@@ -27,6 +27,14 @@
 - Published result: `19` miners and `1,075.336 GNK`.
 - The method uses historical on-chain state from an archive node.
 
+## Mitigation / Fix Status
+
+| Item | Status |
+|---|---|
+| Direct settle fix | PR [`#550`](https://github.com/gonka-ai/gonka/pull/550), `Negative coin balance for settle`, changes settlement handling for negative balances and was merged on 2026-01-13. |
+| Related reward-loss fix | PR [`#826`](https://github.com/gonka-ai/gonka/pull/826) proposes retaining `SettleAmount` after partial claim payment failures; it was closed on 2026-04-27 without merge. |
+| Timing | The negative-balance settlement fix is merged. No deployed correction is established here for the separate unmerged partial-payment path in `#826`. |
+
 ## Sources
 
 - [Calculation repository](https://github.com/gonkavip/unclaimed)

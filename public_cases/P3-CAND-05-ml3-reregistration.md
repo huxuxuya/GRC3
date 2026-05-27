@@ -27,6 +27,16 @@
 - Hardware replacement itself is not verifiable from the cited on-chain information.
 - No compensation computation has been presented.
 
+## Mitigation / Fix Status
+
+| Item | Status |
+|---|---|
+| Related preserved-node redesign | PR [`#1089`](https://github.com/gonka-ai/gonka/pull/1089) replaces epoch-long preserved scheduling with episode-scoped preserved snapshots; it was merged into the `v0.2.12` upgrade branch. |
+| Deployment evidence | Upgrade PR [`#948`](https://github.com/gonka-ai/gonka/pull/948), which includes the preserved-node redesign, was merged into `main` on 2026-04-30. |
+| Case-specific conclusion | This is general mitigation for predictable preserved-node behaviour; it does not prove that the reported hardware re-registration claim was a defect or that it was cured. |
+
 ## Sources
 
 - [Participant tracker record](https://tracker.gonka.hyperfusion.io/?epoch=269&participant=gonka15munkmx6x7k6rqqeexjet4556p7at39ks9qgr5)
+- [PR #1089: Random Selection of Preserved MLNodes](https://github.com/gonka-ai/gonka/pull/1089)
+- [PR #948: Upgrade v0.2.12](https://github.com/gonka-ai/gonka/pull/948)
