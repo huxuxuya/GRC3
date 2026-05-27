@@ -11,6 +11,7 @@
 | Result so far | Calculation published and reproduced once; DevOps discussion confirms unintended cPoC behaviour |
 | Further analysis | Required: independent validation and inclusion decision |
 | Compensation | 36,209.451 GNK |
+| Lost reward destination | Confirmation-weight share lost through unintended cPoC is not redistributed; under fixed-reward settlement it is transferred to governance remainder. |
 
 ## Message Log
 
@@ -39,9 +40,15 @@
 | Corrective fix | No public Gonka PR or issue specifically correcting the `LastUpgradeHeight` misfire was identified in the reviewed sources as of 2026-05-27. |
 | Timing | Unknown. The affected upgrade itself was already live when this incident occurred. |
 
+## Reward Flow
+
+The calculation reports `7` dropped participants receiving zero reward and `12` participants receiving reduced reward because their confirmation weight fell. Gonka settlement explicitly keeps the unreduced weight in the denominator and routes cPoC-reduced undistributed rewards to governance rather than redistributing them.
+
 ## Sources
 
 - [Calculation repository](https://github.com/gonkavip/payout276)
 - [Upgrade proposal #54](https://gonka.gg/network/proposals/54)
 - [DevOps chat evidence log](sources/P3-CAND-04-devops-chat.md)
 - [PR #1143: v0.2.13 microrelease](https://github.com/gonka-ai/gonka/pull/1143)
+- [Settlement logic: `accountsettle.go`](https://github.com/gonka-ai/gonka/blob/17808620293b57112896bcbb7f99c4c2f554d6c8/inference-chain/x/inference/keeper/accountsettle.go)
+- [Reward remainder logic: `bitcoin_rewards.go`](https://github.com/gonka-ai/gonka/blob/17808620293b57112896bcbb7f99c4c2f554d6c8/inference-chain/x/inference/keeper/bitcoin_rewards.go)

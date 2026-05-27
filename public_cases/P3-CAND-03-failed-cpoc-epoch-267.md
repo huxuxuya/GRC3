@@ -11,6 +11,7 @@
 | Result so far | Known claimant is outside Proposal #2 scopes; DevOps evidence describes the Kimi validation shortfall mechanism |
 | Further analysis | Required: affected set, historical preserved-node evidence and methodology |
 | Compensation | Not calculated |
+| Lost reward destination | Under fixed-reward settlement logic, confirmation-PoC reductions / zero reward shares remain undistributed and are transferred to governance rather than redistributed to other participants. |
 
 ## Message Log
 
@@ -37,8 +38,14 @@
 | DevOps confirmation | Gleb Morgachev stated in message `15567` that a fix was added in `0.2.13` to prevent the relevant nodes from remaining preserved in this condition. |
 | Timing | DevOps announcement reports `v0.2.13` executed on mainnet at block `4267300` on 2026-05-26. Historical losses remain a compensation decision. |
 
+## Reward Flow
+
+The identified claimant is described as having a Kimi confirmation-PoC shortfall and zero reward in epoch 267. In fixed-reward settlement, confirmation-weight reductions are included in the governance remainder and are not renormalized onto successful participants.
+
 ## Sources
 
 - No standalone public calculation repository identified for this candidate.
 - [DevOps chat evidence log](sources/P3-CAND-03-devops-chat.md)
 - [PR #1143: v0.2.13 microrelease](https://github.com/gonka-ai/gonka/pull/1143)
+- [Settlement logic: `accountsettle.go`](https://github.com/gonka-ai/gonka/blob/17808620293b57112896bcbb7f99c4c2f554d6c8/inference-chain/x/inference/keeper/accountsettle.go)
+- [Reward remainder logic: `bitcoin_rewards.go`](https://github.com/gonka-ai/gonka/blob/17808620293b57112896bcbb7f99c4c2f554d6c8/inference-chain/x/inference/keeper/bitcoin_rewards.go)

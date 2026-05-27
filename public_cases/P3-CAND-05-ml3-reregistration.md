@@ -11,6 +11,7 @@
 | Result so far | No on-chain proof of hardware change identified |
 | Further analysis | Required only if committee accepts this claim type as eligible |
 | Compensation | Not calculated |
+| Lost reward destination | Not established: no compensable reward shortfall has been proven for this claim. |
 
 ## Message Log
 
@@ -34,6 +35,10 @@
 | Related preserved-node redesign | PR [`#1089`](https://github.com/gonka-ai/gonka/pull/1089) replaces epoch-long preserved scheduling with episode-scoped preserved snapshots; it was merged into the `v0.2.12` upgrade branch. |
 | Deployment evidence | Upgrade PR [`#948`](https://github.com/gonka-ai/gonka/pull/948), which includes the preserved-node redesign, was merged into `main` on 2026-04-30. |
 | Case-specific conclusion | This is general mitigation for predictable preserved-node behaviour; it does not prove that the reported hardware re-registration claim was a defect or that it was cured. |
+
+## Reward Flow
+
+No reward-destination conclusion can be made until the committee establishes that a measurable reward loss occurred and identifies its on-chain mechanism.
 
 ## Sources
 

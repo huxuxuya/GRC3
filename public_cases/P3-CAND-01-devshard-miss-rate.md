@@ -11,6 +11,7 @@
 | Result so far | On-chain reward outcomes identified; protocol bug not established |
 | Further analysis | Required: retained devshard proof/stat data and root-cause determination |
 | Compensation | Not approved; preliminary estimates only |
+| Lost reward destination | Under fixed-reward settlement logic, downtime / miss-rate reductions remain undistributed and are transferred to governance rather than redistributed to other participants. |
 
 ## Message Log
 
@@ -38,8 +39,14 @@
 | Case-specific remediation | Not confirmed. The available evidence does not identify a code change that fixes the cause of this high miss-rate outcome. |
 | Timing | `v0.2.13` is reported deployed on mainnet on 2026-05-26; a root-cause fix schedule for this case is unknown. |
 
+## Reward Flow
+
+The report concerns epoch 272 participants with `rewarded_coins = 0`. Gonka fixed-reward settlement keeps pre-punishment weight in the denominator; downtime reductions are therefore undistributed remainder sent to the governance module, rather than additional rewards for other participants.
+
 ## Sources
 
 - [Audit/calculation repository](https://github.com/huxuxuya/gonka_248_and_250_-epoch_loss/)
 - [DevOps chat evidence log](sources/P3-CAND-01-devops-chat.md)
 - [PR #1143: v0.2.13 microrelease](https://github.com/gonka-ai/gonka/pull/1143)
+- [Settlement logic: `accountsettle.go`](https://github.com/gonka-ai/gonka/blob/17808620293b57112896bcbb7f99c4c2f554d6c8/inference-chain/x/inference/keeper/accountsettle.go)
+- [Reward remainder logic: `bitcoin_rewards.go`](https://github.com/gonka-ai/gonka/blob/17808620293b57112896bcbb7f99c4c2f554d6c8/inference-chain/x/inference/keeper/bitcoin_rewards.go)

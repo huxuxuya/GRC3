@@ -11,6 +11,7 @@
 | Result so far | Full-period calculation published; contemporaneous epoch 266 exclusion and ComputeGroupCap evidence located |
 | Further analysis | Required: 3-5 independent validations and eligibility decision |
 | Compensation | 710,772.72 GNK |
+| Lost reward destination | Underpaid or excluded fixed-reward shares are not redistributed; settlement routes undistributed remainder to governance. |
 
 ## Message Log
 
@@ -41,8 +42,14 @@
 | Deployment timing | DevOps announcement reports that `v0.2.13` executed on mainnet at block `4267300` on 2026-05-26. |
 | Remaining status | Historical restitution and eligibility still require review; the mitigation does not approve or calculate compensation by itself. |
 
+## Reward Flow
+
+The restitution package calculates shortfalls from zeroed or reduced effective weight. For the fixed-reward epochs in scope, settlement does not increase other participants' allocations when a participant is invalidated or reduced through cPoC/weight scaling; the undistributed remainder is transferred to governance. This is distinct from determining whether each historical shortfall is eligible for compensation.
+
 ## Sources
 
 - [Calculation repository](https://github.com/votkon/gonka-kimi-restitution)
 - [DevOps chat evidence log](sources/P4-CAND-01-devops-chat.md)
 - [PR #1143: v0.2.13 microrelease](https://github.com/gonka-ai/gonka/pull/1143)
+- [Settlement logic: `accountsettle.go`](https://github.com/gonka-ai/gonka/blob/17808620293b57112896bcbb7f99c4c2f554d6c8/inference-chain/x/inference/keeper/accountsettle.go)
+- [Reward remainder logic: `bitcoin_rewards.go`](https://github.com/gonka-ai/gonka/blob/17808620293b57112896bcbb7f99c4c2f554d6c8/inference-chain/x/inference/keeper/bitcoin_rewards.go)

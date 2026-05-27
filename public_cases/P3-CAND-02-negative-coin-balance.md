@@ -11,6 +11,7 @@
 | Result so far | Deterministic affected set and payout calculated |
 | Further analysis | Required: independent validation and inclusion decision |
 | Compensation | 1,075.336 GNK |
+| Lost reward destination | Rewards were computed but no `SettleAmount` claim ticket was written; the published calculation states they were eventually swept into the gov module account. |
 
 ## Message Log
 
@@ -34,6 +35,10 @@
 | Direct settle fix | PR [`#550`](https://github.com/gonka-ai/gonka/pull/550), `Negative coin balance for settle`, changes settlement handling for negative balances and was merged on 2026-01-13. |
 | Related reward-loss fix | PR [`#826`](https://github.com/gonka-ai/gonka/pull/826) proposes retaining `SettleAmount` after partial claim payment failures; it was closed on 2026-04-27 without merge. |
 | Timing | The negative-balance settlement fix is merged. No deployed correction is established here for the separate unmerged partial-payment path in `#826`. |
+
+## Reward Flow
+
+This case is not redistribution through reduced reward weight. The chain recorded positive `rewarded_coins` but skipped creation of the claimant's `SettleAmount`. The calculation repository states that such inaccessible rewards are eventually swept into the governance module account by `TransferOldSettleAmountsToGovernance`.
 
 ## Sources
 
