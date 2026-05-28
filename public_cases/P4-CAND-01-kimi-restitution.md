@@ -2,16 +2,16 @@
 
 | Field | Value |
 |---|---|
+| **Case** | `P4-CAND-01` - Kimi Restitution |
 | Proposal | Proposal #4 candidate |
-| Epochs | 265-276 |
-| Status | Calculated; GRC eligibility under discussion |
-| Reported by | Votkon; DevOps chat reporters including Evgenii Maksimenkov |
-| Affected / detail contact | 52 unique addresses; Votkon; Evgenii Maksimenkov for chat evidence |
-| Investigated by | Votkon; DevOps technical discussion |
-| Result so far | Full-period calculation published; contemporaneous epoch 266 exclusion and ComputeGroupCap evidence located |
-| Further analysis | Required: 3-5 independent validations and eligibility decision |
-| Compensation | 710,772.72 GNK |
-| Lost reward destination | Underpaid or excluded fixed-reward shares are not redistributed; settlement routes undistributed remainder to governance. |
+| Epochs affected | 265-276 |
+| Affected participants | 52 unique addresses |
+| Estimated compensation | 710,772.72 GNK |
+| **Cause and evidence** | CPoC degradation in epoch 265, nonce/delegation losses in epoch 266, and ComputeGroupCap underpayment in epochs 267-276. Evidence: [calculation repository](https://github.com/votkon/gonka-kimi-restitution) and [DevOps chat log](sources/P4-CAND-01-devops-chat.md). |
+| **Can it happen again?** | Reduced risk after `v0.2.13`; `ComputeGroupCap` still exists as an intended protocol rule, so recurrence risk should be reviewed. |
+| **Mitigation / fix** | Partially mitigated by PR [#1143](https://github.com/gonka-ai/gonka/pull/1143) in `v0.2.13`: confirmation PoC weight loss during new-model bootstrap was fixed, and Kimi `WeightScaleFactor` was recalibrated to `0.78`. |
+| **Current decision** | Calculated; GRC must decide eligibility and Proposal #4 inclusion. 3-5 independent validations are required due to the high compensation amount. |
+| **Review focus** | @maksimenkoff and @mikenosov to validate the case first; also check overlap with the separate epoch 276 CPoC-misfire candidate. |
 
 ## Message Log
 
