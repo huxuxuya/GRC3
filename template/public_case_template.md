@@ -1,6 +1,6 @@
 # Public Compensation Case Template
 
-Use this template for public case investigation pages in `public_cases/`.
+Use this template for public case investigation pages.
 
 The first table is the case header. It should be short, clear, and enough for a reader to understand the case without reading the full investigation.
 
@@ -39,22 +39,6 @@ The first table is the case header. It should be short, clear, and enough for a 
 | **Compensation overlap** | List any GRC compensation cases, proposals, or active calculations that touch the same epochs or economic loss. If none are known, write `No known overlap`. |
 | **Current decision** | State the next governance or committee decision, not the whole history. |
 | **Review focus** | Name validators if assigned and mention the highest-risk checks. |
-
-## Recommended Page Sections
-
-After the header, keep details in this order:
-
-```md
-## Message Log
-
-## Findings
-
-## Mitigation / Fix Status
-
-## Reward Flow
-
-## Sources
-```
 
 ## Writing Rules
 
