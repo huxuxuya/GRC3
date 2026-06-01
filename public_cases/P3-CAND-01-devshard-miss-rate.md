@@ -7,7 +7,8 @@
 | Status | Investigation |
 | Reported by | Votkon; technical reports by Nik |
 | Affected / detail contact | Six epoch 272 addresses identified below; Nik; claimant `A` |
-| Investigated by | Fedor Tmkhv; shard-proof audit outputs |
+| Case investigator | @OpenMindedPerson |
+| Case validator | @maksimenkoff |
 | Result so far | On-chain reward outcomes identified; protocol bug not established |
 | Further analysis | Required: retained devshard proof/stat data and root-cause determination |
 | Compensation | Not approved; preliminary estimates only |

@@ -3,15 +3,16 @@
 | Field | Value |
 |---|---|
 | **Case** | `P4-CAND-01` - Kimi Restitution |
-| Proposal | Proposal #4 candidate |
+| Proposal | Proposal #3 candidate |
 | Epochs affected | 265-276 |
 | Affected participants | 52 unique addresses |
 | Estimated compensation | 710,772.72 GNK |
 | **Cause and evidence** | CPoC degradation in epoch 265, nonce/delegation losses in epoch 266, and ComputeGroupCap underpayment in epochs 267-276. Evidence: [calculation repository](https://github.com/votkon/gonka-kimi-restitution) and [DevOps chat log](sources/P4-CAND-01-devops-chat.md). |
 | **Can it happen again?** | Reduced risk after `v0.2.13`; `ComputeGroupCap` still exists as an intended protocol rule, so recurrence risk should be reviewed. |
 | **Mitigation / fix** | Partially mitigated by PR [#1143](https://github.com/gonka-ai/gonka/pull/1143) in `v0.2.13`: confirmation PoC weight loss during new-model bootstrap was fixed, and Kimi `WeightScaleFactor` was recalibrated to `0.78`. |
-| **Current decision** | Calculated; GRC must decide eligibility and Proposal #4 inclusion. 3-5 independent validations are required due to the high compensation amount. |
-| **Review focus** | @maksimenkoff and @mikenosov to validate the case first; also check overlap with the separate epoch 276 CPoC-misfire candidate. |
+| **Compensation overlap** | Overlaps epoch 276 with the separate UpgradeProtectionWindow / CPoC misfire case; validators must ensure no duplicate compensation for the same economic loss. |
+| **Current decision** | Calculated; GRC must decide eligibility and Proposal #3 inclusion. |
+| **Review focus** | Investigator: @votkon. Validators: @maksimenkoff and @mikenosov. Also check overlap with the separate epoch 276 CPoC-misfire candidate. |
 
 ## Message Log
 
@@ -19,7 +20,7 @@
 |---|---|---|---|
 | 2026-05-24 09:02 UTC+03 | Votkon | Kimi issue was initially listed for Proposal #3 work. | Earlier planning context. |
 | 2026-05-27 17:03 UTC+03 | Votkon | Clarified period as epochs 265-276. | Calculation scope. |
-| 2026-05-27 17:50 UTC+03 | Votkon | Proposed voting whether to include the case in Proposal #4. | Current proposal classification. |
+| 2026-05-27 17:50 UTC+03 | Votkon | Proposed voting whether to include the case in Proposal #4. | Earlier proposal-positioning and eligibility context. |
 | 2026-05-27 18:04 UTC+03 | Votkon | "We'd probably need 3-5 validations." | Review requirement due to amount. |
 | 2026-05-17 00:56 UTC+03 | Evgenii Maksimenkov, DevOps chat | Identified 9 PoC submitters that did not enter the epoch 266 final set. | Address-level evidence for nonce exclusion. |
 | 2026-05-17 22:30 UTC+03 | David Liberman, DevOps chat | Identified `ComputeGroupCap` and its `75%` cap as the cause of reduced Kimi weight. | Protocol-rule evidence for later Kimi weight reduction. |

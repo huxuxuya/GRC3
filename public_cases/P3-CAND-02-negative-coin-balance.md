@@ -7,7 +7,8 @@
 | Status | Calculated; inclusion pending |
 | Reported by | Evgenii Maksimenkov |
 | Affected / detail contact | 19 miners; Evgenii Maksimenkov |
-| Investigated by | Evgenii Maksimenkov |
+| Case investigator | @maksimenkoff; calculation: [gonkavip/unclaimed](https://github.com/gonkavip/unclaimed) |
+| Case validator | @dem_ww |
 | Result so far | Deterministic affected set and payout calculated |
 | Further analysis | Required: independent validation and inclusion decision |
 | Compensation | 1,075.336 GNK |

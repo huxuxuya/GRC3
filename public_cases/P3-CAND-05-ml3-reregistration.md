@@ -4,7 +4,7 @@
 |---|---|
 | Proposal | Proposal #3 candidate |
 | Epochs | Around epoch 269 |
-| Status | Scope decision required |
+| Status | Scope decision required; not in the current five assigned Proposal #3 cases |
 | Reported by | SegovChik from `@gonkstein` and technical contact |
 | Affected / detail contact | One known claimant: `gonka15munkmx6x7k6rqqeexjet4556p7at39ks9qgr5`; `@gonkstein` via SegovChik |
 | Investigated by | Arturs Plisko provided initial scope assessment |

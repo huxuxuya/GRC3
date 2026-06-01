@@ -7,7 +7,8 @@
 | Status | Calculated; inclusion pending |
 | Reported by | Votkon; calculation by Evgenii Maksimenkov |
 | Affected / detail contact | 19 miners; Evgenii Maksimenkov; Vas Ily for `gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09` |
-| Investigated by | Evgenii Maksimenkov; initial reproduction by Nik; root-cause note by Egor |
+| Case investigator | @maksimenkoff; calculation: [gonkavip/payout276](https://github.com/gonkavip/payout276) |
+| Case validators | @votkon; @OpenMindedPerson |
 | Result so far | Calculation published and reproduced once; DevOps discussion confirms unintended cPoC behaviour |
 | Further analysis | Required: independent validation and inclusion decision |
 | Compensation | 36,209.451 GNK |

@@ -7,7 +7,8 @@
 | Status | Scope decision required |
 | Reported by | Nik; follow-up context by Votkon |
 | Affected / detail contact | One known claimant: `gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6`; Nik; Evgenii Maksimenkov |
-| Investigated by | Mike; Evgenii Maksimenkov; Gleb Morgachev |
+| Case investigator | @mikenosov |
+| Case validators | @dem_ww; @votkon |
 | Result so far | Known claimant is outside Proposal #2 scopes; DevOps evidence describes the Kimi validation shortfall mechanism |
 | Further analysis | Required: affected set, historical preserved-node evidence and methodology |
 | Compensation | Not calculated |
