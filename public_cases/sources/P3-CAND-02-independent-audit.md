@@ -36,7 +36,7 @@ Spot checks in the published Case 2 epochs:
 
 These spot checks show why the final Case 2 list cannot be derived from summary data alone: the broad first-pass rows in the relevant epochs are much larger than the published 19 settle-drop rows.
 
-## Archive-State Requirement
+## Archive-State Validation
 
 The independent compensation criterion requires historical `SettleAmount` state at the settlement height of the next epoch:
 
@@ -55,7 +55,30 @@ Public nodes checked on 2026-06-01 did not provide the needed historical state:
 | `rpc.gonka.gg` | same endpoint without credentials | `unauthorized`; endpoint reference states an API key is required. |
 | `rpc.gonka.gg` | same endpoint with API-key authentication | authenticated request reached the chain API, but `settle_amount` at height `1519978` still returned `no commit info found`. |
 
-Therefore the independent data audit is complete only through the broad first-pass and current-tail check. The final 19-row compensation list and `1,075.336150923 GNK` total still require a true archive node or indexed historical `SettleAmount` dataset to independently verify missing historical `SettleAmount` entries. Authentication to `rpc.gonka.gg` is not sufficient for this specific old-state query.
+A separate local archive LCD configured through `.env` was later validated on 2026-06-01. The endpoint and API key are intentionally not tracked in git. The script derives the direct Cosmos LCD URL locally, stores its resumable cache outside the repository at `/tmp/grc3-case2-audit/cache.db`, and writes only sanitized review artifacts to `artifacts/case2_archive`.
+
+The archive validation script is [`scripts/verify_case2_archive.py`](../../scripts/verify_case2_archive.py). It independently builds the candidate set from chain state and uses the published `gonkavip/unclaimed` CSV only as a comparison target.
+
+| Scan | Epochs | Candidate pairs | Affected addresses | Total, ngonka | Total, GNK | Nonzero epochs | Published comparison |
+|---|---|---:|---:|---:|---:|---|---|
+| Smoke | `97`, `112`, `116`, `129`, `132`, `240`, `275-280` | 19 | 19 | 1,075,336,150,923 | 1,075.336150923 | `97`, `112`, `116`, `129`, `132` | Exact match; 0 mismatches |
+| Focused | `87-142`, `275-280` | 19 | 19 | 1,075,336,150,923 | 1,075.336150923 | `97`, `112`, `116`, `129`, `132` | Exact match; 0 mismatches |
+| Full | `1-274` | 19 | 19 | 1,075,336,150,923 | 1,075.336150923 | `97`, `112`, `116`, `129`, `132` | Exact match; 0 mismatches |
+
+Tracked artifacts:
+
+- [`case2_full_candidates.csv`](../../artifacts/case2_archive/case2_full_candidates.csv) - final independently derived address-by-epoch matrix.
+- [`case2_full_summary.json`](../../artifacts/case2_archive/case2_full_summary.json) - scanned epoch range, totals, per-epoch summary stats, and failure list.
+- [`case2_full_published_compare.json`](../../artifacts/case2_archive/case2_full_published_compare.json) - exact comparison against the published CSV.
+
+Control checks from the archive source:
+
+| Check | Address | Epoch | Rewarded coins | Historical `SettleAmount` result |
+|---|---|---:|---:|---|
+| Candidate row | `gonka19nd876302m3ll2h7sd55hp9pqzv2hpqalh8pjj` | 97 | 8,432,384,134 | No record at settlement height `1519978`; included. |
+| Non-candidate control | `gonka1qqpsxmrmk99lw0xaychamatvydd8uw49qw2pga` | 97 | 83,253,062,409 | Record exists at settlement height `1519978`; excluded. |
+
+The full independent archive scan confirms the published 19-row set and did not find additional settle-drop candidates in epochs `1-274`. The focused and smoke windows also confirm that no new candidates appear in the checked tail `275-280`.
 
 ## Code Audit
 
@@ -75,4 +98,4 @@ Current `main` also uses `CacheContext` in `payoutClaim` in `msg_server_claim_re
 - The settlement-time negative-balance bug is fixed in current code for the reward-covers-debt case.
 - The remaining `debt > reward` path intentionally returns `ErrNegativeCoinBalance` with zero reward, so it does not match the positive-reward compensation signature.
 - No positive unclaimed rows were found in epochs `275-280`.
-- A full independent confirmation of the published 19 affected rows remains blocked until historical `settle_amount` state is available from an archive node.
+- Full independent archive validation confirms the published 19 affected rows exactly: `1,075,336,150,923 ngonka` / `1,075.336150923 GNK`, with no mismatches against the published calculation and no additional candidates in the scanned `1-274` range.

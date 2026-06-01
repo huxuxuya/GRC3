@@ -1,0 +1,103 @@
+{
+  "mode": "smoke",
+  "epochs": [
+    97,
+    112,
+    116,
+    129,
+    132,
+    240,
+    275,
+    276,
+    277,
+    278,
+    279,
+    280
+  ],
+  "candidate_pairs": 19,
+  "affected_addresses": 19,
+  "total_ngonka": 1075336150923,
+  "total_gnk": "1075.336150923",
+  "nonzero_epochs": [
+    97,
+    112,
+    116,
+    129,
+    132
+  ],
+  "failures": [],
+  "epoch_stats": [
+    {
+      "epoch": 97,
+      "summary_rows": 415,
+      "positive_unclaimed_rows": 6,
+      "positive_unclaimed_reward": 8125070579633
+    },
+    {
+      "epoch": 112,
+      "summary_rows": 573,
+      "positive_unclaimed_rows": 6,
+      "positive_unclaimed_reward": 731602580169
+    },
+    {
+      "epoch": 116,
+      "summary_rows": 594,
+      "positive_unclaimed_rows": 57,
+      "positive_unclaimed_reward": 2751905731625
+    },
+    {
+      "epoch": 129,
+      "summary_rows": 597,
+      "positive_unclaimed_rows": 7,
+      "positive_unclaimed_reward": 218739570224
+    },
+    {
+      "epoch": 132,
+      "summary_rows": 613,
+      "positive_unclaimed_rows": 31,
+      "positive_unclaimed_reward": 5776580606544
+    },
+    {
+      "epoch": 240,
+      "summary_rows": 160,
+      "positive_unclaimed_rows": 0,
+      "positive_unclaimed_reward": 0
+    },
+    {
+      "epoch": 275,
+      "summary_rows": 55,
+      "positive_unclaimed_rows": 0,
+      "positive_unclaimed_reward": 0
+    },
+    {
+      "epoch": 276,
+      "summary_rows": 54,
+      "positive_unclaimed_rows": 0,
+      "positive_unclaimed_reward": 0
+    },
+    {
+      "epoch": 277,
+      "summary_rows": 56,
+      "positive_unclaimed_rows": 0,
+      "positive_unclaimed_reward": 0
+    },
+    {
+      "epoch": 278,
+      "summary_rows": 57,
+      "positive_unclaimed_rows": 0,
+      "positive_unclaimed_reward": 0
+    },
+    {
+      "epoch": 279,
+      "summary_rows": 57,
+      "positive_unclaimed_rows": 0,
+      "positive_unclaimed_reward": 0
+    },
+    {
+      "epoch": 280,
+      "summary_rows": 54,
+      "positive_unclaimed_rows": 0,
+      "positive_unclaimed_reward": 0
+    }
+  ]
+}

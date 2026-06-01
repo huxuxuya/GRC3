@@ -1,0 +1,453 @@
+{
+  "mode": "focused",
+  "epochs": [
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    275,
+    276,
+    277,
+    278,
+    279,
+    280
+  ],
+  "candidate_pairs": 19,
+  "affected_addresses": 19,
+  "total_ngonka": 1075336150923,
+  "total_gnk": "1075.336150923",
+  "nonzero_epochs": [
+    97,
+    112,
+    116,
+    129,
+    132
+  ],
+  "failures": [],
+  "epoch_stats": [
+    {
+      "epoch": 87,
+      "summary_rows": 1468,
+      "positive_unclaimed_rows": 10,
+      "positive_unclaimed_reward": 9413778997422
+    },
+    {
+      "epoch": 88,
+      "summary_rows": 1560,
+      "positive_unclaimed_rows": 13,
+      "positive_unclaimed_reward": 3065642039124
+    },
+    {
+      "epoch": 89,
+      "summary_rows": 1715,
+      "positive_unclaimed_rows": 16,
+      "positive_unclaimed_reward": 5494233632716
+    },
+    {
+      "epoch": 90,
+      "summary_rows": 457,
+      "positive_unclaimed_rows": 14,
+      "positive_unclaimed_reward": 1094725634448
+    },
+    {
+      "epoch": 91,
+      "summary_rows": 444,
+      "positive_unclaimed_rows": 6,
+      "positive_unclaimed_reward": 958116066749
+    },
+    {
+      "epoch": 92,
+      "summary_rows": 436,
+      "positive_unclaimed_rows": 5,
+      "positive_unclaimed_reward": 4362291022594
+    },
+    {
+      "epoch": 93,
+      "summary_rows": 439,
+      "positive_unclaimed_rows": 11,
+      "positive_unclaimed_reward": 2140534037009
+    },
+    {
+      "epoch": 94,
+      "summary_rows": 415,
+      "positive_unclaimed_rows": 3,
+      "positive_unclaimed_reward": 89641007213
+    },
+    {
+      "epoch": 95,
+      "summary_rows": 453,
+      "positive_unclaimed_rows": 10,
+      "positive_unclaimed_reward": 399007617573
+    },
+    {
+      "epoch": 96,
+      "summary_rows": 425,
+      "positive_unclaimed_rows": 1,
+      "positive_unclaimed_reward": 6610405256586
+    },
+    {
+      "epoch": 97,
+      "summary_rows": 415,
+      "positive_unclaimed_rows": 6,
+      "positive_unclaimed_reward": 8125070579633
+    },
+    {
+      "epoch": 98,
+      "summary_rows": 419,
+      "positive_unclaimed_rows": 4,
+      "positive_unclaimed_reward": 609742520001
+    },
+    {
+      "epoch": 99,
+      "summary_rows": 448,
+      "positive_unclaimed_rows": 3,
+      "positive_unclaimed_reward": 1235469762567
+    },
+    {
+      "epoch": 100,
+      "summary_rows": 439,
+      "positive_unclaimed_rows": 2,
+      "positive_unclaimed_reward": 293423567403
+    },
+    {
+      "epoch": 101,
+      "summary_rows": 453,
+      "positive_unclaimed_rows": 2,
+      "positive_unclaimed_reward": 511091290108
+    },
+    {
+      "epoch": 102,
+      "summary_rows": 456,
+      "positive_unclaimed_rows": 4,
+      "positive_unclaimed_reward": 82909570326
+    },
+    {
+      "epoch": 103,
+      "summary_rows": 462,
+      "positive_unclaimed_rows": 7,
+      "positive_unclaimed_reward": 641959792266
+    },
+    {
+      "epoch": 104,
+      "summary_rows": 461,
+      "positive_unclaimed_rows": 1,
+      "positive_unclaimed_reward": 1805104362
+    },
+    {
+      "epoch": 105,
+      "summary_rows": 477,
+      "positive_unclaimed_rows": 5,
+      "positive_unclaimed_reward": 1153728404211
+    },
+    {
+      "epoch": 106,
+      "summary_rows": 465,
+      "positive_unclaimed_rows": 9,
+      "positive_unclaimed_reward": 1025664079592
+    },
+    {
+      "epoch": 107,
+      "summary_rows": 468,
+      "positive_unclaimed_rows": 9,
+      "positive_unclaimed_reward": 2725489475305
+    },
+    {
+      "epoch": 108,
+      "summary_rows": 486,
+      "positive_unclaimed_rows": 13,
+      "positive_unclaimed_reward": 1060161651821
+    },
+    {
+      "epoch": 109,
+      "summary_rows": 488,
+      "positive_unclaimed_rows": 4,
+      "positive_unclaimed_reward": 226594999060
+    },
+    {
+      "epoch": 110,
+      "summary_rows": 499,
+      "positive_unclaimed_rows": 2,
+      "positive_unclaimed_reward": 136976710256
+    },
+    {
+      "epoch": 111,
+      "summary_rows": 545,
+      "positive_unclaimed_rows": 7,
+      "positive_unclaimed_reward": 248101191284
+    },
+    {
+      "epoch": 112,
+      "summary_rows": 573,
+      "positive_unclaimed_rows": 6,
+      "positive_unclaimed_reward": 731602580169
+    },
+    {
+      "epoch": 113,
+      "summary_rows": 535,
+      "positive_unclaimed_rows": 5,
+      "positive_unclaimed_reward": 972228009273
+    },
+    {
+      "epoch": 114,
+      "summary_rows": 559,
+      "positive_unclaimed_rows": 7,
+      "positive_unclaimed_reward": 1067283037615
+    },
+    {
+      "epoch": 115,
+      "summary_rows": 586,
+      "positive_unclaimed_rows": 10,
+      "positive_unclaimed_reward": 1647876660485
+    },
+    {
+      "epoch": 116,
+      "summary_rows": 594,
+      "positive_unclaimed_rows": 57,
+      "positive_unclaimed_reward": 2751905731625
+    },
+    {
+      "epoch": 117,
+      "summary_rows": 653,
+      "positive_unclaimed_rows": 55,
+      "positive_unclaimed_reward": 20500352273779
+    },
+    {
+      "epoch": 118,
+      "summary_rows": 602,
+      "positive_unclaimed_rows": 4,
+      "positive_unclaimed_reward": 347424534137
+    },
+    {
+      "epoch": 119,
+      "summary_rows": 609,
+      "positive_unclaimed_rows": 7,
+      "positive_unclaimed_reward": 574511178372
+    },
+    {
+      "epoch": 120,
+      "summary_rows": 622,
+      "positive_unclaimed_rows": 2,
+      "positive_unclaimed_reward": 29397086106
+    },
+    {
+      "epoch": 121,
+      "summary_rows": 646,
+      "positive_unclaimed_rows": 3,
+      "positive_unclaimed_reward": 463822798860
+    },
+    {
+      "epoch": 122,
+      "summary_rows": 640,
+      "positive_unclaimed_rows": 10,
+      "positive_unclaimed_reward": 345172873404
+    },
+    {
+      "epoch": 123,
+      "summary_rows": 625,
+      "positive_unclaimed_rows": 4,
+      "positive_unclaimed_reward": 834147616908
+    },
+    {
+      "epoch": 124,
+      "summary_rows": 572,
+      "positive_unclaimed_rows": 7,
+      "positive_unclaimed_reward": 578057347316
+    },
+    {
+      "epoch": 125,
+      "summary_rows": 548,
+      "positive_unclaimed_rows": 5,
+      "positive_unclaimed_reward": 126355376867
+    },
+    {
+      "epoch": 126,
+      "summary_rows": 564,
+      "positive_unclaimed_rows": 4,
+      "positive_unclaimed_reward": 58483019996
+    },
+    {
+      "epoch": 127,
+      "summary_rows": 582,
+      "positive_unclaimed_rows": 10,
+      "positive_unclaimed_reward": 7491451452882
+    },
+    {
+      "epoch": 128,
+      "summary_rows": 617,
+      "positive_unclaimed_rows": 6,
+      "positive_unclaimed_reward": 217495501227
+    },
+    {
+      "epoch": 129,
+      "summary_rows": 597,
+      "positive_unclaimed_rows": 7,
+      "positive_unclaimed_reward": 218739570224
+    },
+    {
+      "epoch": 130,
+      "summary_rows": 600,
+      "positive_unclaimed_rows": 2,
+      "positive_unclaimed_reward": 4387337692708
+    },
+    {
+      "epoch": 131,
+      "summary_rows": 597,
+      "positive_unclaimed_rows": 2,
+      "positive_unclaimed_reward": 225496197410
+    },
+    {
+      "epoch": 132,
+      "summary_rows": 613,
+      "positive_unclaimed_rows": 31,
+      "positive_unclaimed_reward": 5776580606544
+    },
+    {
+      "epoch": 133,
+      "summary_rows": 624,
+      "positive_unclaimed_rows": 12,
+      "positive_unclaimed_reward": 20678803640169
+    },
+    {
+      "epoch": 134,
+      "summary_rows": 510,
+      "positive_unclaimed_rows": 4,
+      "positive_unclaimed_reward": 141464020193
+    },
+    {
+      "epoch": 135,
+      "summary_rows": 534,
+      "positive_unclaimed_rows": 6,
+      "positive_unclaimed_reward": 207097974410
+    },
+    {
+      "epoch": 136,
+      "summary_rows": 542,
+      "positive_unclaimed_rows": 6,
+      "positive_unclaimed_reward": 201918568617
+    },
+    {
+      "epoch": 137,
+      "summary_rows": 539,
+      "positive_unclaimed_rows": 5,
+      "positive_unclaimed_reward": 66230109701
+    },
+    {
+      "epoch": 138,
+      "summary_rows": 539,
+      "positive_unclaimed_rows": 2,
+      "positive_unclaimed_reward": 332324039605
+    },
+    {
+      "epoch": 139,
+      "summary_rows": 442,
+      "positive_unclaimed_rows": 0,
+      "positive_unclaimed_reward": 0
+    },
+    {
+      "epoch": 140,
+      "summary_rows": 405,
+      "positive_unclaimed_rows": 4,
+      "positive_unclaimed_reward": 1607115785941
+    },
+    {
+      "epoch": 141,
+      "summary_rows": 401,
+      "positive_unclaimed_rows": 6,
+      "positive_unclaimed_reward": 112952581550
+    },
+    {
+      "epoch": 142,
+      "summary_rows": 403,
+      "positive_unclaimed_rows": 15,
+      "positive_unclaimed_reward": 3438565419854
+    },
+    {
+      "epoch": 275,
+      "summary_rows": 55,
+      "positive_unclaimed_rows": 0,
+      "positive_unclaimed_reward": 0
+    },
+    {
+      "epoch": 276,
+      "summary_rows": 54,
+      "positive_unclaimed_rows": 0,
+      "positive_unclaimed_reward": 0
+    },
+    {
+      "epoch": 277,
+      "summary_rows": 56,
+      "positive_unclaimed_rows": 0,
+      "positive_unclaimed_reward": 0
+    },
+    {
+      "epoch": 278,
+      "summary_rows": 57,
+      "positive_unclaimed_rows": 0,
+      "positive_unclaimed_reward": 0
+    },
+    {
+      "epoch": 279,
+      "summary_rows": 57,
+      "positive_unclaimed_rows": 0,
+      "positive_unclaimed_reward": 0
+    },
+    {
+      "epoch": 280,
+      "summary_rows": 54,
+      "positive_unclaimed_rows": 0,
+      "positive_unclaimed_reward": 0
+    }
+  ]
+}

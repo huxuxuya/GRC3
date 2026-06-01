@@ -4,14 +4,14 @@
 |---|---|
 | Proposal | Proposal #3 candidate |
 | Epochs | 1-274 in the published calculation |
-| Status | Calculated; inclusion pending |
+| Status | Independently validated; inclusion pending |
 | Reported by | Evgenii Maksimenkov |
 | Affected / detail contact | 19 miners; Evgenii Maksimenkov |
 | Case investigator | @maksimenkoff; calculation: [gonkavip/unclaimed](https://github.com/gonkavip/unclaimed) |
 | Case validator | @dem_ww |
-| Result so far | Published affected set and payout calculated; independent first-pass and code audit completed |
-| Further analysis | Required: archive-node validation of historical `SettleAmount` state and inclusion decision |
-| Compensation | 1,075.336 GNK |
+| Result so far | Independent archive validation matched the published 19-row affected set exactly |
+| Further analysis | Required: governance inclusion decision |
+| Compensation | 1,075.336150923 GNK |
 | Lost reward destination | Rewards were computed but no `SettleAmount` claim ticket was written; the published calculation states they were eventually swept into the gov module account. |
 
 ## Message Log
@@ -28,23 +28,26 @@
 
 - A participant is included when rewards were calculated but no `SettleAmount` entry existed at settlement.
 - The broader first-pass scan found 576 participants with assigned but unclaimed rewards for any reason; after checking for a missing post-settlement `SettleAmount`, 19 remained in the deterministic bug scope.
-- Published result: `19` miners and `1,075.336 GNK`.
+- Published result: `19` miners and `1,075.336150923 GNK`.
 - The method uses historical on-chain state from an archive node.
 - Independent first-pass scan on 2026-06-01 did not use the published script or CSV. It queried `epoch_performance_summary` directly for epochs `1-280`.
 - That independent first pass found `823` rows with `rewarded_coins > 0` and `claimed = false` in epochs `1-274`, including ordinary missed claims. The broad result confirms that `EpochPerformanceSummary` alone cannot identify Case 2 compensation recipients.
 - In the current tail `275-280`, the independent scan found `0` rows with positive unclaimed rewards.
-- Independent historical `SettleAmount` validation is currently blocked because public `node1`, `node2`, and `node3` do not retain the required old state. Authenticated `rpc.gonka.gg` access also reaches the API but still returns `no commit info found` for the old `settle_amount` height checked.
+- Public `node1`, `node2`, and `node3` did not retain the required old `SettleAmount` state, and authenticated `rpc.gonka.gg` gateway access did not expose it either.
+- A local archive LCD configured through `.env` was validated on 2026-06-01. The endpoint and key are not tracked in git; sanitized results are stored in `artifacts/case2_archive`.
+- Independent archive validation scanned the full published range `1-274`, checking each epoch's positive rewards against the complete historical `SettleAmount` snapshot at the next epoch's `effective_block_height`.
+- The full scan found exactly `19` candidate `(epoch, address)` pairs, `19` affected addresses, total `1,075.336150923 GNK`, with nonzero epochs `97`, `112`, `116`, `129`, and `132`.
+- The independent result matched the published `gonkavip/unclaimed` CSV exactly: `19` pairs, `1,075.336150923 GNK`, `0` mismatches.
 
 ## Independent Audit Snapshot
 
-| Range | Positive unclaimed rows from direct summary scan | Positive unclaimed reward | Interpretation |
-|---|---:|---:|---|
-| `1-274` | 823 | 1,427,305.676769 GNK | Broad unclaimed-positive universe; not the compensation set. |
-| `87-142` | 471 | 127,838.757296 GNK | Wide window around known Case 2 epochs. |
-| `133-274` | 185 | 131,513.967332 GNK | Post-fix summary rows exist, but summary data alone cannot classify them as bug recurrence. |
-| `275-280` | 0 | 0 GNK | No positive unclaimed rows in the current tail checked. |
+| Scan | Epochs | Candidate pairs | Affected addresses | Total | Nonzero epochs | Published compare |
+|---|---|---:|---:|---:|---|---|
+| Smoke | `97`, `112`, `116`, `129`, `132`, `240`, `275-280` | 19 | 19 | 1,075.336150923 GNK | `97`, `112`, `116`, `129`, `132` | Exact |
+| Focused | `87-142`, `275-280` | 19 | 19 | 1,075.336150923 GNK | `97`, `112`, `116`, `129`, `132` | Exact |
+| Full | `1-274` | 19 | 19 | 1,075.336150923 GNK | `97`, `112`, `116`, `129`, `132` | Exact |
 
-The independent compensation criterion still requires an archive-node lookup of `settle_amount` at the `effective_block_height` of epoch `N+1`. Without that historical state, the published 19-row set remains a calculated claim requiring independent archive validation rather than a fully independently confirmed result.
+The earlier broad summary scan remains useful as a sanity check: `EpochPerformanceSummary` contains many normal positive-unclaimed rows, so the final compensation set must be isolated by historical `SettleAmount` absence, not by `claimed = false` alone.
 
 ## Mitigation / Fix Status
 
@@ -53,7 +56,7 @@ The independent compensation criterion still requires an archive-node lookup of 
 | Direct settle fix | PR [`#550`](https://github.com/gonka-ai/gonka/pull/550), `Negative coin balance for settle`, was merged on 2026-01-13 as commit [`8184fe3`](https://github.com/gonka-ai/gonka/commit/8184fe3501629d1051d1d14b31e7c47c01f7615d) into milestone `v0.2.8`. |
 | Current code status | Current `main` subtracts negative `CoinBalance` debt from `RewardCoins` when the reward covers the debt. If debt exceeds reward, `RewardCoins` becomes `0` and `ErrNegativeCoinBalance` remains. |
 | Related claim-time path | PR [`#826`](https://github.com/gonka-ai/gonka/pull/826) describes partial claim payment failure and was closed on 2026-04-27 without merge. Current `main` uses `CacheContext` in `payoutClaim`, so payout failure does not commit `finishSettle`; this is separate from the settlement-time Case 2 path. |
-| Timing | The negative-balance settlement fix is present in current code. No positive unclaimed rows were found in epochs `275-280`; full post-fix settle-drop exclusion still requires archive `SettleAmount` state. |
+| Timing | The negative-balance settlement fix is present in current code. Full archive validation through epoch `274` and tail checks through `280` found no additional settle-drop candidates outside the published set. |
 
 ## Reward Flow
 
@@ -63,6 +66,10 @@ This case is not redistribution through reduced reward weight. The chain recorde
 
 - [Calculation repository](https://github.com/gonkavip/unclaimed)
 - [Independent audit notes](sources/P3-CAND-02-independent-audit.md)
+- [Archive validation script](../scripts/verify_case2_archive.py)
+- [Full candidate artifact](../artifacts/case2_archive/case2_full_candidates.csv)
+- [Full summary artifact](../artifacts/case2_archive/case2_full_summary.json)
+- [Published comparison artifact](../artifacts/case2_archive/case2_full_published_compare.json)
 - [GRC chat update export index](sources/GRC-chat-update-2026-06-01.md)
 - [PR #826](https://github.com/gonka-ai/gonka/pull/826)
 - [PR #550](https://github.com/gonka-ai/gonka/pull/550)
