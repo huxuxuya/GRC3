@@ -4,14 +4,14 @@
 |---|---|
 | Proposal | Proposal #3 candidate |
 | Epochs | 267 |
-| Status | Scope decision required |
-| Reported by | Nik; follow-up context by Votkon |
+| Status | Calculated; eligibility disputed |
+| Reported by | Nik; proposed for GRC review by Votkon |
 | Affected / detail contact | One known claimant: `gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6`; Nik; Evgenii Maksimenkov |
 | Case investigator | @mikenosov |
 | Case validators | @dem_ww; @votkon |
-| Result so far | Known claimant is outside Proposal #2 scopes; DevOps evidence describes the Kimi validation shortfall mechanism |
-| Further analysis | Required: affected set, historical preserved-node evidence and methodology |
-| Compensation | Not calculated |
+| Result so far | Investigator report identifies one fully valid restitution participant and a compensation amount around `10.2k GNK` |
+| Further analysis | Required: validator review and eligibility vote, especially proxy-configuration responsibility |
+| Compensation | Approximately 10.2k GNK in the published report; not approved |
 | Lost reward destination | Under fixed-reward settlement logic, confirmation-PoC reductions / zero reward shares remain undistributed and are transferred to governance rather than redistributed to other participants. |
 
 ## Message Log
@@ -23,12 +23,17 @@
 | 2026-05-19 20:34 UTC+03 | Mike | Epoch 267 was outside published case 3 scope. | Separate scope decision required. |
 | 2026-05-26 19:25 UTC+03 | Votkon | Identifying all affected parties is difficult due to preserved-node history. | Primary evidence gap. |
 | 2026-05-18 05:52-10:42 UTC+03 | Evgenii Maksimenkov; Gleb Morgachev, DevOps chat | Kimi validation lacked sufficient voting power when delegated Kimi nodes were preserved; Gleb noted a fix in `0.2.13`. | Mechanism and remediation evidence, not a completed payout calculation. |
+| 2026-05-30 18:40 UTC+03 | Votkon | Confirmed he proposed this case after seeing it during the Kimi investigation. | Reporter/proposer clarification. |
+| 2026-05-30 18:57 UTC+03 | Mike | Published the case intake form. | Investigation artefact created. |
+| 2026-05-30 20:49 UTC+03 | Mike | Published report v1; "fully 100% valid participant set" is one address with about `10.2k GNK`. | Calculation available for validation. |
+| 2026-05-30 20:55-21:14 UTC+03 | Evgenii Maksimenkov; Nik; Gleb Morgachev; Votkon | Discussed whether the cause was an old proxy configuration; Gleb warned against using GRC for node misconfiguration; Votkon suggested a vote. | Eligibility disputed. |
 
 ## Findings
 
 - For the known address, the discussion cites `failed_confirmation_poc` and zero reward in epoch 267.
-- No complete victim set or payout method is available.
-- The case cannot reuse Proposal #2 scope without a new committee decision.
+- The investigator report currently treats one address as the fully valid restitution set, with a compensation amount around `10.2k GNK`.
+- Additional cohort sanity checks may affect wording, but the report does not present a larger fully validated participant set.
+- Eligibility is disputed because later discussion links the validation failure to an outdated proxy configuration / missing `poc/proofs` exemption, raising the question of operator configuration versus protocol fault.
 - A cited technical fix reduces recurrence risk but does not by itself determine compensation eligibility.
 
 ## Mitigation / Fix Status
@@ -37,6 +42,7 @@
 |---|---|
 | Fix reference | PR [`#1143`](https://github.com/gonka-ai/gonka/pull/1143) states that `v0.2.13` fixes confirmation PoC weight loss during new-model bootstrap by using a consistent epoch snapshot for confirmation and reward-weight calculations. |
 | DevOps confirmation | Gleb Morgachev stated in message `15567` that a fix was added in `0.2.13` to prevent the relevant nodes from remaining preserved in this condition. |
+| Configuration dispute | Gleb later noted that `poc/proofs` had been in the recommended proxy config since January and warned against creating a precedent for node-misconfiguration compensation. |
 | Timing | DevOps announcement reports `v0.2.13` executed on mainnet at block `4267300` on 2026-05-26. Historical losses remain a compensation decision. |
 
 ## Reward Flow
@@ -45,7 +51,10 @@ The identified claimant is described as having a Kimi confirmation-PoC shortfall
 
 ## Sources
 
-- No standalone public calculation repository identified for this candidate.
+- [Investigation repository](https://github.com/gonkalabs/GRC-e267-kimi_shortfall)
+- [Case intake form](https://github.com/gonkalabs/GRC-e267-kimi_shortfall/blob/main/grc-form.md)
+- [Restitution report](https://github.com/gonkalabs/GRC-e267-kimi_shortfall/blob/main/RESTITUTION_REPORT.md)
+- [GRC chat update export index](sources/GRC-chat-update-2026-06-01.md)
 - [DevOps chat evidence log](sources/P3-CAND-03-devops-chat.md)
 - [PR #1143: v0.2.13 microrelease](https://github.com/gonka-ai/gonka/pull/1143)
 - [Settlement logic: `accountsettle.go`](https://github.com/gonka-ai/gonka/blob/17808620293b57112896bcbb7f99c4c2f554d6c8/inference-chain/x/inference/keeper/accountsettle.go)

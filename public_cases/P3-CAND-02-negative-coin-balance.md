@@ -20,12 +20,14 @@
 |---|---|---|---|
 | 2026-05-26 06:54 UTC+03 | Evgenii Maksimenkov | Introduced a recovery proposal initially covering unclaimed rewards. | Initial submission; scope later narrowed. |
 | 2026-05-26 08:22 UTC+03 | Votkon | GRC should restitute rewards lost due to confirmed protocol issues. | Scope requirement: exclude normal unclaimed cases. |
+| 2026-05-26 08:31 UTC+03 | Evgenii Maksimenkov | Scope filters would keep only participants assigned rewards whose claim failed with "No rewards for this address". | Method narrowed to the settle-drop path. |
 | 2026-05-26 09:23 UTC+03 | Evgenii Maksimenkov | "only 19 participants remain" affected by the specific bug. | Narrow deterministic affected set. |
 | 2026-05-26 16:21 UTC+03 | Evgenii Maksimenkov | Shared PR #826 and PR #550. | Referenced issue/fix sources. |
 
 ## Findings
 
 - A participant is included when rewards were calculated but no `SettleAmount` entry existed at settlement.
+- The broader first-pass scan found 576 participants with assigned but unclaimed rewards for any reason; after checking for a missing post-settlement `SettleAmount`, 19 remained in the deterministic bug scope.
 - Published result: `19` miners and `1,075.336 GNK`.
 - The method uses historical on-chain state from an archive node.
 
@@ -44,5 +46,6 @@ This case is not redistribution through reduced reward weight. The chain recorde
 ## Sources
 
 - [Calculation repository](https://github.com/gonkavip/unclaimed)
+- [GRC chat update export index](sources/GRC-chat-update-2026-06-01.md)
 - [PR #826](https://github.com/gonka-ai/gonka/pull/826)
 - [PR #550](https://github.com/gonka-ai/gonka/pull/550)

@@ -20,6 +20,7 @@
 |---|---|---|---|
 | 2026-05-26 21:54 UTC+03 | Votkon | `LastUpgradeHeight` was not recorded after v0.2.13. | Stated root cause for unintended cPoC execution. |
 | 2026-05-27 06:18 UTC+03 | Evgenii Maksimenkov | "7 participants were affected and dropped out" | Initial dropped-participant scope. |
+| 2026-05-27 09:27 UTC+03 | Evgenii Maksimenkov | `UpgradeProtectionWindow` was supposed to be `10,000` blocks, nearly 15 hours. | Confirms both subsequent cPoC rounds were inside the intended safety window. |
 | 2026-05-27 10:12 UTC+03 | Evgenii Maksimenkov | Published the calculation script and total. | Calculation available for review. |
 | 2026-05-27 12:09 UTC+03 | Nik | Script ran without errors and amount matched. | One reproduction reported. |
 | 2026-05-26 18:52-18:57 UTC+03 | Arturs Plisko; Evgenii Maksimenkov; Gleb Morgachev, DevOps chat | cPoC happened although it was not expected; five participants dropped after the latest cPoC. | Contemporaneous technical confirmation. |
@@ -30,6 +31,7 @@
 - Published calculation includes `7` dropped miners and `12` miners with reduced confirmation weight.
 - Total calculated payout: `36,209.451 GNK`.
 - Inputs are archive-node snapshots at fixed historical block heights.
+- The calculation compares chain state at block heights `4267299` and `4274661`.
 - DevOps chat identifies one affected address, `gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09`, with reported `53.21%` confirmation ratio before dropping from the epoch.
 
 ## Mitigation / Fix Status
@@ -48,6 +50,7 @@ The calculation reports `7` dropped participants receiving zero reward and `12` 
 ## Sources
 
 - [Calculation repository](https://github.com/gonkavip/payout276)
+- [GRC chat update export index](sources/GRC-chat-update-2026-06-01.md)
 - [Upgrade proposal #54](https://gonka.gg/network/proposals/54)
 - [DevOps chat evidence log](sources/P3-CAND-04-devops-chat.md)
 - [PR #1143: v0.2.13 microrelease](https://github.com/gonka-ai/gonka/pull/1143)
