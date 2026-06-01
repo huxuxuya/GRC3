@@ -104,6 +104,8 @@ The participant/epoch timeline with PoC start, cPoC trigger, exclusion height,
 blocks remaining to next epoch, root weight, confirmed weight, and lost
 confirmation weight is in
 `validations/P3-CAND-06-pre-fix-confirmation-accounting/participant_epoch_timeline.md`.
+For the more readable participant -> epoch -> cPoC breakdown, use
+`validations/P3-CAND-06-pre-fix-confirmation-accounting/participant_grouped_cpoc_timeline.md`.
 
 ## Гипотезы И Пробелы В Данных
 
@@ -146,5 +148,6 @@ confirmation weight is in
 - [Validation README](../validations/P3-CAND-06-pre-fix-confirmation-accounting/README.md)
 - [Candidate rows CSV](../validations/P3-CAND-06-pre-fix-confirmation-accounting/candidate_rows.csv)
 - [Participant epoch timeline](../validations/P3-CAND-06-pre-fix-confirmation-accounting/participant_epoch_timeline.md)
+- [Grouped cPoC timeline](../validations/P3-CAND-06-pre-fix-confirmation-accounting/participant_grouped_cpoc_timeline.md)
 - [Source scan artifact](../validations/P3-CAND-03-failed-cpoc-epoch-267/case3_neighbor_failed_cpoc_rows.csv)
 - [Pre-fix window review](../validations/P3-CAND-03-failed-cpoc-epoch-267/case3_pre_fix_window_review.md)

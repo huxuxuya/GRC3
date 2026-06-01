@@ -83,6 +83,9 @@ Distribution by epoch:
 The full row list is in `candidate_rows.csv`.
 The expanded per-participant timeline is in `participant_epoch_timeline.md`;
 the machine-readable version is `participant_epoch_timeline.csv`.
+The grouped participant -> epoch -> cPoC view is in
+`participant_grouped_cpoc_timeline.md`; the machine-readable version is
+`participant_grouped_cpoc_timeline.csv`.
 
 | Epoch | Participant | Ratio | Qwen result | Kimi result | Loss, GONKA |
 |---:|---|---:|---|---|---:|
@@ -126,6 +129,9 @@ the machine-readable version is `participant_epoch_timeline.csv`.
 
 - `participant_epoch_timeline.md`
 - `participant_epoch_timeline.csv`
+- `participant_grouped_cpoc_timeline.md`
+- `participant_grouped_cpoc_timeline.csv`
+- `build_grouped_timeline.py`
 - `candidate_rows.csv`
 - `../P3-CAND-03-failed-cpoc-epoch-267/case3_neighbor_failed_cpoc_rows.csv`
 - `../P3-CAND-03-failed-cpoc-epoch-267/case3_pre_fix_window_review.md`
