@@ -1,1 +1,6 @@
 Exported Data_Update.pdf
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
