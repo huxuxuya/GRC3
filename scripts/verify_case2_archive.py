@@ -308,18 +308,27 @@ def write_outputs(
     rows: list[dict[str, object]],
     failures: list[tuple[str, int, str]],
     epoch_stats: list[dict[str, object]],
+    snapshot_stats: list[dict[str, object]],
 ) -> tuple[Path, Path]:
     output_dir = workdir / "outputs"
     output_dir.mkdir(parents=True, exist_ok=True)
     artifact_dir.mkdir(parents=True, exist_ok=True)
     csv_path = output_dir / f"case2_{mode}_candidates.csv"
     json_path = output_dir / f"case2_{mode}_summary.json"
+    coverage_path = output_dir / f"case2_{mode}_coverage.csv"
     artifact_csv_path = artifact_dir / f"case2_{mode}_candidates.csv"
     artifact_json_path = artifact_dir / f"case2_{mode}_summary.json"
+    artifact_coverage_path = artifact_dir / f"case2_{mode}_coverage.csv"
 
     by_addr: dict[str, dict[int, int]] = {}
+    by_epoch: dict[int, dict[str, int]] = {}
     for row in rows:
-        by_addr.setdefault(str(row["address"]), {})[int(row["epoch"])] = int(row["rewarded_coins"])
+        epoch = int(row["epoch"])
+        coins = int(row["rewarded_coins"])
+        by_addr.setdefault(str(row["address"]), {})[epoch] = coins
+        slot = by_epoch.setdefault(epoch, {"candidate_pairs": 0, "candidate_reward_ngonka": 0})
+        slot["candidate_pairs"] += 1
+        slot["candidate_reward_ngonka"] += coins
 
     def write_csv(path: Path) -> None:
         with path.open("w", newline="", encoding="utf-8") as handle:
@@ -334,11 +343,55 @@ def write_outputs(
     write_csv(csv_path)
     write_csv(artifact_csv_path)
 
+    epoch_stats_by_epoch = {int(row["epoch"]): row for row in epoch_stats}
+    snapshot_stats_by_epoch = {int(row["epoch"]): row for row in snapshot_stats}
+
+    def write_coverage(path: Path) -> None:
+        with path.open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.writer(handle, lineterminator="\n")
+            writer.writerow(
+                [
+                    "epoch",
+                    "effective_height",
+                    "summary_rows",
+                    "positive_unclaimed_rows",
+                    "positive_unclaimed_reward",
+                    "settle_snapshot_entries",
+                    "settle_entries_for_epoch",
+                    "candidate_pairs",
+                    "candidate_reward_ngonka",
+                ]
+            )
+            for epoch in epochs:
+                summary = epoch_stats_by_epoch.get(epoch, {})
+                snapshot = snapshot_stats_by_epoch.get(epoch, {})
+                candidates_for_epoch = by_epoch.get(epoch, {})
+                writer.writerow(
+                    [
+                        epoch,
+                        snapshot.get("effective_height", 0),
+                        summary.get("summary_rows", 0),
+                        summary.get("positive_unclaimed_rows", 0),
+                        summary.get("positive_unclaimed_reward", 0),
+                        snapshot.get("settle_snapshot_entries", 0),
+                        snapshot.get("settle_entries_for_epoch", 0),
+                        candidates_for_epoch.get("candidate_pairs", 0),
+                        candidates_for_epoch.get("candidate_reward_ngonka", 0),
+                    ]
+                )
+
+    write_coverage(coverage_path)
+    write_coverage(artifact_coverage_path)
+
     # The JSON summary is deliberately sanitized: it contains counts, totals,
     # failures and checked heights, but not the configured endpoint or API key.
+    snapshot_count = sum(1 for row in snapshot_stats if int(row.get("effective_height") or 0) > 0)
     summary = {
         "mode": mode,
         "epochs": epochs,
+        "epoch_count": len(epochs),
+        "settle_snapshots_checked": snapshot_count,
+        "settle_snapshot_coverage_complete": snapshot_count == len(epochs),
         "candidate_pairs": len(rows),
         "affected_addresses": len(by_addr),
         "total_ngonka": sum(int(row["rewarded_coins"]) for row in rows),
@@ -349,6 +402,7 @@ def write_outputs(
             for stage, epoch, detail in failures
         ],
         "epoch_stats": epoch_stats,
+        "snapshot_stats": snapshot_stats,
     }
     json_text = json.dumps(summary, indent=2)
     json_path.write_text(json_text, encoding="utf-8")
@@ -427,8 +481,17 @@ def main() -> int:
             }
         )
 
+    snapshot_stats: list[dict[str, object]] = []
     for index, epoch in enumerate(epochs, start=1):
         height, entries, entries_for_epoch = fetch_settle_snapshot(db, base, epoch)
+        snapshot_stats.append(
+            {
+                "epoch": epoch,
+                "effective_height": height,
+                "settle_snapshot_entries": entries,
+                "settle_entries_for_epoch": entries_for_epoch,
+            }
+        )
         print(
             f"snapshot {index}/{len(epochs)} epoch={epoch} height={height} "
             f"entries={entries} entries_for_epoch={entries_for_epoch}",
@@ -449,6 +512,7 @@ def main() -> int:
         rows,
         failures,
         sorted(epoch_stats, key=lambda x: int(x["epoch"])),
+        sorted(snapshot_stats, key=lambda x: int(x["epoch"])),
     )
 
     total = sum(int(row["rewarded_coins"]) for row in rows)

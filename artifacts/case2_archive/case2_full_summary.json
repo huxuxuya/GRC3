@@ -276,6 +276,9 @@
     273,
     274
   ],
+  "epoch_count": 274,
+  "settle_snapshots_checked": 274,
+  "settle_snapshot_coverage_complete": true,
   "candidate_pairs": 19,
   "affected_addresses": 19,
   "total_ngonka": 1075336150923,
@@ -1932,6 +1935,1652 @@
       "summary_rows": 55,
       "positive_unclaimed_rows": 0,
       "positive_unclaimed_reward": 0
+    }
+  ],
+  "snapshot_stats": [
+    {
+      "epoch": 1,
+      "effective_height": 17785,
+      "settle_snapshot_entries": 10,
+      "settle_entries_for_epoch": 10
+    },
+    {
+      "epoch": 2,
+      "effective_height": 35065,
+      "settle_snapshot_entries": 10,
+      "settle_entries_for_epoch": 10
+    },
+    {
+      "epoch": 3,
+      "effective_height": 52345,
+      "settle_snapshot_entries": 10,
+      "settle_entries_for_epoch": 10
+    },
+    {
+      "epoch": 4,
+      "effective_height": 69625,
+      "settle_snapshot_entries": 11,
+      "settle_entries_for_epoch": 11
+    },
+    {
+      "epoch": 5,
+      "effective_height": 86905,
+      "settle_snapshot_entries": 13,
+      "settle_entries_for_epoch": 12
+    },
+    {
+      "epoch": 6,
+      "effective_height": 104185,
+      "settle_snapshot_entries": 19,
+      "settle_entries_for_epoch": 19
+    },
+    {
+      "epoch": 7,
+      "effective_height": 121465,
+      "settle_snapshot_entries": 22,
+      "settle_entries_for_epoch": 20
+    },
+    {
+      "epoch": 8,
+      "effective_height": 138745,
+      "settle_snapshot_entries": 20,
+      "settle_entries_for_epoch": 20
+    },
+    {
+      "epoch": 9,
+      "effective_height": 156025,
+      "settle_snapshot_entries": 22,
+      "settle_entries_for_epoch": 22
+    },
+    {
+      "epoch": 10,
+      "effective_height": 173305,
+      "settle_snapshot_entries": 23,
+      "settle_entries_for_epoch": 23
+    },
+    {
+      "epoch": 11,
+      "effective_height": 190585,
+      "settle_snapshot_entries": 22,
+      "settle_entries_for_epoch": 21
+    },
+    {
+      "epoch": 12,
+      "effective_height": 207865,
+      "settle_snapshot_entries": 21,
+      "settle_entries_for_epoch": 19
+    },
+    {
+      "epoch": 13,
+      "effective_height": 225145,
+      "settle_snapshot_entries": 20,
+      "settle_entries_for_epoch": 20
+    },
+    {
+      "epoch": 14,
+      "effective_height": 242425,
+      "settle_snapshot_entries": 29,
+      "settle_entries_for_epoch": 29
+    },
+    {
+      "epoch": 15,
+      "effective_height": 257816,
+      "settle_snapshot_entries": 31,
+      "settle_entries_for_epoch": 31
+    },
+    {
+      "epoch": 16,
+      "effective_height": 273207,
+      "settle_snapshot_entries": 32,
+      "settle_entries_for_epoch": 32
+    },
+    {
+      "epoch": 17,
+      "effective_height": 288598,
+      "settle_snapshot_entries": 34,
+      "settle_entries_for_epoch": 34
+    },
+    {
+      "epoch": 18,
+      "effective_height": 303989,
+      "settle_snapshot_entries": 34,
+      "settle_entries_for_epoch": 33
+    },
+    {
+      "epoch": 19,
+      "effective_height": 319380,
+      "settle_snapshot_entries": 35,
+      "settle_entries_for_epoch": 35
+    },
+    {
+      "epoch": 20,
+      "effective_height": 334771,
+      "settle_snapshot_entries": 38,
+      "settle_entries_for_epoch": 38
+    },
+    {
+      "epoch": 21,
+      "effective_height": 350162,
+      "settle_snapshot_entries": 39,
+      "settle_entries_for_epoch": 37
+    },
+    {
+      "epoch": 22,
+      "effective_height": 365553,
+      "settle_snapshot_entries": 38,
+      "settle_entries_for_epoch": 38
+    },
+    {
+      "epoch": 23,
+      "effective_height": 380944,
+      "settle_snapshot_entries": 36,
+      "settle_entries_for_epoch": 35
+    },
+    {
+      "epoch": 24,
+      "effective_height": 396335,
+      "settle_snapshot_entries": 37,
+      "settle_entries_for_epoch": 36
+    },
+    {
+      "epoch": 25,
+      "effective_height": 411726,
+      "settle_snapshot_entries": 38,
+      "settle_entries_for_epoch": 38
+    },
+    {
+      "epoch": 26,
+      "effective_height": 427117,
+      "settle_snapshot_entries": 40,
+      "settle_entries_for_epoch": 40
+    },
+    {
+      "epoch": 27,
+      "effective_height": 442508,
+      "settle_snapshot_entries": 43,
+      "settle_entries_for_epoch": 39
+    },
+    {
+      "epoch": 28,
+      "effective_height": 457999,
+      "settle_snapshot_entries": 40,
+      "settle_entries_for_epoch": 38
+    },
+    {
+      "epoch": 29,
+      "effective_height": 473390,
+      "settle_snapshot_entries": 39,
+      "settle_entries_for_epoch": 39
+    },
+    {
+      "epoch": 30,
+      "effective_height": 488781,
+      "settle_snapshot_entries": 38,
+      "settle_entries_for_epoch": 38
+    },
+    {
+      "epoch": 31,
+      "effective_height": 504172,
+      "settle_snapshot_entries": 38,
+      "settle_entries_for_epoch": 38
+    },
+    {
+      "epoch": 32,
+      "effective_height": 519563,
+      "settle_snapshot_entries": 45,
+      "settle_entries_for_epoch": 40
+    },
+    {
+      "epoch": 33,
+      "effective_height": 534954,
+      "settle_snapshot_entries": 36,
+      "settle_entries_for_epoch": 32
+    },
+    {
+      "epoch": 34,
+      "effective_height": 550345,
+      "settle_snapshot_entries": 30,
+      "settle_entries_for_epoch": 24
+    },
+    {
+      "epoch": 35,
+      "effective_height": 565736,
+      "settle_snapshot_entries": 33,
+      "settle_entries_for_epoch": 33
+    },
+    {
+      "epoch": 36,
+      "effective_height": 581127,
+      "settle_snapshot_entries": 35,
+      "settle_entries_for_epoch": 35
+    },
+    {
+      "epoch": 37,
+      "effective_height": 596518,
+      "settle_snapshot_entries": 35,
+      "settle_entries_for_epoch": 34
+    },
+    {
+      "epoch": 38,
+      "effective_height": 611909,
+      "settle_snapshot_entries": 34,
+      "settle_entries_for_epoch": 34
+    },
+    {
+      "epoch": 39,
+      "effective_height": 627300,
+      "settle_snapshot_entries": 33,
+      "settle_entries_for_epoch": 33
+    },
+    {
+      "epoch": 40,
+      "effective_height": 642691,
+      "settle_snapshot_entries": 34,
+      "settle_entries_for_epoch": 32
+    },
+    {
+      "epoch": 41,
+      "effective_height": 658082,
+      "settle_snapshot_entries": 24,
+      "settle_entries_for_epoch": 24
+    },
+    {
+      "epoch": 42,
+      "effective_height": 673473,
+      "settle_snapshot_entries": 25,
+      "settle_entries_for_epoch": 23
+    },
+    {
+      "epoch": 43,
+      "effective_height": 688864,
+      "settle_snapshot_entries": 24,
+      "settle_entries_for_epoch": 19
+    },
+    {
+      "epoch": 44,
+      "effective_height": 704255,
+      "settle_snapshot_entries": 23,
+      "settle_entries_for_epoch": 23
+    },
+    {
+      "epoch": 45,
+      "effective_height": 719646,
+      "settle_snapshot_entries": 23,
+      "settle_entries_for_epoch": 23
+    },
+    {
+      "epoch": 46,
+      "effective_height": 735037,
+      "settle_snapshot_entries": 22,
+      "settle_entries_for_epoch": 19
+    },
+    {
+      "epoch": 47,
+      "effective_height": 750428,
+      "settle_snapshot_entries": 17,
+      "settle_entries_for_epoch": 17
+    },
+    {
+      "epoch": 48,
+      "effective_height": 765819,
+      "settle_snapshot_entries": 19,
+      "settle_entries_for_epoch": 19
+    },
+    {
+      "epoch": 49,
+      "effective_height": 781210,
+      "settle_snapshot_entries": 20,
+      "settle_entries_for_epoch": 19
+    },
+    {
+      "epoch": 50,
+      "effective_height": 796601,
+      "settle_snapshot_entries": 22,
+      "settle_entries_for_epoch": 22
+    },
+    {
+      "epoch": 51,
+      "effective_height": 811992,
+      "settle_snapshot_entries": 20,
+      "settle_entries_for_epoch": 20
+    },
+    {
+      "epoch": 52,
+      "effective_height": 827383,
+      "settle_snapshot_entries": 21,
+      "settle_entries_for_epoch": 21
+    },
+    {
+      "epoch": 53,
+      "effective_height": 842774,
+      "settle_snapshot_entries": 25,
+      "settle_entries_for_epoch": 25
+    },
+    {
+      "epoch": 54,
+      "effective_height": 858165,
+      "settle_snapshot_entries": 24,
+      "settle_entries_for_epoch": 24
+    },
+    {
+      "epoch": 55,
+      "effective_height": 873556,
+      "settle_snapshot_entries": 19,
+      "settle_entries_for_epoch": 19
+    },
+    {
+      "epoch": 56,
+      "effective_height": 888947,
+      "settle_snapshot_entries": 24,
+      "settle_entries_for_epoch": 24
+    },
+    {
+      "epoch": 57,
+      "effective_height": 904338,
+      "settle_snapshot_entries": 26,
+      "settle_entries_for_epoch": 26
+    },
+    {
+      "epoch": 58,
+      "effective_height": 919729,
+      "settle_snapshot_entries": 26,
+      "settle_entries_for_epoch": 26
+    },
+    {
+      "epoch": 59,
+      "effective_height": 935120,
+      "settle_snapshot_entries": 25,
+      "settle_entries_for_epoch": 25
+    },
+    {
+      "epoch": 60,
+      "effective_height": 950511,
+      "settle_snapshot_entries": 26,
+      "settle_entries_for_epoch": 26
+    },
+    {
+      "epoch": 61,
+      "effective_height": 965902,
+      "settle_snapshot_entries": 28,
+      "settle_entries_for_epoch": 28
+    },
+    {
+      "epoch": 62,
+      "effective_height": 981293,
+      "settle_snapshot_entries": 25,
+      "settle_entries_for_epoch": 24
+    },
+    {
+      "epoch": 63,
+      "effective_height": 996684,
+      "settle_snapshot_entries": 28,
+      "settle_entries_for_epoch": 28
+    },
+    {
+      "epoch": 64,
+      "effective_height": 1012075,
+      "settle_snapshot_entries": 26,
+      "settle_entries_for_epoch": 26
+    },
+    {
+      "epoch": 65,
+      "effective_height": 1027466,
+      "settle_snapshot_entries": 30,
+      "settle_entries_for_epoch": 29
+    },
+    {
+      "epoch": 66,
+      "effective_height": 1042857,
+      "settle_snapshot_entries": 24,
+      "settle_entries_for_epoch": 24
+    },
+    {
+      "epoch": 67,
+      "effective_height": 1058248,
+      "settle_snapshot_entries": 25,
+      "settle_entries_for_epoch": 23
+    },
+    {
+      "epoch": 68,
+      "effective_height": 1073639,
+      "settle_snapshot_entries": 25,
+      "settle_entries_for_epoch": 25
+    },
+    {
+      "epoch": 69,
+      "effective_height": 1089030,
+      "settle_snapshot_entries": 31,
+      "settle_entries_for_epoch": 30
+    },
+    {
+      "epoch": 70,
+      "effective_height": 1104421,
+      "settle_snapshot_entries": 35,
+      "settle_entries_for_epoch": 35
+    },
+    {
+      "epoch": 71,
+      "effective_height": 1119812,
+      "settle_snapshot_entries": 33,
+      "settle_entries_for_epoch": 30
+    },
+    {
+      "epoch": 72,
+      "effective_height": 1135203,
+      "settle_snapshot_entries": 42,
+      "settle_entries_for_epoch": 41
+    },
+    {
+      "epoch": 73,
+      "effective_height": 1150594,
+      "settle_snapshot_entries": 38,
+      "settle_entries_for_epoch": 37
+    },
+    {
+      "epoch": 74,
+      "effective_height": 1165985,
+      "settle_snapshot_entries": 42,
+      "settle_entries_for_epoch": 39
+    },
+    {
+      "epoch": 75,
+      "effective_height": 1181376,
+      "settle_snapshot_entries": 46,
+      "settle_entries_for_epoch": 46
+    },
+    {
+      "epoch": 76,
+      "effective_height": 1196767,
+      "settle_snapshot_entries": 51,
+      "settle_entries_for_epoch": 51
+    },
+    {
+      "epoch": 77,
+      "effective_height": 1212158,
+      "settle_snapshot_entries": 62,
+      "settle_entries_for_epoch": 62
+    },
+    {
+      "epoch": 78,
+      "effective_height": 1227549,
+      "settle_snapshot_entries": 75,
+      "settle_entries_for_epoch": 72
+    },
+    {
+      "epoch": 79,
+      "effective_height": 1242940,
+      "settle_snapshot_entries": 83,
+      "settle_entries_for_epoch": 80
+    },
+    {
+      "epoch": 80,
+      "effective_height": 1258331,
+      "settle_snapshot_entries": 82,
+      "settle_entries_for_epoch": 75
+    },
+    {
+      "epoch": 81,
+      "effective_height": 1273722,
+      "settle_snapshot_entries": 97,
+      "settle_entries_for_epoch": 92
+    },
+    {
+      "epoch": 82,
+      "effective_height": 1289113,
+      "settle_snapshot_entries": 140,
+      "settle_entries_for_epoch": 130
+    },
+    {
+      "epoch": 83,
+      "effective_height": 1304504,
+      "settle_snapshot_entries": 152,
+      "settle_entries_for_epoch": 146
+    },
+    {
+      "epoch": 84,
+      "effective_height": 1319895,
+      "settle_snapshot_entries": 126,
+      "settle_entries_for_epoch": 120
+    },
+    {
+      "epoch": 85,
+      "effective_height": 1335286,
+      "settle_snapshot_entries": 178,
+      "settle_entries_for_epoch": 174
+    },
+    {
+      "epoch": 86,
+      "effective_height": 1350677,
+      "settle_snapshot_entries": 201,
+      "settle_entries_for_epoch": 180
+    },
+    {
+      "epoch": 87,
+      "effective_height": 1366068,
+      "settle_snapshot_entries": 293,
+      "settle_entries_for_epoch": 287
+    },
+    {
+      "epoch": 88,
+      "effective_height": 1381459,
+      "settle_snapshot_entries": 353,
+      "settle_entries_for_epoch": 344
+    },
+    {
+      "epoch": 89,
+      "effective_height": 1396850,
+      "settle_snapshot_entries": 403,
+      "settle_entries_for_epoch": 395
+    },
+    {
+      "epoch": 90,
+      "effective_height": 1412241,
+      "settle_snapshot_entries": 440,
+      "settle_entries_for_epoch": 423
+    },
+    {
+      "epoch": 91,
+      "effective_height": 1427632,
+      "settle_snapshot_entries": 426,
+      "settle_entries_for_epoch": 411
+    },
+    {
+      "epoch": 92,
+      "effective_height": 1443023,
+      "settle_snapshot_entries": 420,
+      "settle_entries_for_epoch": 406
+    },
+    {
+      "epoch": 93,
+      "effective_height": 1458414,
+      "settle_snapshot_entries": 423,
+      "settle_entries_for_epoch": 411
+    },
+    {
+      "epoch": 94,
+      "effective_height": 1473805,
+      "settle_snapshot_entries": 405,
+      "settle_entries_for_epoch": 390
+    },
+    {
+      "epoch": 95,
+      "effective_height": 1489196,
+      "settle_snapshot_entries": 420,
+      "settle_entries_for_epoch": 412
+    },
+    {
+      "epoch": 96,
+      "effective_height": 1504587,
+      "settle_snapshot_entries": 427,
+      "settle_entries_for_epoch": 406
+    },
+    {
+      "epoch": 97,
+      "effective_height": 1519978,
+      "settle_snapshot_entries": 419,
+      "settle_entries_for_epoch": 400
+    },
+    {
+      "epoch": 98,
+      "effective_height": 1535369,
+      "settle_snapshot_entries": 412,
+      "settle_entries_for_epoch": 398
+    },
+    {
+      "epoch": 99,
+      "effective_height": 1550760,
+      "settle_snapshot_entries": 425,
+      "settle_entries_for_epoch": 418
+    },
+    {
+      "epoch": 100,
+      "effective_height": 1566151,
+      "settle_snapshot_entries": 438,
+      "settle_entries_for_epoch": 416
+    },
+    {
+      "epoch": 101,
+      "effective_height": 1581542,
+      "settle_snapshot_entries": 447,
+      "settle_entries_for_epoch": 442
+    },
+    {
+      "epoch": 102,
+      "effective_height": 1596933,
+      "settle_snapshot_entries": 439,
+      "settle_entries_for_epoch": 433
+    },
+    {
+      "epoch": 103,
+      "effective_height": 1612324,
+      "settle_snapshot_entries": 463,
+      "settle_entries_for_epoch": 445
+    },
+    {
+      "epoch": 104,
+      "effective_height": 1627715,
+      "settle_snapshot_entries": 460,
+      "settle_entries_for_epoch": 442
+    },
+    {
+      "epoch": 105,
+      "effective_height": 1643106,
+      "settle_snapshot_entries": 482,
+      "settle_entries_for_epoch": 463
+    },
+    {
+      "epoch": 106,
+      "effective_height": 1658497,
+      "settle_snapshot_entries": 468,
+      "settle_entries_for_epoch": 449
+    },
+    {
+      "epoch": 107,
+      "effective_height": 1673888,
+      "settle_snapshot_entries": 482,
+      "settle_entries_for_epoch": 446
+    },
+    {
+      "epoch": 108,
+      "effective_height": 1689279,
+      "settle_snapshot_entries": 488,
+      "settle_entries_for_epoch": 456
+    },
+    {
+      "epoch": 109,
+      "effective_height": 1704670,
+      "settle_snapshot_entries": 487,
+      "settle_entries_for_epoch": 445
+    },
+    {
+      "epoch": 110,
+      "effective_height": 1720061,
+      "settle_snapshot_entries": 501,
+      "settle_entries_for_epoch": 481
+    },
+    {
+      "epoch": 111,
+      "effective_height": 1735452,
+      "settle_snapshot_entries": 534,
+      "settle_entries_for_epoch": 525
+    },
+    {
+      "epoch": 112,
+      "effective_height": 1750843,
+      "settle_snapshot_entries": 563,
+      "settle_entries_for_epoch": 552
+    },
+    {
+      "epoch": 113,
+      "effective_height": 1766234,
+      "settle_snapshot_entries": 529,
+      "settle_entries_for_epoch": 509
+    },
+    {
+      "epoch": 114,
+      "effective_height": 1781625,
+      "settle_snapshot_entries": 542,
+      "settle_entries_for_epoch": 519
+    },
+    {
+      "epoch": 115,
+      "effective_height": 1797016,
+      "settle_snapshot_entries": 569,
+      "settle_entries_for_epoch": 550
+    },
+    {
+      "epoch": 116,
+      "effective_height": 1812407,
+      "settle_snapshot_entries": 557,
+      "settle_entries_for_epoch": 544
+    },
+    {
+      "epoch": 117,
+      "effective_height": 1827798,
+      "settle_snapshot_entries": 613,
+      "settle_entries_for_epoch": 598
+    },
+    {
+      "epoch": 118,
+      "effective_height": 1843189,
+      "settle_snapshot_entries": 561,
+      "settle_entries_for_epoch": 507
+    },
+    {
+      "epoch": 119,
+      "effective_height": 1858580,
+      "settle_snapshot_entries": 591,
+      "settle_entries_for_epoch": 587
+    },
+    {
+      "epoch": 120,
+      "effective_height": 1873971,
+      "settle_snapshot_entries": 578,
+      "settle_entries_for_epoch": 568
+    },
+    {
+      "epoch": 121,
+      "effective_height": 1889362,
+      "settle_snapshot_entries": 580,
+      "settle_entries_for_epoch": 578
+    },
+    {
+      "epoch": 122,
+      "effective_height": 1904753,
+      "settle_snapshot_entries": 571,
+      "settle_entries_for_epoch": 567
+    },
+    {
+      "epoch": 123,
+      "effective_height": 1920144,
+      "settle_snapshot_entries": 524,
+      "settle_entries_for_epoch": 513
+    },
+    {
+      "epoch": 124,
+      "effective_height": 1935535,
+      "settle_snapshot_entries": 464,
+      "settle_entries_for_epoch": 438
+    },
+    {
+      "epoch": 125,
+      "effective_height": 1950926,
+      "settle_snapshot_entries": 485,
+      "settle_entries_for_epoch": 478
+    },
+    {
+      "epoch": 126,
+      "effective_height": 1966317,
+      "settle_snapshot_entries": 540,
+      "settle_entries_for_epoch": 536
+    },
+    {
+      "epoch": 127,
+      "effective_height": 1981708,
+      "settle_snapshot_entries": 542,
+      "settle_entries_for_epoch": 538
+    },
+    {
+      "epoch": 128,
+      "effective_height": 1997099,
+      "settle_snapshot_entries": 587,
+      "settle_entries_for_epoch": 581
+    },
+    {
+      "epoch": 129,
+      "effective_height": 2012490,
+      "settle_snapshot_entries": 534,
+      "settle_entries_for_epoch": 527
+    },
+    {
+      "epoch": 130,
+      "effective_height": 2027881,
+      "settle_snapshot_entries": 541,
+      "settle_entries_for_epoch": 536
+    },
+    {
+      "epoch": 131,
+      "effective_height": 2043272,
+      "settle_snapshot_entries": 558,
+      "settle_entries_for_epoch": 544
+    },
+    {
+      "epoch": 132,
+      "effective_height": 2058663,
+      "settle_snapshot_entries": 523,
+      "settle_entries_for_epoch": 518
+    },
+    {
+      "epoch": 133,
+      "effective_height": 2074054,
+      "settle_snapshot_entries": 509,
+      "settle_entries_for_epoch": 485
+    },
+    {
+      "epoch": 134,
+      "effective_height": 2089445,
+      "settle_snapshot_entries": 474,
+      "settle_entries_for_epoch": 462
+    },
+    {
+      "epoch": 135,
+      "effective_height": 2104836,
+      "settle_snapshot_entries": 497,
+      "settle_entries_for_epoch": 495
+    },
+    {
+      "epoch": 136,
+      "effective_height": 2120227,
+      "settle_snapshot_entries": 504,
+      "settle_entries_for_epoch": 501
+    },
+    {
+      "epoch": 137,
+      "effective_height": 2135618,
+      "settle_snapshot_entries": 499,
+      "settle_entries_for_epoch": 495
+    },
+    {
+      "epoch": 138,
+      "effective_height": 2151009,
+      "settle_snapshot_entries": 389,
+      "settle_entries_for_epoch": 384
+    },
+    {
+      "epoch": 139,
+      "effective_height": 2166400,
+      "settle_snapshot_entries": 377,
+      "settle_entries_for_epoch": 375
+    },
+    {
+      "epoch": 140,
+      "effective_height": 2181791,
+      "settle_snapshot_entries": 379,
+      "settle_entries_for_epoch": 379
+    },
+    {
+      "epoch": 141,
+      "effective_height": 2197182,
+      "settle_snapshot_entries": 371,
+      "settle_entries_for_epoch": 369
+    },
+    {
+      "epoch": 142,
+      "effective_height": 2212573,
+      "settle_snapshot_entries": 354,
+      "settle_entries_for_epoch": 350
+    },
+    {
+      "epoch": 143,
+      "effective_height": 2227964,
+      "settle_snapshot_entries": 349,
+      "settle_entries_for_epoch": 334
+    },
+    {
+      "epoch": 144,
+      "effective_height": 2243355,
+      "settle_snapshot_entries": 348,
+      "settle_entries_for_epoch": 344
+    },
+    {
+      "epoch": 145,
+      "effective_height": 2258746,
+      "settle_snapshot_entries": 317,
+      "settle_entries_for_epoch": 314
+    },
+    {
+      "epoch": 146,
+      "effective_height": 2274137,
+      "settle_snapshot_entries": 288,
+      "settle_entries_for_epoch": 276
+    },
+    {
+      "epoch": 147,
+      "effective_height": 2289528,
+      "settle_snapshot_entries": 262,
+      "settle_entries_for_epoch": 257
+    },
+    {
+      "epoch": 148,
+      "effective_height": 2304919,
+      "settle_snapshot_entries": 273,
+      "settle_entries_for_epoch": 272
+    },
+    {
+      "epoch": 149,
+      "effective_height": 2320310,
+      "settle_snapshot_entries": 287,
+      "settle_entries_for_epoch": 287
+    },
+    {
+      "epoch": 150,
+      "effective_height": 2335701,
+      "settle_snapshot_entries": 281,
+      "settle_entries_for_epoch": 280
+    },
+    {
+      "epoch": 151,
+      "effective_height": 2351092,
+      "settle_snapshot_entries": 259,
+      "settle_entries_for_epoch": 256
+    },
+    {
+      "epoch": 152,
+      "effective_height": 2366483,
+      "settle_snapshot_entries": 293,
+      "settle_entries_for_epoch": 292
+    },
+    {
+      "epoch": 153,
+      "effective_height": 2381874,
+      "settle_snapshot_entries": 288,
+      "settle_entries_for_epoch": 286
+    },
+    {
+      "epoch": 154,
+      "effective_height": 2397265,
+      "settle_snapshot_entries": 308,
+      "settle_entries_for_epoch": 306
+    },
+    {
+      "epoch": 155,
+      "effective_height": 2412656,
+      "settle_snapshot_entries": 214,
+      "settle_entries_for_epoch": 204
+    },
+    {
+      "epoch": 156,
+      "effective_height": 2428047,
+      "settle_snapshot_entries": 247,
+      "settle_entries_for_epoch": 247
+    },
+    {
+      "epoch": 157,
+      "effective_height": 2443438,
+      "settle_snapshot_entries": 249,
+      "settle_entries_for_epoch": 247
+    },
+    {
+      "epoch": 158,
+      "effective_height": 2459189,
+      "settle_snapshot_entries": 164,
+      "settle_entries_for_epoch": 163
+    },
+    {
+      "epoch": 159,
+      "effective_height": 2474580,
+      "settle_snapshot_entries": 127,
+      "settle_entries_for_epoch": 106
+    },
+    {
+      "epoch": 160,
+      "effective_height": 2489971,
+      "settle_snapshot_entries": 117,
+      "settle_entries_for_epoch": 117
+    },
+    {
+      "epoch": 161,
+      "effective_height": 2505362,
+      "settle_snapshot_entries": 145,
+      "settle_entries_for_epoch": 145
+    },
+    {
+      "epoch": 162,
+      "effective_height": 2520753,
+      "settle_snapshot_entries": 149,
+      "settle_entries_for_epoch": 148
+    },
+    {
+      "epoch": 163,
+      "effective_height": 2536144,
+      "settle_snapshot_entries": 154,
+      "settle_entries_for_epoch": 154
+    },
+    {
+      "epoch": 164,
+      "effective_height": 2551535,
+      "settle_snapshot_entries": 160,
+      "settle_entries_for_epoch": 159
+    },
+    {
+      "epoch": 165,
+      "effective_height": 2566926,
+      "settle_snapshot_entries": 162,
+      "settle_entries_for_epoch": 158
+    },
+    {
+      "epoch": 166,
+      "effective_height": 2582317,
+      "settle_snapshot_entries": 153,
+      "settle_entries_for_epoch": 151
+    },
+    {
+      "epoch": 167,
+      "effective_height": 2597708,
+      "settle_snapshot_entries": 151,
+      "settle_entries_for_epoch": 150
+    },
+    {
+      "epoch": 168,
+      "effective_height": 2613099,
+      "settle_snapshot_entries": 162,
+      "settle_entries_for_epoch": 162
+    },
+    {
+      "epoch": 169,
+      "effective_height": 2628490,
+      "settle_snapshot_entries": 174,
+      "settle_entries_for_epoch": 172
+    },
+    {
+      "epoch": 170,
+      "effective_height": 2643881,
+      "settle_snapshot_entries": 156,
+      "settle_entries_for_epoch": 144
+    },
+    {
+      "epoch": 171,
+      "effective_height": 2659272,
+      "settle_snapshot_entries": 177,
+      "settle_entries_for_epoch": 175
+    },
+    {
+      "epoch": 172,
+      "effective_height": 2674663,
+      "settle_snapshot_entries": 169,
+      "settle_entries_for_epoch": 169
+    },
+    {
+      "epoch": 173,
+      "effective_height": 2690054,
+      "settle_snapshot_entries": 175,
+      "settle_entries_for_epoch": 175
+    },
+    {
+      "epoch": 174,
+      "effective_height": 2705445,
+      "settle_snapshot_entries": 170,
+      "settle_entries_for_epoch": 170
+    },
+    {
+      "epoch": 175,
+      "effective_height": 2720571,
+      "settle_snapshot_entries": 182,
+      "settle_entries_for_epoch": 182
+    },
+    {
+      "epoch": 176,
+      "effective_height": 2735962,
+      "settle_snapshot_entries": 144,
+      "settle_entries_for_epoch": 132
+    },
+    {
+      "epoch": 177,
+      "effective_height": 2751353,
+      "settle_snapshot_entries": 151,
+      "settle_entries_for_epoch": 150
+    },
+    {
+      "epoch": 178,
+      "effective_height": 2766744,
+      "settle_snapshot_entries": 148,
+      "settle_entries_for_epoch": 147
+    },
+    {
+      "epoch": 179,
+      "effective_height": 2782135,
+      "settle_snapshot_entries": 133,
+      "settle_entries_for_epoch": 121
+    },
+    {
+      "epoch": 180,
+      "effective_height": 2797526,
+      "settle_snapshot_entries": 125,
+      "settle_entries_for_epoch": 125
+    },
+    {
+      "epoch": 181,
+      "effective_height": 2812917,
+      "settle_snapshot_entries": 105,
+      "settle_entries_for_epoch": 102
+    },
+    {
+      "epoch": 182,
+      "effective_height": 2828308,
+      "settle_snapshot_entries": 118,
+      "settle_entries_for_epoch": 114
+    },
+    {
+      "epoch": 183,
+      "effective_height": 2843699,
+      "settle_snapshot_entries": 112,
+      "settle_entries_for_epoch": 110
+    },
+    {
+      "epoch": 184,
+      "effective_height": 2859090,
+      "settle_snapshot_entries": 113,
+      "settle_entries_for_epoch": 112
+    },
+    {
+      "epoch": 185,
+      "effective_height": 2874481,
+      "settle_snapshot_entries": 121,
+      "settle_entries_for_epoch": 120
+    },
+    {
+      "epoch": 186,
+      "effective_height": 2889872,
+      "settle_snapshot_entries": 118,
+      "settle_entries_for_epoch": 110
+    },
+    {
+      "epoch": 187,
+      "effective_height": 2905263,
+      "settle_snapshot_entries": 105,
+      "settle_entries_for_epoch": 103
+    },
+    {
+      "epoch": 188,
+      "effective_height": 2920654,
+      "settle_snapshot_entries": 104,
+      "settle_entries_for_epoch": 96
+    },
+    {
+      "epoch": 189,
+      "effective_height": 2936045,
+      "settle_snapshot_entries": 96,
+      "settle_entries_for_epoch": 95
+    },
+    {
+      "epoch": 190,
+      "effective_height": 2951436,
+      "settle_snapshot_entries": 102,
+      "settle_entries_for_epoch": 101
+    },
+    {
+      "epoch": 191,
+      "effective_height": 2966827,
+      "settle_snapshot_entries": 106,
+      "settle_entries_for_epoch": 106
+    },
+    {
+      "epoch": 192,
+      "effective_height": 2982218,
+      "settle_snapshot_entries": 102,
+      "settle_entries_for_epoch": 100
+    },
+    {
+      "epoch": 193,
+      "effective_height": 2997609,
+      "settle_snapshot_entries": 101,
+      "settle_entries_for_epoch": 100
+    },
+    {
+      "epoch": 194,
+      "effective_height": 3013000,
+      "settle_snapshot_entries": 99,
+      "settle_entries_for_epoch": 99
+    },
+    {
+      "epoch": 195,
+      "effective_height": 3028391,
+      "settle_snapshot_entries": 98,
+      "settle_entries_for_epoch": 97
+    },
+    {
+      "epoch": 196,
+      "effective_height": 3043782,
+      "settle_snapshot_entries": 93,
+      "settle_entries_for_epoch": 93
+    },
+    {
+      "epoch": 197,
+      "effective_height": 3059173,
+      "settle_snapshot_entries": 102,
+      "settle_entries_for_epoch": 100
+    },
+    {
+      "epoch": 198,
+      "effective_height": 3074564,
+      "settle_snapshot_entries": 110,
+      "settle_entries_for_epoch": 106
+    },
+    {
+      "epoch": 199,
+      "effective_height": 3089955,
+      "settle_snapshot_entries": 111,
+      "settle_entries_for_epoch": 111
+    },
+    {
+      "epoch": 200,
+      "effective_height": 3105346,
+      "settle_snapshot_entries": 132,
+      "settle_entries_for_epoch": 132
+    },
+    {
+      "epoch": 201,
+      "effective_height": 3120737,
+      "settle_snapshot_entries": 140,
+      "settle_entries_for_epoch": 140
+    },
+    {
+      "epoch": 202,
+      "effective_height": 3136128,
+      "settle_snapshot_entries": 163,
+      "settle_entries_for_epoch": 163
+    },
+    {
+      "epoch": 203,
+      "effective_height": 3151519,
+      "settle_snapshot_entries": 105,
+      "settle_entries_for_epoch": 104
+    },
+    {
+      "epoch": 204,
+      "effective_height": 3166910,
+      "settle_snapshot_entries": 117,
+      "settle_entries_for_epoch": 108
+    },
+    {
+      "epoch": 205,
+      "effective_height": 3182301,
+      "settle_snapshot_entries": 103,
+      "settle_entries_for_epoch": 101
+    },
+    {
+      "epoch": 206,
+      "effective_height": 3197692,
+      "settle_snapshot_entries": 98,
+      "settle_entries_for_epoch": 98
+    },
+    {
+      "epoch": 207,
+      "effective_height": 3213083,
+      "settle_snapshot_entries": 92,
+      "settle_entries_for_epoch": 92
+    },
+    {
+      "epoch": 208,
+      "effective_height": 3228474,
+      "settle_snapshot_entries": 100,
+      "settle_entries_for_epoch": 99
+    },
+    {
+      "epoch": 209,
+      "effective_height": 3243865,
+      "settle_snapshot_entries": 96,
+      "settle_entries_for_epoch": 96
+    },
+    {
+      "epoch": 210,
+      "effective_height": 3259256,
+      "settle_snapshot_entries": 86,
+      "settle_entries_for_epoch": 86
+    },
+    {
+      "epoch": 211,
+      "effective_height": 3274647,
+      "settle_snapshot_entries": 85,
+      "settle_entries_for_epoch": 85
+    },
+    {
+      "epoch": 212,
+      "effective_height": 3290038,
+      "settle_snapshot_entries": 105,
+      "settle_entries_for_epoch": 105
+    },
+    {
+      "epoch": 213,
+      "effective_height": 3305429,
+      "settle_snapshot_entries": 103,
+      "settle_entries_for_epoch": 103
+    },
+    {
+      "epoch": 214,
+      "effective_height": 3320820,
+      "settle_snapshot_entries": 114,
+      "settle_entries_for_epoch": 113
+    },
+    {
+      "epoch": 215,
+      "effective_height": 3336211,
+      "settle_snapshot_entries": 105,
+      "settle_entries_for_epoch": 105
+    },
+    {
+      "epoch": 216,
+      "effective_height": 3351602,
+      "settle_snapshot_entries": 108,
+      "settle_entries_for_epoch": 108
+    },
+    {
+      "epoch": 217,
+      "effective_height": 3366993,
+      "settle_snapshot_entries": 83,
+      "settle_entries_for_epoch": 83
+    },
+    {
+      "epoch": 218,
+      "effective_height": 3382384,
+      "settle_snapshot_entries": 92,
+      "settle_entries_for_epoch": 91
+    },
+    {
+      "epoch": 219,
+      "effective_height": 3397775,
+      "settle_snapshot_entries": 97,
+      "settle_entries_for_epoch": 96
+    },
+    {
+      "epoch": 220,
+      "effective_height": 3413166,
+      "settle_snapshot_entries": 97,
+      "settle_entries_for_epoch": 96
+    },
+    {
+      "epoch": 221,
+      "effective_height": 3428557,
+      "settle_snapshot_entries": 108,
+      "settle_entries_for_epoch": 108
+    },
+    {
+      "epoch": 222,
+      "effective_height": 3443948,
+      "settle_snapshot_entries": 113,
+      "settle_entries_for_epoch": 112
+    },
+    {
+      "epoch": 223,
+      "effective_height": 3459339,
+      "settle_snapshot_entries": 109,
+      "settle_entries_for_epoch": 109
+    },
+    {
+      "epoch": 224,
+      "effective_height": 3474730,
+      "settle_snapshot_entries": 114,
+      "settle_entries_for_epoch": 114
+    },
+    {
+      "epoch": 225,
+      "effective_height": 3490121,
+      "settle_snapshot_entries": 111,
+      "settle_entries_for_epoch": 109
+    },
+    {
+      "epoch": 226,
+      "effective_height": 3505512,
+      "settle_snapshot_entries": 101,
+      "settle_entries_for_epoch": 100
+    },
+    {
+      "epoch": 227,
+      "effective_height": 3520903,
+      "settle_snapshot_entries": 102,
+      "settle_entries_for_epoch": 100
+    },
+    {
+      "epoch": 228,
+      "effective_height": 3536294,
+      "settle_snapshot_entries": 114,
+      "settle_entries_for_epoch": 114
+    },
+    {
+      "epoch": 229,
+      "effective_height": 3551685,
+      "settle_snapshot_entries": 108,
+      "settle_entries_for_epoch": 108
+    },
+    {
+      "epoch": 230,
+      "effective_height": 3567076,
+      "settle_snapshot_entries": 109,
+      "settle_entries_for_epoch": 109
+    },
+    {
+      "epoch": 231,
+      "effective_height": 3582467,
+      "settle_snapshot_entries": 122,
+      "settle_entries_for_epoch": 120
+    },
+    {
+      "epoch": 232,
+      "effective_height": 3597858,
+      "settle_snapshot_entries": 109,
+      "settle_entries_for_epoch": 109
+    },
+    {
+      "epoch": 233,
+      "effective_height": 3613249,
+      "settle_snapshot_entries": 131,
+      "settle_entries_for_epoch": 131
+    },
+    {
+      "epoch": 234,
+      "effective_height": 3628640,
+      "settle_snapshot_entries": 122,
+      "settle_entries_for_epoch": 122
+    },
+    {
+      "epoch": 235,
+      "effective_height": 3644031,
+      "settle_snapshot_entries": 120,
+      "settle_entries_for_epoch": 120
+    },
+    {
+      "epoch": 236,
+      "effective_height": 3659422,
+      "settle_snapshot_entries": 124,
+      "settle_entries_for_epoch": 124
+    },
+    {
+      "epoch": 237,
+      "effective_height": 3674813,
+      "settle_snapshot_entries": 136,
+      "settle_entries_for_epoch": 135
+    },
+    {
+      "epoch": 238,
+      "effective_height": 3690204,
+      "settle_snapshot_entries": 134,
+      "settle_entries_for_epoch": 133
+    },
+    {
+      "epoch": 239,
+      "effective_height": 3705595,
+      "settle_snapshot_entries": 128,
+      "settle_entries_for_epoch": 128
+    },
+    {
+      "epoch": 240,
+      "effective_height": 3720986,
+      "settle_snapshot_entries": 131,
+      "settle_entries_for_epoch": 131
+    },
+    {
+      "epoch": 241,
+      "effective_height": 3736377,
+      "settle_snapshot_entries": 122,
+      "settle_entries_for_epoch": 122
+    },
+    {
+      "epoch": 242,
+      "effective_height": 3751768,
+      "settle_snapshot_entries": 125,
+      "settle_entries_for_epoch": 125
+    },
+    {
+      "epoch": 243,
+      "effective_height": 3767159,
+      "settle_snapshot_entries": 129,
+      "settle_entries_for_epoch": 128
+    },
+    {
+      "epoch": 244,
+      "effective_height": 3782550,
+      "settle_snapshot_entries": 133,
+      "settle_entries_for_epoch": 133
+    },
+    {
+      "epoch": 245,
+      "effective_height": 3797941,
+      "settle_snapshot_entries": 110,
+      "settle_entries_for_epoch": 109
+    },
+    {
+      "epoch": 246,
+      "effective_height": 3813332,
+      "settle_snapshot_entries": 110,
+      "settle_entries_for_epoch": 108
+    },
+    {
+      "epoch": 247,
+      "effective_height": 3828723,
+      "settle_snapshot_entries": 93,
+      "settle_entries_for_epoch": 92
+    },
+    {
+      "epoch": 248,
+      "effective_height": 3844114,
+      "settle_snapshot_entries": 51,
+      "settle_entries_for_epoch": 51
+    },
+    {
+      "epoch": 249,
+      "effective_height": 3859505,
+      "settle_snapshot_entries": 55,
+      "settle_entries_for_epoch": 55
+    },
+    {
+      "epoch": 250,
+      "effective_height": 3874896,
+      "settle_snapshot_entries": 53,
+      "settle_entries_for_epoch": 53
+    },
+    {
+      "epoch": 251,
+      "effective_height": 3890287,
+      "settle_snapshot_entries": 49,
+      "settle_entries_for_epoch": 49
+    },
+    {
+      "epoch": 252,
+      "effective_height": 3905678,
+      "settle_snapshot_entries": 67,
+      "settle_entries_for_epoch": 67
+    },
+    {
+      "epoch": 253,
+      "effective_height": 3921069,
+      "settle_snapshot_entries": 54,
+      "settle_entries_for_epoch": 54
+    },
+    {
+      "epoch": 254,
+      "effective_height": 3936460,
+      "settle_snapshot_entries": 48,
+      "settle_entries_for_epoch": 48
+    },
+    {
+      "epoch": 255,
+      "effective_height": 3951851,
+      "settle_snapshot_entries": 54,
+      "settle_entries_for_epoch": 54
+    },
+    {
+      "epoch": 256,
+      "effective_height": 3967242,
+      "settle_snapshot_entries": 54,
+      "settle_entries_for_epoch": 54
+    },
+    {
+      "epoch": 257,
+      "effective_height": 3982633,
+      "settle_snapshot_entries": 56,
+      "settle_entries_for_epoch": 56
+    },
+    {
+      "epoch": 258,
+      "effective_height": 3998024,
+      "settle_snapshot_entries": 54,
+      "settle_entries_for_epoch": 54
+    },
+    {
+      "epoch": 259,
+      "effective_height": 4013415,
+      "settle_snapshot_entries": 53,
+      "settle_entries_for_epoch": 53
+    },
+    {
+      "epoch": 260,
+      "effective_height": 4028806,
+      "settle_snapshot_entries": 47,
+      "settle_entries_for_epoch": 47
+    },
+    {
+      "epoch": 261,
+      "effective_height": 4044197,
+      "settle_snapshot_entries": 48,
+      "settle_entries_for_epoch": 48
+    },
+    {
+      "epoch": 262,
+      "effective_height": 4059588,
+      "settle_snapshot_entries": 54,
+      "settle_entries_for_epoch": 54
+    },
+    {
+      "epoch": 263,
+      "effective_height": 4074979,
+      "settle_snapshot_entries": 48,
+      "settle_entries_for_epoch": 48
+    },
+    {
+      "epoch": 264,
+      "effective_height": 4090370,
+      "settle_snapshot_entries": 51,
+      "settle_entries_for_epoch": 51
+    },
+    {
+      "epoch": 265,
+      "effective_height": 4105761,
+      "settle_snapshot_entries": 39,
+      "settle_entries_for_epoch": 37
+    },
+    {
+      "epoch": 266,
+      "effective_height": 4121152,
+      "settle_snapshot_entries": 39,
+      "settle_entries_for_epoch": 38
+    },
+    {
+      "epoch": 267,
+      "effective_height": 4136543,
+      "settle_snapshot_entries": 48,
+      "settle_entries_for_epoch": 48
+    },
+    {
+      "epoch": 268,
+      "effective_height": 4151934,
+      "settle_snapshot_entries": 44,
+      "settle_entries_for_epoch": 44
+    },
+    {
+      "epoch": 269,
+      "effective_height": 4167325,
+      "settle_snapshot_entries": 47,
+      "settle_entries_for_epoch": 47
+    },
+    {
+      "epoch": 270,
+      "effective_height": 4182716,
+      "settle_snapshot_entries": 44,
+      "settle_entries_for_epoch": 44
+    },
+    {
+      "epoch": 271,
+      "effective_height": 4198107,
+      "settle_snapshot_entries": 42,
+      "settle_entries_for_epoch": 42
+    },
+    {
+      "epoch": 272,
+      "effective_height": 4213498,
+      "settle_snapshot_entries": 43,
+      "settle_entries_for_epoch": 43
+    },
+    {
+      "epoch": 273,
+      "effective_height": 4228889,
+      "settle_snapshot_entries": 50,
+      "settle_entries_for_epoch": 50
+    },
+    {
+      "epoch": 274,
+      "effective_height": 4244280,
+      "settle_snapshot_entries": 40,
+      "settle_entries_for_epoch": 40
     }
   ]
 }

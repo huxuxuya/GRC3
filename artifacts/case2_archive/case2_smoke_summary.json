@@ -14,6 +14,9 @@
     279,
     280
   ],
+  "epoch_count": 12,
+  "settle_snapshots_checked": 12,
+  "settle_snapshot_coverage_complete": true,
   "candidate_pairs": 19,
   "affected_addresses": 19,
   "total_ngonka": 1075336150923,
@@ -98,6 +101,80 @@
       "summary_rows": 54,
       "positive_unclaimed_rows": 0,
       "positive_unclaimed_reward": 0
+    }
+  ],
+  "snapshot_stats": [
+    {
+      "epoch": 97,
+      "effective_height": 1519978,
+      "settle_snapshot_entries": 419,
+      "settle_entries_for_epoch": 400
+    },
+    {
+      "epoch": 112,
+      "effective_height": 1750843,
+      "settle_snapshot_entries": 563,
+      "settle_entries_for_epoch": 552
+    },
+    {
+      "epoch": 116,
+      "effective_height": 1812407,
+      "settle_snapshot_entries": 557,
+      "settle_entries_for_epoch": 544
+    },
+    {
+      "epoch": 129,
+      "effective_height": 2012490,
+      "settle_snapshot_entries": 534,
+      "settle_entries_for_epoch": 527
+    },
+    {
+      "epoch": 132,
+      "effective_height": 2058663,
+      "settle_snapshot_entries": 523,
+      "settle_entries_for_epoch": 518
+    },
+    {
+      "epoch": 240,
+      "effective_height": 3720986,
+      "settle_snapshot_entries": 131,
+      "settle_entries_for_epoch": 131
+    },
+    {
+      "epoch": 275,
+      "effective_height": 4259671,
+      "settle_snapshot_entries": 48,
+      "settle_entries_for_epoch": 48
+    },
+    {
+      "epoch": 276,
+      "effective_height": 4275062,
+      "settle_snapshot_entries": 39,
+      "settle_entries_for_epoch": 39
+    },
+    {
+      "epoch": 277,
+      "effective_height": 4290453,
+      "settle_snapshot_entries": 50,
+      "settle_entries_for_epoch": 50
+    },
+    {
+      "epoch": 278,
+      "effective_height": 4305844,
+      "settle_snapshot_entries": 44,
+      "settle_entries_for_epoch": 44
+    },
+    {
+      "epoch": 279,
+      "effective_height": 4321235,
+      "settle_snapshot_entries": 49,
+      "settle_entries_for_epoch": 49
+    },
+    {
+      "epoch": 280,
+      "effective_height": 4336626,
+      "settle_snapshot_entries": 51,
+      "settle_entries_for_epoch": 51
     }
   ]
 }

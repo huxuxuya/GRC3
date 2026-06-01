@@ -64,6 +64,9 @@
     279,
     280
   ],
+  "epoch_count": 62,
+  "settle_snapshots_checked": 62,
+  "settle_snapshot_coverage_complete": true,
   "candidate_pairs": 19,
   "affected_addresses": 19,
   "total_ngonka": 1075336150923,
@@ -448,6 +451,380 @@
       "summary_rows": 54,
       "positive_unclaimed_rows": 0,
       "positive_unclaimed_reward": 0
+    }
+  ],
+  "snapshot_stats": [
+    {
+      "epoch": 87,
+      "effective_height": 1366068,
+      "settle_snapshot_entries": 293,
+      "settle_entries_for_epoch": 287
+    },
+    {
+      "epoch": 88,
+      "effective_height": 1381459,
+      "settle_snapshot_entries": 353,
+      "settle_entries_for_epoch": 344
+    },
+    {
+      "epoch": 89,
+      "effective_height": 1396850,
+      "settle_snapshot_entries": 403,
+      "settle_entries_for_epoch": 395
+    },
+    {
+      "epoch": 90,
+      "effective_height": 1412241,
+      "settle_snapshot_entries": 440,
+      "settle_entries_for_epoch": 423
+    },
+    {
+      "epoch": 91,
+      "effective_height": 1427632,
+      "settle_snapshot_entries": 426,
+      "settle_entries_for_epoch": 411
+    },
+    {
+      "epoch": 92,
+      "effective_height": 1443023,
+      "settle_snapshot_entries": 420,
+      "settle_entries_for_epoch": 406
+    },
+    {
+      "epoch": 93,
+      "effective_height": 1458414,
+      "settle_snapshot_entries": 423,
+      "settle_entries_for_epoch": 411
+    },
+    {
+      "epoch": 94,
+      "effective_height": 1473805,
+      "settle_snapshot_entries": 405,
+      "settle_entries_for_epoch": 390
+    },
+    {
+      "epoch": 95,
+      "effective_height": 1489196,
+      "settle_snapshot_entries": 420,
+      "settle_entries_for_epoch": 412
+    },
+    {
+      "epoch": 96,
+      "effective_height": 1504587,
+      "settle_snapshot_entries": 427,
+      "settle_entries_for_epoch": 406
+    },
+    {
+      "epoch": 97,
+      "effective_height": 1519978,
+      "settle_snapshot_entries": 419,
+      "settle_entries_for_epoch": 400
+    },
+    {
+      "epoch": 98,
+      "effective_height": 1535369,
+      "settle_snapshot_entries": 412,
+      "settle_entries_for_epoch": 398
+    },
+    {
+      "epoch": 99,
+      "effective_height": 1550760,
+      "settle_snapshot_entries": 425,
+      "settle_entries_for_epoch": 418
+    },
+    {
+      "epoch": 100,
+      "effective_height": 1566151,
+      "settle_snapshot_entries": 438,
+      "settle_entries_for_epoch": 416
+    },
+    {
+      "epoch": 101,
+      "effective_height": 1581542,
+      "settle_snapshot_entries": 447,
+      "settle_entries_for_epoch": 442
+    },
+    {
+      "epoch": 102,
+      "effective_height": 1596933,
+      "settle_snapshot_entries": 439,
+      "settle_entries_for_epoch": 433
+    },
+    {
+      "epoch": 103,
+      "effective_height": 1612324,
+      "settle_snapshot_entries": 463,
+      "settle_entries_for_epoch": 445
+    },
+    {
+      "epoch": 104,
+      "effective_height": 1627715,
+      "settle_snapshot_entries": 460,
+      "settle_entries_for_epoch": 442
+    },
+    {
+      "epoch": 105,
+      "effective_height": 1643106,
+      "settle_snapshot_entries": 482,
+      "settle_entries_for_epoch": 463
+    },
+    {
+      "epoch": 106,
+      "effective_height": 1658497,
+      "settle_snapshot_entries": 468,
+      "settle_entries_for_epoch": 449
+    },
+    {
+      "epoch": 107,
+      "effective_height": 1673888,
+      "settle_snapshot_entries": 482,
+      "settle_entries_for_epoch": 446
+    },
+    {
+      "epoch": 108,
+      "effective_height": 1689279,
+      "settle_snapshot_entries": 488,
+      "settle_entries_for_epoch": 456
+    },
+    {
+      "epoch": 109,
+      "effective_height": 1704670,
+      "settle_snapshot_entries": 487,
+      "settle_entries_for_epoch": 445
+    },
+    {
+      "epoch": 110,
+      "effective_height": 1720061,
+      "settle_snapshot_entries": 501,
+      "settle_entries_for_epoch": 481
+    },
+    {
+      "epoch": 111,
+      "effective_height": 1735452,
+      "settle_snapshot_entries": 534,
+      "settle_entries_for_epoch": 525
+    },
+    {
+      "epoch": 112,
+      "effective_height": 1750843,
+      "settle_snapshot_entries": 563,
+      "settle_entries_for_epoch": 552
+    },
+    {
+      "epoch": 113,
+      "effective_height": 1766234,
+      "settle_snapshot_entries": 529,
+      "settle_entries_for_epoch": 509
+    },
+    {
+      "epoch": 114,
+      "effective_height": 1781625,
+      "settle_snapshot_entries": 542,
+      "settle_entries_for_epoch": 519
+    },
+    {
+      "epoch": 115,
+      "effective_height": 1797016,
+      "settle_snapshot_entries": 569,
+      "settle_entries_for_epoch": 550
+    },
+    {
+      "epoch": 116,
+      "effective_height": 1812407,
+      "settle_snapshot_entries": 557,
+      "settle_entries_for_epoch": 544
+    },
+    {
+      "epoch": 117,
+      "effective_height": 1827798,
+      "settle_snapshot_entries": 613,
+      "settle_entries_for_epoch": 598
+    },
+    {
+      "epoch": 118,
+      "effective_height": 1843189,
+      "settle_snapshot_entries": 561,
+      "settle_entries_for_epoch": 507
+    },
+    {
+      "epoch": 119,
+      "effective_height": 1858580,
+      "settle_snapshot_entries": 591,
+      "settle_entries_for_epoch": 587
+    },
+    {
+      "epoch": 120,
+      "effective_height": 1873971,
+      "settle_snapshot_entries": 578,
+      "settle_entries_for_epoch": 568
+    },
+    {
+      "epoch": 121,
+      "effective_height": 1889362,
+      "settle_snapshot_entries": 580,
+      "settle_entries_for_epoch": 578
+    },
+    {
+      "epoch": 122,
+      "effective_height": 1904753,
+      "settle_snapshot_entries": 571,
+      "settle_entries_for_epoch": 567
+    },
+    {
+      "epoch": 123,
+      "effective_height": 1920144,
+      "settle_snapshot_entries": 524,
+      "settle_entries_for_epoch": 513
+    },
+    {
+      "epoch": 124,
+      "effective_height": 1935535,
+      "settle_snapshot_entries": 464,
+      "settle_entries_for_epoch": 438
+    },
+    {
+      "epoch": 125,
+      "effective_height": 1950926,
+      "settle_snapshot_entries": 485,
+      "settle_entries_for_epoch": 478
+    },
+    {
+      "epoch": 126,
+      "effective_height": 1966317,
+      "settle_snapshot_entries": 540,
+      "settle_entries_for_epoch": 536
+    },
+    {
+      "epoch": 127,
+      "effective_height": 1981708,
+      "settle_snapshot_entries": 542,
+      "settle_entries_for_epoch": 538
+    },
+    {
+      "epoch": 128,
+      "effective_height": 1997099,
+      "settle_snapshot_entries": 587,
+      "settle_entries_for_epoch": 581
+    },
+    {
+      "epoch": 129,
+      "effective_height": 2012490,
+      "settle_snapshot_entries": 534,
+      "settle_entries_for_epoch": 527
+    },
+    {
+      "epoch": 130,
+      "effective_height": 2027881,
+      "settle_snapshot_entries": 541,
+      "settle_entries_for_epoch": 536
+    },
+    {
+      "epoch": 131,
+      "effective_height": 2043272,
+      "settle_snapshot_entries": 558,
+      "settle_entries_for_epoch": 544
+    },
+    {
+      "epoch": 132,
+      "effective_height": 2058663,
+      "settle_snapshot_entries": 523,
+      "settle_entries_for_epoch": 518
+    },
+    {
+      "epoch": 133,
+      "effective_height": 2074054,
+      "settle_snapshot_entries": 509,
+      "settle_entries_for_epoch": 485
+    },
+    {
+      "epoch": 134,
+      "effective_height": 2089445,
+      "settle_snapshot_entries": 474,
+      "settle_entries_for_epoch": 462
+    },
+    {
+      "epoch": 135,
+      "effective_height": 2104836,
+      "settle_snapshot_entries": 497,
+      "settle_entries_for_epoch": 495
+    },
+    {
+      "epoch": 136,
+      "effective_height": 2120227,
+      "settle_snapshot_entries": 504,
+      "settle_entries_for_epoch": 501
+    },
+    {
+      "epoch": 137,
+      "effective_height": 2135618,
+      "settle_snapshot_entries": 499,
+      "settle_entries_for_epoch": 495
+    },
+    {
+      "epoch": 138,
+      "effective_height": 2151009,
+      "settle_snapshot_entries": 389,
+      "settle_entries_for_epoch": 384
+    },
+    {
+      "epoch": 139,
+      "effective_height": 2166400,
+      "settle_snapshot_entries": 377,
+      "settle_entries_for_epoch": 375
+    },
+    {
+      "epoch": 140,
+      "effective_height": 2181791,
+      "settle_snapshot_entries": 379,
+      "settle_entries_for_epoch": 379
+    },
+    {
+      "epoch": 141,
+      "effective_height": 2197182,
+      "settle_snapshot_entries": 371,
+      "settle_entries_for_epoch": 369
+    },
+    {
+      "epoch": 142,
+      "effective_height": 2212573,
+      "settle_snapshot_entries": 354,
+      "settle_entries_for_epoch": 350
+    },
+    {
+      "epoch": 275,
+      "effective_height": 4259671,
+      "settle_snapshot_entries": 48,
+      "settle_entries_for_epoch": 48
+    },
+    {
+      "epoch": 276,
+      "effective_height": 4275062,
+      "settle_snapshot_entries": 39,
+      "settle_entries_for_epoch": 39
+    },
+    {
+      "epoch": 277,
+      "effective_height": 4290453,
+      "settle_snapshot_entries": 50,
+      "settle_entries_for_epoch": 50
+    },
+    {
+      "epoch": 278,
+      "effective_height": 4305844,
+      "settle_snapshot_entries": 44,
+      "settle_entries_for_epoch": 44
+    },
+    {
+      "epoch": 279,
+      "effective_height": 4321235,
+      "settle_snapshot_entries": 49,
+      "settle_entries_for_epoch": 49
+    },
+    {
+      "epoch": 280,
+      "effective_height": 4336626,
+      "settle_snapshot_entries": 51,
+      "settle_entries_for_epoch": 51
     }
   ]
 }
