@@ -2,8 +2,9 @@
 """Build a participant-grouped cPoC timeline for P3-CAND-06.
 
 The source candidate set is intentionally narrow: the 24 rows already selected
-in candidate_rows.csv. For each row this script expands the epoch from PoC start
-through the cPoC event that caused failed_confirmation_poc exclusion.
+in candidate_rows.csv. For each row this script expands the epoch from PoC
+start, through every cPoC before the next epoch boundary, and then adds the
+next epoch PoC baseline so weight restoration is visible.
 """
 
 from __future__ import annotations
@@ -46,14 +47,21 @@ def fmt_int(value: Any) -> str:
 
 
 def fmt_height(value: Any) -> str:
+    if value in ("", None):
+        return ""
     return f"`{fmt_int(value)}`"
 
 
 def fmt_weight(value: Any) -> str:
+    if value in ("", None):
+        return ""
     return f"`{fmt_int(value)}`"
 
 
-def fmt_delta(value: int) -> str:
+def fmt_delta(value: Any) -> str:
+    if value in ("", None):
+        return ""
+    value = int(value)
     if value > 0:
         return f"`+{fmt_int(value)}`"
     return f"`{fmt_int(value)}`"
@@ -67,6 +75,8 @@ def fmt_percent_from_ratio(value: str | int | float) -> str:
 
 
 def model_cell(row: dict[str, Any], prefix: str) -> str:
+    if not row.get(f"{prefix}_result"):
+        return ""
     submitted = int(row[f"{prefix}_submitted_count"])
     valid = int(row[f"{prefix}_valid_weight"])
     percent = row[f"{prefix}_valid_weight_percent"]
@@ -150,6 +160,8 @@ def build_rows() -> list[dict[str, Any]]:
             "poc_start": int(root_group["poc_start_block_height"]),
             "effective_start": int(root_group["effective_block_height"]),
             "next_epoch_height": int(next_epoch_group["poc_start_block_height"]),
+            "next_epoch_root_weights": scan.root_weight_map(next_epoch_group),
+            "next_epoch_total_network_weight": int(next_epoch_group["total_weight"]),
         }
         return epoch_cache[epoch]
 
@@ -173,16 +185,62 @@ def build_rows() -> list[dict[str, Any]]:
         exclusion_height = int(failed["exclusion_height"])
         poc_utc, poc_msk = block_time(base, data["poc_start"])
 
-        events = [event for event in data["events"] if int(event["event_sequence"]) <= failed_sequence]
+        rows.append(
+            {
+                "participant": participant,
+                "epoch": epoch,
+                "event_epoch": epoch,
+                "row_order": 0,
+                "row_type": "poc_baseline",
+                "event_label": "PoC",
+                "poc_start_height": data["poc_start"],
+                "poc_start_utc": poc_utc,
+                "poc_start_msk": poc_msk,
+                "effective_start_height": data["effective_start"],
+                "next_epoch_height": data["next_epoch_height"],
+                "total_network_weight": data["total_network_weight"],
+                "two_thirds_min_weight": data["total_network_weight"] * 2 // 3 + 1,
+                "root_weight_at_poc": root_weight,
+                "cpoc_sequence": "",
+                "cpoc_trigger_height": "",
+                "cpoc_trigger_utc": "",
+                "cpoc_trigger_msk": "",
+                "snapshot_height": data["poc_start"],
+                "snapshot_utc": poc_utc,
+                "snapshot_msk": poc_msk,
+                "confirmation_weight_before": "",
+                "confirmation_weight_after": "",
+                "confirmation_weight_delta": "",
+                "confirmation_weight_after_pct_of_root": "",
+                "qwen_submitted_count": "",
+                "qwen_valid_weight": "",
+                "qwen_valid_weight_percent": "",
+                "qwen_result": "",
+                "kimi_submitted_count": "",
+                "kimi_valid_weight": "",
+                "kimi_valid_weight_percent": "",
+                "kimi_result": "",
+                "event_status": "poc_baseline",
+                "exclusion_height": "",
+                "blocks_to_next_epoch_from_snapshot": data["next_epoch_height"] - data["poc_start"],
+                "loss_gonka": "",
+                "note": "epoch PoC baseline before any confirmation PoC event",
+            }
+        )
+
+        events = data["events"]
         for index, event in enumerate(events):
             sequence = int(event["event_sequence"])
             trigger_height = int(event["trigger_height"])
             is_failure = trigger_height == failed_trigger
+            is_after_failure = sequence > failed_sequence
             if is_failure:
                 before_height = exclusion_height - 1
                 after_height = exclusion_height
             else:
-                next_trigger_height = int(events[index + 1]["trigger_height"])
+                next_trigger_height = (
+                    int(events[index + 1]["trigger_height"]) if index + 1 < len(events) else data["next_epoch_height"]
+                )
                 before_height = max(data["poc_start"], trigger_height - 1)
                 after_height = next_trigger_height - 1
 
@@ -209,6 +267,9 @@ def build_rows() -> list[dict[str, Any]]:
             if is_failure:
                 status = "lost_at_failed_confirmation_poc"
                 note = "confirmation weight drops below alpha and participant is excluded"
+            elif is_after_failure:
+                status = "after_loss_until_next_epoch"
+                note = "participant already lost in this epoch; row kept to show no same-epoch restoration"
             elif delta < 0:
                 status = "reduced_before_failure"
                 note = "confirmation weight already reduced before the later exclusion"
@@ -220,6 +281,10 @@ def build_rows() -> list[dict[str, Any]]:
                 {
                     "participant": participant,
                     "epoch": epoch,
+                    "event_epoch": epoch,
+                    "row_order": sequence + 1,
+                    "row_type": "cpoc",
+                    "event_label": f"cPoC #{sequence}",
                     "poc_start_height": data["poc_start"],
                     "poc_start_utc": poc_utc,
                     "poc_start_msk": poc_msk,
@@ -254,6 +319,52 @@ def build_rows() -> list[dict[str, Any]]:
                     "note": note,
                 }
             )
+        next_poc_utc, next_poc_msk = block_time(base, data["next_epoch_height"])
+        next_root_weights = data["next_epoch_root_weights"]
+        next_root_weight = next_root_weights.get(participant, 0)
+        next_network_weight = data["next_epoch_total_network_weight"]
+        rows.append(
+            {
+                "participant": participant,
+                "epoch": epoch,
+                "event_epoch": epoch + 1,
+                "row_order": len(events) + 1,
+                "row_type": "next_epoch_poc",
+                "event_label": f"PoC epoch {epoch + 1}",
+                "poc_start_height": data["poc_start"],
+                "poc_start_utc": poc_utc,
+                "poc_start_msk": poc_msk,
+                "effective_start_height": data["effective_start"],
+                "next_epoch_height": data["next_epoch_height"],
+                "total_network_weight": next_network_weight,
+                "two_thirds_min_weight": next_network_weight * 2 // 3 + 1,
+                "root_weight_at_poc": next_root_weight,
+                "cpoc_sequence": "",
+                "cpoc_trigger_height": "",
+                "cpoc_trigger_utc": "",
+                "cpoc_trigger_msk": "",
+                "snapshot_height": data["next_epoch_height"],
+                "snapshot_utc": next_poc_utc,
+                "snapshot_msk": next_poc_msk,
+                "confirmation_weight_before": "",
+                "confirmation_weight_after": "",
+                "confirmation_weight_delta": "",
+                "confirmation_weight_after_pct_of_root": "",
+                "qwen_submitted_count": "",
+                "qwen_valid_weight": "",
+                "qwen_valid_weight_percent": "",
+                "qwen_result": "",
+                "kimi_submitted_count": "",
+                "kimi_valid_weight": "",
+                "kimi_valid_weight_percent": "",
+                "kimi_result": "",
+                "event_status": "next_epoch_poc",
+                "exclusion_height": "",
+                "blocks_to_next_epoch_from_snapshot": 0,
+                "loss_gonka": "",
+                "note": "next epoch PoC baseline; use this to see whether participant weight restored",
+            }
+        )
     return rows
 
 
@@ -272,10 +383,13 @@ def write_markdown(path: Path, rows: list[dict[str, Any]]) -> None:
         "",
         "Column notes:",
         "",
-        "- `PoC weight` is the participant root weight at the epoch PoC baseline.",
+        "- Each participant/epoch section starts with the epoch PoC baseline and ends with the next epoch PoC baseline.",
+        "- `PoC weight` is the participant root weight for that row's event epoch.",
         "- `CW before -> after` is root confirmation weight before the cPoC effect and at the post-cPoC snapshot.",
+        "- `CW before -> after` is intentionally blank for PoC baseline rows; those rows show root/PoC weight only.",
         "- For non-failing cPoC rows, the post-cPoC snapshot is the block before the next cPoC trigger.",
         "- For the failing cPoC row, the post-cPoC snapshot is the exclusion block.",
+        "- For cPoC rows after `LOST`, the post-cPoC snapshot continues to the next cPoC or the next epoch PoC.",
         "- `2/3 min` is computed from the root/network total weight for that epoch, matching the chain validation threshold convention.",
         "",
         "## Participants",
@@ -283,7 +397,7 @@ def write_markdown(path: Path, rows: list[dict[str, Any]]) -> None:
     ]
 
     for participant in sorted(participants):
-        participant_rows = sorted(participants[participant], key=lambda row: (int(row["epoch"]), int(row["cpoc_sequence"])))
+        participant_rows = sorted(participants[participant], key=lambda row: (int(row["epoch"]), int(row["row_order"])))
         total_loss = sum(float(row["loss_gonka"] or 0) for row in participant_rows)
         epochs = sorted({int(row["epoch"]) for row in participant_rows})
         lines.extend(
@@ -314,25 +428,43 @@ def write_markdown(path: Path, rows: list[dict[str, Any]]) -> None:
                     f"| Blocks left to next epoch after loss | `{fmt_int(failing['blocks_to_next_epoch_from_snapshot'])}` |",
                     f"| Candidate loss | `{failing['loss_gonka']}` GONKA |",
                     "",
-                    "| cPoC | Trigger / MSK | Snapshot / MSK | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |",
-                    "|---:|---|---|---|---|---:|---:|---:|---|",
+                    "| Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |",
+                    "|---:|---|---|---:|---|---|---:|---:|---:|---|",
                 ]
             )
             for row in epoch_rows:
-                status = "LOST" if row["event_status"] == "lost_at_failed_confirmation_poc" else "kept"
+                status_by_event = {
+                    "poc_baseline": "PoC",
+                    "kept_before_next_cpoc": "kept",
+                    "reduced_before_failure": "reduced",
+                    "lost_at_failed_confirmation_poc": "LOST",
+                    "after_loss_until_next_epoch": "after loss",
+                    "next_epoch_poc": "next PoC",
+                }
+                status = status_by_event.get(row["event_status"], row["event_status"])
+                trigger_display = (
+                    f"{fmt_height(row['cpoc_trigger_height'])} / `{row['cpoc_trigger_msk']}`"
+                    if row["cpoc_trigger_height"] not in ("", None)
+                    else ""
+                )
+                after_pct = fmt_percent_from_ratio(row["confirmation_weight_after_pct_of_root"])
+                after_pct_display = f"`{after_pct}`" if after_pct else ""
                 lines.append(
-                    "| `#{cpoc_sequence}` | {trigger} / `{trigger_msk}` | {snapshot} / `{snapshot_msk}` | {qwen} | {kimi} | {before} -> {after} | {delta} | `{after_pct}` | {status} |".format(
-                        cpoc_sequence=row["cpoc_sequence"],
-                        trigger=fmt_height(row["cpoc_trigger_height"]),
-                        trigger_msk=row["cpoc_trigger_msk"],
+                    "| `{event_label}` | {trigger} | {snapshot} / `{snapshot_msk}` | {poc_weight} | {qwen} | {kimi} | {before_after} | {delta} | {after_pct} | {status} |".format(
+                        event_label=row["event_label"],
+                        trigger=trigger_display,
                         snapshot=fmt_height(row["snapshot_height"]),
                         snapshot_msk=row["snapshot_msk"],
+                        poc_weight=fmt_weight(row["root_weight_at_poc"]),
                         qwen=model_cell(row, "qwen"),
                         kimi=model_cell(row, "kimi"),
-                        before=fmt_weight(row["confirmation_weight_before"]),
-                        after=fmt_weight(row["confirmation_weight_after"]),
-                        delta=fmt_delta(int(row["confirmation_weight_delta"])),
-                        after_pct=fmt_percent_from_ratio(row["confirmation_weight_after_pct_of_root"]),
+                        before_after=(
+                            f"{fmt_weight(row['confirmation_weight_before'])} -> {fmt_weight(row['confirmation_weight_after'])}"
+                            if row["confirmation_weight_before"] not in ("", None)
+                            else fmt_weight(row["confirmation_weight_after"])
+                        ),
+                        delta=fmt_delta(row["confirmation_weight_delta"]),
+                        after_pct=after_pct_display,
                         status=status,
                     )
                 )
@@ -354,6 +486,10 @@ def main() -> None:
     fieldnames = [
         "participant",
         "epoch",
+        "event_epoch",
+        "row_order",
+        "row_type",
+        "event_label",
         "poc_start_height",
         "poc_start_utc",
         "poc_start_msk",
