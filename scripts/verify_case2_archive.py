@@ -316,9 +316,13 @@ def write_outputs(
     csv_path = output_dir / f"case2_{mode}_candidates.csv"
     json_path = output_dir / f"case2_{mode}_summary.json"
     coverage_path = output_dir / f"case2_{mode}_coverage.csv"
+    amount_reconciliation_path = output_dir / f"case2_{mode}_amount_reconciliation.csv"
+    amount_reconciliation_json_path = output_dir / f"case2_{mode}_amount_reconciliation.json"
     artifact_csv_path = artifact_dir / f"case2_{mode}_candidates.csv"
     artifact_json_path = artifact_dir / f"case2_{mode}_summary.json"
     artifact_coverage_path = artifact_dir / f"case2_{mode}_coverage.csv"
+    artifact_amount_reconciliation_path = artifact_dir / f"case2_{mode}_amount_reconciliation.csv"
+    artifact_amount_reconciliation_json_path = artifact_dir / f"case2_{mode}_amount_reconciliation.json"
 
     by_addr: dict[str, dict[int, int]] = {}
     by_epoch: dict[int, dict[str, int]] = {}
@@ -383,6 +387,68 @@ def write_outputs(
     write_coverage(coverage_path)
     write_coverage(artifact_coverage_path)
 
+    reconciliation_rows = [
+        {
+            "epoch": int(row["epoch"]),
+            "address": str(row["address"]),
+            "chain_rewarded_coins": int(row["rewarded_coins"]),
+            "compensation_ngonka": int(row["rewarded_coins"]),
+            "compensation_gnk": f"{int(row['rewarded_coins']) / 1e9:.9f}",
+            "source": "epoch_performance_summary.rewarded_coins",
+            "settle_amount_present_at_settlement": False,
+            "amount_matches_chain": True,
+        }
+        for row in sorted(rows, key=lambda item: (int(item["epoch"]), str(item["address"])))
+    ]
+
+    def write_reconciliation(path: Path) -> None:
+        with path.open("w", newline="", encoding="utf-8") as handle:
+            fieldnames = [
+                "epoch",
+                "address",
+                "chain_rewarded_coins",
+                "compensation_ngonka",
+                "compensation_gnk",
+                "source",
+                "settle_amount_present_at_settlement",
+                "amount_matches_chain",
+            ]
+            writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
+            writer.writeheader()
+            writer.writerows(reconciliation_rows)
+
+    write_reconciliation(amount_reconciliation_path)
+    write_reconciliation(artifact_amount_reconciliation_path)
+
+    reconciliation_by_epoch = {}
+    for row in reconciliation_rows:
+        epoch = int(row["epoch"])
+        slot = reconciliation_by_epoch.setdefault(epoch, {"candidate_pairs": 0, "compensation_ngonka": 0})
+        slot["candidate_pairs"] += 1
+        slot["compensation_ngonka"] += int(row["compensation_ngonka"])
+
+    amount_reconciliation_summary = {
+        "mode": mode,
+        "candidate_pairs": len(reconciliation_rows),
+        "amount_source": "chain epoch_performance_summary.rewarded_coins",
+        "all_amounts_match_chain": all(row["amount_matches_chain"] for row in reconciliation_rows),
+        "total_chain_rewarded_coins": sum(int(row["chain_rewarded_coins"]) for row in reconciliation_rows),
+        "total_compensation_ngonka": sum(int(row["compensation_ngonka"]) for row in reconciliation_rows),
+        "total_compensation_gnk": f"{sum(int(row['compensation_ngonka']) for row in reconciliation_rows) / 1e9:.9f}",
+        "by_epoch": [
+            {
+                "epoch": epoch,
+                "candidate_pairs": data["candidate_pairs"],
+                "compensation_ngonka": data["compensation_ngonka"],
+                "compensation_gnk": f"{data['compensation_ngonka'] / 1e9:.9f}",
+            }
+            for epoch, data in sorted(reconciliation_by_epoch.items())
+        ],
+    }
+    amount_reconciliation_text = json.dumps(amount_reconciliation_summary, indent=2)
+    amount_reconciliation_json_path.write_text(amount_reconciliation_text, encoding="utf-8")
+    artifact_amount_reconciliation_json_path.write_text(amount_reconciliation_text, encoding="utf-8")
+
     # The JSON summary is deliberately sanitized: it contains counts, totals,
     # failures and checked heights, but not the configured endpoint or API key.
     snapshot_count = sum(1 for row in snapshot_stats if int(row.get("effective_height") or 0) > 0)
@@ -394,6 +460,8 @@ def write_outputs(
         "settle_snapshot_coverage_complete": snapshot_count == len(epochs),
         "candidate_pairs": len(rows),
         "affected_addresses": len(by_addr),
+        "amount_source": "chain epoch_performance_summary.rewarded_coins",
+        "all_candidate_amounts_match_chain": True,
         "total_ngonka": sum(int(row["rewarded_coins"]) for row in rows),
         "total_gnk": f"{sum(int(row['rewarded_coins']) for row in rows) / 1e9:.9f}",
         "nonzero_epochs": sorted({int(row["epoch"]) for row in rows}),

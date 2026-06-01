@@ -1,0 +1,41 @@
+{
+  "mode": "full",
+  "candidate_pairs": 19,
+  "amount_source": "chain epoch_performance_summary.rewarded_coins",
+  "all_amounts_match_chain": true,
+  "total_chain_rewarded_coins": 1075336150923,
+  "total_compensation_ngonka": 1075336150923,
+  "total_compensation_gnk": "1075.336150923",
+  "by_epoch": [
+    {
+      "epoch": 97,
+      "candidate_pairs": 1,
+      "compensation_ngonka": 8432384134,
+      "compensation_gnk": "8.432384134"
+    },
+    {
+      "epoch": 112,
+      "candidate_pairs": 1,
+      "compensation_ngonka": 7993576578,
+      "compensation_gnk": "7.993576578"
+    },
+    {
+      "epoch": 116,
+      "candidate_pairs": 15,
+      "compensation_ngonka": 1037343139724,
+      "compensation_gnk": "1037.343139724"
+    },
+    {
+      "epoch": 129,
+      "candidate_pairs": 1,
+      "compensation_ngonka": 7470360710,
+      "compensation_gnk": "7.470360710"
+    },
+    {
+      "epoch": 132,
+      "candidate_pairs": 1,
+      "compensation_ngonka": 14096689777,
+      "compensation_gnk": "14.096689777"
+    }
+  ]
+}

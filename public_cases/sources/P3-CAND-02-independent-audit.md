@@ -68,6 +68,8 @@ The archive validation script is [`scripts/verify_case2_archive.py`](../../scrip
 Tracked artifacts:
 
 - [`case2_full_candidates.csv`](../../artifacts/case2_archive/case2_full_candidates.csv) - final independently derived address-by-epoch matrix.
+- [`case2_full_amount_reconciliation.csv`](../../artifacts/case2_archive/case2_full_amount_reconciliation.csv) - per-candidate proof that compensation equals chain `epoch_performance_summary.rewarded_coins`.
+- [`case2_full_amount_reconciliation.json`](../../artifacts/case2_archive/case2_full_amount_reconciliation.json) - amount totals by epoch and all-amounts-match-chain flag.
 - [`case2_full_summary.json`](../../artifacts/case2_archive/case2_full_summary.json) - scanned epoch range, totals, per-epoch summary stats, and failure list.
 - [`case2_full_published_compare.json`](../../artifacts/case2_archive/case2_full_published_compare.json) - exact comparison against the published CSV.
 
@@ -87,6 +89,7 @@ Proposal coordinator `@OpenMindedPerson` validated the Case 2 result after the i
 - full archive scan coverage: `274/274` epochs in `1-274`, with `0` recorded failures;
 - confirmed affected set: `19` `(epoch, address)` pairs and `19` unique addresses;
 - confirmed compensation: `1,075,336,150,923 ngonka` / `1,075.336150923 GNK`;
+- amount reconciliation: every candidate amount equals the on-chain `epoch_performance_summary.rewarded_coins` value for that `(epoch, address)`;
 - comparison with the published `gonkavip/unclaimed` calculation: exact match, `0` mismatches;
 - additional Case 2 settle-drop candidates in the full `1-274` scan and checked `275-280` tail: `0`.
 

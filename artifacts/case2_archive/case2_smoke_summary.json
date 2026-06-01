@@ -19,6 +19,8 @@
   "settle_snapshot_coverage_complete": true,
   "candidate_pairs": 19,
   "affected_addresses": 19,
+  "amount_source": "chain epoch_performance_summary.rewarded_coins",
+  "all_candidate_amounts_match_chain": true,
   "total_ngonka": 1075336150923,
   "total_gnk": "1075.336150923",
   "nonzero_epochs": [

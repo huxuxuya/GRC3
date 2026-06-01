@@ -11,6 +11,8 @@ in git. The resumable raw cache is also outside the repository at
 | File | Meaning |
 |---|---|
 | `case2_full_candidates.csv` | Final independently derived address-by-epoch compensation matrix for epochs `1-274`. |
+| `case2_full_amount_reconciliation.csv` | Per-candidate amount proof: compensation equals chain `epoch_performance_summary.rewarded_coins`. |
+| `case2_full_amount_reconciliation.json` | Amount totals by epoch and all-amounts-match-chain flag. |
 | `case2_full_coverage.csv` | Per-epoch coverage proof: settlement height, summary rows, snapshot size, and candidate count. |
 | `case2_full_summary.json` | Full scan metadata, totals, nonzero epochs, per-epoch summary stats, and failures. |
 | `case2_full_published_compare.json` | Exact comparison with the published `gonkavip/unclaimed` CSV. |

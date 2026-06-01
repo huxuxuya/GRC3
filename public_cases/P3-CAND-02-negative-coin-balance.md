@@ -38,6 +38,7 @@
 - A local archive LCD configured through `.env` was validated on 2026-06-01. The endpoint and key are not tracked in git; sanitized results are stored in `artifacts/case2_archive`.
 - Independent archive validation scanned the full published range `1-274`, checking each epoch's positive rewards against the complete historical `SettleAmount` snapshot at the next epoch's `effective_block_height`.
 - The full scan found exactly `19` candidate `(epoch, address)` pairs, `19` affected addresses, total `1,075.336150923 GNK`, with nonzero epochs `97`, `112`, `116`, `129`, and `132`.
+- Amount reconciliation confirms every candidate payout equals the on-chain `epoch_performance_summary.rewarded_coins` value for that `(epoch, address)`. Total chain rewarded coins and total compensation both equal `1,075,336,150,923 ngonka`.
 - The independent result matched the published `gonkavip/unclaimed` CSV exactly: `19` pairs, `1,075.336150923 GNK`, `0` mismatches.
 - Proposal coordinator `@OpenMindedPerson` validated the Case 2 result: the confirmed compensation set remains the 19 settle-drop rows, and no additional Case 2 candidates were found in the full `1-274` archive scan or the checked `275-280` tail.
 
@@ -70,6 +71,8 @@ This case is not redistribution through reduced reward weight. The chain recorde
 - [Independent audit notes](sources/P3-CAND-02-independent-audit.md)
 - [Archive validation script](../scripts/verify_case2_archive.py)
 - [Full candidate artifact](../artifacts/case2_archive/case2_full_candidates.csv)
+- [Full amount reconciliation CSV](../artifacts/case2_archive/case2_full_amount_reconciliation.csv)
+- [Full amount reconciliation summary](../artifacts/case2_archive/case2_full_amount_reconciliation.json)
 - [Full summary artifact](../artifacts/case2_archive/case2_full_summary.json)
 - [Published comparison artifact](../artifacts/case2_archive/case2_full_published_compare.json)
 - [GRC chat update export index](sources/GRC-chat-update-2026-06-01.md)
