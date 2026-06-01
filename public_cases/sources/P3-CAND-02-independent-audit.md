@@ -80,6 +80,18 @@ Control checks from the archive source:
 
 The full independent archive scan confirms the published 19-row set and did not find additional settle-drop candidates in epochs `1-274`. The focused and smoke windows also confirm that no new candidates appear in the checked tail `275-280`.
 
+## Coordinator Validation
+
+Proposal coordinator `@OpenMindedPerson` validated the Case 2 result after the independent archive pass. The validated result is:
+
+- full archive scan coverage: `274/274` epochs in `1-274`, with `0` recorded failures;
+- confirmed affected set: `19` `(epoch, address)` pairs and `19` unique addresses;
+- confirmed compensation: `1,075,336,150,923 ngonka` / `1,075.336150923 GNK`;
+- comparison with the published `gonkavip/unclaimed` calculation: exact match, `0` mismatches;
+- additional Case 2 settle-drop candidates in the full `1-274` scan and checked `275-280` tail: `0`.
+
+This coordinator validation applies to the settlement-time `#550` / negative-balance settle-drop case. PR `#826` remains documented as a separate claim-time partial-payout risk and is not included in the confirmed Case 2 compensation result.
+
 ## Code Audit
 
 PR #550, `Negative coin balance for settle`, was merged on 2026-01-13 as commit `8184fe3501629d1051d1d14b31e7c47c01f7615d` into milestone `v0.2.8`.
@@ -99,3 +111,4 @@ Current `main` also uses `CacheContext` in `payoutClaim` in `msg_server_claim_re
 - The remaining `debt > reward` path intentionally returns `ErrNegativeCoinBalance` with zero reward, so it does not match the positive-reward compensation signature.
 - No positive unclaimed rows were found in epochs `275-280`.
 - Full independent archive validation confirms the published 19 affected rows exactly: `1,075,336,150,923 ngonka` / `1,075.336150923 GNK`, with no mismatches against the published calculation and no additional candidates in the scanned `1-274` range.
+- Proposal coordinator `@OpenMindedPerson` validated this Case 2 result; governance inclusion remains the only open decision recorded for this case.

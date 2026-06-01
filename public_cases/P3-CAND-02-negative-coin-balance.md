@@ -4,12 +4,12 @@
 |---|---|
 | Proposal | Proposal #3 candidate |
 | Epochs | 1-274 in the published calculation |
-| Status | Independently validated; inclusion pending |
+| Status | Coordinator validated; inclusion pending |
 | Reported by | Evgenii Maksimenkov |
 | Affected / detail contact | 19 miners; Evgenii Maksimenkov |
 | Case investigator | @maksimenkoff; calculation: [gonkavip/unclaimed](https://github.com/gonkavip/unclaimed) |
 | Case validator | @dem_ww |
-| Result so far | Independent archive validation matched the published 19-row affected set exactly |
+| Result so far | Proposal coordinator validated the independent archive result: 19 affected rows, exact match to the published calculation |
 | Further analysis | Required: governance inclusion decision |
 | Compensation | 1,075.336150923 GNK |
 | Lost reward destination | Rewards were computed but no `SettleAmount` claim ticket was written; the published calculation states they were eventually swept into the gov module account. |
@@ -23,6 +23,7 @@
 | 2026-05-26 08:31 UTC+03 | Evgenii Maksimenkov | Scope filters would keep only participants assigned rewards whose claim failed with "No rewards for this address". | Method narrowed to the settle-drop path. |
 | 2026-05-26 09:23 UTC+03 | Evgenii Maksimenkov | "only 19 participants remain" affected by the specific bug. | Narrow deterministic affected set. |
 | 2026-05-26 16:21 UTC+03 | Evgenii Maksimenkov | Shared PR #826 and PR #550. | Referenced issue/fix sources. |
+| 2026-06-01 | @OpenMindedPerson | Proposal coordinator validated Case 2 archive-check result: 19 affected addresses, `1,075.336150923 GNK`, and no additional settle-drop candidates in the checked range. | Coordinator validation confirms the independently reproduced result; governance inclusion decision remains. |
 
 ## Findings
 
@@ -38,6 +39,7 @@
 - Independent archive validation scanned the full published range `1-274`, checking each epoch's positive rewards against the complete historical `SettleAmount` snapshot at the next epoch's `effective_block_height`.
 - The full scan found exactly `19` candidate `(epoch, address)` pairs, `19` affected addresses, total `1,075.336150923 GNK`, with nonzero epochs `97`, `112`, `116`, `129`, and `132`.
 - The independent result matched the published `gonkavip/unclaimed` CSV exactly: `19` pairs, `1,075.336150923 GNK`, `0` mismatches.
+- Proposal coordinator `@OpenMindedPerson` validated the Case 2 result: the confirmed compensation set remains the 19 settle-drop rows, and no additional Case 2 candidates were found in the full `1-274` archive scan or the checked `275-280` tail.
 
 ## Independent Audit Snapshot
 
