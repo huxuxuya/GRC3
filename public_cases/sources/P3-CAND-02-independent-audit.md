@@ -55,9 +55,9 @@ Public nodes checked on 2026-06-01 did not provide the needed historical state:
 | `rpc.gonka.gg` | same endpoint without credentials | `unauthorized`; endpoint reference states an API key is required. |
 | `rpc.gonka.gg` | same endpoint with API-key authentication | authenticated request reached the chain API, but `settle_amount` at height `1519978` still returned `no commit info found`. |
 
-A separate local archive LCD configured through `.env` was later validated on 2026-06-01. The endpoint and API key are intentionally not tracked in git. The script derives the direct Cosmos LCD URL locally, stores its resumable cache outside the repository at `/tmp/grc3-case2-audit/cache.db`, and writes only sanitized review artifacts to `artifacts/case2_archive`.
+A separate local archive LCD configured through `.env` was later validated on 2026-06-01. The endpoint and API key are intentionally not tracked in git. The script derives the direct Cosmos LCD URL locally, stores its resumable cache outside the repository at `/tmp/grc3-case2-audit/cache.db`, and writes only sanitized review artifacts to `validations/P3-CAND-02-negative-coin-balance`.
 
-The archive validation script is [`scripts/verify_case2_archive.py`](../../scripts/verify_case2_archive.py). It independently builds the candidate set from chain state and uses the published `gonkavip/unclaimed` CSV only as a comparison target.
+The archive validation script is [`verify_archive.py`](../../validations/P3-CAND-02-negative-coin-balance/verify_archive.py). It independently builds the candidate set from chain state and uses the published `gonkavip/unclaimed` CSV only as a comparison target.
 
 | Scan | Epochs | Candidate pairs | Affected addresses | Total, ngonka | Total, GNK | Nonzero epochs | Published comparison |
 |---|---|---:|---:|---:|---:|---|---|
@@ -67,11 +67,11 @@ The archive validation script is [`scripts/verify_case2_archive.py`](../../scrip
 
 Tracked artifacts:
 
-- [`case2_full_candidates.csv`](../../artifacts/case2_archive/case2_full_candidates.csv) - final independently derived address-by-epoch matrix.
-- [`case2_full_amount_reconciliation.csv`](../../artifacts/case2_archive/case2_full_amount_reconciliation.csv) - per-candidate proof that compensation equals chain `epoch_performance_summary.rewarded_coins`.
-- [`case2_full_amount_reconciliation.json`](../../artifacts/case2_archive/case2_full_amount_reconciliation.json) - amount totals by epoch and all-amounts-match-chain flag.
-- [`case2_full_summary.json`](../../artifacts/case2_archive/case2_full_summary.json) - scanned epoch range, totals, per-epoch summary stats, and failure list.
-- [`case2_full_published_compare.json`](../../artifacts/case2_archive/case2_full_published_compare.json) - exact comparison against the published CSV.
+- [`case2_full_candidates.csv`](../../validations/P3-CAND-02-negative-coin-balance/case2_full_candidates.csv) - final independently derived address-by-epoch matrix.
+- [`case2_full_amount_reconciliation.csv`](../../validations/P3-CAND-02-negative-coin-balance/case2_full_amount_reconciliation.csv) - per-candidate proof that compensation equals chain `epoch_performance_summary.rewarded_coins`.
+- [`case2_full_amount_reconciliation.json`](../../validations/P3-CAND-02-negative-coin-balance/case2_full_amount_reconciliation.json) - amount totals by epoch and all-amounts-match-chain flag.
+- [`case2_full_summary.json`](../../validations/P3-CAND-02-negative-coin-balance/case2_full_summary.json) - scanned epoch range, totals, per-epoch summary stats, and failure list.
+- [`case2_full_published_compare.json`](../../validations/P3-CAND-02-negative-coin-balance/case2_full_published_compare.json) - exact comparison against the published CSV.
 
 Control checks from the archive source:
 

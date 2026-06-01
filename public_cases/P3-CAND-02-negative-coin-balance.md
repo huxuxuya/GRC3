@@ -35,7 +35,7 @@
 - That independent first pass found `823` rows with `rewarded_coins > 0` and `claimed = false` in epochs `1-274`, including ordinary missed claims. The broad result confirms that `EpochPerformanceSummary` alone cannot identify Case 2 compensation recipients.
 - In the current tail `275-280`, the independent scan found `0` rows with positive unclaimed rewards.
 - Public `node1`, `node2`, and `node3` did not retain the required old `SettleAmount` state, and authenticated `rpc.gonka.gg` gateway access did not expose it either.
-- A local archive LCD configured through `.env` was validated on 2026-06-01. The endpoint and key are not tracked in git; sanitized results are stored in `artifacts/case2_archive`.
+- A local archive LCD configured through `.env` was validated on 2026-06-01. The endpoint and key are not tracked in git; sanitized results are stored in `validations/P3-CAND-02-negative-coin-balance`.
 - Independent archive validation scanned the full published range `1-274`, checking each epoch's positive rewards against the complete historical `SettleAmount` snapshot at the next epoch's `effective_block_height`.
 - The full scan found exactly `19` candidate `(epoch, address)` pairs, `19` affected addresses, total `1,075.336150923 GNK`, with nonzero epochs `97`, `112`, `116`, `129`, and `132`.
 - Amount reconciliation confirms every candidate payout equals the on-chain `epoch_performance_summary.rewarded_coins` value for that `(epoch, address)`. Total chain rewarded coins and total compensation both equal `1,075,336,150,923 ngonka`.
@@ -69,12 +69,13 @@ This case is not redistribution through reduced reward weight. The chain recorde
 
 - [Calculation repository](https://github.com/gonkavip/unclaimed)
 - [Independent audit notes](sources/P3-CAND-02-independent-audit.md)
-- [Archive validation script](../scripts/verify_case2_archive.py)
-- [Full candidate artifact](../artifacts/case2_archive/case2_full_candidates.csv)
-- [Full amount reconciliation CSV](../artifacts/case2_archive/case2_full_amount_reconciliation.csv)
-- [Full amount reconciliation summary](../artifacts/case2_archive/case2_full_amount_reconciliation.json)
-- [Full summary artifact](../artifacts/case2_archive/case2_full_summary.json)
-- [Published comparison artifact](../artifacts/case2_archive/case2_full_published_compare.json)
+- [Validation package](../validations/P3-CAND-02-negative-coin-balance/README.md)
+- [Archive validation script](../validations/P3-CAND-02-negative-coin-balance/verify_archive.py)
+- [Full candidate artifact](../validations/P3-CAND-02-negative-coin-balance/case2_full_candidates.csv)
+- [Full amount reconciliation CSV](../validations/P3-CAND-02-negative-coin-balance/case2_full_amount_reconciliation.csv)
+- [Full amount reconciliation summary](../validations/P3-CAND-02-negative-coin-balance/case2_full_amount_reconciliation.json)
+- [Full summary artifact](../validations/P3-CAND-02-negative-coin-balance/case2_full_summary.json)
+- [Published comparison artifact](../validations/P3-CAND-02-negative-coin-balance/case2_full_published_compare.json)
 - [GRC chat update export index](sources/GRC-chat-update-2026-06-01.md)
 - [PR #826](https://github.com/gonka-ai/gonka/pull/826)
 - [PR #550](https://github.com/gonka-ai/gonka/pull/550)

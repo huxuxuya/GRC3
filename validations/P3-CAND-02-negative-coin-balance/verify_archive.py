@@ -22,7 +22,7 @@ from pathlib import Path
 
 
 DEFAULT_WORKDIR = Path("/tmp/grc3-case2-audit")
-DEFAULT_ARTIFACT_DIR = Path("artifacts/case2_archive")
+DEFAULT_ARTIFACT_DIR = Path("validations/P3-CAND-02-negative-coin-balance")
 DEFAULT_PUBLISHED_CSV = (
     "https://raw.githubusercontent.com/gonkavip/unclaimed/main/unclaimed.csv"
 )
