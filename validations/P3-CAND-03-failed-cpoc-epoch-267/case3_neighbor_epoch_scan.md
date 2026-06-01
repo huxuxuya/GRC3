@@ -1,6 +1,6 @@
 # Case 3 Neighbor Epoch Scan
 
-Range checked: epochs `262` through `272`.
+Range checked: epochs `262` through `276`.
 
 The scan looks for the same durable chain signature as Case 3:
 
@@ -25,6 +25,10 @@ The scan looks for the same durable chain signature as Case 3:
 | 270 | 49 | 4 | 4 | 0 |  |
 | 271 | 49 | 7 | 7 | 0 |  |
 | 272 | 50 | 7 | 6 | 0 |  |
+| 273 | 61 | 11 | 11 | 0 |  |
+| 274 | 55 | 15 | 15 | 0 |  |
+| 275 | 55 | 7 | 7 | 0 |  |
+| 276 | 54 | 15 | 15 | 0 |  |
 
 ## Case-3-like Rows
 
@@ -108,3 +112,51 @@ The scan looks for the same durable chain signature as Case 3:
 | 272 | `gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p` | 0 | 28.7372% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
 | 272 | `gonka1nku7u6d5mz80h35ty8ydeh0k5xydesvt9w0vjr` | 0 | 19.6229% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
 | 272 | `gonka1mmlyd5xxu5l68yx8wzclrkxkxvm88mhq5tp5s0` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 273 | `gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx` | 0 | 31.5761% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 273 | `gonka1yal0ysgzc860zt3y8cds8656tnueusgymftvkw` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 273 | `gonka18x5f3q6g0r3n7rgslwq66d2hd6tp5mgxwxnmc3` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 273 | `gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p` | 0 | 49.0130% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 273 | `gonka125n6kr5gvdup0lndfkps7t6rd6592panhrg3np` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 273 | `gonka1tl5m3vuqsx333v7095ymwjdc4vdk2wd9r5hqws` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 273 | `gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 273 | `gonka15munkmx6x7k6rqqeexjet4556p7at39ks9qgr5` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 273 | `gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 273 | `gonka1mmlyd5xxu5l68yx8wzclrkxkxvm88mhq5tp5s0` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 273 | `gonka1ujnc662v6g69jm6fgxnr79a2m7ehzeut059239` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 274 | `gonka1qwfrtz9c7kcrfkrrlne2pkcye74mj6ce33xdkl` | 0 | 30.4095% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 274 | `gonka1q5xt54wncgzk7dxv9x64uln68455g83wu9tugg` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 274 | `gonka1yal0ysgzc860zt3y8cds8656tnueusgymftvkw` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 274 | `gonka19cjm4c5mt3j3qdr8vhytmm4hef3pnkvkm0x7m2` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 274 | `gonka1xwkesaxvdadh9wt9yyladu0r260s7whklcktds` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 274 | `gonka1830lqug50lse998x2lakk4pj5ypfumz5pasz0y` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 274 | `gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p` | 0 | 29.0542% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 274 | `gonka125n6kr5gvdup0lndfkps7t6rd6592panhrg3np` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 274 | `gonka1wt8sr9jxzpec65j7zkxsgh6edk3m6r8nlf5za4` | 0 | 6.9693% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 274 | `gonka1wkgawwdzj623ss8eywayzdj6qcgr2llygactje` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 274 | `gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 274 | `gonka14tqh62mangwzrma2lgg2dm375rcjzn2ydy8ttm` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 274 | `gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 274 | `gonka1ujnc662v6g69jm6fgxnr79a2m7ehzeut059239` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 274 | `gonka1l8jd2nz92mnem0xwgwkltcw2952cnlphs5arsa` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 275 | `gonka19cjm4c5mt3j3qdr8vhytmm4hef3pnkvkm0x7m2` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 275 | `gonka1xwkesaxvdadh9wt9yyladu0r260s7whklcktds` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 275 | `gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p` | 0 | 33.4816% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 275 | `gonka1nku7u6d5mz80h35ty8ydeh0k5xydesvt9w0vjr` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 275 | `gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 275 | `gonka14tqh62mangwzrma2lgg2dm375rcjzn2ydy8ttm` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 275 | `gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 276 | `gonka1830lqug50lse998x2lakk4pj5ypfumz5pasz0y` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 276 | `gonka1gyk0aahvr3qeju4zx0nplfreej6cy4jjk8svc5` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 276 | `gonka1f0u3y2wneer8zhz3ypw4x54h38cpa0qsy8ts3e` | 0 | 16.9861% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 276 | `gonka125n6kr5gvdup0lndfkps7t6rd6592panhrg3np` | 0 | 46.8992% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 276 | `gonka1d694r00czmq75txghwjcuk07lxvc8d4ekgsha0` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 276 | `gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09` | 0 | 35.2638% | pass_weight | zero_reward,ratio_below_alpha,kimi_submitted,kimi_preserved_power_present |
+| 276 | `gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 276 | `gonka14tqh62mangwzrma2lgg2dm375rcjzn2ydy8ttm` | 0 | 37.1301% | pass_weight | zero_reward,ratio_below_alpha,kimi_submitted,kimi_preserved_power_present |
+| 276 | `gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 276 | `gonka1mmlyd5xxu5l68yx8wzclrkxkxvm88mhq5tp5s0` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 276 | `gonka1ujnc662v6g69jm6fgxnr79a2m7ehzeut059239` | 0 | 36.3655% | pass_weight | zero_reward,ratio_below_alpha,kimi_submitted,kimi_preserved_power_present |
+| 276 | `gonka1u4zxypjgcr8khlzefwjr0vwdaj2uzruw2cehj3` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 276 | `gonka1amlmhjym02shahjv8ldmupg4cx0qc66q6f85rj` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 276 | `gonka17pw6099q758qwzewtrqmqpf5c2lrhr97fwqexu` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |
+| 276 | `gonka1l8jd2nz92mnem0xwgwkltcw2952cnlphs5arsa` | 0 | 0.0000% | no_submission | zero_reward,ratio_below_alpha,kimi_below_2_3,kimi_preserved_power_present |

@@ -71,6 +71,18 @@ This does not look like the simple case "the claimant did not submit anything."
 The claimant did submit. The disputed part that remains is policy/eligibility:
 whether any proxy configuration responsibility should affect compensation.
 
+Formula check: `case3_chain_formula_reconciliation.md` maps these tables back
+to the historical chain code. The raw `>2/3` checks use
+`sum(model voting power) > TotalNetworkWeight * 2 / 3`; the final failure ratio
+uses the pre-fix `foldEventReadings` formula
+`(preserved + measured) / (preserved + notPreserved) / 0.909`. The stored epoch
+`265` and `267` ratios both reconcile with that formula.
+
+Fixed in: `v0.2.13` microrelease / PR `#1143` / commit `17808620`. The update
+stores one epoch snapshot of confirmable models and weight-scale factors for
+confirmation and reward calculations, and disables confirmation PoC for the
+rest of the upgrade epoch so the new snapshot logic starts cleanly.
+
 ## How To Run
 
 The script reads `.env` locally. `GONKA_RPC_URL` or `GONKA_RPC_LCD_URL` must be
@@ -83,14 +95,14 @@ python3 validations/P3-CAND-03-failed-cpoc-epoch-267/verify_archive.py
 Raw node responses are cached under `/tmp/grc3-case3-audit` by default. The
 tracked artifacts are normalized CSV/JSON summaries only.
 
-To check the nearest five epochs before and after epoch `267` for the same
-failed-cPoC signature:
+To check the nearest five epochs before epoch `267` and all epochs through the
+`v0.2.13` upgrade epoch for the same failed-cPoC signature:
 
 ```bash
-python3 validations/P3-CAND-03-failed-cpoc-epoch-267/scan_neighbor_epochs.py
+python3 validations/P3-CAND-03-failed-cpoc-epoch-267/scan_neighbor_epochs.py --center-epoch 267 --epochs-before 5 --epochs-after 9
 ```
 
-That scan checks epochs `262..272`, caches raw node responses under
+That scan checks epochs `262..276`, caches raw node responses under
 `/tmp/grc3-case3-neighbor-scan`, and writes normalized summary artifacts in this
 folder.
 
@@ -124,6 +136,16 @@ Confirmed chain facts:
   participant preserved on Kimi nodes `B9` and `U11`;
 - the integer reward reconciliation matches `10,262.057515369 GONKA`.
 
+Extended pre-fix scan through epoch `276`:
+
+- `119` zero-reward `failed_confirmation_poc` rows were found before the clean
+  `v0.2.13` start;
+- strict Case-3-like Kimi-shortfall signature appears only in epochs `265` and
+  `267`, both for the same claimant;
+- `24` additional rows had at least one submitted model reach `pass_weight` but
+  still failed the confirmation ratio, so they are broader confirmation
+  accounting candidates for separate review, not automatic Case 3 inclusions.
+
 Important limitation: the raw REST validation rows alone are not the final
 chain verdict, because the chain also applies cPoC snapshot/slot logic and then
 records the actual outcome in exclusion state. The inclusion decision therefore
@@ -156,12 +178,27 @@ guardian vote count from validation rows.
 - `case3_epoch265_timeline.md` - same-address neighbor timeline for epoch
   `265`, including cPoC heights, preserved weight, available validation
   weight, actual claimant validation weight, and exclusion state.
+- `case3_epoch265_model_weights.csv` - full epoch `265` per-model
+  participant weights with model `weight`, model `voting_power`, preserved
+  flag, and preserved node IDs.
+- `case3_chain_formula_reconciliation.md` - mapping from the validation tables
+  to the historical chain formulas, including numeric reconciliation of the
+  epoch `265` and `267` `ConfirmationPoCRatio` values.
+- `case3_time_reference.md` - UTC/MSK timestamps for epoch `265`, epoch `267`,
+  the claimant cPoC/exclusion blocks, and the on-chain `v0.2.13` upgrade
+  installation.
+- `case3_pre_fix_window_review.md` - extended epoch `262..276` scan summary,
+  separating strict Case-3-like rows from broader pre-fix confirmation-accounting
+  candidates.
+- `../P3-CAND-06-pre-fix-confirmation-accounting/` - standalone candidate case
+  package for the `24` broader pass-weight-but-failed-ratio rows found during
+  the pre-fix scan.
 - `case3_epoch266_same_claimant_check.md` - boundary check for the same
   claimant in epoch `266`, separating ordinary PoC from confirmation PoC and
   documenting why epoch `266` does not currently prove a same-claimant reward
   loss.
-- `scan_neighbor_epochs.py` - independent scanner for the five epochs before
-  and after epoch `267`.
+- `scan_neighbor_epochs.py` - independent scanner for neighbor and pre-fix
+  epochs around epoch `267`.
 - `case3_neighbor_epoch_summary.csv` - per-epoch counts for the neighbor scan.
 - `case3_neighbor_failed_cpoc_rows.csv` - every `failed_confirmation_poc` row
   found in the neighbor scan with model weights, ratio, and loss estimate.

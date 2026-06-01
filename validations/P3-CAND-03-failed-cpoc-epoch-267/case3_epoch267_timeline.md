@@ -42,6 +42,10 @@ The important distinction is:
 
 Snapshot: episode anchor `4,122,271`; validation snapshot height `4,122,312`.
 
+The table uses model voting-power availability as a raw `>2/3` diagnostic. The
+final chain `ConfirmationPoCRatio` is computed later from coefficient-adjusted
+PoC node readings; see `case3_chain_formula_reconciliation.md`.
+
 | Model | Preserved weight | Preserved share | Available after preserved | Available share | Is available weight enough for `>2/3`? | Shortfall/surplus vs `360,944` |
 |---|---:|---:|---:|---:|---|---:|
 | Qwen | `139,925` | `25.8443%` | `401,490` | `74.1557%` | yes | `+40,546` |
@@ -121,4 +125,3 @@ At cPoC #1:
 - `ConfirmationPoCRatio` became `0.0057419461588255`, below alpha `0.5`;
 - at block `4,122,552`, claimant became `INACTIVE` with reason
   `failed_confirmation_poc`.
-
