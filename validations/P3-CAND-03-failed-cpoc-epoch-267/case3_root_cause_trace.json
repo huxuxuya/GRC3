@@ -1,0 +1,59 @@
+{
+  "alpha_threshold_decimal": "0.5",
+  "alpha_threshold_raw": {
+    "exponent": -1,
+    "value": "5"
+  },
+  "case_id": "P3-CAND-03",
+  "claimant": "gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6",
+  "claimant_confirmation_weight_at_exclusion": 343,
+  "claimant_confirmation_weight_before_exclusion": 65716,
+  "claimant_root_weight_at_exclusion": 19518,
+  "claimant_root_weight_before_exclusion": 19518,
+  "code_path": [
+    "confirmation_poc.go:evaluateConfirmation sets participant.CurrentEpochStats.ConfirmationPoCRatio",
+    "calculations/status.go:getConfirmationPoCStatus fails when ConfirmationPoCRatio < AlphaThreshold",
+    "participant_status.go records failed_confirmation_poc exclusion when status changes to INACTIVE"
+  ],
+  "confirmation_ratio_decimal": "0.0057419461588255",
+  "confirmation_ratio_raw": {
+    "exponent": -16,
+    "value": "57419461588255"
+  },
+  "confirmation_weight_delta": -65373,
+  "epoch": 267,
+  "epochs_completed_at_exclusion": 0,
+  "epochs_completed_before_exclusion": 1,
+  "exclusion_height": 4122552,
+  "exclusion_reason": "failed_confirmation_poc",
+  "first_cpoc_trigger_height": 4122271,
+  "high_power_kimi_group_voting_power": 159432,
+  "high_power_kimi_non_voter": "gonka17gpuntq09zsaqtmpe544gc32tk4424dwv5t34f",
+  "preserved_focus_rows": [
+    {
+      "episode_anchor_height": "4122271",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "node_count": 2,
+      "node_ids": "U2a;U2b",
+      "participant": "gonka17gpuntq09zsaqtmpe544gc32tk4424dwv5t34f"
+    },
+    {
+      "episode_anchor_height": "4122271",
+      "model_id": "moonshotai/Kimi-K2.6",
+      "node_count": 2,
+      "node_ids": "B9;U11",
+      "participant": "gonka17gpuntq09zsaqtmpe544gc32tk4424dwv5t34f"
+    }
+  ],
+  "preserved_snapshot_episode_anchor_height": "4122271",
+  "preserved_snapshot_found": true,
+  "ratio_below_alpha": true,
+  "snapshot_claimant_kimi_voting_power": 19518,
+  "snapshot_claimant_qwen_voting_power": 19518,
+  "snapshot_high_power_kimi_voting_power": 159432,
+  "status_at_exclusion": "INACTIVE",
+  "status_before_exclusion": "ACTIVE",
+  "validation_snapshot_found": true,
+  "validation_snapshot_height": "4122312",
+  "validation_snapshot_total_network_weight": "541415"
+}

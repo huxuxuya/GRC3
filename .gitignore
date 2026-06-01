@@ -4,3 +4,7 @@ Exported Data_Update.pdf
 .env
 .env.*
 !.env.example
+
+# Python local caches
+__pycache__/
+*.pyc

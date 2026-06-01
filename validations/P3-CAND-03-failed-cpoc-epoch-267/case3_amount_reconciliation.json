@@ -1,0 +1,15 @@
+{
+  "actual_reward_ngonka": 0,
+  "case_id": "P3-CAND-03",
+  "epoch": 267,
+  "expected_reward_ngonka": 10262057515369,
+  "fixed_epoch_reward_ngonka": 284661946392231,
+  "formula": "participant_root_weight * fixed_epoch_reward_ngonka // root_total_weight - actual_reward_ngonka",
+  "loss_gonka": "10262.057515369",
+  "loss_ngonka": 10262057515369,
+  "matches_published_amount": true,
+  "participant": "gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6",
+  "participant_root_weight": 19518,
+  "published_amount_ngonka": 10262057515369,
+  "root_total_weight": 541415
+}

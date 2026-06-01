@@ -1,0 +1,209 @@
+{
+  "amount": {
+    "actual_reward_ngonka": 0,
+    "case_id": "P3-CAND-03",
+    "epoch": 267,
+    "expected_reward_ngonka": 10262057515369,
+    "fixed_epoch_reward_ngonka": 284661946392231,
+    "formula": "participant_root_weight * fixed_epoch_reward_ngonka // root_total_weight - actual_reward_ngonka",
+    "loss_gonka": "10262.057515369",
+    "loss_ngonka": 10262057515369,
+    "matches_published_amount": true,
+    "participant": "gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6",
+    "participant_root_weight": 19518,
+    "published_amount_ngonka": 10262057515369,
+    "root_total_weight": 541415
+  },
+  "case3_candidate_count": 1,
+  "case3_candidates": [
+    "gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6"
+  ],
+  "case_id": "P3-CAND-03",
+  "claimant": "gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6",
+  "confirmation_poc_events": [
+    {
+      "generation_start_height": 4122273,
+      "phase": "CONFIRMATION_POC_COMPLETED",
+      "sequence": 0,
+      "trigger_height": 4122271
+    },
+    {
+      "generation_start_height": 4130087,
+      "phase": "CONFIRMATION_POC_COMPLETED",
+      "sequence": 1,
+      "trigger_height": 4130085
+    },
+    {
+      "generation_start_height": 4133667,
+      "phase": "CONFIRMATION_POC_COMPLETED",
+      "sequence": 2,
+      "trigger_height": 4133665
+    },
+    {
+      "generation_start_height": 4134531,
+      "phase": "CONFIRMATION_POC_COMPLETED",
+      "sequence": 3,
+      "trigger_height": 4134529
+    }
+  ],
+  "cpoc1_distribution": {
+    "Kimi:no_submission": 31,
+    "Kimi:pass_guardian": 20,
+    "Qwen:no_submission": 30,
+    "Qwen:pass_guardian": 2,
+    "Qwen:pass_weight": 19
+  },
+  "epoch": 267,
+  "excluded_participants": [
+    {
+      "address": "gonka1tmk2tzdneht6smu34pkmqdvu7p34qavvmwtwq2",
+      "epoch_index": "267",
+      "exclusion_block_height": "4127009",
+      "reason": "statistical_invalidations"
+    },
+    {
+      "address": "gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6",
+      "epoch_index": "267",
+      "exclusion_block_height": "4122552",
+      "reason": "failed_confirmation_poc"
+    },
+    {
+      "address": "gonka1ujnc662v6g69jm6fgxnr79a2m7ehzeut059239",
+      "epoch_index": "267",
+      "exclusion_block_height": "4133946",
+      "reason": "failed_confirmation_poc"
+    }
+  ],
+  "guardian_conversion_errors": [],
+  "guardian_count": 3,
+  "hardware_vs_chain": {
+    "claimant_cpoc1_kimi": "pass_guardian",
+    "claimant_cpoc1_qwen": "pass_guardian",
+    "claimant_exclusion_block_height": "4122552",
+    "claimant_exclusion_reason": "failed_confirmation_poc",
+    "claimant_later_kimi_results": [
+      "pass_guardian",
+      "pass_guardian",
+      "pass_guardian"
+    ],
+    "high_power_cpoc1_kimi_result": "no_submission",
+    "high_power_kimi_non_voter": "gonka17gpuntq09zsaqtmpe544gc32tk4424dwv5t34f",
+    "high_power_kimi_voting_power": 159432,
+    "high_power_validated_claimant_kimi_cpoc1": false
+  },
+  "method": "independent archive LCD reconstruction; published Case 3 code not executed or imported",
+  "model_group_counts": {
+    "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 34,
+    "moonshotai/Kimi-K2.6": 27
+  },
+  "root_cause_trace": {
+    "alpha_threshold_decimal": "0.5",
+    "alpha_threshold_raw": {
+      "exponent": -1,
+      "value": "5"
+    },
+    "case_id": "P3-CAND-03",
+    "claimant": "gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6",
+    "claimant_confirmation_weight_at_exclusion": 343,
+    "claimant_confirmation_weight_before_exclusion": 65716,
+    "claimant_root_weight_at_exclusion": 19518,
+    "claimant_root_weight_before_exclusion": 19518,
+    "code_path": [
+      "confirmation_poc.go:evaluateConfirmation sets participant.CurrentEpochStats.ConfirmationPoCRatio",
+      "calculations/status.go:getConfirmationPoCStatus fails when ConfirmationPoCRatio < AlphaThreshold",
+      "participant_status.go records failed_confirmation_poc exclusion when status changes to INACTIVE"
+    ],
+    "confirmation_ratio_decimal": "0.0057419461588255",
+    "confirmation_ratio_raw": {
+      "exponent": -16,
+      "value": "57419461588255"
+    },
+    "confirmation_weight_delta": -65373,
+    "epoch": 267,
+    "epochs_completed_at_exclusion": 0,
+    "epochs_completed_before_exclusion": 1,
+    "exclusion_height": 4122552,
+    "exclusion_reason": "failed_confirmation_poc",
+    "first_cpoc_trigger_height": 4122271,
+    "high_power_kimi_group_voting_power": 159432,
+    "high_power_kimi_non_voter": "gonka17gpuntq09zsaqtmpe544gc32tk4424dwv5t34f",
+    "preserved_focus_rows": [
+      {
+        "episode_anchor_height": "4122271",
+        "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+        "node_count": 2,
+        "node_ids": "U2a;U2b",
+        "participant": "gonka17gpuntq09zsaqtmpe544gc32tk4424dwv5t34f"
+      },
+      {
+        "episode_anchor_height": "4122271",
+        "model_id": "moonshotai/Kimi-K2.6",
+        "node_count": 2,
+        "node_ids": "B9;U11",
+        "participant": "gonka17gpuntq09zsaqtmpe544gc32tk4424dwv5t34f"
+      }
+    ],
+    "preserved_snapshot_episode_anchor_height": "4122271",
+    "preserved_snapshot_found": true,
+    "ratio_below_alpha": true,
+    "snapshot_claimant_kimi_voting_power": 19518,
+    "snapshot_claimant_qwen_voting_power": 19518,
+    "snapshot_high_power_kimi_voting_power": 159432,
+    "status_at_exclusion": "INACTIVE",
+    "status_before_exclusion": "ACTIVE",
+    "validation_snapshot_found": true,
+    "validation_snapshot_height": "4122312",
+    "validation_snapshot_total_network_weight": "541415"
+  },
+  "root_participant_count": 51,
+  "root_total_weight": 541415,
+  "source_hashes": {
+    "/productscience/inference/inference/all_poc_v2_store_commits/4122271": "9bf3a472f6d7b1caa36dbbc74261d19906b989961f44b245be1b4c8ebdc0fbd6",
+    "/productscience/inference/inference/all_poc_v2_store_commits/4130085": "a0699f7f1b43633afc38d3583f69a01b746b93e7290c92d9830eca58af62616f",
+    "/productscience/inference/inference/all_poc_v2_store_commits/4133665": "f377caae6426d6243d14ababd0845b80c638db0d045d40bc81e11cc20514e26d",
+    "/productscience/inference/inference/all_poc_v2_store_commits/4134529": "25d5e6a47970a21e7409519d6d4f5de87230228d526e02c09dd08cd70f891cee",
+    "/productscience/inference/inference/poc_v2_validations_for_stage/4122271": "fc40e6d318987a09b2bed1946ba8ec6a6548c056a781dcb07d518681127ab3f5",
+    "/productscience/inference/inference/poc_v2_validations_for_stage/4130085": "77787bdbc8fa212c2d797798f25473164061fdc0e5edb1ffcec6e6e51bce5584",
+    "/productscience/inference/inference/poc_v2_validations_for_stage/4133665": "14127abe747d9ba1c28c8dfc92df9d360dcbc31bc53d9ce31652f252edd1722e",
+    "/productscience/inference/inference/poc_v2_validations_for_stage/4134529": "630886d27c724e91a35f0c19b8dd54a57dc7d5e27de9414b26f7a8fabf789dd5"
+  },
+  "stage_counts": [
+    {
+      "commit_rows": 42,
+      "event_sequence": 0,
+      "generation_start_height": 4122273,
+      "phase": "CONFIRMATION_POC_COMPLETED",
+      "trigger_height": 4122271,
+      "validation_inner_rows": 831,
+      "validation_outer_rows": 42
+    },
+    {
+      "commit_rows": 44,
+      "event_sequence": 1,
+      "generation_start_height": 4130087,
+      "phase": "CONFIRMATION_POC_COMPLETED",
+      "trigger_height": 4130085,
+      "validation_inner_rows": 961,
+      "validation_outer_rows": 44
+    },
+    {
+      "commit_rows": 40,
+      "event_sequence": 2,
+      "generation_start_height": 4133667,
+      "phase": "CONFIRMATION_POC_COMPLETED",
+      "trigger_height": 4133665,
+      "validation_inner_rows": 784,
+      "validation_outer_rows": 40
+    },
+    {
+      "commit_rows": 39,
+      "event_sequence": 3,
+      "generation_start_height": 4134531,
+      "phase": "CONFIRMATION_POC_COMPLETED",
+      "trigger_height": 4134529,
+      "validation_inner_rows": 783,
+      "validation_outer_rows": 39
+    }
+  ],
+  "zero_reward_count": 3
+}

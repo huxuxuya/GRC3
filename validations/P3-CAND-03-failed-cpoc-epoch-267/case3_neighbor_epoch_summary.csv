@@ -1,0 +1,12 @@
+epoch,root_participant_count,total_network_weight,cpoc_event_count,excluded_count,failed_confirmation_poc_count,zero_reward_failed_confirmation_poc_count,case3_like_count,case3_like_participants
+262,54,1096187,0,0,0,0,0,
+263,55,1045290,1,6,6,6,0,
+264,54,1010191,2,3,3,3,0,
+265,51,904177,3,14,14,14,1,gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6
+266,46,335159,3,7,7,7,0,
+267,51,541415,4,3,2,2,1,gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6
+268,57,698639,7,11,11,11,0,
+269,58,679397,6,11,11,11,0,
+270,49,717467,3,4,4,4,0,
+271,49,796030,7,7,7,7,0,
+272,50,823183,5,7,6,6,0,

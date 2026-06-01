@@ -1,0 +1,4 @@
+participant,root_weight,actual_reward_ngonka,exclusion_reason,exclusion_block_height,case3_included,reason,cpoc1_qwen_result,cpoc1_kimi_result,cpoc2_kimi_result,cpoc3_kimi_result,cpoc4_kimi_result
+gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6,19518,0,failed_confirmation_poc,4122552,True,"zero reward, failed_confirmation_poc in cPoC #1 window, Qwen/Kimi submissions present, Kimi validation weight below 2/3, later Kimi submitted",pass_guardian,pass_guardian,pass_guardian,pass_guardian,pass_guardian
+gonka1tmk2tzdneht6smu34pkmqdvu7p34qavvmwtwq2,1124,0,statistical_invalidations,4127009,False,exclusion reason is statistical_invalidations,no_submission,no_submission,no_submission,no_submission,no_submission
+gonka1ujnc662v6g69jm6fgxnr79a2m7ehzeut059239,6900,0,failed_confirmation_poc,4133946,False,"failed_confirmation_poc exclusion happened at 4133946, not in cPoC #1 window",no_submission,pass_guardian,pass_guardian,no_submission,pass_guardian
