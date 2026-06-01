@@ -26,6 +26,26 @@ Lost-reward destinations in the case tables below refer to the chain `gov` modul
 | [`P3-CAND-05`](public_cases/P3-CAND-05-ml3-reregistration.md)<br>`ml3` hardware re-registration | ~269 | Scope decision required; not in the current five assigned Proposal #3 cases | SegovChik from `@gonkstein` | 1 claimant; `@gonkstein` via SegovChik | Arturs noted no on-chain HW proof | Required: policy/scope decision first | TBD | Not established: compensable lost reward is not yet proven. | [#1089](https://github.com/gonka-ai/gonka/pull/1089) (`v0.2.12`, related mitigation) |
 | [`P4-CAND-01`](public_cases/P4-CAND-01-kimi-restitution.md)<br>Kimi restitution: CPoC, nonce exclusion, ComputeGroupCap<br>[Calculation](https://github.com/votkon/gonka-kimi-restitution); [DevOps evidence](public_cases/sources/P4-CAND-01-devops-chat.md) | 265-276 | Not included in GRC; community proposal possible | Votkon; DevOps reporters | 52 unique addresses; Votkon; Evgenii Maksimenkov | @votkon; full-period calculation published; @maksimenkoff reviewed numbers as generally correct | @mikenosov raised scope, denominator and reproducibility objections; GRC voted against inclusion | 710,772.72 GNK published; contested | Disputed: chat notes some losses may have been redistributed by network rules, while fixed-reward reduced weights can leave governance remainder. | [#1143](https://github.com/gonka-ai/gonka/pull/1143) (`v0.2.13`, partial mitigation) |
 
+## Compensation By Epoch / Overlap Matrix
+
+Amounts are in GNK and are calculated estimates from the linked public repositories. Empty cells mean no compensation amount was found for that case and epoch.
+
+| Case | Source | 97 | 112 | 116 | 129 | 132 | 265 | 266 | 267 | 268 | 269 | 270 | 271 | 272 | 273 | 274 | 275 | 276 | Total | Overlap Notes |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| `P3-CAND-01` | [grc-p3-cand01](https://github.com/huxuxuya/grc-p3-cand01) |  |  |  |  |  |  |  |  |  |  |  |  | 30,715.490666 |  |  |  |  | 30,715.490666 | Epoch 272 overlaps `P4-CAND-01` by epoch only; no same-address overlap found in checked aggregate data. |
+| `P3-CAND-02` | [unclaimed](https://github.com/gonkavip/unclaimed) | 8.432384 | 7.993577 | 1,037.343140 | 7.470361 | 14.096690 |  |  |  |  |  |  |  |  |  |  |  |  | 1,075.336151 | No overlap with other current case epochs. |
+| `P3-CAND-03` | [GRC-e267-kimi_shortfall](https://github.com/gonkalabs/GRC-e267-kimi_shortfall) |  |  |  |  |  |  |  | 10,262.057515 |  |  |  |  |  |  |  |  |  | 10,262.057515 | Epoch 267 overlaps `P4-CAND-01` by epoch only; no same-address overlap found in checked aggregate data. |
+| `P3-CAND-04` | [payout276](https://github.com/gonkavip/payout276) |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 36,209.451291 | 36,209.451291 | Epoch 276 has same-address overlap with `P4-CAND-01`; duplicate-compensation handling required. |
+| `P4-CAND-01` | [gonka-kimi-restitution](https://github.com/votkon/gonka-kimi-restitution) |  |  |  |  |  | 30,592.104862 | 188,698.468970 | 88,917.163953 | 65,241.369805 | 48,012.518034 | 30,965.834116 | 38,178.788158 | 32,434.442996 | 50,077.516007 | 47,718.948918 | 33,938.754950 | 55,996.808384 | 710,772.719154 | Not in current GRC proposal; overlaps `P3-CAND-04` by address+epoch in epoch 276. |
+
+### Overlap Findings
+
+- Epoch-level overlaps exist at epoch `267` (`P3-CAND-03` / `P4-CAND-01`), epoch `272` (`P3-CAND-01` / `P4-CAND-01`) and epoch `276` (`P3-CAND-04` / `P4-CAND-01`).
+- Epoch-level overlap is only a review signal; it does not by itself prove duplicate payment risk.
+- Confirmed address+epoch overlap was found only for epoch `276`, between `P3-CAND-04` and `P4-CAND-01`.
+- The overlapping epoch `276` addresses are `gonka10079cnl3nuh2k82mhkm04dj0slhtw9kmjewwau`, `gonka168rtjfkszuhcggg4dfyse4yh7xn9zwfglnkns2`, `gonka1gvrrhjmy4w4mayvs2s5l23edj8ertcmtd2v4zr`, `gonka1kx9mca3xm8u8ypzfuhmxey66u0ufxhs7nm6wc5`, `gonka1scskt6wpnjnumsah6kjphmdu87vjgvcxmn4rxv`, and `gonka1yal0ysgzc860zt3y8cds8656tnueusgymftvkw`.
+- Before any `P4-CAND-01` community payout, validators should subtract or otherwise reconcile any approved `P3-CAND-04` epoch `276` compensation for the overlapping addresses.
+
 ## Additional Observations - Not Proposed for Compensation
 
 | Observation | Epoch / Date | Reported By | Known Affected | Evidence Status | Action Status | Fix |

@@ -10,7 +10,7 @@
 | **Cause and evidence** | CPoC degradation in epoch 265, nonce/delegation losses in epoch 266, and ComputeGroupCap underpayment in epochs 267-276. Evidence: [calculation repository](https://github.com/votkon/gonka-kimi-restitution) and [DevOps chat log](sources/P4-CAND-01-devops-chat.md). |
 | **Can it happen again?** | Reduced risk after `v0.2.13`; `ComputeGroupCap` still exists as an intended protocol rule, so recurrence risk should be reviewed. |
 | **Mitigation / fix** | Partially mitigated by PR [#1143](https://github.com/gonka-ai/gonka/pull/1143) in `v0.2.13`: confirmation PoC weight loss during new-model bootstrap was fixed, and Kimi `WeightScaleFactor` was recalibrated to `0.78`. |
-| **Compensation overlap** | Overlaps epoch 276 with the separate UpgradeProtectionWindow / CPoC misfire case; validators must ensure no duplicate compensation for the same economic loss. |
+| **Compensation overlap** | Overlaps by epoch with `P3-CAND-03` at epoch 267, `P3-CAND-01` at epoch 272, and `P3-CAND-04` at epoch 276. Confirmed same-address overlap was found only with `P3-CAND-04` in epoch 276; validators must ensure no duplicate compensation for those addresses. |
 | **Current decision** | GRC voted against including this case in a GRC proposal; published findings remain usable for a community proposal. |
 | **Review focus** | Investigator: @votkon. @maksimenkoff reviewed the numbers as generally correct but questioned GroupCap compensation; @mikenosov raised scope, denominator, epoch-276 proration and reproducibility objections. |
 
@@ -36,7 +36,7 @@
 - GRC voted against including the case in a GRC proposal because the root event was framed as a third-party attack / operator-disruption case.
 - Evgenii Maksimenkov reviewed the numbers as generally correct, but did not support compensating all later GroupCap effects without qualification.
 - Mike raised additional methodological concerns: scope exclusion for e265-e266, denominator correctness for e267-e276, proration for e276, and an e266 script/output mismatch.
-- Any approval must check overlap with the separate epoch 276 CPoC-misfire candidate.
+- Any approval must check overlap with the separate epoch 276 CPoC-misfire candidate. The checked data shows six same-address epoch-276 overlaps with `P3-CAND-04`.
 - DevOps evidence includes named addresses and publicly described methods for recovering PoC/validation evidence.
 
 ## Mitigation / Fix Status

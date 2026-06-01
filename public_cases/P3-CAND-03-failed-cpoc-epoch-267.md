@@ -33,6 +33,7 @@
 - For the known address, the discussion cites `failed_confirmation_poc` and zero reward in epoch 267.
 - The investigator report currently treats one address as the fully valid restitution set, with a compensation amount around `10.2k GNK`.
 - Additional cohort sanity checks may affect wording, but the report does not present a larger fully validated participant set.
+- The case has an epoch-level overlap with the Kimi restitution package in epoch 267, but no same-address overlap was found in the checked aggregate compensation data.
 - Eligibility is disputed because later discussion links the validation failure to an outdated proxy configuration / missing `poc/proofs` exemption, raising the question of operator configuration versus protocol fault.
 - A cited technical fix reduces recurrence risk but does not by itself determine compensation eligibility.
 

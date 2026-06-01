@@ -32,6 +32,7 @@
 - Total calculated payout: `36,209.451 GNK`.
 - Inputs are archive-node snapshots at fixed historical block heights.
 - The calculation compares chain state at block heights `4267299` and `4274661`.
+- The case has confirmed same-address epoch-276 overlap with `P4-CAND-01`; duplicate-compensation handling is required if the Kimi restitution package is pursued separately.
 - DevOps chat identifies one affected address, `gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09`, with reported `53.21%` confirmation ratio before dropping from the epoch.
 
 ## Mitigation / Fix Status
