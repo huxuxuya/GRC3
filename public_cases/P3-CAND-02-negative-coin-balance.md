@@ -33,7 +33,7 @@
 - Independent first-pass scan on 2026-06-01 did not use the published script or CSV. It queried `epoch_performance_summary` directly for epochs `1-280`.
 - That independent first pass found `823` rows with `rewarded_coins > 0` and `claimed = false` in epochs `1-274`, including ordinary missed claims. The broad result confirms that `EpochPerformanceSummary` alone cannot identify Case 2 compensation recipients.
 - In the current tail `275-280`, the independent scan found `0` rows with positive unclaimed rewards.
-- Independent historical `SettleAmount` validation is currently blocked because public `node1`, `node2`, and `node3` do not retain the required old state; `rpc.gonka.gg` requires an API key.
+- Independent historical `SettleAmount` validation is currently blocked because public `node1`, `node2`, and `node3` do not retain the required old state. Authenticated `rpc.gonka.gg` access also reaches the API but still returns `no commit info found` for the old `settle_amount` height checked.
 
 ## Independent Audit Snapshot
 

@@ -53,8 +53,9 @@ Public nodes checked on 2026-06-01 did not provide the needed historical state:
 | `node2.gonka.ai` | same height and endpoint | `no commit info found`, latest height reported around `4364799+`. |
 | `node3.gonka.ai` | same height and endpoint | empty reply from server. |
 | `rpc.gonka.gg` | same endpoint without credentials | `unauthorized`; endpoint reference states an API key is required. |
+| `rpc.gonka.gg` | same endpoint with API-key authentication | authenticated request reached the chain API, but `settle_amount` at height `1519978` still returned `no commit info found`. |
 
-Therefore the independent data audit is complete only through the broad first-pass and current-tail check. The final 19-row compensation list and `1,075.336150923 GNK` total still require an archive node or authenticated archive API to independently verify missing historical `SettleAmount` entries.
+Therefore the independent data audit is complete only through the broad first-pass and current-tail check. The final 19-row compensation list and `1,075.336150923 GNK` total still require a true archive node or indexed historical `SettleAmount` dataset to independently verify missing historical `SettleAmount` entries. Authentication to `rpc.gonka.gg` is not sufficient for this specific old-state query.
 
 ## Code Audit
 
