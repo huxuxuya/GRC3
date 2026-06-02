@@ -1,0 +1,1124 @@
+{
+  "cache_files": [
+    {
+      "cache_file": "raw_stage_cache/height_4073650_productscience_inference_inference_params.352ae5d10a795cd2.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4073650",
+      "sha256": "253367154a6c9b482434b14e977b3dc77a491d2eddf44b4811e7d87ef7caaee2",
+      "size_bytes": 11235
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4073931_productscience_inference_inference_all_mlnode_weight_distributions_4073650.2cb8ee9faecb7802.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_mlnode_weight_distributions/4073650",
+      "requested_block_height": "4073931",
+      "sha256": "faa2ef840906711ac1aadb0c26fd4ce59fb5fc4ce9c566da98affd648f19dd43",
+      "size_bytes": 23791
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4073931_productscience_inference_inference_poc_validation_snapshot_4073650.d54686885a922de9.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/poc_validation_snapshot/4073650",
+      "requested_block_height": "4073931",
+      "sha256": "0a97cee43cf0b11bf862498f6370658543aa8910260846f8810e24412c9590ef",
+      "size_bytes": 9514
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4073931_productscience_inference_inference_preserved_nodes_snapshot.89157b746db957db.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/preserved_nodes_snapshot",
+      "requested_block_height": "4073931",
+      "sha256": "e3fd8562bd50595b96b12cee487cee2a4e693802231ee4e6d08f8f7cb75286e0",
+      "size_bytes": 5576
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4075202_productscience_inference_inference_params.809202c7acf2b606.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4075202",
+      "sha256": "253367154a6c9b482434b14e977b3dc77a491d2eddf44b4811e7d87ef7caaee2",
+      "size_bytes": 11235
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4075483_productscience_inference_inference_all_mlnode_weight_distributions_4075202.87903a2ae811a344.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_mlnode_weight_distributions/4075202",
+      "requested_block_height": "4075483",
+      "sha256": "b09ad3709c2db5e59ad1aec6a3506c208d68822c4bf2774bb1a201d127ca102c",
+      "size_bytes": 24150
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4075483_productscience_inference_inference_poc_validation_snapshot_4075202.3b75dd19b372dbd2.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/poc_validation_snapshot/4075202",
+      "requested_block_height": "4075483",
+      "sha256": "01769250aac2d924efdf48479b8e5afcec53d947fec663387ba36ce24a5db6e8",
+      "size_bytes": 9381
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4075483_productscience_inference_inference_preserved_nodes_snapshot.cc57fbf255c2fd18.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/preserved_nodes_snapshot",
+      "requested_block_height": "4075483",
+      "sha256": "d7fe452343790b17bd6a67f795181079f9945a3823aa09ff6a958b774a524818",
+      "size_bytes": 6149
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4102890_productscience_inference_inference_params.6613bb2373d6ba0e.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4102890",
+      "sha256": "253367154a6c9b482434b14e977b3dc77a491d2eddf44b4811e7d87ef7caaee2",
+      "size_bytes": 11235
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4103171_productscience_inference_inference_all_mlnode_weight_distributions_4102890.1043ee2856eb1f38.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_mlnode_weight_distributions/4102890",
+      "requested_block_height": "4103171",
+      "sha256": "3ddb44bba02f5affac9a0e08aca3858212c33d63606c4f2e89f08891dd641c12",
+      "size_bytes": 18740
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4103171_productscience_inference_inference_poc_validation_snapshot_4102890.2f6f01f280e13850.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/poc_validation_snapshot/4102890",
+      "requested_block_height": "4103171",
+      "sha256": "9060941b61a1fae67de64a50cdb05630372df2b34400bdd17c4298cb4847aaf9",
+      "size_bytes": 7012
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4103171_productscience_inference_inference_preserved_nodes_snapshot.4eaf667d408cc865.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/preserved_nodes_snapshot",
+      "requested_block_height": "4103171",
+      "sha256": "c39f83e894867232307a68c3cd2e8f2188eb6f696a0ee004dc2f64a373696c7f",
+      "size_bytes": 5456
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4144898_productscience_inference_inference_params.28640b5271fca95d.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4144898",
+      "sha256": "253367154a6c9b482434b14e977b3dc77a491d2eddf44b4811e7d87ef7caaee2",
+      "size_bytes": 11235
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4145179_productscience_inference_inference_all_mlnode_weight_distributions_4144898.3de7a89b37bf92ea.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_mlnode_weight_distributions/4144898",
+      "requested_block_height": "4145179",
+      "sha256": "b36dee302199692ac25e837dc255a55e6b1de66e9c4bcae7c3a5ab3a2cea4692",
+      "size_bytes": 15471
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4145179_productscience_inference_inference_poc_validation_snapshot_4144898.343b281eced774dc.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/poc_validation_snapshot/4144898",
+      "requested_block_height": "4145179",
+      "sha256": "0e0274e09eb59e54714ee12061573742158a7fb7640385ec99c3eee0de7712b1",
+      "size_bytes": 7405
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4145179_productscience_inference_inference_preserved_nodes_snapshot.11cc56c15c8fbff2.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/preserved_nodes_snapshot",
+      "requested_block_height": "4145179",
+      "sha256": "2b99b23031306aa0029f3174f569f287eef2f5028f01df03a6d85d509f0df1dc",
+      "size_bytes": 4997
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4153434_productscience_inference_inference_params.e439d9489536584a.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4153434",
+      "sha256": "253367154a6c9b482434b14e977b3dc77a491d2eddf44b4811e7d87ef7caaee2",
+      "size_bytes": 11235
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4153715_productscience_inference_inference_all_mlnode_weight_distributions_4153434.e82acb364c63a3c1.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_mlnode_weight_distributions/4153434",
+      "requested_block_height": "4153715",
+      "sha256": "4ae8f734e9f79dd48b8999cbbe95dacb5f79638234ef7536e160ccdeb926e888",
+      "size_bytes": 17218
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4153715_productscience_inference_inference_poc_validation_snapshot_4153434.d7ccd024961b2966.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/poc_validation_snapshot/4153434",
+      "requested_block_height": "4153715",
+      "sha256": "3160e7c318c1f6ecf938687889d5ba4bcaf304857bfe54573e3a209f25c677c4",
+      "size_bytes": 9240
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4153715_productscience_inference_inference_preserved_nodes_snapshot.e70b9ee717eabd71.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/preserved_nodes_snapshot",
+      "requested_block_height": "4153715",
+      "sha256": "9ed3bd458d3ad0153e77c8a094c2cafa1b41e6b8e50acc4c22639a02d719c34f",
+      "size_bytes": 4741
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4164861_productscience_inference_inference_params.3dd342cbdadbd139.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4164861",
+      "sha256": "253367154a6c9b482434b14e977b3dc77a491d2eddf44b4811e7d87ef7caaee2",
+      "size_bytes": 11235
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4165142_productscience_inference_inference_all_mlnode_weight_distributions_4164861.11043a3d49744167.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_mlnode_weight_distributions/4164861",
+      "requested_block_height": "4165142",
+      "sha256": "936900bcf7f73c3b4543e0ec4cababf5b71c557387d308414b7bb5cd72fda376",
+      "size_bytes": 16875
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4165142_productscience_inference_inference_poc_validation_snapshot_4164861.3c474ecf311fe5e4.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/poc_validation_snapshot/4164861",
+      "requested_block_height": "4165142",
+      "sha256": "cf17e7e0974aca6ce3fc94795afe7a487be4db60cea10b6b672b8dd2024f43f0",
+      "size_bytes": 8192
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4165142_productscience_inference_inference_preserved_nodes_snapshot.85a4bb225daac692.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/preserved_nodes_snapshot",
+      "requested_block_height": "4165142",
+      "sha256": "140559ec6851ce025c3199634fc454acdc0fc9500f4e2c018a66112d61ad1957",
+      "size_bytes": 4661
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4184386_productscience_inference_inference_params.35ab1f8a57b11d2e.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4184386",
+      "sha256": "253367154a6c9b482434b14e977b3dc77a491d2eddf44b4811e7d87ef7caaee2",
+      "size_bytes": 11235
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4184667_productscience_inference_inference_all_mlnode_weight_distributions_4184386.ef07c82e6d1e77da.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_mlnode_weight_distributions/4184386",
+      "requested_block_height": "4184667",
+      "sha256": "53f8d03b36c6a74a67d47d6a421906cfd75003d47f8c2d6c6aa1b77e4c50b32b",
+      "size_bytes": 18551
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4184667_productscience_inference_inference_poc_validation_snapshot_4184386.c0bae5cf4583d1b0.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/poc_validation_snapshot/4184386",
+      "requested_block_height": "4184667",
+      "sha256": "df33264cc62d9a6efda401fc198d25b5cbed43d982ed6664b73a3efb52efc983",
+      "size_bytes": 8064
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4184667_productscience_inference_inference_preserved_nodes_snapshot.c2b14b6e027694cb.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/preserved_nodes_snapshot",
+      "requested_block_height": "4184667",
+      "sha256": "a98058ed4ed1d1f1307490cee9dacb787c53d8b930a588e60cc18907d4891243",
+      "size_bytes": 4509
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4202293_productscience_inference_inference_params.2dc1ed10b722ee7a.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4202293",
+      "sha256": "253367154a6c9b482434b14e977b3dc77a491d2eddf44b4811e7d87ef7caaee2",
+      "size_bytes": 11235
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4202574_productscience_inference_inference_all_mlnode_weight_distributions_4202293.003fc147b2de454d.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_mlnode_weight_distributions/4202293",
+      "requested_block_height": "4202574",
+      "sha256": "a1b8cc67ca9be1ccefd686ebdf57e1669e38aa459c8454356531ed97b36bd8b0",
+      "size_bytes": 19138
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4202574_productscience_inference_inference_poc_validation_snapshot_4202293.3c569f2bf6a72c9e.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/poc_validation_snapshot/4202293",
+      "requested_block_height": "4202574",
+      "sha256": "68681e9e4879d7ba9ecef23ec2e5c562cd8b6fbeb4183ea90551a1636b7b15a6",
+      "size_bytes": 8195
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4202574_productscience_inference_inference_preserved_nodes_snapshot.de5612d58eceed7b.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/preserved_nodes_snapshot",
+      "requested_block_height": "4202574",
+      "sha256": "c3fbeb8724c13046a6d2fc8778f558c17e7c6f69b92015c6cc6c365c0d7a99eb",
+      "size_bytes": 4305
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4209686_productscience_inference_inference_params.9d63ad921763108a.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4209686",
+      "sha256": "253367154a6c9b482434b14e977b3dc77a491d2eddf44b4811e7d87ef7caaee2",
+      "size_bytes": 11235
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4209967_productscience_inference_inference_all_mlnode_weight_distributions_4209686.cbea6ca2517277a8.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_mlnode_weight_distributions/4209686",
+      "requested_block_height": "4209967",
+      "sha256": "6f8fe05a85ee1765f8bb7dd674e1fcebf67dc3a7b00114780d31fcc4cc044ae1",
+      "size_bytes": 17732
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4209967_productscience_inference_inference_poc_validation_snapshot_4209686.b1ed1f4c7259bd58.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/poc_validation_snapshot/4209686",
+      "requested_block_height": "4209967",
+      "sha256": "4729aa0865b0892bebb0d4c42c54daa16b0e6fa8dd968cb3919b0238bbbd7d92",
+      "size_bytes": 7540
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4209967_productscience_inference_inference_preserved_nodes_snapshot.8d06d9f89c6de3b2.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/preserved_nodes_snapshot",
+      "requested_block_height": "4209967",
+      "sha256": "5f18a5ca8448b3f7edfbeadbf4c2ccdd0aa8ad82ee0e8b65bce1707ac7998621",
+      "size_bytes": 4548
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4215427_productscience_inference_inference_params.4881d12ec5a2d4ad.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4215427",
+      "sha256": "253367154a6c9b482434b14e977b3dc77a491d2eddf44b4811e7d87ef7caaee2",
+      "size_bytes": 11235
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4215708_productscience_inference_inference_all_mlnode_weight_distributions_4215427.1a47f8af9cfd23e0.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_mlnode_weight_distributions/4215427",
+      "requested_block_height": "4215708",
+      "sha256": "1529c4be9113e53724d3e831f166d6f131916e62995621046708d45f22e280a2",
+      "size_bytes": 18463
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4215708_productscience_inference_inference_poc_validation_snapshot_4215427.d3a4bccc0e002a42.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/poc_validation_snapshot/4215427",
+      "requested_block_height": "4215708",
+      "sha256": "86dbe6415fc8d491706917233276a44adafa6f20212093ecfb8616e50fc31349",
+      "size_bytes": 9627
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4215708_productscience_inference_inference_preserved_nodes_snapshot.c00f975612cc4232.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/preserved_nodes_snapshot",
+      "requested_block_height": "4215708",
+      "sha256": "2672b6bc73e27fc559fe481ec24ecef38ce4e262b2f24259b7d94c3a5ab8b230",
+      "size_bytes": 5357
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4231815_productscience_inference_inference_params.70a5d04d5280626f.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4231815",
+      "sha256": "253367154a6c9b482434b14e977b3dc77a491d2eddf44b4811e7d87ef7caaee2",
+      "size_bytes": 11235
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4232096_productscience_inference_inference_all_mlnode_weight_distributions_4231815.17ae822851caa44b.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_mlnode_weight_distributions/4231815",
+      "requested_block_height": "4232096",
+      "sha256": "dd93b5544ce83205981dbd7f0262a6acff4d501908b7ae9b1cc679da1f76478d",
+      "size_bytes": 18695
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4232096_productscience_inference_inference_poc_validation_snapshot_4231815.4ccd6647ab2e2392.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/poc_validation_snapshot/4231815",
+      "requested_block_height": "4232096",
+      "sha256": "47f7121b6a47c3a155f471b2ce86383bebd1def486afd18241c24b870037ef63",
+      "size_bytes": 7665
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4232096_productscience_inference_inference_preserved_nodes_snapshot.037debdfb19ba928.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/preserved_nodes_snapshot",
+      "requested_block_height": "4232096",
+      "sha256": "1694deaced33cef54d68e9cfac36fd53b04fa1d522f75546d72b9ef1359d512d",
+      "size_bytes": 4271
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4232787_productscience_inference_inference_params.a2eabdda6fda8e1b.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4232787",
+      "sha256": "253367154a6c9b482434b14e977b3dc77a491d2eddf44b4811e7d87ef7caaee2",
+      "size_bytes": 11235
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4233068_productscience_inference_inference_all_mlnode_weight_distributions_4232787.8b35474c4f0c8496.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_mlnode_weight_distributions/4232787",
+      "requested_block_height": "4233068",
+      "sha256": "a3eb2d2595eb3c39777f8226114176f117037d9e9129bbc632a57730e3a70278",
+      "size_bytes": 15696
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4233068_productscience_inference_inference_poc_validation_snapshot_4232787.45ea6f915b01cda1.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/poc_validation_snapshot/4232787",
+      "requested_block_height": "4233068",
+      "sha256": "e6482d7991cdacc7e7e9efbf9649c9312b94e5ba57dc6ebac8915a7948bcdc16",
+      "size_bytes": 7272
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4233068_productscience_inference_inference_preserved_nodes_snapshot.cc9f9743376ecdba.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/preserved_nodes_snapshot",
+      "requested_block_height": "4233068",
+      "sha256": "f7c319adad0a9771967f2480290c5dc31ee7be4a35fb9005a0976b9504dae3dc",
+      "size_bytes": 4989
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4258197_productscience_inference_inference_params.c13384cc53b9c68e.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4258197",
+      "sha256": "253367154a6c9b482434b14e977b3dc77a491d2eddf44b4811e7d87ef7caaee2",
+      "size_bytes": 11235
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4258478_productscience_inference_inference_all_mlnode_weight_distributions_4258197.b4fda6370626b8b0.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_mlnode_weight_distributions/4258197",
+      "requested_block_height": "4258478",
+      "sha256": "c174d86f785a1e5b1af5f96a3fe82b14f55d6c41d9b2e497474166c20c257fa4",
+      "size_bytes": 21476
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4258478_productscience_inference_inference_poc_validation_snapshot_4258197.7fc1a833a3b0f0f0.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/poc_validation_snapshot/4258197",
+      "requested_block_height": "4258478",
+      "sha256": "722160931bbc6ea4bae884c398aab948ecbeada5e2097c9fdc0f5a155064914c",
+      "size_bytes": 8057
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4258478_productscience_inference_inference_preserved_nodes_snapshot.f768115630e4a86f.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/preserved_nodes_snapshot",
+      "requested_block_height": "4258478",
+      "sha256": "ef24ffde86ced94dc95359d51421312b05be0c9592e158c22a215cc15a4817e0",
+      "size_bytes": 4832
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4264130_productscience_inference_inference_params.4c240ae932e604a0.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4264130",
+      "sha256": "253367154a6c9b482434b14e977b3dc77a491d2eddf44b4811e7d87ef7caaee2",
+      "size_bytes": 11235
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4264411_productscience_inference_inference_all_mlnode_weight_distributions_4264130.97cb39d5822a6f55.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_mlnode_weight_distributions/4264130",
+      "requested_block_height": "4264411",
+      "sha256": "beb917261cb40e5a9988f983a9a24ab42825a8007545ab920e98149adcfaac91",
+      "size_bytes": 19208
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4264411_productscience_inference_inference_poc_validation_snapshot_4264130.9c6a0b9841a52b4c.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/poc_validation_snapshot/4264130",
+      "requested_block_height": "4264411",
+      "sha256": "3cf1e3b55705d09ac12064b75a3fb3925c8d0a02bffe8898a629b6b9e9659432",
+      "size_bytes": 8715
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4264411_productscience_inference_inference_preserved_nodes_snapshot.87cb7cf707799196.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/preserved_nodes_snapshot",
+      "requested_block_height": "4264411",
+      "sha256": "050a2643b32ebde19375210407512da24152c3362f1a9de51dcfa3cf179c8abe",
+      "size_bytes": 5018
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4265965_productscience_inference_inference_params.c7bc6781caa4d6dd.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4265965",
+      "sha256": "253367154a6c9b482434b14e977b3dc77a491d2eddf44b4811e7d87ef7caaee2",
+      "size_bytes": 11235
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4266246_productscience_inference_inference_all_mlnode_weight_distributions_4265965.d353cc91ee3902e9.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_mlnode_weight_distributions/4265965",
+      "requested_block_height": "4266246",
+      "sha256": "d1bc360a1d449d9482e86f1fe432674ea9cb0de3cd1013e9d8bda142e735398b",
+      "size_bytes": 18919
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4266246_productscience_inference_inference_poc_validation_snapshot_4265965.755907c73c9cdf11.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/poc_validation_snapshot/4265965",
+      "requested_block_height": "4266246",
+      "sha256": "f7e0bc4ba4158bcf379f2e9f4b1568791af41a79b4183ef96d664e340397c577",
+      "size_bytes": 7928
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4266246_productscience_inference_inference_preserved_nodes_snapshot.c10b459d89634477.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/preserved_nodes_snapshot",
+      "requested_block_height": "4266246",
+      "sha256": "46d3d35f9b2b4048750b6551a29f5b048030b4c4124a77ad0400ad17a8a5a7ef",
+      "size_bytes": 5016
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4267778_productscience_inference_inference_params.7c61869f102fd901.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4267778",
+      "sha256": "896e46b79c6915048c6e56297f2782a050717ad6faec563a6fe7b53634ac00e9",
+      "size_bytes": 12053
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4268059_productscience_inference_inference_all_mlnode_weight_distributions_4267778.e46b29caefeaa03b.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_mlnode_weight_distributions/4267778",
+      "requested_block_height": "4268059",
+      "sha256": "6eb7796a748028e5a0b0967ab8689393128aa70b7773191fa41c9fefbac4b396",
+      "size_bytes": 18640
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4268059_productscience_inference_inference_poc_validation_snapshot_4267778.3b09677405c894dc.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/poc_validation_snapshot/4267778",
+      "requested_block_height": "4268059",
+      "sha256": "a59c4033b6aec181b05d676184a25f4759c6d9114c83c4bd1cd8bf4790014313",
+      "size_bytes": 7533
+    },
+    {
+      "cache_file": "raw_stage_cache/height_4268059_productscience_inference_inference_preserved_nodes_snapshot.722d204c82ebad84.json",
+      "consumer": "old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/preserved_nodes_snapshot",
+      "requested_block_height": "4268059",
+      "sha256": "f3956a435bdabd746cab13122bab5e6dfe312b6c7e817234848fe331c26c4362",
+      "size_bytes": 4028
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_all_poc_v2_store_commits_4073650.6194d53efc4cac7a.json",
+      "consumer": "submission_validator_evidence;old_formula_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4073650",
+      "requested_block_height": "latest",
+      "sha256": "4eb49675a451d7d29a49c5f652602a98e999827194f8450655f6ff5af1be9432",
+      "size_bytes": 13551
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_all_poc_v2_store_commits_4075202.b9001ece62051012.json",
+      "consumer": "submission_validator_evidence;old_formula_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4075202",
+      "requested_block_height": "latest",
+      "sha256": "2084ef800d3da3c11e19157ff828456190041dda9aa7aee2b681ff6cf56ba486",
+      "size_bytes": 14176
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_all_poc_v2_store_commits_4102890.328cf870367acd5a.json",
+      "consumer": "submission_validator_evidence;old_formula_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4102890",
+      "requested_block_height": "latest",
+      "sha256": "c4db53cda087750c230e3433158ea3c2e1ddd192530bfc08714a5d3821fbb6e2",
+      "size_bytes": 11613
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_all_poc_v2_store_commits_4144898.652afd10c86f427a.json",
+      "consumer": "submission_validator_evidence;old_formula_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4144898",
+      "requested_block_height": "latest",
+      "sha256": "8ce020f101cfbd027d1a62caa7dd81a1119bc90d1362c4c0c11ee78da75b6904",
+      "size_bytes": 11269
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_all_poc_v2_store_commits_4153434.83c12e40de45c36f.json",
+      "consumer": "submission_validator_evidence;old_formula_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4153434",
+      "requested_block_height": "latest",
+      "sha256": "1749e6acd685e742685e314b3672be3d43835af83b4ae1158c4bc773c892921b",
+      "size_bytes": 13165
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_all_poc_v2_store_commits_4164861.44da5c4dd71d2527.json",
+      "consumer": "submission_validator_evidence;old_formula_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4164861",
+      "requested_block_height": "latest",
+      "sha256": "b2fc162f53a6c29b20412cca6079bc944f8e8112c8e51d412b730ec7cd64f9c1",
+      "size_bytes": 12836
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_all_poc_v2_store_commits_4184386.4c52049ad8dc81e6.json",
+      "consumer": "submission_validator_evidence;old_formula_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4184386",
+      "requested_block_height": "latest",
+      "sha256": "38bc4d5d70542258708ef5ecfb4641484cc1380961b22387566ff00fa52502f2",
+      "size_bytes": 12840
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_all_poc_v2_store_commits_4202293.2b1b90818c0bd3e6.json",
+      "consumer": "submission_validator_evidence;old_formula_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4202293",
+      "requested_block_height": "latest",
+      "sha256": "c8da6f6f0c345e26097da9701e834f15b953167c2b1570b6b2a58cb087ac1dea",
+      "size_bytes": 14769
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_all_poc_v2_store_commits_4209686.d513161f2801fd7a.json",
+      "consumer": "submission_validator_evidence;old_formula_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4209686",
+      "requested_block_height": "latest",
+      "sha256": "a08bdbae2692c475461b87e5c1e095d29ac7970cd4b9f19b79b9174bb0f00e82",
+      "size_bytes": 13805
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_all_poc_v2_store_commits_4215427.4e95d7da0f3987b5.json",
+      "consumer": "submission_validator_evidence;old_formula_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4215427",
+      "requested_block_height": "latest",
+      "sha256": "b636487ce2d45d87d693ee243e181e48706d6d19b40c43cd323dd1a5df870708",
+      "size_bytes": 13170
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_all_poc_v2_store_commits_4231815.b45481c09f1dc08c.json",
+      "consumer": "submission_validator_evidence;old_formula_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4231815",
+      "requested_block_height": "latest",
+      "sha256": "98e1878df1312ce11efc5f4615f513a518f61d3045f62f37c81829e3d5e76bd0",
+      "size_bytes": 13563
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_all_poc_v2_store_commits_4232787.29fe58ca27aa7e28.json",
+      "consumer": "submission_validator_evidence;old_formula_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4232787",
+      "requested_block_height": "latest",
+      "sha256": "68172654f153e94973c62bfa68b39f9a1427267b926a18216570431509cf492b",
+      "size_bytes": 9027
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_all_poc_v2_store_commits_4258197.0e0847025581b7e4.json",
+      "consumer": "submission_validator_evidence;old_formula_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4258197",
+      "requested_block_height": "latest",
+      "sha256": "ee06bb24c6c13afae1e60afd6cfc3de6e3b43583119ada17056204b5df99a674",
+      "size_bytes": 13189
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_all_poc_v2_store_commits_4264130.51a379a632170e51.json",
+      "consumer": "submission_validator_evidence;old_formula_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4264130",
+      "requested_block_height": "latest",
+      "sha256": "ae757362af429c6432b28d7fea3ee39c0788dda42cb6f599941794340395f1f2",
+      "size_bytes": 12236
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_all_poc_v2_store_commits_4265965.abae4546e8f7cdb1.json",
+      "consumer": "submission_validator_evidence;old_formula_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4265965",
+      "requested_block_height": "latest",
+      "sha256": "87a3032d7f1d4680df1282ea55932d8d77b8780e1228793106f086677fbffdbc",
+      "size_bytes": 11962
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_all_poc_v2_store_commits_4267778.ce0fcaff7fb7e207.json",
+      "consumer": "submission_validator_evidence;old_formula_replay",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4267778",
+      "requested_block_height": "latest",
+      "sha256": "1c6828a1a4a5934d457745838b004d855c4a03b24b618bad4b7c7033b44d21e3",
+      "size_bytes": 12544
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_263__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.4626b124a915688d.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/263?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "e0cabfce0dbcd00e0563ff4b92e3d7149fc0fe742736bb5ed4bd0abefbb15a65",
+      "size_bytes": 64215
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_263__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.d912be1acdd43637.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/263?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "e0cabfce0dbcd00e0563ff4b92e3d7149fc0fe742736bb5ed4bd0abefbb15a65",
+      "size_bytes": 64215
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_263__model_id_moonshotai_2FKimi-K2.6.15cb4ce606bd6e79.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/263?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "84020bf5b0e18ceab02761d322a7f5dea398b4a99f2d6c18cd81d20e0765ea89",
+      "size_bytes": 25254
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_263__model_id_moonshotai_2FKimi-K2.6.5b8023014b55fc90.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/263?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "84020bf5b0e18ceab02761d322a7f5dea398b4a99f2d6c18cd81d20e0765ea89",
+      "size_bytes": 25254
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_264__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.70b07c18edc74697.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/264?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "8dcbe16592875970099da7cf56d6e273b9333e197763a6a5ca4e32255f63b21a",
+      "size_bytes": 63990
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_264__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.7275fdb20cd7e72b.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/264?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "8dcbe16592875970099da7cf56d6e273b9333e197763a6a5ca4e32255f63b21a",
+      "size_bytes": 63990
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_264__model_id_moonshotai_2FKimi-K2.6.2fca2bd1975ccf22.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/264?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "10fbf9d51c1bbfe75ea1d31f81bc638e87777d1ad87dbf60985fe4999f2d0300",
+      "size_bytes": 25487
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_264__model_id_moonshotai_2FKimi-K2.6.e8e6d6da2b74b707.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/264?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "10fbf9d51c1bbfe75ea1d31f81bc638e87777d1ad87dbf60985fe4999f2d0300",
+      "size_bytes": 25487
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_265__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.f31575705c5e098c.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/265?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "ebcd9fe3db081e747970cb9f6fe048ad248900fa8396f5942c83810eeef0390a",
+      "size_bytes": 61681
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_265__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.f3d4288113792c3a.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/265?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "ebcd9fe3db081e747970cb9f6fe048ad248900fa8396f5942c83810eeef0390a",
+      "size_bytes": 61681
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_265__model_id_moonshotai_2FKimi-K2.6.c25fcf1f463d66e3.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/265?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "fbf7ad7ddfa8e34b64a1b7cb003d035cc608541351880d981f57aee9f24d98a6",
+      "size_bytes": 20717
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_265__model_id_moonshotai_2FKimi-K2.6.f63b8be865cd75f1.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/265?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "fbf7ad7ddfa8e34b64a1b7cb003d035cc608541351880d981f57aee9f24d98a6",
+      "size_bytes": 20717
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_268__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.57ac380dcfdf2a99.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/268?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "c38719e275a6b681c9bb8206333db0f8e3443ae654b17b6e3d76308df5d485c7",
+      "size_bytes": 50070
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_268__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.5d176cfc86ac13d6.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/268?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "c38719e275a6b681c9bb8206333db0f8e3443ae654b17b6e3d76308df5d485c7",
+      "size_bytes": 50070
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_268__model_id_moonshotai_2FKimi-K2.6.1f5fc2ee55c5d706.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/268?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "a5f34935c5fcdfbdb06472dbe02f4afa56276671488250d446ca9f7ca13071e6",
+      "size_bytes": 22448
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_268__model_id_moonshotai_2FKimi-K2.6.ba3dc995d67f77ff.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/268?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "a5f34935c5fcdfbdb06472dbe02f4afa56276671488250d446ca9f7ca13071e6",
+      "size_bytes": 22448
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_269__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.0162d75b71ab37fa.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/269?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "bbeccecd3061ce608bcccadb2eacf93f7e157dd2a04f56d07bd17e02160b3075",
+      "size_bytes": 42722
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_269__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.dcdaade33327a1e9.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/269?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "bbeccecd3061ce608bcccadb2eacf93f7e157dd2a04f56d07bd17e02160b3075",
+      "size_bytes": 42722
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_269__model_id_moonshotai_2FKimi-K2.6.50ed40e5e5480c0f.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/269?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "bf6e59fd83f93b2774f0d6cbb102fe3111236267789401c3de92d9d7efde24ec",
+      "size_bytes": 28197
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_269__model_id_moonshotai_2FKimi-K2.6.a3eb19a659a123df.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/269?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "bf6e59fd83f93b2774f0d6cbb102fe3111236267789401c3de92d9d7efde24ec",
+      "size_bytes": 28197
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_271__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.21bf23106284cfba.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/271?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "e65330d9dd6852a1f17568fa49b1bdf7c7fd3ac051fa1e8c110413be787cd9ec",
+      "size_bytes": 41754
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_271__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.6f675f92981081cb.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/271?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "e65330d9dd6852a1f17568fa49b1bdf7c7fd3ac051fa1e8c110413be787cd9ec",
+      "size_bytes": 41754
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_271__model_id_moonshotai_2FKimi-K2.6.0482254781f295e7.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/271?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "48e9ca10b981e413436f58f8052067ac04ea83b80adfcd9c7d9e52547326c549",
+      "size_bytes": 26753
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_271__model_id_moonshotai_2FKimi-K2.6.88dd1b71039bfe48.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/271?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "48e9ca10b981e413436f58f8052067ac04ea83b80adfcd9c7d9e52547326c549",
+      "size_bytes": 26753
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_272__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.9fdfc437e880d006.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/272?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "d71561801571759f3b5de33772a3a0bd70ae1d7da1e840cc30fbf4b17cb4d5de",
+      "size_bytes": 41801
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_272__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.a0121dc9af8f59f1.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/272?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "d71561801571759f3b5de33772a3a0bd70ae1d7da1e840cc30fbf4b17cb4d5de",
+      "size_bytes": 41801
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_272__model_id_moonshotai_2FKimi-K2.6.78a4954437be37a8.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/272?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "b13d432222050f33e0ce8a1a1ffe1c37312266953a2a06b6dfff8ad4f1d94ad6",
+      "size_bytes": 26780
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_272__model_id_moonshotai_2FKimi-K2.6.b527dbe5ece4efd0.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/272?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "b13d432222050f33e0ce8a1a1ffe1c37312266953a2a06b6dfff8ad4f1d94ad6",
+      "size_bytes": 26780
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_273__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.21b398dc6738dd82.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/273?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "6e81a0fbd329583344f0c1f6b876b01cd38846ff3e5e36b4acd904251ccfe064",
+      "size_bytes": 43541
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_273__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.5f24f453dff1fdc8.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/273?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "6e81a0fbd329583344f0c1f6b876b01cd38846ff3e5e36b4acd904251ccfe064",
+      "size_bytes": 43541
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_273__model_id_moonshotai_2FKimi-K2.6.04aefeb4b89f8a5b.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/273?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "2a2d1c8304606d3d5d01e37d5c9678524080dfff098ed4ad2e6591c05aff9919",
+      "size_bytes": 33688
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_273__model_id_moonshotai_2FKimi-K2.6.e158d9c94526483b.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/273?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "2a2d1c8304606d3d5d01e37d5c9678524080dfff098ed4ad2e6591c05aff9919",
+      "size_bytes": 33688
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_274__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.20d8294eae6a4046.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/274?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "7446cf3788cc957f9043af6d179b79365632bb817a5aa8eba418fd0864a7d2d5",
+      "size_bytes": 43517
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_274__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.8285f5c6b5b0581b.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/274?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "7446cf3788cc957f9043af6d179b79365632bb817a5aa8eba418fd0864a7d2d5",
+      "size_bytes": 43517
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_274__model_id_moonshotai_2FKimi-K2.6.94017bb78ee76084.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/274?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "6d6a40ff5b7fddce724272628487c33ddd1b89f4a316acb45773a66477a607e1",
+      "size_bytes": 29035
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_274__model_id_moonshotai_2FKimi-K2.6.9eaecef9741602d1.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/274?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "6d6a40ff5b7fddce724272628487c33ddd1b89f4a316acb45773a66477a607e1",
+      "size_bytes": 29035
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_275__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.18d8264c85b9be63.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/275?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "3125e75eab9fa8f2c5c7d4a127e4363a6377e2874b9be90e7efb7a0bcd3fa4d6",
+      "size_bytes": 44404
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_275__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.e61352ae583394dd.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/275?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "3125e75eab9fa8f2c5c7d4a127e4363a6377e2874b9be90e7efb7a0bcd3fa4d6",
+      "size_bytes": 44404
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_275__model_id_moonshotai_2FKimi-K2.6.f18907c497ff5e99.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/275?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "d52b417ee074e5584731e700b6ef75add7da968b5a8a646b38394b5faa317786",
+      "size_bytes": 30583
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_275__model_id_moonshotai_2FKimi-K2.6.f411ec8b37465958.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/275?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "d52b417ee074e5584731e700b6ef75add7da968b5a8a646b38394b5faa317786",
+      "size_bytes": 30583
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_276__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.07309872ef03f82e.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/276?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "120c59a263cb90a4481b29428252a58b3b2ec4a3ea399ea95de3085a23de1043",
+      "size_bytes": 47415
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_276__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.abeb88d23e141e69.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/276?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "120c59a263cb90a4481b29428252a58b3b2ec4a3ea399ea95de3085a23de1043",
+      "size_bytes": 47415
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_276__model_id_moonshotai_2FKimi-K2.6.2070c8c30b7a48a5.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/276?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "cfc489d0b4ad32c807ff7ebe18bf719140d0b176bf2e3b5b0a6ff9a6cf38db70",
+      "size_bytes": 30810
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_epoch_group_data_276__model_id_moonshotai_2FKimi-K2.6.7ffccf344a87e456.json",
+      "consumer": "submission_validator_evidence;old_formula_replay;new_algorithm_replay",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/276?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "cfc489d0b4ad32c807ff7ebe18bf719140d0b176bf2e3b5b0a6ff9a6cf38db70",
+      "size_bytes": 30810
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_poc_v2_validations_for_stage_4073650.bb440bb78df644c6.json",
+      "consumer": "submission_validator_evidence",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4073650",
+      "requested_block_height": "latest",
+      "sha256": "f4d13c02235e07a4918d8ff2716168c96402aa60fc72f638dcbffc8014992345",
+      "size_bytes": 344321
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_poc_v2_validations_for_stage_4075202.1046eb2860408b3b.json",
+      "consumer": "submission_validator_evidence",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4075202",
+      "requested_block_height": "latest",
+      "sha256": "ecbf95cd5d667c9b9742551031c50d3892ca2c08586edad8e43455723d51a64c",
+      "size_bytes": 367879
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_poc_v2_validations_for_stage_4102890.300b03b1b9b61b1f.json",
+      "consumer": "submission_validator_evidence",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4102890",
+      "requested_block_height": "latest",
+      "sha256": "d38a8ed68e2b065879046d04a11d6d5f1d1642033db3eb8c03c49f9e04b04f1e",
+      "size_bytes": 220037
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_poc_v2_validations_for_stage_4144898.8cf72deba8071f37.json",
+      "consumer": "submission_validator_evidence",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4144898",
+      "requested_block_height": "latest",
+      "sha256": "77cb294ad615a8650adb8608690ed7b51a3662fe4aaac4fe453220b1ac8d8f3c",
+      "size_bytes": 228517
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_poc_v2_validations_for_stage_4153434.ce19b4241379dca7.json",
+      "consumer": "submission_validator_evidence",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4153434",
+      "requested_block_height": "latest",
+      "sha256": "75e7f1ae8c344cbd3d20826e521c12742721906a1aecc97b062cc1f4060aba49",
+      "size_bytes": 299298
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_poc_v2_validations_for_stage_4164861.2cf7d68374e291c0.json",
+      "consumer": "submission_validator_evidence",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4164861",
+      "requested_block_height": "latest",
+      "sha256": "f138c3f592d178c29054afcbae53743c0dccc9ebfddd06b5d5b2f4b4f88f7cd8",
+      "size_bytes": 281304
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_poc_v2_validations_for_stage_4184386.c32b94a98b4b219c.json",
+      "consumer": "submission_validator_evidence",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4184386",
+      "requested_block_height": "latest",
+      "sha256": "82929d7591b43aba05354a430ad14a2d2fda1b0b71b6adece2f926f9ab66d5e6",
+      "size_bytes": 272950
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_poc_v2_validations_for_stage_4202293.cb79e97671d12538.json",
+      "consumer": "submission_validator_evidence",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4202293",
+      "requested_block_height": "latest",
+      "sha256": "76bb465899ad49a57c685a00e03a8d2662a9b8f5c50b4de37fcc2faffb5695be",
+      "size_bytes": 343366
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_poc_v2_validations_for_stage_4209686.c5136e8c73b334b9.json",
+      "consumer": "submission_validator_evidence",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4209686",
+      "requested_block_height": "latest",
+      "sha256": "3904397036a8557c17bbe531cda19c2e7cb04d6f84f6e4233f04461bee169584",
+      "size_bytes": 318652
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_poc_v2_validations_for_stage_4215427.300a54f50cf6db28.json",
+      "consumer": "submission_validator_evidence",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4215427",
+      "requested_block_height": "latest",
+      "sha256": "e23241ed14bbd0101e03d9242b231c19e551eb269d2c4e6de05e72cb9fbeaff9",
+      "size_bytes": 336501
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_poc_v2_validations_for_stage_4231815.6671b8cf5b0afe07.json",
+      "consumer": "submission_validator_evidence",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4231815",
+      "requested_block_height": "latest",
+      "sha256": "5c06e4aa24793531ce76e170be696abdd09954a6fbb968ba592865724bf54703",
+      "size_bytes": 332717
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_poc_v2_validations_for_stage_4232787.7b0ce7cdafab6ac5.json",
+      "consumer": "submission_validator_evidence",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4232787",
+      "requested_block_height": "latest",
+      "sha256": "b43d14219136d5bdd85eb342655d7c11a15213f41b77edd32c9cd6ee5214f6df",
+      "size_bytes": 147250
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_poc_v2_validations_for_stage_4258197.7ba798a61356b028.json",
+      "consumer": "submission_validator_evidence",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4258197",
+      "requested_block_height": "latest",
+      "sha256": "2b91c7b1d2d6427133639c1bd2a8a7b7270aa5ab1bca136019897f10841a6b22",
+      "size_bytes": 299624
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_poc_v2_validations_for_stage_4264130.ef1b8a66537210d2.json",
+      "consumer": "submission_validator_evidence",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4264130",
+      "requested_block_height": "latest",
+      "sha256": "1c05181101e6873a826721645e0c8479e0a14722cdeb0803807c67f4765792ad",
+      "size_bytes": 276391
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_poc_v2_validations_for_stage_4265965.77cd3eb076043d7e.json",
+      "consumer": "submission_validator_evidence",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4265965",
+      "requested_block_height": "latest",
+      "sha256": "41a8f88f754a10af3d77204ac5c3b15113481b1a7fdff9e40487e60da4d0c6b4",
+      "size_bytes": 283389
+    },
+    {
+      "cache_file": "raw_stage_cache/productscience_inference_inference_poc_v2_validations_for_stage_4267778.7bdb8d0495351a43.json",
+      "consumer": "submission_validator_evidence",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4267778",
+      "requested_block_height": "latest",
+      "sha256": "a7920a68e5f6868de02ab26238876e4ac0e2bc07c3d868b6f4e54fc4fcaa3cc3",
+      "size_bytes": 273775
+    }
+  ]
+}

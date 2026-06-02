@@ -1,0 +1,880 @@
+{
+  "distributions": [
+    {
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1q5xt54wncgzk7dxv9x64uln68455g83wu9tugg",
+      "weights": [
+        {
+          "node_id": "k201",
+          "weight": 11520
+        }
+      ]
+    },
+    {
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1qa90tgczc0k5dvk4l5nvlf5y6phgm6mg22sfjv",
+      "weights": [
+        {
+          "node_id": "s1-8b300-01",
+          "weight": 6627
+        },
+        {
+          "node_id": "s1-8b300-02",
+          "weight": 6566
+        },
+        {
+          "node_id": "s1-8b300-03",
+          "weight": 7353
+        },
+        {
+          "node_id": "s1-8b300-04",
+          "weight": 7383
+        },
+        {
+          "node_id": "s1-8b300-07",
+          "weight": 7353
+        },
+        {
+          "node_id": "s1-8b300-08",
+          "weight": 7413
+        },
+        {
+          "node_id": "s1-8b300-09",
+          "weight": 5568
+        },
+        {
+          "node_id": "s1-8b300-10",
+          "weight": 6505
+        },
+        {
+          "node_id": "s1-8b300-11",
+          "weight": 6505
+        },
+        {
+          "node_id": "s1-8b300-12",
+          "weight": 6444
+        },
+        {
+          "node_id": "s1-8b300-13",
+          "weight": 6505
+        },
+        {
+          "node_id": "s1-8b300-14",
+          "weight": 6505
+        },
+        {
+          "node_id": "s1-8b300-15",
+          "weight": 6626
+        },
+        {
+          "node_id": "s1-8b300-16",
+          "weight": 6626
+        },
+        {
+          "node_id": "s1-8b300-19",
+          "weight": 6595
+        },
+        {
+          "node_id": "s1-8b300-20",
+          "weight": 6626
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx",
+      "weights": [
+        {
+          "node_id": "gpc_1",
+          "weight": 8225
+        },
+        {
+          "node_id": "lra_1",
+          "weight": 8378
+        },
+        {
+          "node_id": "lra_2",
+          "weight": 8469
+        },
+        {
+          "node_id": "ovh_ma",
+          "weight": 368
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1rcpc45n6zch9qlkn4m3cwngekad89xu8mcr09v",
+      "weights": [
+        {
+          "node_id": "node-101",
+          "weight": 7264
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1y2a9p56kv044327uycmqdexl7zs82fs5ryv5le",
+      "weights": [
+        {
+          "node_id": "node-235b",
+          "weight": 3168
+        }
+      ]
+    },
+    {
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1y2a9p56kv044327uycmqdexl7zs82fs5ryv5le",
+      "weights": [
+        {
+          "node_id": "node1-4xB200",
+          "weight": 2784
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1ym3np7guxart483yfdxnlztuazx22cjt0e4a2p",
+      "weights": [
+        {
+          "node_id": "U57",
+          "weight": 8896
+        }
+      ]
+    },
+    {
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1yal0ysgzc860zt3y8cds8656tnueusgymftvkw",
+      "weights": [
+        {
+          "node_id": "node602",
+          "weight": 12704
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka19ghzvgfr065s3fr5awuvs3nhy9fq4n7wrr9kel",
+      "weights": [
+        {
+          "node_id": "node1",
+          "weight": 3940
+        },
+        {
+          "node_id": "node2",
+          "weight": 3940
+        },
+        {
+          "node_id": "node4",
+          "weight": 3940
+        },
+        {
+          "node_id": "node6",
+          "weight": 3960
+        },
+        {
+          "node_id": "node8",
+          "weight": 3940
+        },
+        {
+          "node_id": "node7",
+          "weight": 3940
+        },
+        {
+          "node_id": "node3",
+          "weight": 3940
+        },
+        {
+          "node_id": "node5",
+          "weight": 3960
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1gvrrhjmy4w4mayvs2s5l23edj8ertcmtd2v4zr",
+      "weights": [
+        {
+          "node_id": "la-ck-qwen-1",
+          "weight": 2953
+        },
+        {
+          "node_id": "la-ck-qwen-2",
+          "weight": 2831
+        },
+        {
+          "node_id": "la-ck-qwen-3",
+          "weight": 2952
+        }
+      ]
+    },
+    {
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1gvrrhjmy4w4mayvs2s5l23edj8ertcmtd2v4zr",
+      "weights": [
+        {
+          "node_id": "8B200-sp-2",
+          "weight": 13024
+        },
+        {
+          "node_id": "8B200-spt-kimi-1",
+          "weight": 13024
+        },
+        {
+          "node_id": "8B300-spt-kimi-test",
+          "weight": 13024
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p",
+      "weights": [
+        {
+          "node_id": "node1",
+          "weight": 512
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1f0u3y2wneer8zhz3ypw4x54h38cpa0qsy8ts3e",
+      "weights": [
+        {
+          "node_id": "node207",
+          "weight": 4224
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1fc9tzt83dgrqswlgay4668cuqjrk7zsqks2vm2",
+      "weights": [
+        {
+          "node_id": "U59",
+          "weight": 3968
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka12pcu9mcrpa4w4sjd9y3dsksnvu495ss6f9r4ra",
+      "weights": [
+        {
+          "node_id": "node7",
+          "weight": 8277
+        },
+        {
+          "node_id": "node8",
+          "weight": 8247
+        },
+        {
+          "node_id": "node9",
+          "weight": 8276
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1tja3g2da45efhe2p83gk3whtussmgmtsdlgprt",
+      "weights": [
+        {
+          "node_id": "at001",
+          "weight": 8143
+        },
+        {
+          "node_id": "at003",
+          "weight": 8143
+        },
+        {
+          "node_id": "at004",
+          "weight": 8143
+        },
+        {
+          "node_id": "at010",
+          "weight": 8173
+        },
+        {
+          "node_id": "at012",
+          "weight": 8173
+        },
+        {
+          "node_id": "at013",
+          "weight": 8173
+        },
+        {
+          "node_id": "at014",
+          "weight": 8172
+        }
+      ]
+    },
+    {
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1tlvg4kjx7ljd5thgd5fkgh39q6lu8cmxupktgg",
+      "weights": [
+        {
+          "node_id": "node1",
+          "weight": 1696
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1dkl4mah5erqggvhqkpc8j3qs5tyuetgdy552cp",
+      "weights": [
+        {
+          "node_id": "node-235-1",
+          "weight": 3584
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1duuaqdx06sx8v2dzggltwwmqyuw8lvjkjq7xll",
+      "weights": [
+        {
+          "node_id": "FT-1",
+          "weight": 10759
+        },
+        {
+          "node_id": "FT-10",
+          "weight": 10729
+        },
+        {
+          "node_id": "FT-11",
+          "weight": 10729
+        },
+        {
+          "node_id": "FT-12",
+          "weight": 10699
+        },
+        {
+          "node_id": "FT-13",
+          "weight": 10729
+        },
+        {
+          "node_id": "FT-14",
+          "weight": 10729
+        },
+        {
+          "node_id": "FT-15",
+          "weight": 10759
+        },
+        {
+          "node_id": "FT-16",
+          "weight": 10699
+        },
+        {
+          "node_id": "FT-17",
+          "weight": 10729
+        },
+        {
+          "node_id": "FT-18",
+          "weight": 10729
+        },
+        {
+          "node_id": "FT-19",
+          "weight": 10699
+        },
+        {
+          "node_id": "FT-2",
+          "weight": 10729
+        },
+        {
+          "node_id": "FT-20",
+          "weight": 10729
+        },
+        {
+          "node_id": "FT-21",
+          "weight": 10759
+        },
+        {
+          "node_id": "FT-22",
+          "weight": 10759
+        },
+        {
+          "node_id": "FT-23",
+          "weight": 10759
+        },
+        {
+          "node_id": "FT-24",
+          "weight": 10759
+        },
+        {
+          "node_id": "FT-25",
+          "weight": 10639
+        },
+        {
+          "node_id": "FT-26",
+          "weight": 10759
+        },
+        {
+          "node_id": "FT-27",
+          "weight": 10699
+        },
+        {
+          "node_id": "FT-28",
+          "weight": 10699
+        },
+        {
+          "node_id": "FT-29",
+          "weight": 10699
+        },
+        {
+          "node_id": "FT-3",
+          "weight": 10729
+        },
+        {
+          "node_id": "FT-30",
+          "weight": 10729
+        },
+        {
+          "node_id": "FT-31",
+          "weight": 10728
+        },
+        {
+          "node_id": "FT-32",
+          "weight": 10698
+        },
+        {
+          "node_id": "FT-33",
+          "weight": 10698
+        },
+        {
+          "node_id": "FT-34",
+          "weight": 10668
+        },
+        {
+          "node_id": "FT-35",
+          "weight": 10698
+        },
+        {
+          "node_id": "FT-36",
+          "weight": 10758
+        },
+        {
+          "node_id": "FT-37",
+          "weight": 10698
+        },
+        {
+          "node_id": "FT-38",
+          "weight": 10668
+        },
+        {
+          "node_id": "FT-4",
+          "weight": 10728
+        },
+        {
+          "node_id": "FT-5",
+          "weight": 10698
+        },
+        {
+          "node_id": "FT-6",
+          "weight": 10698
+        },
+        {
+          "node_id": "FT-7",
+          "weight": 10758
+        },
+        {
+          "node_id": "FT-8",
+          "weight": 10728
+        },
+        {
+          "node_id": "FT-9",
+          "weight": 10668
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1d7p03cu2y2yt3vytq9wlfm6tlz0lfhlgv9h82p",
+      "weights": [
+        {
+          "node_id": "node1",
+          "weight": 1856
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1w29nvdy6caqtrw30whz9h6ghl0xszwh3egndah",
+      "weights": [
+        {
+          "node_id": "node1",
+          "weight": 704
+        }
+      ]
+    },
+    {
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1wt8sr9jxzpec65j7zkxsgh6edk3m6r8nlf5za4",
+      "weights": [
+        {
+          "node_id": "node731",
+          "weight": 12896
+        }
+      ]
+    },
+    {
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka10079cnl3nuh2k82mhkm04dj0slhtw9kmjewwau",
+      "weights": [
+        {
+          "node_id": "node310",
+          "weight": 7278
+        },
+        {
+          "node_id": "node311",
+          "weight": 7248
+        },
+        {
+          "node_id": "node320",
+          "weight": 7217
+        },
+        {
+          "node_id": "node321",
+          "weight": 7216
+        },
+        {
+          "node_id": "node330",
+          "weight": 7186
+        },
+        {
+          "node_id": "node331",
+          "weight": 7247
+        }
+      ]
+    },
+    {
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09",
+      "weights": [
+        {
+          "node_id": "node2",
+          "weight": 13014
+        },
+        {
+          "node_id": "node3",
+          "weight": 13166
+        },
+        {
+          "node_id": "node4",
+          "weight": 13013
+        },
+        {
+          "node_id": "node5",
+          "weight": 12711
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1scskt6wpnjnumsah6kjphmdu87vjgvcxmn4rxv",
+      "weights": [
+        {
+          "node_id": "fo-qwen-01",
+          "weight": 2778
+        },
+        {
+          "node_id": "ma-qwen-01",
+          "weight": 4326
+        }
+      ]
+    },
+    {
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1scskt6wpnjnumsah6kjphmdu87vjgvcxmn4rxv",
+      "weights": [
+        {
+          "node_id": "fo-kimi-01",
+          "weight": 12876
+        },
+        {
+          "node_id": "ma-kimi-01",
+          "weight": 12724
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1nku7u6d5mz80h35ty8ydeh0k5xydesvt9w0vjr",
+      "weights": [
+        {
+          "node_id": "MLNODE",
+          "weight": 7692
+        }
+      ]
+    },
+    {
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka14tqh62mangwzrma2lgg2dm375rcjzn2ydy8ttm",
+      "weights": [
+        {
+          "node_id": "gonka-v-8b300-122",
+          "weight": 7424
+        },
+        {
+          "node_id": "gonka-v-8b300-123",
+          "weight": 7360
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1kx9mca3xm8u8ypzfuhmxey66u0ufxhs7nm6wc5",
+      "weights": [
+        {
+          "node_id": "node1",
+          "weight": 6528
+        }
+      ]
+    },
+    {
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1kx9mca3xm8u8ypzfuhmxey66u0ufxhs7nm6wc5",
+      "weights": [
+        {
+          "node_id": "node2-4xB200",
+          "weight": 2848
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1hwvel7n3zuk6wruefuzc356l9myske9stckwnz",
+      "weights": [
+        {
+          "node_id": "fp002",
+          "weight": 8139
+        },
+        {
+          "node_id": "fp003",
+          "weight": 8108
+        },
+        {
+          "node_id": "fp004",
+          "weight": 8138
+        },
+        {
+          "node_id": "fp005",
+          "weight": 8138
+        },
+        {
+          "node_id": "fp006",
+          "weight": 8107
+        },
+        {
+          "node_id": "fp007",
+          "weight": 8138
+        }
+      ]
+    },
+    {
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka168rtjfkszuhcggg4dfyse4yh7xn9zwfglnkns2",
+      "weights": [
+        {
+          "node_id": "mlnode-201",
+          "weight": 12640
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1myu058axjs62mc3e7na9krwvqpfl9z3gtcw9es",
+      "weights": [
+        {
+          "node_id": "node-10",
+          "weight": 2749
+        },
+        {
+          "node_id": "node-11",
+          "weight": 2749
+        },
+        {
+          "node_id": "node-12",
+          "weight": 2749
+        },
+        {
+          "node_id": "node-13",
+          "weight": 2749
+        },
+        {
+          "node_id": "node-14",
+          "weight": 2748
+        },
+        {
+          "node_id": "node-15",
+          "weight": 2412
+        },
+        {
+          "node_id": "node-16",
+          "weight": 3236
+        },
+        {
+          "node_id": "node-2",
+          "weight": 2748
+        },
+        {
+          "node_id": "node-3",
+          "weight": 2748
+        },
+        {
+          "node_id": "node-4",
+          "weight": 2748
+        },
+        {
+          "node_id": "node-5",
+          "weight": 2748
+        },
+        {
+          "node_id": "node-6",
+          "weight": 2748
+        },
+        {
+          "node_id": "node-7",
+          "weight": 2748
+        },
+        {
+          "node_id": "node-8",
+          "weight": 2748
+        },
+        {
+          "node_id": "node-9",
+          "weight": 2748
+        }
+      ]
+    },
+    {
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1ujnc662v6g69jm6fgxnr79a2m7ehzeut059239",
+      "weights": [
+        {
+          "node_id": "node300-va-1",
+          "weight": 13920
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1u4zxypjgcr8khlzefwjr0vwdaj2uzruw2cehj3",
+      "weights": [
+        {
+          "node_id": "node1",
+          "weight": 3072
+        }
+      ]
+    },
+    {
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1uhqpup9fev3zahlx6n326lp0krznc6usjtx6lu",
+      "weights": [
+        {
+          "node_id": "s3-8b300-01",
+          "weight": 6660
+        },
+        {
+          "node_id": "s3-8b300-02",
+          "weight": 6660
+        },
+        {
+          "node_id": "s3-8b300-03",
+          "weight": 6599
+        },
+        {
+          "node_id": "s3-8b300-04",
+          "weight": 6660
+        },
+        {
+          "node_id": "s3-8b300-05",
+          "weight": 6599
+        },
+        {
+          "node_id": "s3-8b300-06",
+          "weight": 6660
+        },
+        {
+          "node_id": "s3-8b300-07",
+          "weight": 6630
+        },
+        {
+          "node_id": "s3-8b300-08",
+          "weight": 6630
+        },
+        {
+          "node_id": "s3-8b300-09",
+          "weight": 6630
+        },
+        {
+          "node_id": "s3-8b300-10",
+          "weight": 6478
+        },
+        {
+          "node_id": "s3-8b300-100",
+          "weight": 7355
+        },
+        {
+          "node_id": "s3-8b300-101",
+          "weight": 7325
+        },
+        {
+          "node_id": "s3-8b300-102",
+          "weight": 6629
+        },
+        {
+          "node_id": "s3-8b300-103",
+          "weight": 6629
+        },
+        {
+          "node_id": "s3-8b300-11",
+          "weight": 6508
+        },
+        {
+          "node_id": "s3-8b300-12",
+          "weight": 6598
+        },
+        {
+          "node_id": "s3-8b300-13",
+          "weight": 6659
+        },
+        {
+          "node_id": "s3-8b300-14",
+          "weight": 6629
+        },
+        {
+          "node_id": "s3-8b300-15",
+          "weight": 6598
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1amlmhjym02shahjv8ldmupg4cx0qc66q6f85rj",
+      "weights": [
+        {
+          "node_id": "node-1",
+          "weight": 2816
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka17pw6099q758qwzewtrqmqpf5c2lrhr97fwqexu",
+      "weights": [
+        {
+          "node_id": "co-wm-a100-1",
+          "weight": 2927
+        },
+        {
+          "node_id": "vul-kol-A100-2",
+          "weight": 3049
+        },
+        {
+          "node_id": "vul-kol-A100-3",
+          "weight": 3048
+        }
+      ]
+    }
+  ]
+}

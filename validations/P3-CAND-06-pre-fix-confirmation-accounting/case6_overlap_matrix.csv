@@ -1,0 +1,25 @@
+epoch,participant,event_trigger_height,pass_models,loss_gonka,overlap_status,recommended_action,reason
+263,gonka1830lqug50lse998x2lakk4pj5ypfumz5pasz0y,4073650,Kimi,1953.032509538,no_known_overlap_in_local_repo,clear,No local P3/P4 overlap signal found.
+263,gonka19cjm4c5mt3j3qdr8vhytmm4hef3pnkvkm0x7m2,4073650,Kimi,1915.652591432,no_known_overlap_in_local_repo,clear,No local P3/P4 overlap signal found.
+263,gonka1ujnc662v6g69jm6fgxnr79a2m7ehzeut059239,4073650,Qwen,4850.385431974,no_known_overlap_in_local_repo,clear,No local P3/P4 overlap signal found.
+264,gonka14g78ez2zy08k8sssue483zmfpgd4qut8zcwlqc,4075202,Kimi,2019.930762224,no_known_overlap_in_local_repo,clear,No local P3/P4 overlap signal found.
+264,gonka18xeqnspxpg2vncufnjne485rkaagwvz7whyn0d,4075202,Kimi,2019.930762224,no_known_overlap_in_local_repo,clear,No local P3/P4 overlap signal found.
+264,gonka1xwkesaxvdadh9wt9yyladu0r260s7whklcktds,4075202,Kimi,1970.264959744,no_known_overlap_in_local_repo,clear,No local P3/P4 overlap signal found.
+265,gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww,4102890,Qwen,335.927643572,p4_cand_01_epoch_range_overlap,review,Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.
+268,gonka1q5xt54wncgzk7dxv9x64uln68455g83wu9tugg,4144898,Kimi,25309.087745610,p4_cand_01_epoch_range_overlap,review,Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.
+269,gonka1007py6y2qfn2vaqrthqhtchkwx64hgzc6w544w,4164861,Kimi,2228.595538500,p4_cand_01_epoch_range_overlap,review,Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.
+269,gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3,4153434,Qwen,535.800580255,p4_cand_01_epoch_range_overlap,review,Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.
+271,gonka16xa2sdc8qe2289nzr4e6vmdyzlke8g8fn8e75s,4184386,Qwen,139.200061369,p4_cand_01_epoch_range_overlap,review,Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.
+272,gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p,4202293,Qwen,365.340258948,p4_cand_01_epoch_range_overlap,review,Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.
+272,gonka1nku7u6d5mz80h35ty8ydeh0k5xydesvt9w0vjr,4202293,Qwen,146.964070171,p4_cand_01_epoch_range_overlap,review,Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.
+272,gonka1q5xt54wncgzk7dxv9x64uln68455g83wu9tugg,4209686,Kimi,22521.036302544,p4_cand_01_epoch_range_overlap,review,Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.
+272,gonka1ym3np7guxart483yfdxnlztuazx22cjt0e4a2p,4202293,Qwen,8037.485696859,p4_cand_01_epoch_range_overlap,review,Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.
+273,gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p,4215427,Qwen,218.861247867,p4_cand_01_epoch_range_overlap,review,Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.
+273,gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx,4215427,Qwen,3018.788733411,p4_cand_01_epoch_range_overlap,review,Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.
+274,gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p,4231815,Qwen,137.269776102,p4_cand_01_epoch_range_overlap,review,Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.
+274,gonka1qwfrtz9c7kcrfkrrlne2pkcye74mj6ce33xdkl,4232787,Qwen,173.159717563,p4_cand_01_epoch_range_overlap,review,Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.
+275,gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p,4258197,Qwen,126.220428182,p4_cand_01_epoch_range_overlap,review,Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.
+276,gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09,4267778,Qwen+Kimi,17356.095656742,known_p3_cand_04_same_address,blocked,Known same-address overlap with local P3-CAND-04 evidence.
+276,gonka14tqh62mangwzrma2lgg2dm375rcjzn2ydy8ttm,4264130,Kimi,11765.489995489,p3_cand_04_epoch_overlap_unresolved,blocked,Epoch 276 overlaps P3-CAND-04; full payout276 address list is not normalized in this repo.
+276,gonka1f0u3y2wneer8zhz3ypw4x54h38cpa0qsy8ts3e,4265965,Qwen,3557.528990032,p3_cand_04_epoch_overlap_unresolved,blocked,Epoch 276 overlaps P3-CAND-04; full payout276 address list is not normalized in this repo.
+276,gonka1ujnc662v6g69jm6fgxnr79a2m7ehzeut059239,4264130,Kimi,10120.274911440,p3_cand_04_epoch_overlap_unresolved,blocked,Epoch 276 overlaps P3-CAND-04; full payout276 address list is not normalized in this repo.

@@ -40,7 +40,7 @@
 | ID | Кейс | Статус | Эпохи | От кого поступила информация | Пострадавшие / контакт для деталей | Кто уже исследовал / результат | Нужен доп. анализ | Оценка | Следующий шаг | Досье |
 |---|---|---|---|---|---|---|---|---:|---|---|
 | `P3-CAND-05` | `ml3` hardware re-registration | Требуется решение о scope; не входит в текущие пять назначенных кейсов Proposal #3 | Около 269 | SegovChik от `@gonkstein` и его technical contact | `gonka15munk...`; `@gonkstein` через SegovChik | Arturs: on-chain HW proof отсутствует, noted preserved-node behavior | Да: сначала scope/policy decision | Не рассчитано | Решить, является ли это protocol issue | [досье](cases/P3-CAND-05-ml3-hardware-reregistration.md) |
-| `P3-CAND-06` | Pre-fix confirmation accounting / pass-weight but failed ratio | Требуется root-cause и eligibility review; не включать автоматически в Case 3 | 263-276 | Выявлено при validation `P3-CAND-03` | 19 unique participants / 24 epoch rows; contacts не сопоставлены | @mikenosov: archive scan `262..276`, выделен отдельный candidate set | Да: formula replay, overlap checks with `P3-CAND-04` and `P4-CAND-01` | 120,822.324 GNK preliminary | Провести отдельный root-cause review и решить scope | [досье](cases/P3-CAND-06-pre-fix-confirmation-accounting.md) |
+| `P3-CAND-06` | Pre-fix confirmation accounting / pass-weight but failed ratio | Root-cause, raw stage, coefficient/new-algorithm replay, code-diff proof, one-page summary, and row-by-row evidence ledger added; требуется eligibility и overlap review | 263-276 | Выявлено при validation `P3-CAND-03` | 19 unique participants / 24 epoch rows; contacts не сопоставлены | @mikenosov: archive scan `262..276`; GRC replay: 48/48 raw stage rows match aggregates, 25 pass-weight model rows cover all 24 candidates; old formula matches `22/24`; bounded new-style replay has `0/24` pass alpha; ledger action split `6` clear / `14` review / `4` blocked | Да: eligibility for 20 non-epoch-276 formula-reconciled single-model rows, overlap checks with `P3-CAND-04` and `P4-CAND-01` | 120,822.324 GNK preliminary | Решить eligibility для single-model rows и проверить overlap | [досье](cases/P3-CAND-06-pre-fix-confirmation-accounting.md) |
 
 ## Легенда Статусов
 
@@ -61,7 +61,7 @@
 | `P3-CAND-03` | @mikenosov investigates; @dem_ww и @votkon validate; нужны victim set и methodology. |
 | `P3-CAND-04` | @maksimenkoff investigates; @votkon и @OpenMindedPerson validate; нужна финальная validation. |
 | `P4-CAND-01` | @votkon investigates; @maksimenkoff и @mikenosov validate; нужны validation и eligibility decision. |
-| `P3-CAND-06` | Назначить investigator/validators; нужны row-by-row formula replay и overlap checks. |
+| `P3-CAND-06` | Назначить investigator/validators; root-cause/raw stage/coefficient/code-diff replay готов, нужны eligibility decision и overlap checks. |
 
 ## Правила Обновления
 

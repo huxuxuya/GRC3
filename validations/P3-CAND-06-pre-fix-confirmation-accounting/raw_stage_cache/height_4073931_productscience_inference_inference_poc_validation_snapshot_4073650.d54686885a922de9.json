@@ -1,0 +1,295 @@
+{
+  "found": true,
+  "snapshot": {
+    "app_hash": "36149fe8893bc848a0fd68c09f99f1e167abff1237965208d3e0abb7373cbcdf",
+    "exchange_end_timestamp": "1778801846",
+    "generation_start_timestamp": "1778801639",
+    "model_voting_powers": [
+      {
+        "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+        "voting_powers": [
+          {
+            "address": "gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09",
+            "voting_power": "45173"
+          },
+          {
+            "address": "gonka12pcu9mcrpa4w4sjd9y3dsksnvu495ss6f9r4ra",
+            "voting_power": "10430"
+          },
+          {
+            "address": "gonka15munkmx6x7k6rqqeexjet4556p7at39ks9qgr5",
+            "voting_power": "36087"
+          },
+          {
+            "address": "gonka168rtjfkszuhcggg4dfyse4yh7xn9zwfglnkns2",
+            "voting_power": "76217"
+          },
+          {
+            "address": "gonka17gpuntq09zsaqtmpe544gc32tk4424dwv5t34f",
+            "voting_power": "132495"
+          },
+          {
+            "address": "gonka17pw6099q758qwzewtrqmqpf5c2lrhr97fwqexu",
+            "voting_power": "136217"
+          },
+          {
+            "address": "gonka187tn9y92ur6tu0zf69u94hwl0q77m47y0k36hv",
+            "voting_power": "10120"
+          },
+          {
+            "address": "gonka19f9hkpmjaldncsfly4j63sy932y8hughn4l3d8",
+            "voting_power": "1781"
+          },
+          {
+            "address": "gonka19ghzvgfr065s3fr5awuvs3nhy9fq4n7wrr9kel",
+            "voting_power": "3876"
+          },
+          {
+            "address": "gonka1amlmhjym02shahjv8ldmupg4cx0qc66q6f85rj",
+            "voting_power": "772"
+          },
+          {
+            "address": "gonka1ccdm8j6sjyhq4qask049dwgaczs7f3pxte6zmp",
+            "voting_power": "1999"
+          },
+          {
+            "address": "gonka1d694r00czmq75txghwjcuk07lxvc8d4ekgsha0",
+            "voting_power": "66671"
+          },
+          {
+            "address": "gonka1d7p03cu2y2yt3vytq9wlfm6tlz0lfhlgv9h82p",
+            "voting_power": "1532"
+          },
+          {
+            "address": "gonka1dkl4mah5erqggvhqkpc8j3qs5tyuetgdy552cp",
+            "voting_power": "1108"
+          },
+          {
+            "address": "gonka1duuaqdx06sx8v2dzggltwwmqyuw8lvjkjq7xll",
+            "voting_power": "126187"
+          },
+          {
+            "address": "gonka1f0u3y2wneer8zhz3ypw4x54h38cpa0qsy8ts3e",
+            "voting_power": "70001"
+          },
+          {
+            "address": "gonka1famtxh54kad6ylwtm60j6d7h6unpc08d4vdqnk",
+            "voting_power": "7975"
+          },
+          {
+            "address": "gonka1fc9tzt83dgrqswlgay4668cuqjrk7zsqks2vm2",
+            "voting_power": "225"
+          },
+          {
+            "address": "gonka1fkrsesmn2hdj30fhwyam6h4f2e77un36xalhvl",
+            "voting_power": "3639"
+          },
+          {
+            "address": "gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p",
+            "voting_power": "1187"
+          },
+          {
+            "address": "gonka1gyk0aahvr3qeju4zx0nplfreej6cy4jjk8svc5",
+            "voting_power": "346"
+          },
+          {
+            "address": "gonka1hwvel7n3zuk6wruefuzc356l9myske9stckwnz",
+            "voting_power": "17833"
+          },
+          {
+            "address": "gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6",
+            "voting_power": "66092"
+          },
+          {
+            "address": "gonka1kx9mca3xm8u8ypzfuhmxey66u0ufxhs7nm6wc5",
+            "voting_power": "5307"
+          },
+          {
+            "address": "gonka1myu058axjs62mc3e7na9krwvqpfl9z3gtcw9es",
+            "voting_power": "13240"
+          },
+          {
+            "address": "gonka1p2lhgng7tcqju7emk989s5fpdr7k2c3ek6h26m",
+            "voting_power": "593"
+          },
+          {
+            "address": "gonka1pllyukkeymx3hfd9mts3pryr9y6efs9eshty87",
+            "voting_power": "6464"
+          },
+          {
+            "address": "gonka1qnj39ysxpzknvrr5dw9rdl7cx5q7dpkwerryrs",
+            "voting_power": "895"
+          },
+          {
+            "address": "gonka1qu9mna5xlvlnw9455ygtjq92wuzkzm237w8l08",
+            "voting_power": "1094"
+          },
+          {
+            "address": "gonka1qwfrtz9c7kcrfkrrlne2pkcye74mj6ce33xdkl",
+            "voting_power": "531"
+          },
+          {
+            "address": "gonka1rcpc45n6zch9qlkn4m3cwngekad89xu8mcr09v",
+            "voting_power": "4182"
+          },
+          {
+            "address": "gonka1tja3g2da45efhe2p83gk3whtussmgmtsdlgprt",
+            "voting_power": "83181"
+          },
+          {
+            "address": "gonka1tlvg4kjx7ljd5thgd5fkgh39q6lu8cmxupktgg",
+            "voting_power": "1970"
+          },
+          {
+            "address": "gonka1tmk2tzdneht6smu34pkmqdvu7p34qavvmwtwq2",
+            "voting_power": "1178"
+          },
+          {
+            "address": "gonka1u4zxypjgcr8khlzefwjr0vwdaj2uzruw2cehj3",
+            "voting_power": "1736"
+          },
+          {
+            "address": "gonka1uf5cg7ef0ns6877nl27y0s6rt06cdmn40k5a88",
+            "voting_power": "944"
+          },
+          {
+            "address": "gonka1ujnc662v6g69jm6fgxnr79a2m7ehzeut059239",
+            "voting_power": "17777"
+          },
+          {
+            "address": "gonka1vjz8csqsr0ph0lv0yylc4auypnzrld7y6l2feu",
+            "voting_power": "564"
+          },
+          {
+            "address": "gonka1w29nvdy6caqtrw30whz9h6ghl0xszwh3egndah",
+            "voting_power": "228"
+          },
+          {
+            "address": "gonka1wthc28t25pg63hzvl07rl8e8r6km6hesl6jhsz",
+            "voting_power": "47004"
+          },
+          {
+            "address": "gonka1x7zh2277spp7jfqjhv0g5mnezg290xdr4kpfnk",
+            "voting_power": "828"
+          },
+          {
+            "address": "gonka1y2a9p56kv044327uycmqdexl7zs82fs5ryv5le",
+            "voting_power": "11480"
+          },
+          {
+            "address": "gonka1ym3np7guxart483yfdxnlztuazx22cjt0e4a2p",
+            "voting_power": "6237"
+          },
+          {
+            "address": "gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx",
+            "voting_power": "15192"
+          },
+          {
+            "address": "gonka1zsvl7ujlc8z3a35v2q6e3nml7ftyk23v76jqgl",
+            "voting_power": "6702"
+          }
+        ]
+      },
+      {
+        "model_id": "moonshotai/Kimi-K2.6",
+        "voting_powers": [
+          {
+            "address": "gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09",
+            "voting_power": "45173"
+          },
+          {
+            "address": "gonka125n6kr5gvdup0lndfkps7t6rd6592panhrg3np",
+            "voting_power": "11782"
+          },
+          {
+            "address": "gonka15munkmx6x7k6rqqeexjet4556p7at39ks9qgr5",
+            "voting_power": "36087"
+          },
+          {
+            "address": "gonka15p7s7w2hx0y8095lddd4ummm2y0kwpwljk00aq",
+            "voting_power": "737"
+          },
+          {
+            "address": "gonka168rtjfkszuhcggg4dfyse4yh7xn9zwfglnkns2",
+            "voting_power": "77605"
+          },
+          {
+            "address": "gonka17gpuntq09zsaqtmpe544gc32tk4424dwv5t34f",
+            "voting_power": "136371"
+          },
+          {
+            "address": "gonka17pw6099q758qwzewtrqmqpf5c2lrhr97fwqexu",
+            "voting_power": "136217"
+          },
+          {
+            "address": "gonka1830lqug50lse998x2lakk4pj5ypfumz5pasz0y",
+            "voting_power": "7158"
+          },
+          {
+            "address": "gonka18xeqnspxpg2vncufnjne485rkaagwvz7whyn0d",
+            "voting_power": "5352"
+          },
+          {
+            "address": "gonka19cjm4c5mt3j3qdr8vhytmm4hef3pnkvkm0x7m2",
+            "voting_power": "7021"
+          },
+          {
+            "address": "gonka1d694r00czmq75txghwjcuk07lxvc8d4ekgsha0",
+            "voting_power": "70679"
+          },
+          {
+            "address": "gonka1f0u3y2wneer8zhz3ypw4x54h38cpa0qsy8ts3e",
+            "voting_power": "11891"
+          },
+          {
+            "address": "gonka1famtxh54kad6ylwtm60j6d7h6unpc08d4vdqnk",
+            "voting_power": "7975"
+          },
+          {
+            "address": "gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6",
+            "voting_power": "66092"
+          },
+          {
+            "address": "gonka1kx9mca3xm8u8ypzfuhmxey66u0ufxhs7nm6wc5",
+            "voting_power": "5307"
+          },
+          {
+            "address": "gonka1mmlyd5xxu5l68yx8wzclrkxkxvm88mhq5tp5s0",
+            "voting_power": "14181"
+          },
+          {
+            "address": "gonka1q5xt54wncgzk7dxv9x64uln68455g83wu9tugg",
+            "voting_power": "116125"
+          },
+          {
+            "address": "gonka1tl5m3vuqsx333v7095ymwjdc4vdk2wd9r5hqws",
+            "voting_power": "5491"
+          },
+          {
+            "address": "gonka1ujnc662v6g69jm6fgxnr79a2m7ehzeut059239",
+            "voting_power": "17777"
+          },
+          {
+            "address": "gonka1wkgawwdzj623ss8eywayzdj6qcgr2llygactje",
+            "voting_power": "7125"
+          },
+          {
+            "address": "gonka1wthc28t25pg63hzvl07rl8e8r6km6hesl6jhsz",
+            "voting_power": "47004"
+          },
+          {
+            "address": "gonka1y2a9p56kv044327uycmqdexl7zs82fs5ryv5le",
+            "voting_power": "147614"
+          },
+          {
+            "address": "gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx",
+            "voting_power": "15192"
+          }
+        ]
+      }
+    ],
+    "poc_stage_start_height": "4073650",
+    "snapshot_height": "4073691",
+    "total_network_weight": "1045290"
+  }
+}

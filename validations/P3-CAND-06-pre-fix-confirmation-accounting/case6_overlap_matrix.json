@@ -1,0 +1,244 @@
+{
+  "rows": [
+    {
+      "epoch": "263",
+      "event_trigger_height": "4073650",
+      "loss_gonka": "1953.032509538",
+      "overlap_status": "no_known_overlap_in_local_repo",
+      "participant": "gonka1830lqug50lse998x2lakk4pj5ypfumz5pasz0y",
+      "pass_models": "Kimi",
+      "reason": "No local P3/P4 overlap signal found.",
+      "recommended_action": "clear"
+    },
+    {
+      "epoch": "263",
+      "event_trigger_height": "4073650",
+      "loss_gonka": "1915.652591432",
+      "overlap_status": "no_known_overlap_in_local_repo",
+      "participant": "gonka19cjm4c5mt3j3qdr8vhytmm4hef3pnkvkm0x7m2",
+      "pass_models": "Kimi",
+      "reason": "No local P3/P4 overlap signal found.",
+      "recommended_action": "clear"
+    },
+    {
+      "epoch": "263",
+      "event_trigger_height": "4073650",
+      "loss_gonka": "4850.385431974",
+      "overlap_status": "no_known_overlap_in_local_repo",
+      "participant": "gonka1ujnc662v6g69jm6fgxnr79a2m7ehzeut059239",
+      "pass_models": "Qwen",
+      "reason": "No local P3/P4 overlap signal found.",
+      "recommended_action": "clear"
+    },
+    {
+      "epoch": "264",
+      "event_trigger_height": "4075202",
+      "loss_gonka": "2019.930762224",
+      "overlap_status": "no_known_overlap_in_local_repo",
+      "participant": "gonka14g78ez2zy08k8sssue483zmfpgd4qut8zcwlqc",
+      "pass_models": "Kimi",
+      "reason": "No local P3/P4 overlap signal found.",
+      "recommended_action": "clear"
+    },
+    {
+      "epoch": "264",
+      "event_trigger_height": "4075202",
+      "loss_gonka": "2019.930762224",
+      "overlap_status": "no_known_overlap_in_local_repo",
+      "participant": "gonka18xeqnspxpg2vncufnjne485rkaagwvz7whyn0d",
+      "pass_models": "Kimi",
+      "reason": "No local P3/P4 overlap signal found.",
+      "recommended_action": "clear"
+    },
+    {
+      "epoch": "264",
+      "event_trigger_height": "4075202",
+      "loss_gonka": "1970.264959744",
+      "overlap_status": "no_known_overlap_in_local_repo",
+      "participant": "gonka1xwkesaxvdadh9wt9yyladu0r260s7whklcktds",
+      "pass_models": "Kimi",
+      "reason": "No local P3/P4 overlap signal found.",
+      "recommended_action": "clear"
+    },
+    {
+      "epoch": "265",
+      "event_trigger_height": "4102890",
+      "loss_gonka": "335.927643572",
+      "overlap_status": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww",
+      "pass_models": "Qwen",
+      "reason": "Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.",
+      "recommended_action": "review"
+    },
+    {
+      "epoch": "268",
+      "event_trigger_height": "4144898",
+      "loss_gonka": "25309.087745610",
+      "overlap_status": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1q5xt54wncgzk7dxv9x64uln68455g83wu9tugg",
+      "pass_models": "Kimi",
+      "reason": "Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.",
+      "recommended_action": "review"
+    },
+    {
+      "epoch": "269",
+      "event_trigger_height": "4164861",
+      "loss_gonka": "2228.595538500",
+      "overlap_status": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1007py6y2qfn2vaqrthqhtchkwx64hgzc6w544w",
+      "pass_models": "Kimi",
+      "reason": "Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.",
+      "recommended_action": "review"
+    },
+    {
+      "epoch": "269",
+      "event_trigger_height": "4153434",
+      "loss_gonka": "535.800580255",
+      "overlap_status": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3",
+      "pass_models": "Qwen",
+      "reason": "Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.",
+      "recommended_action": "review"
+    },
+    {
+      "epoch": "271",
+      "event_trigger_height": "4184386",
+      "loss_gonka": "139.200061369",
+      "overlap_status": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka16xa2sdc8qe2289nzr4e6vmdyzlke8g8fn8e75s",
+      "pass_models": "Qwen",
+      "reason": "Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.",
+      "recommended_action": "review"
+    },
+    {
+      "epoch": "272",
+      "event_trigger_height": "4202293",
+      "loss_gonka": "365.340258948",
+      "overlap_status": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p",
+      "pass_models": "Qwen",
+      "reason": "Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.",
+      "recommended_action": "review"
+    },
+    {
+      "epoch": "272",
+      "event_trigger_height": "4202293",
+      "loss_gonka": "146.964070171",
+      "overlap_status": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1nku7u6d5mz80h35ty8ydeh0k5xydesvt9w0vjr",
+      "pass_models": "Qwen",
+      "reason": "Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.",
+      "recommended_action": "review"
+    },
+    {
+      "epoch": "272",
+      "event_trigger_height": "4209686",
+      "loss_gonka": "22521.036302544",
+      "overlap_status": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1q5xt54wncgzk7dxv9x64uln68455g83wu9tugg",
+      "pass_models": "Kimi",
+      "reason": "Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.",
+      "recommended_action": "review"
+    },
+    {
+      "epoch": "272",
+      "event_trigger_height": "4202293",
+      "loss_gonka": "8037.485696859",
+      "overlap_status": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1ym3np7guxart483yfdxnlztuazx22cjt0e4a2p",
+      "pass_models": "Qwen",
+      "reason": "Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.",
+      "recommended_action": "review"
+    },
+    {
+      "epoch": "273",
+      "event_trigger_height": "4215427",
+      "loss_gonka": "218.861247867",
+      "overlap_status": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p",
+      "pass_models": "Qwen",
+      "reason": "Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.",
+      "recommended_action": "review"
+    },
+    {
+      "epoch": "273",
+      "event_trigger_height": "4215427",
+      "loss_gonka": "3018.788733411",
+      "overlap_status": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx",
+      "pass_models": "Qwen",
+      "reason": "Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.",
+      "recommended_action": "review"
+    },
+    {
+      "epoch": "274",
+      "event_trigger_height": "4231815",
+      "loss_gonka": "137.269776102",
+      "overlap_status": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p",
+      "pass_models": "Qwen",
+      "reason": "Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.",
+      "recommended_action": "review"
+    },
+    {
+      "epoch": "274",
+      "event_trigger_height": "4232787",
+      "loss_gonka": "173.159717563",
+      "overlap_status": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1qwfrtz9c7kcrfkrrlne2pkcye74mj6ce33xdkl",
+      "pass_models": "Qwen",
+      "reason": "Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.",
+      "recommended_action": "review"
+    },
+    {
+      "epoch": "275",
+      "event_trigger_height": "4258197",
+      "loss_gonka": "126.220428182",
+      "overlap_status": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p",
+      "pass_models": "Qwen",
+      "reason": "Epoch is inside P4-CAND-01 Kimi restitution window; same-address duplicate check needs normalized P4 table.",
+      "recommended_action": "review"
+    },
+    {
+      "epoch": "276",
+      "event_trigger_height": "4267778",
+      "loss_gonka": "17356.095656742",
+      "overlap_status": "known_p3_cand_04_same_address",
+      "participant": "gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09",
+      "pass_models": "Qwen+Kimi",
+      "reason": "Known same-address overlap with local P3-CAND-04 evidence.",
+      "recommended_action": "blocked"
+    },
+    {
+      "epoch": "276",
+      "event_trigger_height": "4264130",
+      "loss_gonka": "11765.489995489",
+      "overlap_status": "p3_cand_04_epoch_overlap_unresolved",
+      "participant": "gonka14tqh62mangwzrma2lgg2dm375rcjzn2ydy8ttm",
+      "pass_models": "Kimi",
+      "reason": "Epoch 276 overlaps P3-CAND-04; full payout276 address list is not normalized in this repo.",
+      "recommended_action": "blocked"
+    },
+    {
+      "epoch": "276",
+      "event_trigger_height": "4265965",
+      "loss_gonka": "3557.528990032",
+      "overlap_status": "p3_cand_04_epoch_overlap_unresolved",
+      "participant": "gonka1f0u3y2wneer8zhz3ypw4x54h38cpa0qsy8ts3e",
+      "pass_models": "Qwen",
+      "reason": "Epoch 276 overlaps P3-CAND-04; full payout276 address list is not normalized in this repo.",
+      "recommended_action": "blocked"
+    },
+    {
+      "epoch": "276",
+      "event_trigger_height": "4264130",
+      "loss_gonka": "10120.274911440",
+      "overlap_status": "p3_cand_04_epoch_overlap_unresolved",
+      "participant": "gonka1ujnc662v6g69jm6fgxnr79a2m7ehzeut059239",
+      "pass_models": "Kimi",
+      "reason": "Epoch 276 overlaps P3-CAND-04; full payout276 address list is not normalized in this repo.",
+      "recommended_action": "blocked"
+    }
+  ]
+}

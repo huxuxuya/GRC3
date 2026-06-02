@@ -1,0 +1,295 @@
+[
+  {
+    "chain_reading_preserved_plus_measured": 14477,
+    "coefficient_replay_diff": "0.0000000000000000",
+    "coefficient_replay_matches_stored": "True",
+    "coefficient_replay_ratio": "0.1738374588419373",
+    "confirmation_weight_at_exclusion": "14477",
+    "confirmation_weight_before": "89030",
+    "epoch": "268",
+    "event_trigger_height": "4144898",
+    "exclusion_height": "4145179",
+    "kimi_coeff": "1.2620856201975851",
+    "measured_details": {
+      "moonshotai/Kimi-K2.6": {
+        "coeff": "1.2620856201975851",
+        "raw_measured": 11471,
+        "raw_measured_before_time_norm": 12480,
+        "result": "pass_weight",
+        "time_normalization_factor": "0.91917475728155339805825242718446601941747572815533980582524271844660194174757282",
+        "valid_weight_percent": "88.6552",
+        "weighted_measured": 14477
+      }
+    },
+    "measured_weight": 14477,
+    "not_preserved_weight": 91616,
+    "participant": "gonka1q5xt54wncgzk7dxv9x64uln68455g83wu9tugg",
+    "pass_models": "Kimi",
+    "preserved_weight": 0,
+    "qwen_coeff": "0.3593",
+    "replay_confirmation_weight_after": 14477,
+    "snapshot_anchor_height": "4144898",
+    "split_details": {
+      "moonshotai/Kimi-K2.6": {
+        "coeff": "1.2620856201975851",
+        "preserved_node_ids": [],
+        "raw_not_preserved": 72591,
+        "raw_preserved": 0,
+        "weighted_not_preserved": 91616,
+        "weighted_preserved": 0
+      }
+    },
+    "stored_confirmation_ratio": "0.1738374588419373",
+    "time_normalization_factor": "0.91917475728155339805825242718446601941747572815533980582524271844660194174757282",
+    "total_expected_weight": 91616
+  },
+  {
+    "chain_reading_preserved_plus_measured": 27426,
+    "coefficient_replay_diff": "-0.0000000000000001",
+    "coefficient_replay_matches_stored": "True",
+    "coefficient_replay_ratio": "0.4025727135404509",
+    "confirmation_weight_at_exclusion": "27426",
+    "confirmation_weight_before": "44078",
+    "epoch": "272",
+    "event_trigger_height": "4209686",
+    "exclusion_height": "4209967",
+    "kimi_coeff": "1.2620856201975851",
+    "measured_details": {
+      "moonshotai/Kimi-K2.6": {
+        "coeff": "1.2620856201975851",
+        "raw_measured": 21731,
+        "raw_measured_before_time_norm": 23872,
+        "result": "pass_weight",
+        "time_normalization_factor": "0.91033653846153846153846153846153846153846153846153846153846153846153846153846154",
+        "valid_weight_percent": "90.8985",
+        "weighted_measured": 27426
+      }
+    },
+    "measured_weight": 27426,
+    "not_preserved_weight": 74947,
+    "participant": "gonka1q5xt54wncgzk7dxv9x64uln68455g83wu9tugg",
+    "pass_models": "Kimi",
+    "preserved_weight": 0,
+    "qwen_coeff": "0.3593",
+    "replay_confirmation_weight_after": 27426,
+    "snapshot_anchor_height": "4209686",
+    "split_details": {
+      "moonshotai/Kimi-K2.6": {
+        "coeff": "1.2620856201975851",
+        "preserved_node_ids": [],
+        "raw_not_preserved": 59384,
+        "raw_preserved": 0,
+        "weighted_not_preserved": 74947,
+        "weighted_preserved": 0
+      }
+    },
+    "stored_confirmation_ratio": "0.4025727135404508",
+    "time_normalization_factor": "0.91033653846153846153846153846153846153846153846153846153846153846153846153846154",
+    "total_expected_weight": 74947
+  },
+  {
+    "chain_reading_preserved_plus_measured": 3062,
+    "coefficient_replay_diff": "0.0000000000000001",
+    "coefficient_replay_matches_stored": "True",
+    "coefficient_replay_ratio": "0.3157608599255126",
+    "confirmation_weight_at_exclusion": "3062",
+    "confirmation_weight_before": "10669",
+    "epoch": "273",
+    "event_trigger_height": "4215427",
+    "exclusion_height": "4215708",
+    "kimi_coeff": "1.2620856201975851",
+    "measured_details": {
+      "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": {
+        "coeff": "0.3593",
+        "raw_measured": 7471,
+        "raw_measured_before_time_norm": 8128,
+        "result": "pass_weight",
+        "time_normalization_factor": "0.91917475728155339805825242718446601941747572815533980582524271844660194174757282",
+        "valid_weight_percent": "73.5996",
+        "weighted_measured": 2684
+      }
+    },
+    "measured_weight": 2684,
+    "not_preserved_weight": 10290,
+    "participant": "gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx",
+    "pass_models": "Qwen",
+    "preserved_weight": 378,
+    "qwen_coeff": "0.3593",
+    "replay_confirmation_weight_after": 3062,
+    "snapshot_anchor_height": "4215427",
+    "split_details": {
+      "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": {
+        "coeff": "0.3593",
+        "preserved_node_ids": [
+          "ovh_ma"
+        ],
+        "raw_not_preserved": 7662,
+        "raw_preserved": 1054,
+        "weighted_not_preserved": 2752,
+        "weighted_preserved": 378
+      },
+      "moonshotai/Kimi-K2.6": {
+        "coeff": "1.2620856201975851",
+        "preserved_node_ids": [],
+        "raw_not_preserved": 5973,
+        "raw_preserved": 0,
+        "weighted_not_preserved": 7538,
+        "weighted_preserved": 0
+      }
+    },
+    "stored_confirmation_ratio": "0.3157608599255127",
+    "time_normalization_factor": "0.91917475728155339805825242718446601941747572815533980582524271844660194174757282",
+    "total_expected_weight": 10668
+  },
+  {
+    "chain_reading_preserved_plus_measured": 103,
+    "coefficient_replay_diff": "-0.0000000000000000",
+    "coefficient_replay_matches_stored": "True",
+    "coefficient_replay_ratio": "0.2905418747002905",
+    "confirmation_weight_at_exclusion": "103",
+    "confirmation_weight_before": "312",
+    "epoch": "274",
+    "event_trigger_height": "4231815",
+    "exclusion_height": "4232096",
+    "kimi_coeff": "1.2620856201975851",
+    "measured_details": {
+      "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": {
+        "coeff": "0.3593",
+        "raw_measured": 289,
+        "raw_measured_before_time_norm": 320,
+        "result": "pass_weight",
+        "time_normalization_factor": "0.90598086124401913875598086124401913875598086124401913875598086124401913875598086",
+        "valid_weight_percent": "83.3818",
+        "weighted_measured": 103
+      }
+    },
+    "measured_weight": 103,
+    "not_preserved_weight": 390,
+    "participant": "gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p",
+    "pass_models": "Qwen",
+    "preserved_weight": 0,
+    "qwen_coeff": "0.3593",
+    "replay_confirmation_weight_after": 103,
+    "snapshot_anchor_height": "4231815",
+    "split_details": {
+      "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": {
+        "coeff": "0.3593",
+        "preserved_node_ids": [],
+        "raw_not_preserved": 1086,
+        "raw_preserved": 0,
+        "weighted_not_preserved": 390,
+        "weighted_preserved": 0
+      }
+    },
+    "stored_confirmation_ratio": "0.2905418747002905",
+    "time_normalization_factor": "0.90598086124401913875598086124401913875598086124401913875598086124401913875598086",
+    "total_expected_weight": 390
+  },
+  {
+    "chain_reading_preserved_plus_measured": 105,
+    "coefficient_replay_diff": "-0.0000000000000000",
+    "coefficient_replay_matches_stored": "True",
+    "coefficient_replay_ratio": "0.3348160903046826",
+    "confirmation_weight_at_exclusion": "105",
+    "confirmation_weight_before": "289",
+    "epoch": "275",
+    "event_trigger_height": "4258197",
+    "exclusion_height": "4258478",
+    "kimi_coeff": "1.2620856201975851",
+    "measured_details": {
+      "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": {
+        "coeff": "0.3593",
+        "raw_measured": 294,
+        "raw_measured_before_time_norm": 320,
+        "result": "pass_weight",
+        "time_normalization_factor": "0.91917475728155339805825242718446601941747572815533980582524271844660194174757282",
+        "valid_weight_percent": "90.4051",
+        "weighted_measured": 105
+      }
+    },
+    "measured_weight": 105,
+    "not_preserved_weight": 345,
+    "participant": "gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p",
+    "pass_models": "Qwen",
+    "preserved_weight": 0,
+    "qwen_coeff": "0.3593",
+    "replay_confirmation_weight_after": 105,
+    "snapshot_anchor_height": "4258197",
+    "split_details": {
+      "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": {
+        "coeff": "0.3593",
+        "preserved_node_ids": [],
+        "raw_not_preserved": 962,
+        "raw_preserved": 0,
+        "weighted_not_preserved": 345,
+        "weighted_preserved": 0
+      }
+    },
+    "stored_confirmation_ratio": "0.3348160903046826",
+    "time_normalization_factor": "0.91917475728155339805825242718446601941747572815533980582524271844660194174757282",
+    "total_expected_weight": 345
+  },
+  {
+    "chain_reading_preserved_plus_measured": 16317,
+    "coefficient_replay_diff": "-0.0483286930616480",
+    "coefficient_replay_matches_stored": "False",
+    "coefficient_replay_ratio": "0.4009670981394065",
+    "confirmation_weight_at_exclusion": "21654",
+    "confirmation_weight_before": "65994",
+    "epoch": "276",
+    "event_trigger_height": "4267778",
+    "exclusion_height": "4268059",
+    "kimi_coeff": "0.78",
+    "measured_details": {
+      "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": {
+        "coeff": "0.3593",
+        "raw_measured": 10516,
+        "raw_measured_before_time_norm": 11552,
+        "result": "pass_weight",
+        "time_normalization_factor": "0.91033653846153846153846153846153846153846153846153846153846153846153846153846154",
+        "valid_weight_percent": "86.9859",
+        "weighted_measured": 3778
+      },
+      "moonshotai/Kimi-K2.6": {
+        "coeff": "0.78",
+        "raw_measured": 11069,
+        "raw_measured_before_time_norm": 12160,
+        "result": "pass_weight",
+        "time_normalization_factor": "0.91033653846153846153846153846153846153846153846153846153846153846153846153846154",
+        "valid_weight_percent": "78.7207",
+        "weighted_measured": 8633
+      }
+    },
+    "measured_weight": 12411,
+    "not_preserved_weight": 40862,
+    "participant": "gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09",
+    "pass_models": "Qwen+Kimi",
+    "preserved_weight": 3906,
+    "qwen_coeff": "0.3593",
+    "replay_confirmation_weight_after": 16317,
+    "snapshot_anchor_height": "4267778",
+    "split_details": {
+      "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": {
+        "coeff": "0.3593",
+        "preserved_node_ids": [
+          "node1"
+        ],
+        "raw_not_preserved": 11135,
+        "raw_preserved": 10872,
+        "weighted_not_preserved": 4000,
+        "weighted_preserved": 3906
+      },
+      "moonshotai/Kimi-K2.6": {
+        "coeff": "0.78",
+        "preserved_node_ids": [],
+        "raw_not_preserved": 47260,
+        "raw_preserved": 0,
+        "weighted_not_preserved": 36862,
+        "weighted_preserved": 0
+      }
+    },
+    "stored_confirmation_ratio": "0.3526384050777585",
+    "time_normalization_factor": "0.91033653846153846153846153846153846153846153846153846153846153846153846153846154",
+    "total_expected_weight": 44768
+  }
+]

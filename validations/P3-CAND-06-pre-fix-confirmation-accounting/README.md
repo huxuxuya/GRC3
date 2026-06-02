@@ -62,6 +62,13 @@ Excluded from this candidate:
 | Epoch `276` rows | `4` |
 | Epoch `276` estimated loss | `42,799.389553703 GNK` |
 
+Start with `case6_decision_summary.md` for the one-page conclusion and
+`case6_evidence_ledger.md` for row-by-row evidence. The ledger combines each
+candidate row's trigger/exclusion heights, Qwen/Kimi commit and validator
+evidence, strict `2/3` threshold comparison, old-formula replay, bounded
+v0.2.13-style replay, loss amount, technical status, overlap status, and
+decision boundary.
+
 Distribution by epoch:
 
 | Epoch | Rows |
@@ -77,6 +84,142 @@ Distribution by epoch:
 | `274` | `2` |
 | `275` | `1` |
 | `276` | `4` |
+
+## Root-Cause Replay
+
+`case6_root_cause_replay.md` replays the `24` candidate rows against the
+normalized archive-chain scan data and the strict chain threshold:
+
+```text
+validWeight > TotalNetworkWeight * 2 / 3
+```
+
+Current result:
+
+| Check | Result |
+|---|---:|
+| Rows with at least one Qwen/Kimi `pass_weight` model and durable `failed_confirmation_poc` state | `24` |
+| Rows with exactly one `pass_weight` model | `23` |
+| Rows with both Qwen and Kimi `pass_weight` | `1` |
+| Rows where simple `confirmation_weight_at_exclusion / confirmation_weight_before / 0.909` matches stored ratio | `18` |
+| Rows where that simple ratio does not match stored ratio | `6` |
+| Simple-ratio mismatch rows reconciled by full coefficient replay | `5` |
+| Remaining mismatch after coefficient replay | `1` |
+
+Classification:
+
+| Classification | Rows | Interpretation |
+|---|---:|---|
+| `single_model_pass_expected_capacity_failed` | `18` | One model reached `pass_weight`; the stored ratio reconciles with the observed confirmation-weight reduction. |
+| `single_model_pass_coefficient_replayed` | `5` | One model reached `pass_weight`; full replay matches the stored ratio once historical coefficients, time normalization, and preserved snapshots are used. |
+| `strong_signal_but_epoch276_overlap` | `1` | Both Qwen and Kimi reached `pass_weight`, but the row is in epoch `276` and overlaps the `P3-CAND-04` review window. |
+
+The strongest contradiction is epoch `276`
+`gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09`: Qwen had `86.9859%`
+valid weight, Kimi had `78.7207%` valid weight, yet the stored confirmation
+ratio was only `35.2638%` and the participant received zero reward. This row
+must still be reconciled with `P3-CAND-04` before any payout decision.
+
+`case6_coefficient_replay.md` closes the `5` non-epoch-276 simple-ratio
+mismatch rows. The apparent mismatch was from using the current
+`ConfirmationWeight` as a diagnostic denominator, while the pre-fix chain
+formula used full `preserved + notPreserved` expected weight. The same replay
+does not reconcile the epoch `276` overlap row, so that row remains separate.
+
+The likely fix family is PR
+[`#1143`](https://github.com/gonka-ai/gonka/pull/1143) / `v0.2.13`, which
+stores one epoch snapshot of confirmable models and weight-scale factors for
+confirmation/reward calculations. PRs `#550` and `#826` remain treated as
+unrelated settlement/claim-path fixes unless a direct confirmation-PoC code
+link is found.
+
+`case6_code_diff_root_cause.md` independently reviews the `v0.2.13` source diff
+against its parent commit. It confirms that PR `#1143` added the
+`ConfirmationWeightScales` epoch snapshot and then used the same snapshot for:
+
+- initial epoch-member confirmation weight;
+- cPoC measured and preserved weight;
+- Bitcoin reward rescaling.
+
+The code-diff review strengthens the root-cause finding: the current evidence
+matches a pre-fix confirmation-accounting mismatch, not a simple absence of
+submissions or validator weight for the passing model. It does not by itself
+approve all `24` rows for payout; eligibility and overlap review remain
+separate.
+
+## Submission And Validator Evidence
+
+`case6_submission_validator_evidence.md` fetches raw cPoC stage data for the
+candidate loss triggers:
+
+- `/productscience/inference/inference/all_poc_v2_store_commits/{trigger}`;
+- `/productscience/inference/inference/poc_v2_validations_for_stage/{trigger}`;
+- model-specific `epoch_group_data` for Qwen/Kimi voting power.
+
+Result:
+
+| Check | Result |
+|---|---:|
+| Unique loss trigger heights fetched | `16` |
+| Submission-evidence raw endpoint files | `54` |
+| Full validation raw cache files after formula/new replay | `140` |
+| Full validation raw cache size | `7.2 MB` |
+| Model rows reconstructed | `48` |
+| Model rows matching previous aggregate CSV | `48` |
+| Model rows with cPoC store commit/submission | `25` |
+| Model rows with strict `pass_weight` | `25` |
+| Candidate rows with at least one passing model | `24` |
+
+This confirms that submissions and enough validator weight existed for the
+passing model in every candidate row. The current evidence does not expose every
+individual off-chain nonce/payload body; it proves commit counts/root hashes,
+validator rows, valid validator counts, and valid validator voting weight from
+the chain's cPoC stage endpoints.
+
+## Full Formula And Eligibility Review
+
+`case6_full_old_formula_replay.md` replays all `24` rows with historical
+params, cPoC time normalization, preserved snapshots, MLNode distributions, and
+raw submission evidence.
+
+| Check | Result |
+|---|---:|
+| Rows replayed through old formula | `24` |
+| Rows matching stored ratio | `22` |
+| Rows still below alpha in bounded v0.2.13-style replay | `24` |
+| Rows that would pass alpha in bounded v0.2.13-style replay | `0` |
+
+The bounded v0.2.13-style replay is intentionally limited to the Qwen/Kimi data
+available in this case folder. It does not prove the exact post-upgrade state,
+but it shows that the available Qwen/Kimi evidence does not automatically rescue
+the single-model rows. This strengthens the decision boundary: most rows are
+technically reproducible but still require a policy decision on whether
+single-model service is compensable.
+
+`case6_eligibility_matrix.md` classifies:
+
+| Technical status | Rows |
+|---|---:|
+| `formula_reconciled_policy_required` | `20` |
+| `blocked_epoch276_overlap` | `4` |
+
+`case6_overlap_matrix.md` classifies duplicate-payment risk:
+
+| Overlap status | Rows |
+|---|---:|
+| `no_known_overlap_in_local_repo` | `6` |
+| `p4_cand_01_epoch_range_overlap` | `14` |
+| `p3_cand_04_epoch_overlap_unresolved` | `3` |
+| `known_p3_cand_04_same_address` | `1` |
+
+`case6_evidence_ledger.md` provides the combined audit table. Its action split
+is:
+
+| Action | Rows | Estimated loss, GONKA |
+|---|---:|---:|
+| `clear` | `6` | `14,729.197017136` |
+| `review` | `14` | `63,293.737800953` |
+| `blocked` | `4` | `42,799.389553703` |
 
 ## Candidate Rows
 
@@ -116,10 +259,11 @@ The grouped participant -> epoch -> cPoC view is in
 
 ## What Still Needs Review
 
-- Confirm whether `pass_weight` on one model should have preserved enough
-  confirmation capacity under the historical pre-fix formula.
-- Reconcile each row against coefficient-adjusted `foldEventReadings`, not only
-  raw model voting power.
+- Reconcile all `4` epoch `276` rows against `P3-CAND-04` /
+  upgrade-protection evidence.
+- Decide whether the `20` formula-reconciled non-epoch-276 single-model rows
+  are protocol-bug compensation rows or ordinary incomplete multi-model service
+  rows.
 - Check overlap with `P3-CAND-04` for epoch `276` so the same economic loss is
   not paid twice.
 - Check overlap with `P4-CAND-01` Kimi restitution before assigning this
@@ -131,8 +275,51 @@ The grouped participant -> epoch -> cPoC view is in
 - `participant_epoch_timeline.csv`
 - `participant_grouped_cpoc_timeline.md`
 - `participant_grouped_cpoc_timeline.csv`
+- `case6_decision_summary.md`
+- `case6_evidence_ledger.md`
+- `case6_evidence_ledger.csv`
+- `case6_evidence_ledger.json`
+- `case6_root_cause_replay.md`
+- `case6_row_formula_replay.csv`
+- `case6_row_formula_replay.json`
+- `case6_overlap_review.md`
+- `case6_submission_validator_evidence.md`
+- `case6_submission_validator_evidence.csv`
+- `case6_submission_validator_evidence.json`
+- `case6_stage_fetch_summary.csv`
+- `case6_fix_review.md`
+- `case6_code_diff_root_cause.md`
+- `case6_coefficient_replay.md`
+- `case6_coefficient_replay.csv`
+- `case6_coefficient_replay.json`
+- `case6_full_old_formula_replay.md`
+- `case6_full_old_formula_replay.csv`
+- `case6_full_old_formula_replay.json`
+- `case6_new_algorithm_replay.md`
+- `case6_new_algorithm_replay.csv`
+- `case6_new_algorithm_replay.json`
+- `case6_eligibility_matrix.md`
+- `case6_eligibility_matrix.csv`
+- `case6_eligibility_matrix.json`
+- `case6_overlap_matrix.md`
+- `case6_overlap_matrix.csv`
+- `case6_overlap_matrix.json`
+- `case6_epoch276_overlap_deep_dive.md`
+- `case6_raw_data_manifest.md`
+- `case6_raw_data_manifest.csv`
+- `case6_raw_data_manifest.json`
+- `build_case6_root_cause_replay.py`
+- `build_case6_submission_evidence.py`
+- `build_case6_coefficient_replay.py`
+- `build_case6_full_old_formula_replay.py`
+- `build_case6_new_algorithm_replay.py`
+- `build_case6_eligibility_matrix.py`
+- `build_case6_overlap_matrix.py`
+- `build_case6_raw_manifest.py`
+- `build_case6_evidence_ledger.py`
 - `build_grouped_timeline.py`
 - `candidate_rows.csv`
+- `raw_stage_cache/`
 - `../P3-CAND-03-failed-cpoc-epoch-267/case3_neighbor_failed_cpoc_rows.csv`
 - `../P3-CAND-03-failed-cpoc-epoch-267/case3_pre_fix_window_review.md`
 - `../P3-CAND-03-failed-cpoc-epoch-267/case3_chain_formula_reconciliation.md`

@@ -1,0 +1,170 @@
+{
+  "found": true,
+  "snapshot": {
+    "episode_anchor_height": "4209686",
+    "model_preserved_nodes": [
+      {
+        "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+        "participants": [
+          {
+            "node_ids": [
+              "node10",
+              "node8"
+            ],
+            "participant_id": "gonka12pcu9mcrpa4w4sjd9y3dsksnvu495ss6f9r4ra"
+          },
+          {
+            "node_ids": [
+              "main"
+            ],
+            "participant_id": "gonka14tqh62mangwzrma2lgg2dm375rcjzn2ydy8ttm"
+          },
+          {
+            "node_ids": [
+              "co-wm-a100-1",
+              "vul-kol-A100-1"
+            ],
+            "participant_id": "gonka17pw6099q758qwzewtrqmqpf5c2lrhr97fwqexu"
+          },
+          {
+            "node_ids": [
+              "mlnode-039"
+            ],
+            "participant_id": "gonka1d694r00czmq75txghwjcuk07lxvc8d4ekgsha0"
+          },
+          {
+            "node_ids": [
+              "node-235-1"
+            ],
+            "participant_id": "gonka1dkl4mah5erqggvhqkpc8j3qs5tyuetgdy552cp"
+          },
+          {
+            "node_ids": [
+              "FT-25"
+            ],
+            "participant_id": "gonka1duuaqdx06sx8v2dzggltwwmqyuw8lvjkjq7xll"
+          },
+          {
+            "node_ids": [
+              "node207"
+            ],
+            "participant_id": "gonka1f0u3y2wneer8zhz3ypw4x54h38cpa0qsy8ts3e"
+          },
+          {
+            "node_ids": [
+              "U59"
+            ],
+            "participant_id": "gonka1fc9tzt83dgrqswlgay4668cuqjrk7zsqks2vm2"
+          },
+          {
+            "node_ids": [
+              "la-ck-qwen-2"
+            ],
+            "participant_id": "gonka1gvrrhjmy4w4mayvs2s5l23edj8ertcmtd2v4zr"
+          },
+          {
+            "node_ids": [
+              "node1"
+            ],
+            "participant_id": "gonka1gyk0aahvr3qeju4zx0nplfreej6cy4jjk8svc5"
+          },
+          {
+            "node_ids": [
+              "fp003"
+            ],
+            "participant_id": "gonka1hwvel7n3zuk6wruefuzc356l9myske9stckwnz"
+          },
+          {
+            "node_ids": [
+              "node-ML-2"
+            ],
+            "participant_id": "gonka1qnj39ysxpzknvrr5dw9rdl7cx5q7dpkwerryrs"
+          },
+          {
+            "node_ids": [
+              "at003"
+            ],
+            "participant_id": "gonka1tja3g2da45efhe2p83gk3whtussmgmtsdlgprt"
+          },
+          {
+            "node_ids": [
+              "node1"
+            ],
+            "participant_id": "gonka1u4zxypjgcr8khlzefwjr0vwdaj2uzruw2cehj3"
+          },
+          {
+            "node_ids": [
+              "node1"
+            ],
+            "participant_id": "gonka1w29nvdy6caqtrw30whz9h6ghl0xszwh3egndah"
+          },
+          {
+            "node_ids": [
+              "node-235b"
+            ],
+            "participant_id": "gonka1y2a9p56kv044327uycmqdexl7zs82fs5ryv5le"
+          },
+          {
+            "node_ids": [
+              "U5"
+            ],
+            "participant_id": "gonka1ym3np7guxart483yfdxnlztuazx22cjt0e4a2p"
+          },
+          {
+            "node_ids": [
+              "ovh_ma"
+            ],
+            "participant_id": "gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx"
+          }
+        ]
+      },
+      {
+        "model_id": "moonshotai/Kimi-K2.6",
+        "participants": [
+          {
+            "node_ids": [
+              "node1"
+            ],
+            "participant_id": "gonka10079cnl3nuh2k82mhkm04dj0slhtw9kmjewwau"
+          },
+          {
+            "node_ids": [
+              "node3"
+            ],
+            "participant_id": "gonka1007g0ut3u4wjkay9hegqfev4pj90qgexwskmcw"
+          },
+          {
+            "node_ids": [
+              "ml1"
+            ],
+            "participant_id": "gonka15munkmx6x7k6rqqeexjet4556p7at39ks9qgr5"
+          },
+          {
+            "node_ids": [
+              "node218"
+            ],
+            "participant_id": "gonka19cjm4c5mt3j3qdr8vhytmm4hef3pnkvkm0x7m2"
+          },
+          {
+            "node_ids": [
+              "node217"
+            ],
+            "participant_id": "gonka1f0u3y2wneer8zhz3ypw4x54h38cpa0qsy8ts3e"
+          },
+          {
+            "node_ids": [
+              "la-ey-kimi-1"
+            ],
+            "participant_id": "gonka1gvrrhjmy4w4mayvs2s5l23edj8ertcmtd2v4zr"
+          },
+          {
+            "node_ids": [
+              "node606"
+            ],
+            "participant_id": "gonka1mmlyd5xxu5l68yx8wzclrkxkxvm88mhq5tp5s0"
+          }
+        ]
+      }
+    ]
+  }
+}
