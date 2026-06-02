@@ -8,3 +8,6 @@ Exported Data_Update.pdf
 # Python local caches
 __pycache__/
 *.pyc
+
+# Validation raw node caches
+validations/**/raw_cache/

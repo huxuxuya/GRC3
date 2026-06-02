@@ -60,18 +60,25 @@ pass        = validWeight > twoThirds
 
 Important consequences for the validation tables:
 
-- the denominator is root/snapshot `TotalNetworkWeight`;
+- the denominator is the cPoC validation snapshot `TotalNetworkWeight` for the
+  specific cPoC stage;
+- this can differ from the epoch reward/root `totalFullWeight` used later in
+  the payout formula;
 - model `total_weight` is not the `>2/3` denominator;
 - model `voting_power` is what gets summed for the validator side;
 - the check is strict `>2/3`, so the minimum integer pass line is
   `floor(TotalNetworkWeight * 2 / 3) + 1`.
 
-This matches the corrected epoch timeline tables:
+This matches the corrected epoch timeline tables for the stages where the
+archive `poc_validation_snapshot` was checked directly:
 
-| Epoch | `TotalNetworkWeight` | Exact `2/3` | Minimum integer pass line |
-|---:|---:|---:|---:|
-| `265` | `904,177` | `602,784.666667` | `602,785` |
-| `267` | `541,415` | `360,943.333333` | `360,944` |
+| Epoch | cPoC stage | cPoC snapshot `TotalNetworkWeight` | Exact `2/3` floor line | Minimum integer pass line |
+|---:|---:|---:|---:|---:|
+| `265` | `4,102,890` / cPoC #2 | `732,828` | `488,552` | `488,553` |
+| `267` | `4,122,271` / cPoC #1 | `541,415` | `360,943` | `360,944` |
+
+The epoch `265` payout examples still use reward `totalFullWeight = 904,177`.
+That number is the reward denominator, not the cPoC #2 majority denominator.
 
 ## Final Confirmation Ratio
 
@@ -111,6 +118,12 @@ consensusWeight(participant) =
 
 Models without an explicit coefficient use `1.0`; the product is truncated to
 integer per model.
+
+When a counterfactual starts from raw model `PocWeight`, the model
+`WeightScaleFactor` must be applied before using that weight in a reward
+numerator. When a counterfactual starts from stored chain fields such as
+`ConfirmationWeight`, `voting_power`, `rewarded_coins`, or `settle_amount`,
+that scale has already been applied upstream and must not be applied again.
 
 ## Numeric Reconciliation
 
@@ -167,7 +180,7 @@ diff         = 0.0000000000000000118652044156269056816205693854430182
 The validation package now separates two calculations:
 
 1. Raw cPoC majority diagnostics, which match `pocValidated`:
-   `sum(model voting power) > TotalNetworkWeight * 2 / 3`.
+   `sum(model voting power) > poc_validation_snapshot.TotalNetworkWeight * 2 / 3`.
 2. Final exclusion ratio, which matches `foldEventReadings`:
    `(preserved + measured) / (preserved + notPreserved) / 0.909`.
 

@@ -32,9 +32,13 @@ The scan looks for the same durable chain signature as Case 3:
 
 ## Case-3-like Rows
 
-| Epoch | Participant | Ratio | Alpha | Kimi submitted | Kimi valid weight | Preserved Kimi weight | Loss, GONKA |
+The epoch `265` amount has two interpretations: `20,896.527179100 GNK` is the
+full-root scan upper bound, while `12,951.806895703 GNK` is the narrower
+chain-style counterfactual if the `0.780` Kimi scale factor is accepted.
+
+| Epoch | Participant | Ratio | Alpha | Kimi submitted | Kimi valid weight | Preserved Kimi weight | Amount interpretation, GONKA |
 |---:|---|---:|---:|---:|---:|---:|---:|
-| 265 | `gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6` | 0.5359% | 0.5 | 52028 | 256727 (28.3934%) | 189884 (21.0008%) | 20896.527179100 |
+| 265 | `gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6` | 0.5359% | 0.5 | 52028 | 256727 (35.0324% of cPoC #2 snapshot total) | 189884 (21.0008% diagnostic share of epoch reward/root total) | 12951.806895703 conditional; 20896.527179100 upper bound |
 | 267 | `gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6` | 0.5742% | 0.5 | 57664 | 171571 (31.6894%) | 159432 (29.4473%) | 10262.057515369 |
 
 ## All failed_confirmation_poc Rows

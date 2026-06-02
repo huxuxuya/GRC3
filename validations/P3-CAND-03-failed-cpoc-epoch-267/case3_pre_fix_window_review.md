@@ -16,9 +16,14 @@ clean start:    epoch 277, block 4,275,062
 
 ## Result Summary
 
+The table keeps the original neighbor-scan loss totals as full-root estimates.
+For epoch `265`, the narrower chain-style counterfactual is lower because the
+lost raw Kimi model weight must be scaled before it is used as a reward
+numerator. See `case3_epoch265_timeline.md` for the detailed amount split.
+
 | Class | Rows | Estimated zero-reward loss, GONKA | Interpretation |
 |---|---:|---:|---|
-| Strict Case-3-like Kimi submitted below `2/3` | `2` | `31,158.584694469` | Same narrow mechanism as Case 3. |
+| Strict Case-3-like Kimi submitted below `2/3` | `2` | `31,158.584694469` full-root scan estimate; `23,213.864411072` if epoch `265` uses the narrower `12,951.806895703` counterfactual | Same narrow symptom family; epoch `265` amount needs scope/source decision. |
 | Submitted and `pass_weight`, but still failed ratio | `24` | `120,822.324371792` | Broader suspicious confirmation-accounting candidates; not the same Kimi-shortfall signature. |
 | Qwen submitted below `2/3` | `3` | `4,917.314529158` | Different model-side shortfall. |
 | No Qwen/Kimi submission on selected cPoC event | `90` | `260,371.420615124` | Broad `failed_confirmation_poc`, but not enough evidence for the Case 3 mechanism. |
@@ -36,9 +41,9 @@ validations/P3-CAND-06-pre-fix-confirmation-accounting/
 Only one participant appears under the strict Case 3 signature, but it appears
 in two epochs:
 
-| Epoch | Participant | Exclusion height | Trigger height | Kimi submitted | Kimi validating weight | Max preserved Kimi weight | Loss, GONKA |
+| Epoch | Participant | Exclusion height | Trigger height | Kimi submitted | Kimi validating weight | Max preserved Kimi weight | Amount interpretation, GONKA |
 |---:|---|---:|---:|---:|---:|---:|---:|
-| `265` | `gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6` | `4,103,171` | `4,102,890` | `52,028` | `256,727` / `28.3934%` | `189,884` / `21.0008%` | `20,896.527179100` |
+| `265` | `gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6` | `4,103,171` | `4,102,890` | `52,028` | `256,727` / `35.0324%` of cPoC #2 snapshot total | `189,884` / `21.0008%` diagnostic share of epoch reward/root total | `12,951.806895703` conditional chain-style counterfactual; `20,896.527179100` full-root upper bound |
 | `267` | `gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6` | `4,122,552` | `4,122,271` | `57,664` | `171,571` / `31.6894%` | `159,432` / `29.4473%` | `10,262.057515369` |
 
 The strict signature requires:

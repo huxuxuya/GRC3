@@ -73,8 +73,8 @@ whether any proxy configuration responsibility should affect compensation.
 
 Formula check: `case3_chain_formula_reconciliation.md` maps these tables back
 to the historical chain code. The raw `>2/3` checks use
-`sum(model voting power) > TotalNetworkWeight * 2 / 3`; the final failure ratio
-uses the pre-fix `foldEventReadings` formula
+`sum(model voting power) > poc_validation_snapshot.TotalNetworkWeight * 2 / 3`;
+the final failure ratio uses the pre-fix `foldEventReadings` formula
 `(preserved + measured) / (preserved + notPreserved) / 0.909`. The stored epoch
 `265` and `267` ratios both reconcile with that formula.
 

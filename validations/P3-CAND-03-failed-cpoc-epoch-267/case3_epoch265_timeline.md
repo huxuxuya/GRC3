@@ -16,9 +16,10 @@ separate scope/eligibility decision.
 | Metric | Value |
 |---|---:|
 | Epoch | `265` |
-| Total network/root weight | `904,177` |
-| `2/3` exact line | `602,784.666667` |
-| Minimum integer weight for `>2/3` | `602,785` |
+| Epoch reward/root `totalFullWeight` | `904,177` |
+| cPoC #2 validation snapshot `TotalNetworkWeight` | `732,828` |
+| cPoC #2 `2/3` exact line | `488,552` |
+| cPoC #2 minimum integer weight for strict `>2/3` | `488,553` |
 | Claimant root weight | `66,311` |
 | Claimant Qwen voting power | `66,311` |
 | Claimant Kimi voting power | `66,311` |
@@ -31,24 +32,29 @@ be mixed:
 
 | Field | Meaning | Used as the `>2/3` denominator? |
 |---|---|---|
-| Root / `TotalNetworkWeight` | Whole epoch network weight from the cPoC validation snapshot. | yes |
+| cPoC snapshot `TotalNetworkWeight` | Network weight stored in `poc_validation_snapshot/{stage}` for the specific cPoC stage. | yes |
+| Epoch reward/root `totalFullWeight` | Reward denominator for the epoch payout formula. For epoch `265` this is `904,177`. | no |
 | Model `total_weight` | Model-group capacity/weight total from `epoch_group_data/{epoch}?model_id=...`. | no |
 | Model `voting_power` | Per-participant model voting power. Validator, preserved, and non-preserved model weights below are sums of this field. | no |
 
-For epoch `265`, the `>2/3` line is based on root/network total:
+For cPoC #2 at trigger height `4,102,890`, the archive validation snapshot
+sets the `>2/3` line from its own `TotalNetworkWeight`:
 
 ```text
-root/network total = 904,177
->2/3 threshold    = 602,785
+cPoC #2 snapshot total = 732,828
+strict >2/3 line       = 488,553
 ```
 
-The model totals are still shown for context, but they are not the denominator
-used in the `>2/3` checks:
+The epoch reward/root total `904,177` is still used later for the reward payout
+formula, but it is not the cPoC #2 majority denominator.
 
-| Model | Model `total_weight` | Sum of model `voting_power` | Sum of model `voting_power` as share of root total | `>2/3` denominator used below |
+The model totals are shown for context, but they are not the denominator used
+in the `>2/3` checks:
+
+| Model | Model `total_weight` | Sum of model `voting_power` | Sum of model `voting_power` as share of epoch reward/root total | `>2/3` denominator used below |
 |---|---:|---:|---:|---:|
-| Qwen | `1,227,899` | `891,766` | `98.6274%` | `904,177` |
-| Kimi | `377,276` | `842,654` | `93.1957%` | `904,177` |
+| Qwen | `1,227,899` | `891,766` | `98.6274%` of epoch reward/root total | cPoC snapshot total |
+| Kimi | `377,276` | `842,654` | `93.1957%` of epoch reward/root total | cPoC snapshot total |
 
 ## Claimant Model Weights
 
@@ -56,6 +62,18 @@ used in the `>2/3` checks:
 |---|---:|---:|---:|---|
 | Qwen | `923` | `66,311` | `66,311` | `node1` |
 | Kimi | `52,279` | `66,311` | `66,311` | `kimi30; kimi31; kimi32; kimi33` |
+
+Important scale note: the per-model `weight` field above is raw model
+`PocWeight`, not the final consensus/reward weight. The chain scales raw model
+weights when it combines models:
+
+```text
+scaled consensus weight = sum(raw model weight * model weight_scale_factor)
+```
+
+The root `confirmation_weight`/reward weight is already in that combined
+consensus scale. The raw model `weight` fields are useful for explaining which
+model was lost, but they must be scaled before being used as a reward numerator.
 
 ## Height Timeline
 
@@ -77,17 +95,19 @@ diagnostic for the raw `>2/3` validation context. The final chain
 `ConfirmationPoCRatio` uses coefficient-adjusted PoC node readings; see
 `case3_chain_formula_reconciliation.md`.
 
-| Model | Sum model voting power | Preserved voting power | Non-preserved voting power | Non-preserved share of root total | Is non-preserved weight enough for `>2/3`? | Shortfall vs `602,785` |
+| Model | Sum model voting power | Preserved voting power | Non-preserved voting power | Non-preserved share of epoch reward/root total | Epoch-level diagnostic enough for `>2/3`? | Diagnostic shortfall vs `602,785` |
 |---|---:|---:|---:|---:|---|---:|
 | Qwen | `891,766` | `309,671` | `582,095` | `64.3784%` | no | `20,690` |
 | Kimi | `842,654` | `380,371` | `462,283` | `51.1275%` | no | `140,502` |
 
-Key point: unlike epoch `267`, in epoch `265` both Qwen and Kimi non-preserved
-model voting power are below the strict `>2/3` line.
+Key point for this epoch-level availability diagnostic: unlike epoch `267`, in
+epoch `265` both Qwen and Kimi non-preserved model voting power are below the
+diagnostic `>2/3` line. The final cPoC #2 majority verdict is shown separately
+below from the archive `poc_validation_snapshot`.
 
 ## Preserved Qwen Weight
 
-| Participant | Qwen voting power | Share of total network | Nodes |
+| Participant | Qwen voting power | Share of epoch reward/root total | Nodes |
 |---|---:|---:|---|
 | `gonka1tja3g2da45efhe2p83gk3whtussmgmtsdlgprt` | `115,425` | `12.7658%` | `at003;at009` |
 | `gonka1f0u3y2wneer8zhz3ypw4x54h38cpa0qsy8ts3e` | `74,862` | `8.2796%` | `node207` |
@@ -100,7 +120,7 @@ model voting power are below the strict `>2/3` line.
 
 Full per-participant rows are in `case3_epoch265_model_weights.csv`.
 
-| Participant | Qwen voting power | Share of root total | Model `weight` field |
+| Participant | Qwen voting power | Share of epoch reward/root total | Model `weight` field |
 |---|---:|---:|---:|
 | `gonka17pw6099q758qwzewtrqmqpf5c2lrhr97fwqexu` | `189,884` | `21.0008%` | `50,745` |
 | `gonka1duuaqdx06sx8v2dzggltwwmqyuw8lvjkjq7xll` | `128,853` | `14.2509%` | `377,497` |
@@ -112,7 +132,7 @@ Full per-participant rows are in `case3_epoch265_model_weights.csv`.
 
 ## Preserved Kimi Weight
 
-| Participant | Kimi voting power | Share of total network | Nodes |
+| Participant | Kimi voting power | Share of epoch reward/root total | Nodes |
 |---|---:|---:|---|
 | `gonka17pw6099q758qwzewtrqmqpf5c2lrhr97fwqexu` | `189,884` | `21.0008%` | `4B200-spt-kimi-1` |
 | `gonka1famtxh54kad6ylwtm60j6d7h6unpc08d4vdqnk` | `96,900` | `10.7169%` | `U11` |
@@ -125,7 +145,7 @@ Full per-participant rows are in `case3_epoch265_model_weights.csv`.
 
 Full per-participant rows are in `case3_epoch265_model_weights.csv`.
 
-| Participant | Kimi voting power | Share of root total | Model `weight` field |
+| Participant | Kimi voting power | Share of epoch reward/root total | Model `weight` field |
 |---|---:|---:|---:|
 | `gonka1q5xt54wncgzk7dxv9x64uln68455g83wu9tugg` | `147,538` | `16.3174%` | `72,507` |
 | `gonka1y2a9p56kv044327uycmqdexl7zs82fs5ryv5le` | `141,664` | `15.6677%` | `865` |
@@ -137,9 +157,12 @@ Full per-participant rows are in `case3_epoch265_model_weights.csv`.
 
 ## Claimant Raw cPoC Rows
 
-The `>2/3` threshold is `602,785`.
+The table below is the original neighbor-scan diagnostic table. It used the
+epoch reward/root total `904,177` as a quick scan denominator, so its percentage
+and shortfall columns are not the final chain denominator for cPoC #2. The raw
+submitted counts and validating weights are still useful as the event timeline.
 
-| cPoC | Trigger height | Model | Submitted count | Actual validating weight | Actual validating share | Meets `>2/3` by weight? | Shortfall/surplus vs `602,785` |
+| cPoC | Trigger height | Model | Submitted count | Actual validating weight | Diagnostic share vs `904,177` | Diagnostic result vs `602,785` | Diagnostic shortfall/surplus |
 |---:|---:|---|---:|---:|---:|---|---:|
 | `0` | `4,095,682` | Qwen | `960` | `509,938` | `56.3980%` | no | `92,847` |
 | `0` | `4,095,682` | Kimi | `43,360` | `677,518` | `74.9320%` | yes | `+74,733` |
@@ -148,31 +171,74 @@ The `>2/3` threshold is `602,785`.
 | `2` | `4,102,890` | Qwen | `960` | `35,370` | `3.9118%` | no | `567,415` |
 | `2` | `4,102,890` | Kimi | `52,028` | `256,727` | `28.3934%` | no | `346,058` |
 
+## Archive-Confirmed cPoC #2 Majority Check
+
+For the final cPoC before exclusion, the archive snapshot at stage
+`4,102,890` gives `TotalNetworkWeight = 732,828`, so strict `>2/3` requires at
+least `488,553` validating voting power.
+
+| cPoC | Trigger height | Model | Submitted count | Actual validating weight | Share vs cPoC snapshot total | Meets strict `>2/3`? | Shortfall vs `488,553` |
+|---:|---:|---|---:|---:|---:|---|---:|
+| `2` | `4,102,890` | Qwen | `960` | `35,370` | `4.8265%` | no | `453,183` |
+| `2` | `4,102,890` | Kimi | `52,028` | `256,727` | `35.0324%` | no | `231,826` |
+
 ## What Actually Failed
 
 At the final cPoC before exclusion:
 
 - claimant submitted Qwen count `960`;
 - claimant submitted Kimi count `52,028`;
-- Qwen actual validating weight was only `35,370` (`3.9118%`);
-- Kimi actual validating weight was only `256,727` (`28.3934%`);
+- Qwen actual validating weight was only `35,370` (`4.8265%` of the cPoC #2
+  snapshot total);
+- Kimi actual validating weight was only `256,727` (`35.0324%` of the cPoC #2
+  snapshot total);
 - preserved Qwen weight was `309,671` (`34.2489%`);
 - preserved Kimi weight was `380,371` (`42.0682%`);
 - non-preserved Qwen voting power was `582,095`, short `20,690` of the
-  `>2/3` line;
+  epoch-level diagnostic `>2/3` line;
 - non-preserved Kimi voting power was `462,283`, short `140,502` of the
-  `>2/3` line;
+  epoch-level diagnostic `>2/3` line;
 - chain reduced claimant confirmation weight from `66,311` to `323`;
 - `ConfirmationPoCRatio` became `0.0053586212476565`, below alpha `0.5`;
 - at block `4,103,171`, claimant became `INACTIVE` with reason
   `failed_confirmation_poc`;
 - actual epoch reward was `0`.
 
-Estimated zero-reward loss from the neighbor scan:
+## Amount Interpretation
+
+The neighbor scan's `20,896.527179100 GNK` value is a full-root-weight upper
+bound:
 
 ```text
-20,896.527179100 GNK
+floor(66,311 * fixedEpochReward / 904,177) = 20,896.527179100 GNK
 ```
 
-This amount is not included in the current epoch `267` case estimate until
-governance or validators decide that epoch `265` belongs in scope.
+That number treats the whole root weight `66,311` as restored. It does not
+answer the narrower question "what would the chain-style reward be if only the
+lost Kimi contribution from cPoC #2 were restored?"
+
+The narrower counterfactual must scale raw model weights. The externally
+proposed decomposition is:
+
+```text
+actual cPoC #2 Qwen measured weight = 323
+raw Kimi model weight               = 52,279
+proposed Kimi scale factor          = 0.780
+floor(52,279 * 0.780)               = 40,777
+counterfactual confirmation weight  = 323 + 40,777 = 41,100
+```
+
+With that participant weight, the chain reward formula gives:
+
+```text
+floor(41,100 * 284,932,503,735,690 / 904,177)
+= 12,951.806895703 GNK
+```
+
+Current validation status for epoch `265`: the chain facts are confirmed
+(`66,311 -> 323`, zero reward, Kimi cPoC shortfall, guardian split). The
+`20,896.527179100 GNK` amount should be treated only as a full-weight upper
+bound. The `12,951.806895703 GNK` amount is the narrower chain-style
+counterfactual if the `0.780` Kimi scale factor is accepted; that scale factor
+still needs an explicit source decision because the raw archive params at cPoC
+height `4,102,890` show a different current Kimi `weight_scale_factor`.
