@@ -1,0 +1,480 @@
+{
+  "commits": [
+    {
+      "count": 2912,
+      "hex_pub_key": "02890dd8a5ad46409af473f64ea66ce752fd8a1c439e6c0d38613982929c00f3e0",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1qnj39ysxpzknvrr5dw9rdl7cx5q7dpkwerryrs",
+      "root_hash": "qzGjFWZr870pDIMkMzneWwFCOiqJ6YHWJy7860D/l3U="
+    },
+    {
+      "count": 38848,
+      "hex_pub_key": "02f196facea0c57cfe2d571e910df4295ea38c70d45ca9981928b136d91ae7a7ff",
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1q5xt54wncgzk7dxv9x64uln68455g83wu9tugg",
+      "root_hash": "0dtkG46yXqa2WgbLh6+3ZOYHlyXdfTc7RkjBQ29rPg4="
+    },
+    {
+      "count": 36896,
+      "hex_pub_key": "021cbe7c06fa9abc1c928e19db4d3aecc4858f5c9bcee571b1a65d6ebb262ad494",
+      "model_id": "MiniMaxAI/MiniMax-M2.7",
+      "participant_address": "gonka1qa90tgczc0k5dvk4l5nvlf5y6phgm6mg22sfjv",
+      "root_hash": "uF+88Q7NlDgt5DZL8Lyj1cdQgz5dxHjeS0FQ9bUJHEk="
+    },
+    {
+      "count": 46432,
+      "hex_pub_key": "021cbe7c06fa9abc1c928e19db4d3aecc4858f5c9bcee571b1a65d6ebb262ad494",
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1qa90tgczc0k5dvk4l5nvlf5y6phgm6mg22sfjv",
+      "root_hash": "Ql3Ft9iskIEtHHvK7zglJ3dtqhQwoKwLjn29+lHJFUk="
+    },
+    {
+      "count": 1920,
+      "hex_pub_key": "029341d31d5f61db749b5794c2232026331fb2e894325bbe4ea92248ed92ef7882",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1p2lhgng7tcqju7emk989s5fpdr7k2c3ek6h26m",
+      "root_hash": "dxvFSgRQzd+hEY5pYvLZCbwZJjYuHWdtzplpCMtQj2g="
+    },
+    {
+      "count": 7959,
+      "hex_pub_key": "0308c7ba1d75111d0b197f156b0487c9c56bcab3076cc33b1d5fcaa63990fd19d6",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1zfj67rvrz86q4uu2vdyt24gwf06yl9cqmy58np",
+      "root_hash": "Tw4gmi2M4xgbxmvZG+TIE2SSrJQVQPlW3wYauBF3p5I="
+    },
+    {
+      "count": 1120,
+      "hex_pub_key": "0253882a59405c28b3c780b28bea241ca359c1a347d8f487d4d5595efb63169667",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx",
+      "root_hash": "7qXcQFW1LOLP5eCdjLsSGj1m50kZL33RTBWlxNbtXeQ="
+    },
+    {
+      "count": 15360,
+      "hex_pub_key": "037d8212947d01e545ce4bb6edb8318e7e01318d953170dca687ca6dc5b88144b8",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1rcpc45n6zch9qlkn4m3cwngekad89xu8mcr09v",
+      "root_hash": "Bxb6DUyBP6pBBA+nb4yXPAGjH0fW7R/JFXSX+nwQK8I="
+    },
+    {
+      "count": 4608,
+      "hex_pub_key": "03f10763a0966c01fc7af4f98110d225db13326b5040b42ca5e453df62daf1c5fc",
+      "model_id": "MiniMaxAI/MiniMax-M2.7",
+      "participant_address": "gonka1y2a9p56kv044327uycmqdexl7zs82fs5ryv5le",
+      "root_hash": "zgNg+B+OQJuHp20PmbAApIhT+RCvR2I3MBTQF6d7oQ8="
+    },
+    {
+      "count": 2880,
+      "hex_pub_key": "03f10763a0966c01fc7af4f98110d225db13326b5040b42ca5e453df62daf1c5fc",
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1y2a9p56kv044327uycmqdexl7zs82fs5ryv5le",
+      "root_hash": "pqe7/tc5ub1dFNcVz0yN4Nmz1K6aQkh4YElzUPuSOEQ="
+    },
+    {
+      "count": 14080,
+      "hex_pub_key": "03fc8b9c986a37e0bd35a80252656f16032c1638344a8e49e06722f80cb83da57b",
+      "model_id": "MiniMaxAI/MiniMax-M2.7",
+      "participant_address": "gonka1ym3np7guxart483yfdxnlztuazx22cjt0e4a2p",
+      "root_hash": "lEK6PlCZJ/kRDCI5PoqQja9UmL9QK9kxLsqLLe8Y5r8="
+    },
+    {
+      "count": 1344,
+      "hex_pub_key": "03fc8b9c986a37e0bd35a80252656f16032c1638344a8e49e06722f80cb83da57b",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1ym3np7guxart483yfdxnlztuazx22cjt0e4a2p",
+      "root_hash": "76Q750X6lbff8sv/dzdQJ92wQW8W3OIGSbS/OoqaZkA="
+    },
+    {
+      "count": 1176,
+      "hex_pub_key": "03fc8b9c986a37e0bd35a80252656f16032c1638344a8e49e06722f80cb83da57b",
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1ym3np7guxart483yfdxnlztuazx22cjt0e4a2p",
+      "root_hash": "2z3+mPzV4hKVHJhmOdTei58yIbiS9b1dHy7COUHHyOE="
+    },
+    {
+      "count": 50656,
+      "hex_pub_key": "0355a7994822847fbcbb58de942a9b0f17d7fd7c02607b0f1af11e3e07d06d168f",
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1yal0ysgzc860zt3y8cds8656tnueusgymftvkw",
+      "root_hash": "uUi9eX2oox9otHHouUy43j1YLNTswCerupnSgkGutCg="
+    },
+    {
+      "count": 1261,
+      "hex_pub_key": "02bdf320251a7300f7c3295a764965ec1242be27c0ffd8c32e66147b844c6568aa",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1y7mt2r8qalzdca9eq3pvf86c0puv0xfa60wl8w",
+      "root_hash": "EJ1M6Tr4hTKT+qNIVDi/AZTW9AJfQgihCqHjSc517wo="
+    },
+    {
+      "count": 31340,
+      "hex_pub_key": "035bd3e349c50fecbb6da47904261fa4ee526832cc12e78d2818dff4706edb00e4",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka19ghzvgfr065s3fr5awuvs3nhy9fq4n7wrr9kel",
+      "root_hash": "NEe+mqlIOzj/FZoP9Qp2VzWzQaVfP8M2iLT+FwOnVbc="
+    },
+    {
+      "count": 6938,
+      "hex_pub_key": "02a4260c763f4c46915b886deb533c89c3c7e17607cbc734776fcccdcc2c829c9f",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka19u92d2744vrmjg2y8wpeguz48vv52damsc5uv5",
+      "root_hash": "p7BPn0sLOFhBVp/xQnz5PF7rAOWM6P3Vy5Tgkuq+kOw="
+    },
+    {
+      "count": 135744,
+      "hex_pub_key": "02087fc4e687d8354c92d0ce6e39a27e25e55836f871423b02bc82bc79fd5cd9f1",
+      "model_id": "MiniMaxAI/MiniMax-M2.7",
+      "participant_address": "gonka19u0tv8egcwjaur62v7x58vj0uq5yv6k8rv8jld",
+      "root_hash": "WrwLVabkjvsisfvP38QEEM6kKthtiKjVXNXXgCKccLI="
+    },
+    {
+      "count": 99680,
+      "hex_pub_key": "02087fc4e687d8354c92d0ce6e39a27e25e55836f871423b02bc82bc79fd5cd9f1",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka19u0tv8egcwjaur62v7x58vj0uq5yv6k8rv8jld",
+      "root_hash": "dKHYjoLlZ+NLfArNbT8KO6vkB+tT1IuEeLftYTiAHYo="
+    },
+    {
+      "count": 13280,
+      "hex_pub_key": "02c77791c963a1e9fab046df84ad8ae108db44eb5e6df97c8b7a9ce37f682e6150",
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1xwkesaxvdadh9wt9yyladu0r260s7whklcktds",
+      "root_hash": "Naml6Ok8QQ9jVd8U392z9/D83W4WcE63AhD4kiW0CMc="
+    },
+    {
+      "count": 3072,
+      "hex_pub_key": "02fd70a5ca4ef3e08ab55d33a97a04a47320ff7b05e5be73bc24b2991b77f7260c",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1x7zh2277spp7jfqjhv0g5mnezg290xdr4kpfnk",
+      "root_hash": "P2HKqSbBK9LS+GvvL4+nWrPw0xCqusloej/KXSE49G4="
+    },
+    {
+      "count": 12768,
+      "hex_pub_key": "03e14d80c27e9cddcc9c497aa2c7801b3cbb44e6fb49e41b90fef63c724152bed3",
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1830lqug50lse998x2lakk4pj5ypfumz5pasz0y",
+      "root_hash": "qYBtkmeQX39jUQSGJqUFkNM4XYqSfvDWr/Bdfsl4p74="
+    },
+    {
+      "count": 1088,
+      "hex_pub_key": "02ba681e18d164b0beb7e6d813297ffc4e886456a23876054d5c83719157c500a9",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1gyk0aahvr3qeju4zx0nplfreej6cy4jjk8svc5",
+      "root_hash": "oW5HMF3O+m+9j7zNNos26vTH0RAbBf3zTheFmP9cIQA="
+    },
+    {
+      "count": 24768,
+      "hex_pub_key": "03ec5f9bf7833eb50bb97742d137907a80818ab2146ecf0bc9389f2701abbe3cc1",
+      "model_id": "MiniMaxAI/MiniMax-M2.7",
+      "participant_address": "gonka1gvrrhjmy4w4mayvs2s5l23edj8ertcmtd2v4zr",
+      "root_hash": "44Ya/VWYT8hDlinJd5IUV/eCGJ4RoFSMDcGomlzmr/c="
+    },
+    {
+      "count": 9312,
+      "hex_pub_key": "03ec5f9bf7833eb50bb97742d137907a80818ab2146ecf0bc9389f2701abbe3cc1",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1gvrrhjmy4w4mayvs2s5l23edj8ertcmtd2v4zr",
+      "root_hash": "pfl0clCfaf4NHaRCGeGkGHqp+Vi9gMPI8z08/7oifLU="
+    },
+    {
+      "count": 53568,
+      "hex_pub_key": "03ec5f9bf7833eb50bb97742d137907a80818ab2146ecf0bc9389f2701abbe3cc1",
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1gvrrhjmy4w4mayvs2s5l23edj8ertcmtd2v4zr",
+      "root_hash": "jAIy0diBvcLbLB2Nb9iRGIcRU8Q7tHuLiq/Fp42i898="
+    },
+    {
+      "count": 960,
+      "hex_pub_key": "026c1af3d86cefc21b08955dd955ede2aa8d75c33c8d443c5d11bd299a84b25ff9",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p",
+      "root_hash": "MCtn5vYzqumvGmShTm4jxy0fkmVSYxpR+GRpDTbQIVY="
+    },
+    {
+      "count": 13568,
+      "hex_pub_key": "0226a972d39634e6ce8045cf24f8664caa911ce28cbab13159910aeba15255d39d",
+      "model_id": "MiniMaxAI/MiniMax-M2.7",
+      "participant_address": "gonka1f0u3y2wneer8zhz3ypw4x54h38cpa0qsy8ts3e",
+      "root_hash": "pUm2lYJkPZhExPgPrsyADMbuqq0FIiIfiwj3K5IEVyQ="
+    },
+    {
+      "count": 3072,
+      "hex_pub_key": "0226a972d39634e6ce8045cf24f8664caa911ce28cbab13159910aeba15255d39d",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1f0u3y2wneer8zhz3ypw4x54h38cpa0qsy8ts3e",
+      "root_hash": "yoy9tBDKOtSGaSC4P7jzid4WnPp7Q+e8xnT8FG9peDI="
+    },
+    {
+      "count": 42016,
+      "hex_pub_key": "030aa5b15e5d967003b9cd5d5bf52fff4c9f51729f7c7a891778a1b1d39b42837e",
+      "model_id": "MiniMaxAI/MiniMax-M2.7",
+      "participant_address": "gonka12pcu9mcrpa4w4sjd9y3dsksnvu495ss6f9r4ra",
+      "root_hash": "xQNwW3sWEa90vf7pbLZ3o/IXbpNOOocPYOm1Ig6pavw="
+    },
+    {
+      "count": 8384,
+      "hex_pub_key": "030aa5b15e5d967003b9cd5d5bf52fff4c9f51729f7c7a891778a1b1d39b42837e",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka12pcu9mcrpa4w4sjd9y3dsksnvu495ss6f9r4ra",
+      "root_hash": "vJqmi4kqDlFWeg9CqpUQqxPyRu0Dyq5BEZipAkxBd78="
+    },
+    {
+      "count": 15744,
+      "hex_pub_key": "02d8526667dd1ffc273ec4cd843adb11f9223ae5355b5364cbd5e34aecafa895ff",
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka125n6kr5gvdup0lndfkps7t6rd6592panhrg3np",
+      "root_hash": "KQ2m1+wIaeXcpBZnF5+fSJAnHEmMRclg6pkjTlYaWqI="
+    },
+    {
+      "count": 98016,
+      "hex_pub_key": "0374c37b34b4a20d88a5e121eef8ee2e8fe58abd8f1ebb70648001bfbaeaae95ec",
+      "model_id": "MiniMaxAI/MiniMax-M2.7",
+      "participant_address": "gonka1tja3g2da45efhe2p83gk3whtussmgmtsdlgprt",
+      "root_hash": "cuZ+xtCODymA4L+1f79d9nUgtArv1BXApgNLfMOdmVk="
+    },
+    {
+      "count": 8608,
+      "hex_pub_key": "0374c37b34b4a20d88a5e121eef8ee2e8fe58abd8f1ebb70648001bfbaeaae95ec",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1tja3g2da45efhe2p83gk3whtussmgmtsdlgprt",
+      "root_hash": "ycCsQFd13/xf8O3/H/pQP6w+nv4bE6kLPjgnnYNzZjI="
+    },
+    {
+      "count": 3392,
+      "hex_pub_key": "03d24ebb0345d8d11846c78259042db0d705d8470d0069438a19504e2a2b789bfb",
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1tlvg4kjx7ljd5thgd5fkgh39q6lu8cmxupktgg",
+      "root_hash": "1szxONzSMFQ37CfiBrDQknsJoHP71J7GNgokaw1IDnM="
+    },
+    {
+      "count": 1920,
+      "hex_pub_key": "033b20f3463fdfc087062c5927a1ae6fac78cefa6ad834fcd896294173d00fb3c8",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1vjz8csqsr0ph0lv0yylc4auypnzrld7y6l2feu",
+      "root_hash": "AVtIQAnAmKQ5Gd1F0aZy24SCVbSIj4DNVlCcPM5BDbI="
+    },
+    {
+      "count": 3072,
+      "hex_pub_key": "02e930dce6a29ab900be635d798381ffbde9f8f53c4c02b8e7efbd1fdeeb2aaaee",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1v5cl6pudnagau7exyu3a9h74clw9zm7l5psp0r",
+      "root_hash": "eCxxYkMKPoPmYp6Orx8lqvnxEehB6S7yoh94ATGj7MU="
+    },
+    {
+      "count": 3520,
+      "hex_pub_key": "03d097dab929d18c5502f296d9bbf89d7114d765049f0fe01e340d0f5b4f582a18",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1dkl4mah5erqggvhqkpc8j3qs5tyuetgdy552cp",
+      "root_hash": "o1hnh7lASb7m2dv1KXYvPzfXW5fL6qpSRWc3vlevpE4="
+    },
+    {
+      "count": 111296,
+      "hex_pub_key": "029f9a1e6de87303e29e4d177e660138f68484956f0197189adb122d07bc46a4bb",
+      "model_id": "MiniMaxAI/MiniMax-M2.7",
+      "participant_address": "gonka1d694r00czmq75txghwjcuk07lxvc8d4ekgsha0",
+      "root_hash": "SSTum7zPn/JRmH35sm3mt4lCG1w+CSVWr1yu6A3eg/Y="
+    },
+    {
+      "count": 1440,
+      "hex_pub_key": "029f9a1e6de87303e29e4d177e660138f68484956f0197189adb122d07bc46a4bb",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1d694r00czmq75txghwjcuk07lxvc8d4ekgsha0",
+      "root_hash": "GzZCamTN4qmA0HWYF0XIjAVqT6KcedqmPVGkglZ5Jn8="
+    },
+    {
+      "count": 6720,
+      "hex_pub_key": "029f9a1e6de87303e29e4d177e660138f68484956f0197189adb122d07bc46a4bb",
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1d694r00czmq75txghwjcuk07lxvc8d4ekgsha0",
+      "root_hash": "m7XtpgXgG61WP3qjHyZ9iM+tXcIT3VI2mTBjFsu9QJ8="
+    },
+    {
+      "count": 152704,
+      "hex_pub_key": "020f7a94eaa5155cff2f6fb4de02f3a0c6b65e263948cdc9fd88e4872460fd696f",
+      "model_id": "MiniMaxAI/MiniMax-M2.7",
+      "participant_address": "gonka1duuaqdx06sx8v2dzggltwwmqyuw8lvjkjq7xll",
+      "root_hash": "Qo/Yz/qlsplQAbAkE+ZCHdAVAP8zM3ckG4vP3Q005B4="
+    },
+    {
+      "count": 77440,
+      "hex_pub_key": "020f7a94eaa5155cff2f6fb4de02f3a0c6b65e263948cdc9fd88e4872460fd696f",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1duuaqdx06sx8v2dzggltwwmqyuw8lvjkjq7xll",
+      "root_hash": "9ohtT/whznajj7gdETUtKbf51ZvT0BUz911Ulj2iLTo="
+    },
+    {
+      "count": 704,
+      "hex_pub_key": "0234ee0b14b4faa485dd5e1fd8ac961cdd0dee7650de88a8096acf3a310c5cf7ca",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1w29nvdy6caqtrw30whz9h6ghl0xszwh3egndah",
+      "root_hash": "CMNimP15/mjUrNXImIPZbtWjxwEHds8bOiu+ZgXlkbY="
+    },
+    {
+      "count": 82208,
+      "hex_pub_key": "020f7c51309e1c24591fe611fc5a70450930c537207c237080962badfb57e9508d",
+      "model_id": "MiniMaxAI/MiniMax-M2.7",
+      "participant_address": "gonka1wt8sr9jxzpec65j7zkxsgh6edk3m6r8nlf5za4",
+      "root_hash": "1VyDqmBEkoe1OaP1MN6V1ymxgt2IaCmm7HC286X/5pE="
+    },
+    {
+      "count": 12960,
+      "hex_pub_key": "020f7c51309e1c24591fe611fc5a70450930c537207c237080962badfb57e9508d",
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1wt8sr9jxzpec65j7zkxsgh6edk3m6r8nlf5za4",
+      "root_hash": "o+Izqr9jJpLRhGHJlyy4CNMLKrr4JWIKEQCJwae0YlE="
+    },
+    {
+      "count": 65600,
+      "hex_pub_key": "03a654c9be1fa2ae64cefc00d611b88e41faa00d907d5f0f1ca85682b7db2661ab",
+      "model_id": "MiniMaxAI/MiniMax-M2.7",
+      "participant_address": "gonka1007dchuqgdnute4qam70kmn56j2vfw38mhyrqv",
+      "root_hash": "F65pC2LJ3S83zikoPZLXtHDK4PWSq16tG+YqTVWwkrk="
+    },
+    {
+      "count": 1088,
+      "hex_pub_key": "03a654c9be1fa2ae64cefc00d611b88e41faa00d907d5f0f1ca85682b7db2661ab",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1007dchuqgdnute4qam70kmn56j2vfw38mhyrqv",
+      "root_hash": "l1SZz2NtkLOA0R9tKMy7MgKbXq7Khj90JJpNGbXnLF8="
+    },
+    {
+      "count": 29376,
+      "hex_pub_key": "03eb5692e7198e5398cc7807552b94d67d6c773cdf5c32a8d0b113bd0cb444d385",
+      "model_id": "MiniMaxAI/MiniMax-M2.7",
+      "participant_address": "gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09",
+      "root_hash": "wy+WrIszWc5Uedr4Ll6xJBRR26/KvxPK39h5EJgyVz8="
+    },
+    {
+      "count": 12032,
+      "hex_pub_key": "03eb5692e7198e5398cc7807552b94d67d6c773cdf5c32a8d0b113bd0cb444d385",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09",
+      "root_hash": "7vtxcG+ajzo/DkYtcxpoBhhVVXtbjtgEauPx6wcL6r8="
+    },
+    {
+      "count": 13184,
+      "hex_pub_key": "03eb5692e7198e5398cc7807552b94d67d6c773cdf5c32a8d0b113bd0cb444d385",
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09",
+      "root_hash": "Ay5W7wpXscRqlDfQzOcRPH0FAMS61DQyJ4i45gTe39Y="
+    },
+    {
+      "count": 24096,
+      "hex_pub_key": "02a9bb0c1e02d00c9d15ea1825b1f40821796efa6089c6324b892f88756b5b8204",
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1jfv9n2af9y8xgnn6834mnp924vkpucmvchsq8d",
+      "root_hash": "Sw/vjIEEVCA0L080MmO9R+H+6umu7H4naM4TROUyZ5k="
+    },
+    {
+      "count": 7767,
+      "hex_pub_key": "02e6d8db5d3d9fe921a026ed66fc2cd3cf44b7565e776729c14469c061db1d94a9",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1nku7u6d5mz80h35ty8ydeh0k5xydesvt9w0vjr",
+      "root_hash": "tFV5taCXXFt+EWG/MwD+xuaMtyl8f37kxtytcDlTBTc="
+    },
+    {
+      "count": 3392,
+      "hex_pub_key": "03136623335dde22af4b31dc2d754d56c839f8deec2f4361d03020a33a20bc7dbc",
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka15p7s7w2hx0y8095lddd4ummm2y0kwpwljk00aq",
+      "root_hash": "meOZu5EfWmapKSD9Od39gRIV7f6YlCnN6qB4x7D5P+U="
+    },
+    {
+      "count": 3008,
+      "hex_pub_key": "031dc2e9b3c8c893feec52d09cc9f399c0c5d5ce97ad05c4099004458a6a4a2b9f",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka14hyyn555u6dqdr4zqmllr429cnt8kdqx80jws5",
+      "root_hash": "201xGuxQ8iA+H83w/LDIMXv3uhYfgkNJKqpgqpYEwCs="
+    },
+    {
+      "count": 4864,
+      "hex_pub_key": "03381d39b2367079fe2236786c8d9fa720075c2b94c250ca90281907d0d15b2c9e",
+      "model_id": "MiniMaxAI/MiniMax-M2.7",
+      "participant_address": "gonka14ljarev2nlzu4ej50vx7ylj2rvg4n20fnq2ysc",
+      "root_hash": "bw+IAmXbYitl3LTPHdfWwlPNNk/b7zbw0AgIHKIC2zs="
+    },
+    {
+      "count": 4736,
+      "hex_pub_key": "03eca8933c0b6f2227da3cd38ab8ce35ec643f7e8060cbfa4710d732b6c29c9cd1",
+      "model_id": "MiniMaxAI/MiniMax-M2.7",
+      "participant_address": "gonka1kx9mca3xm8u8ypzfuhmxey66u0ufxhs7nm6wc5",
+      "root_hash": "faeex6oFOMano/5KoYshlxt/7lQFQtIdsQ8N7WM5bIU="
+    },
+    {
+      "count": 2976,
+      "hex_pub_key": "03eca8933c0b6f2227da3cd38ab8ce35ec643f7e8060cbfa4710d732b6c29c9cd1",
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1kx9mca3xm8u8ypzfuhmxey66u0ufxhs7nm6wc5",
+      "root_hash": "CP0xfUPhkY7E7OfolRHxb0Gt0wD6AYrUkjOzO9OcgYg="
+    },
+    {
+      "count": 87072,
+      "hex_pub_key": "02a615a1bd04a683ba98a55319cf2bef8a7a94e73b8697c7911230cf7ec47c6945",
+      "model_id": "MiniMaxAI/MiniMax-M2.7",
+      "participant_address": "gonka1hwvel7n3zuk6wruefuzc356l9myske9stckwnz",
+      "root_hash": "7LEbx8s38aVXCLt0FAvKJJrMtp3oJzfUH3Wj5sVvfe0="
+    },
+    {
+      "count": 7439,
+      "hex_pub_key": "03502b3310f0df509c6f02843a3ac60af6df5c0ccccd72bd7a4d839e3f72cc6baf",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1ce0j6ez5m2kj6c2cu62mkva72jj7emr3vjtgjy",
+      "root_hash": "aPOfsEM7Ez5uHx0Zke+6xw9qLJbwcw3nYsBmQaZNd10="
+    },
+    {
+      "count": 94720,
+      "hex_pub_key": "03a1b25d015f0e33cfe4b9d2b675583f245752599f6567c069ebc047e7c80c543e",
+      "model_id": "MiniMaxAI/MiniMax-M2.7",
+      "participant_address": "gonka168rtjfkszuhcggg4dfyse4yh7xn9zwfglnkns2",
+      "root_hash": "dpq5TsbYqjEi2TynlYPnfsE22HrryBDrQLG9dM7OUYE="
+    },
+    {
+      "count": 1440,
+      "hex_pub_key": "03a1b25d015f0e33cfe4b9d2b675583f245752599f6567c069ebc047e7c80c543e",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka168rtjfkszuhcggg4dfyse4yh7xn9zwfglnkns2",
+      "root_hash": "rWGuehifkaIz71Oc4GiAluSoQQAaJF0oNVKSBaShUlk="
+    },
+    {
+      "count": 6720,
+      "hex_pub_key": "03a1b25d015f0e33cfe4b9d2b675583f245752599f6567c069ebc047e7c80c543e",
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka168rtjfkszuhcggg4dfyse4yh7xn9zwfglnkns2",
+      "root_hash": "ek4vH7b4WcSNGBkEHRCIWV/63PJjDIqJDdQDw+9viVQ="
+    },
+    {
+      "count": 19712,
+      "hex_pub_key": "02c19101da4e9f0d4f0435c6da7c83bf41e12e556978b56d80cd681a1f1ac7a4ad",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1myu058axjs62mc3e7na9krwvqpfl9z3gtcw9es",
+      "root_hash": "n0jxLI+w5UCFq7egsKI0KnnGJoYdXhdIO5Usgjd7CAY="
+    },
+    {
+      "count": 7715,
+      "hex_pub_key": "027a4669e97bace6164d417c83c53f3c9d27cf66e28cc122e936013eda8a512663",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1mu9ftknnz954jl4tnshmx0n3gyhglsk6h7qw0u",
+      "root_hash": "n8tJk2AigUkIlxBVRJ7Sh9xzTw6C2kbFQ9xVEpx5Ykk="
+    },
+    {
+      "count": 1984,
+      "hex_pub_key": "02bd8f8c463a23d47f1579e2e1231180534233c7a50b7a30e7e606acf2df072199",
+      "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "participant_address": "gonka1uf5cg7ef0ns6877nl27y0s6rt06cdmn40k5a88",
+      "root_hash": "viXDnnFHcAiV0zVpmB+MwwvMxaocxz0x89TB9S9ZX4w="
+    },
+    {
+      "count": 28640,
+      "hex_pub_key": "035c0485cd0b61ab02f287a6397e553e86674e3b5e2d6f01a592ac1ea59173d4f6",
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1ujnc662v6g69jm6fgxnr79a2m7ehzeut059239",
+      "root_hash": "RjnYhLCfJWlOLqke1zlA23EuyNwxSYVOKc1jBN8OJdM="
+    },
+    {
+      "count": 20448,
+      "hex_pub_key": "038c6ff7a171cb847eb9a73f73e387e7b2a2c1747452a8d5545cab589af5fb7e80",
+      "model_id": "moonshotai/Kimi-K2.6",
+      "participant_address": "gonka1uhqpup9fev3zahlx6n326lp0krznc6usjtx6lu",
+      "root_hash": "nxcoVYy83maImxL2a0MF/7mdgcti7a8aB7glPM5D33k="
+    }
+  ]
+}

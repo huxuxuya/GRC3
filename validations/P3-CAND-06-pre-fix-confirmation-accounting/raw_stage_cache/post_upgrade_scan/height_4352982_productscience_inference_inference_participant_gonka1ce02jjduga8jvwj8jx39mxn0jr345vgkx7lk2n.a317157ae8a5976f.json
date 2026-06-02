@@ -1,0 +1,38 @@
+{
+  "participant": {
+    "address": "gonka1ce02jjduga8jvwj8jx39mxn0jr345vgkx7lk2n",
+    "coin_balance": "0",
+    "consecutive_invalid_inferences": "0",
+    "current_epoch_stats": {
+      "burned_coins": "0",
+      "confirmationPoCRatio": {
+        "exponent": -16,
+        "value": "0"
+      },
+      "earned_coins": "0",
+      "inactiveLLR": {
+        "exponent": 0,
+        "value": "0"
+      },
+      "inference_count": "0",
+      "invalidLLR": {
+        "exponent": 0,
+        "value": "0"
+      },
+      "invalidated_inferences": "0",
+      "missed_requests": "0",
+      "rewarded_coins": "0",
+      "validated_inferences": "0"
+    },
+    "epochs_completed": 0,
+    "index": "gonka1ce02jjduga8jvwj8jx39mxn0jr345vgkx7lk2n",
+    "inference_url": "http://198.244.228.95:8000",
+    "join_height": "1679651",
+    "join_time": "1765477393148",
+    "last_inference_time": "1766822153458",
+    "status": "INACTIVE",
+    "validator_key": "6RhBO1uyNVHqjZ9peqPrFG1eUy05GWFGve1XsqTew00=",
+    "weight": -1,
+    "worker_public_key": ""
+  }
+}

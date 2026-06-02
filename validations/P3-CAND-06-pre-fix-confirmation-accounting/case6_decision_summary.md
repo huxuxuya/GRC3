@@ -16,7 +16,7 @@ be paid automatically.
 |---|---:|
 | Candidate rows | `24` |
 | Unique participants | `19` |
-| Estimated zero-reward loss | `120,822.324371792000 GONKA` |
+| Estimated zero-reward loss | `120,822.324371792 GONKA` |
 | Old-formula replay matches stored ratio | `22` |
 | Bounded v0.2.13-style rows passing alpha | `0` |
 | Formula-reconciled rows needing policy decision | `20` |
@@ -50,9 +50,12 @@ be paid automatically.
 
 | Action | Rows | Loss, GNK | Meaning |
 |---|---:|---:|---|
-| `clear` | `6` | `14,729.197017136000` | No local overlap signal; still needs single-model policy decision. |
-| `review` | `14` | `63,293.737800953000` | Compare against P4-CAND-01 before payout. |
-| `blocked` | `4` | `42,799.389553703000` | Resolve P3-CAND-04 duplicate risk first. |
+| `clear` | `6` | `14,729.197017136` | No local overlap signal; still needs single-model policy decision. |
+| `review` | `14` | `63,293.737800953` | Compare against P4-CAND-01 before payout. |
+| `blocked` | `4` | `42,799.389553703` | Resolve P3-CAND-04 duplicate risk first. |
+
+For a full calculation that includes all rows before overlap filtering, see
+`case6_gross_compensation_calculation.md`.
 
 ## Overlap Split
 
@@ -67,6 +70,7 @@ be paid automatically.
 
 1. `case6_decision_summary.md` for the one-page conclusion.
 2. `case6_evidence_ledger.md` for row-by-row evidence.
-3. `case6_full_old_formula_replay.md` for formula reconciliation.
-4. `case6_new_algorithm_replay.md` for the bounded post-fix counterfactual.
-5. `case6_overlap_matrix.md` before any payout decision.
+3. `case6_gross_compensation_calculation.md` for the all-row gross table.
+4. `case6_full_old_formula_replay.md` for formula reconciliation.
+5. `case6_new_algorithm_replay.md` for the bounded post-fix counterfactual.
+6. `case6_overlap_matrix.md` before any payout decision.

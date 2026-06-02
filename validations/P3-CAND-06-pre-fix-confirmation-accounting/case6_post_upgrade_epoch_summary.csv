@@ -1,0 +1,8 @@
+epoch,root_participant_count,total_network_weight,two_thirds_min_weight,cpoc_event_count,excluded_count,failed_confirmation_poc_count,zero_reward_failed_confirmation_poc_count,pass_weight_failed_confirmation_poc_count,single_pass_model_failed_confirmation_poc_count,both_pass_models_failed_confirmation_poc_count,case6_like_count,case6_like_participants
+277,56,502534,335023,1,6,6,6,0,0,0,0,
+278,57,444033,296023,4,12,12,12,2,2,0,2,gonka1zfj67rvrz86q4uu2vdyt24gwf06yl9cqmy58np;gonka1tlvg4kjx7ljd5thgd5fkgh39q6lu8cmxupktgg
+279,57,546414,364277,1,8,8,8,1,1,0,1,gonka19ghzvgfr065s3fr5awuvs3nhy9fq4n7wrr9kel
+280,53,570437,380292,5,2,2,2,0,0,0,0,
+281,59,704835,469891,2,2,2,2,0,0,0,0,
+282,62,555014,370010,5,14,14,14,4,4,0,4,gonka1qnj39ysxpzknvrr5dw9rdl7cx5q7dpkwerryrs;gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx;gonka1f0u3y2wneer8zhz3ypw4x54h38cpa0qsy8ts3e;gonka10egxskdvc0a5w2r5q44wvuxmjyplx6yn8l97fd
+283,55,548622,365749,2,6,6,6,1,1,0,1,gonka10egxskdvc0a5w2r5q44wvuxmjyplx6yn8l97fd

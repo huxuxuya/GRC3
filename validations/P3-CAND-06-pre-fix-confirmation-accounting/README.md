@@ -162,8 +162,8 @@ Result:
 |---|---:|
 | Unique loss trigger heights fetched | `16` |
 | Submission-evidence raw endpoint files | `54` |
-| Full validation raw cache files after formula/new replay | `140` |
-| Full validation raw cache size | `7.2 MB` |
+| Full validation raw cache files after formula/new/timeline/post-upgrade replay | `349` |
+| Full validation raw cache size | `17.6 MB` |
 | Model rows reconstructed | `48` |
 | Model rows matching previous aggregate CSV | `48` |
 | Model rows with cPoC store commit/submission | `25` |
@@ -220,6 +220,73 @@ is:
 | `clear` | `6` | `14,729.197017136` |
 | `review` | `14` | `63,293.737800953` |
 | `blocked` | `4` | `42,799.389553703` |
+
+## Epoch And Upgrade Timeline
+
+`case6_epoch_upgrade_timeline.md` records block-header timestamps for epoch
+`263..277` boundaries and the on-chain `v0.2.13` upgrade point.
+
+| Item | Height | UTC | MSK |
+|---|---:|---|---|
+| Epoch `276` PoC start | `4,259,271` | `2026-05-26 02:59:12 UTC` | `2026-05-26 05:59:12 MSK` |
+| Epoch `276` effective start | `4,259,671` | `2026-05-26 03:34:34 UTC` | `2026-05-26 06:34:34 MSK` |
+| `v0.2.13` applied on-chain | `4,267,300` | `2026-05-26 14:39:41 UTC` | `2026-05-26 17:39:41 MSK` |
+| Epoch `277` effective start | `4,275,062` | `2026-05-27 02:12:33 UTC` | `2026-05-27 05:12:33 MSK` |
+
+Interpretation: epochs `263..275` are pre-upgrade, epoch `276` contains the
+upgrade application point, and epoch `277` is the first clean start after
+`v0.2.13`.
+
+## Post-v0.2.13 Regression Scan
+
+`case6_post_upgrade_regression_scan.md` checks the accessible post-upgrade
+epochs `277..283` for recurrence of the broad P3-CAND-06 signal:
+
+```text
+failed_confirmation_poc
+zero reward
+ConfirmationPoCRatio < AlphaThreshold
+at least one tracked Qwen/Kimi model has strict pass_weight
+```
+
+Current result:
+
+| Check | Result |
+|---|---:|
+| Epochs checked | `277..283` |
+| failed_confirmation_poc rows | `50` |
+| Rows matching the broad pass-weight-but-failed-ratio signal | `8` |
+| Rows where exactly one tracked model passed | `8` |
+| Rows where both tracked models passed | `0` |
+
+Interpretation: the broad signal does appear after the clean `v0.2.13` start,
+but every post-upgrade hit is a single-model-pass row where the other tracked
+model has `no_submission`. This does not by itself prove that the pre-`v0.2.13`
+root cause still exists; it strengthens the existing decision boundary that
+single-model rows need a policy/formula eligibility review. No post-upgrade row
+in `277..283` reproduced the stronger epoch `276` contradiction where both
+tracked models passed but the stored confirmation ratio still failed.
+
+## Gross Compensation Calculation
+
+`case6_gross_compensation_calculation.md` is the common calculation table for
+all `24` rows before overlap review. It includes every candidate row in the
+gross sum and keeps overlap status only as a reference column.
+
+| Gross calculation metric | Value |
+|---|---:|
+| Rows included | `24` |
+| Unique participants | `19` |
+| Gross compensation before overlap review | `120,822.324371792 GONKA` |
+
+The generated machine-readable tables are:
+
+- `case6_gross_compensation_calculation.csv`
+- `case6_gross_compensation_calculation.json`
+- `case6_gross_compensation_by_epoch.csv`
+- `case6_gross_compensation_by_participant.csv`
+- `case6_gross_compensation_by_pass_models.csv`
+- `case6_gross_compensation_by_overlap_reference.csv`
 
 ## Candidate Rows
 
@@ -279,6 +346,20 @@ The grouped participant -> epoch -> cPoC view is in
 - `case6_evidence_ledger.md`
 - `case6_evidence_ledger.csv`
 - `case6_evidence_ledger.json`
+- `case6_gross_compensation_calculation.md`
+- `case6_gross_compensation_calculation.csv`
+- `case6_gross_compensation_calculation.json`
+- `case6_gross_compensation_by_epoch.csv`
+- `case6_gross_compensation_by_participant.csv`
+- `case6_gross_compensation_by_pass_models.csv`
+- `case6_gross_compensation_by_overlap_reference.csv`
+- `case6_epoch_upgrade_timeline.md`
+- `case6_epoch_upgrade_timeline.csv`
+- `case6_epoch_upgrade_timeline.json`
+- `case6_post_upgrade_regression_scan.md`
+- `case6_post_upgrade_regression_scan.json`
+- `case6_post_upgrade_epoch_summary.csv`
+- `case6_post_upgrade_failed_cpoc_rows.csv`
 - `case6_root_cause_replay.md`
 - `case6_row_formula_replay.csv`
 - `case6_row_formula_replay.json`
@@ -317,6 +398,9 @@ The grouped participant -> epoch -> cPoC view is in
 - `build_case6_overlap_matrix.py`
 - `build_case6_raw_manifest.py`
 - `build_case6_evidence_ledger.py`
+- `build_case6_compensation_calculation.py`
+- `build_case6_epoch_upgrade_timeline.py`
+- `build_case6_post_upgrade_regression_scan.py`
 - `build_grouped_timeline.py`
 - `candidate_rows.csv`
 - `raw_stage_cache/`

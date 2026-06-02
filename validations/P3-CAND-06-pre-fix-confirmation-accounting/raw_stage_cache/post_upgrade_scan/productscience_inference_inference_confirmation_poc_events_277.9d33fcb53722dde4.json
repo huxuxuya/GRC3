@@ -1,0 +1,12 @@
+{
+  "events": [
+    {
+      "epoch_index": "277",
+      "event_sequence": "0",
+      "generation_start_height": "4284640",
+      "phase": "CONFIRMATION_POC_COMPLETED",
+      "poc_seed_block_hash": "76a30b2ab0475e3393c2fa1c26dd9369dab5aaf2edb8ca349bee90bffbb7c6d3",
+      "trigger_height": "4284638"
+    }
+  ]
+}

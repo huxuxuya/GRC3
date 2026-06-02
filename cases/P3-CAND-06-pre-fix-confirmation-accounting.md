@@ -7,12 +7,12 @@
 | Поле | Значение |
 |---|---|
 | Proposal | Кандидат Proposal #3 |
-| Статус | Root-cause, raw stage replay, and code-diff proof added; требуется eligibility и overlap review |
+| Статус | Root-cause, raw stage replay, code-diff proof, gross calculation, epoch/upgrade timeline, and post-upgrade regression scan added; требуется eligibility и overlap review |
 | Эпохи | 263-276 |
 | От кого поступила информация | Выявлено при независимой validation `P3-CAND-03` |
 | Пострадавший / контакт для деталей | 19 unique participants из archive scan; contacts не сопоставлены |
-| Кто уже исследовал / результат | @mikenosov; расширенный scan epochs `262..276`, выделено `24` candidate rows; GRC validation replay подтвердил raw submissions/validator weight, выделил классы риска, and matched the code fix in `v0.2.13` |
-| Нужен дополнительный анализ | Да: coefficient-adjusted replay для mismatch rows и overlap checks |
+| Кто уже исследовал / результат | @mikenosov; расширенный scan epochs `262..276`, выделено `24` candidate rows; GRC validation replay подтвердил raw submissions/validator weight, выделил классы риска, matched the code fix in `v0.2.13`, and scanned accessible post-upgrade epochs `277..283` |
+| Нужен дополнительный анализ | Да: eligibility decision для single-model rows и overlap checks |
 | Investigator | Назначить |
 | Validators | Назначить |
 | Срок | Назначить |
@@ -57,10 +57,16 @@ Kimi voting power. Здесь условие другое: одна из мод�
 | 26.05.2026 17:39:41 MSK | Chain upgrade | `v0.2.13` applied at block `4,267,300`, epoch `276` | Fix installed on-chain |
 | 27.05.2026 05:12:33 MSK | Chain epoch boundary | Epoch `277` starts at block `4,275,062` | Clean start after confirmation PoC disabled for upgrade epoch |
 | 02.06.2026 | GRC validation work | Extended scan `262..276` identifies `24` broader suspicious rows | Candidate set extracted |
+| 02.06.2026 | GRC validation work | Post-upgrade regression scan `277..283` finds `8` broad single-model-pass hits and `0` both-model-pass hits | Broad signal still appears, but stronger pre-fix contradiction is not reproduced |
+
+Full epoch boundary timestamps for epochs `263..277` are recorded in
+`case6_epoch_upgrade_timeline.md`.
 
 ## Подтверждённые Факты
 
 - Scan range: epochs `262..276`.
+- Post-upgrade regression scan range: epochs `277..283`; epoch `284` was not
+  available from the archive LCD during this run.
 - `119` zero-reward `failed_confirmation_poc` rows exist in the broad pre-fix
   window.
 - Strict Case-3-like Kimi-shortfall rows: `2`, both for
@@ -94,6 +100,13 @@ Kimi voting power. Здесь условие другое: одна из мод�
 - Bounded v0.2.13-style replay over the available Qwen/Kimi data does not make
   any of the `24` rows pass alpha. This supports keeping single-model row
   payout as a policy decision, not an automatic technical conclusion.
+- Post-upgrade regression scan over accessible epochs `277..283` found `50`
+  `failed_confirmation_poc` rows and `8` rows matching the broad
+  pass-weight-but-failed-ratio signal. All `8` are single-model-pass rows where
+  the other tracked model has `no_submission`; `0` post-upgrade rows had both
+  Qwen and Kimi `pass_weight` with a failed ratio. This means the broad signal
+  can still occur after `v0.2.13`, but the stronger epoch `276` contradiction
+  was not reproduced in the checked post-upgrade window.
 - Eligibility matrix: `20` non-epoch-276 rows are
   `formula_reconciled_policy_required`; `4` epoch-276 rows are
   `blocked_epoch276_overlap`.
@@ -105,12 +118,15 @@ Kimi voting power. Здесь условие другое: одна из мод�
   (`14,729.197017136 GNK`), `14` rows need P4-CAND-01 overlap review
   (`63,293.737800953 GNK`), and `4` rows are blocked by P3-CAND-04 overlap
   (`42,799.389553703 GNK`).
+- Gross compensation calculation before overlap review includes all `24` rows:
+  `120,822.324371792 GONKA` across `19` unique participants. Overlap status is
+  retained only as a reference column in that table.
 - Raw cPoC stage replay fetched `16` unique loss trigger heights and `54` raw
   endpoint cache files. It reconstructed `48` model rows from store commits,
   validation rows, and model voting power; all `48/48` rows match the previous
   aggregate CSV.
-- After full formula/new-algorithm replay, the validation raw cache contains
-  `140` files (`7.2 MB`) with a manifest and SHA256 hashes.
+- After full formula/new-algorithm/timeline/post-upgrade replay, the validation
+  raw cache contains `349` files (`17.6 MB`) with a manifest and SHA256 hashes.
 - The replay confirms `25` model rows with cPoC store commit/submission and
   strict `pass_weight`, covering all `24` candidate rows with at least one
   passing model. Therefore the current evidence does not support "lack of
@@ -208,6 +224,7 @@ here are reconstructed from PoC V2 stage commits and validation rows.
 | Review `v0.2.13` source diff for the matching confirmation-accounting fix | GRC validation | Назначить | 02.06.2026 | Done |
 | Reconcile 6 simple-ratio mismatch rows against historical coefficient-adjusted formulas | GRC validation | Назначить | 02.06.2026 | 5/6 done; epoch 276 remains open |
 | Replay all 24 rows through full old formula and bounded v0.2.13-style formula | GRC validation | Назначить | 02.06.2026 | Done: old `22/24`, new-style `0/24` pass alpha |
+| Scan post-upgrade epochs for recurrence after clean epoch `277` start | GRC validation | Назначить | 02.06.2026 | Done for `277..283`: `8` broad single-model-pass hits, `0` both-model-pass hits; epoch `284` unavailable |
 | Decide eligibility for 20 non-epoch-276 formula-reconciled single-model-pass rows | Назначить | Назначить | Назначить | Открыто |
 | Check overlap with `P3-CAND-04` epoch 276 | Назначить | Назначить | Назначить | Открыто |
 | Check overlap with `P4-CAND-01` Kimi restitution package | Назначить | Назначить | Назначить | Открыто |
@@ -227,6 +244,9 @@ here are reconstructed from PoC V2 stage commits and validation rows.
 - [Coefficient replay](../validations/P3-CAND-06-pre-fix-confirmation-accounting/case6_coefficient_replay.md)
 - [Full old formula replay](../validations/P3-CAND-06-pre-fix-confirmation-accounting/case6_full_old_formula_replay.md)
 - [Bounded v0.2.13-style replay](../validations/P3-CAND-06-pre-fix-confirmation-accounting/case6_new_algorithm_replay.md)
+- [Gross compensation calculation](../validations/P3-CAND-06-pre-fix-confirmation-accounting/case6_gross_compensation_calculation.md)
+- [Epoch and upgrade timeline](../validations/P3-CAND-06-pre-fix-confirmation-accounting/case6_epoch_upgrade_timeline.md)
+- [Post-upgrade regression scan](../validations/P3-CAND-06-pre-fix-confirmation-accounting/case6_post_upgrade_regression_scan.md)
 - [Eligibility matrix](../validations/P3-CAND-06-pre-fix-confirmation-accounting/case6_eligibility_matrix.md)
 - [Overlap matrix](../validations/P3-CAND-06-pre-fix-confirmation-accounting/case6_overlap_matrix.md)
 - [Epoch 276 overlap deep dive](../validations/P3-CAND-06-pre-fix-confirmation-accounting/case6_epoch276_overlap_deep_dive.md)

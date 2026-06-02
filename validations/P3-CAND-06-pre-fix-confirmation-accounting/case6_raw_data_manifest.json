@@ -1,6 +1,374 @@
 {
   "cache_files": [
     {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4059188.4a6392ce550fe2a8.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4059188",
+      "requested_block_height": "4059188",
+      "sha256": "7bbb330755b161d858378547c423808fb29f7e986e6fd93a8ede5d127227b3f5",
+      "size_bytes": 28931
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4059588.dc45c3d7e5060472.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4059588",
+      "requested_block_height": "4059588",
+      "sha256": "98f0a57a1d113f48d7b5972e61bbe3899fd9f2572915140c97d788652416176b",
+      "size_bytes": 27663
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4074579.cce2b40743bc8280.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4074579",
+      "requested_block_height": "4074579",
+      "sha256": "050aa93df4b76ac8f5952ac34a9eabfc0eb22c1769e2f8ce188db50fc0a1263e",
+      "size_bytes": 25209
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4074978.3ceca43f4b6afc13.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4074978",
+      "requested_block_height": "4074978",
+      "sha256": "d121bd4a1be6095f262770571de215a016957b1d23f0f1c670a3b9a9506f29fb",
+      "size_bytes": 25215
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4074979.c1dc4c3bbde0975f.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4074979",
+      "requested_block_height": "4074979",
+      "sha256": "aa3be3120a30c63813a43f15ffd3145ddcfd71963e04b4e24cdffc490bd2b870",
+      "size_bytes": 25215
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4089970.3548812268a3c39a.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4089970",
+      "requested_block_height": "4089970",
+      "sha256": "8e0d6498d42228cf23e95bbd82bd405dc848ec32ff47f79df137ab6b72e40e2e",
+      "size_bytes": 25363
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4090369.193e932305561d07.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4090369",
+      "requested_block_height": "4090369",
+      "sha256": "2c3ce3a0a5a36657e137a1300814ff519937a9d6d2116843a7b7cbc3daa2878f",
+      "size_bytes": 23991
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4090370.ca2ee3e74c685288.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4090370",
+      "requested_block_height": "4090370",
+      "sha256": "0cec533f778b7acd691b1a78be2d64007e6694572f0bf8d179b099beba24c0a8",
+      "size_bytes": 28163
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4105361.3f668e04762c5534.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4105361",
+      "requested_block_height": "4105361",
+      "sha256": "ac5c6c9f3848ffd5f0ad4730e301b90e2c733e95e00de311ef376b9d9ebffc0d",
+      "size_bytes": 17987
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4105760.bb2210a0751af84b.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4105760",
+      "requested_block_height": "4105760",
+      "sha256": "5c86177006cdde9425939449a41211c03017e5ca997999b6d451a72a75d23348",
+      "size_bytes": 20819
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4105761.f809d281d1e1463d.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4105761",
+      "requested_block_height": "4105761",
+      "sha256": "1f93e945cf52fe1031d537867a6aeccb6214230ca3c2309b6d9b72b19396a251",
+      "size_bytes": 17907
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4120752.633be97e0fffebe2.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4120752",
+      "requested_block_height": "4120752",
+      "sha256": "2fef14f9c283f8e2ac35740ec8eea383ffbf7878efb52577b2d782f5f60dcfe6",
+      "size_bytes": 20063
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4121151.142d1546f1e6cfb3.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4121151",
+      "requested_block_height": "4121151",
+      "sha256": "f83a44ce8b534a5df8081b949a4f442bc016cc0b199bdd11109d212701e5555d",
+      "size_bytes": 18483
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4121152.acf2e6fe503839d4.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4121152",
+      "requested_block_height": "4121152",
+      "sha256": "6fc7627149780f6b5358d3e12388de4dc01ac969c210e123a9debfa615f8b192",
+      "size_bytes": 18483
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4136143.45de95f506af72ef.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4136143",
+      "requested_block_height": "4136143",
+      "sha256": "f037f263879f4f8e02204dbf2f8ccfed9ae47efdf4da3f521bdd4870a1696d09",
+      "size_bytes": 23379
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4136542.a01431e9d9814b52.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4136542",
+      "requested_block_height": "4136542",
+      "sha256": "a29f3c4b7aecac48a24ff9e3317f6784d91a420d2ac3b67b530399332e88d112",
+      "size_bytes": 29607
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4136543.c136967ae5b0fd6c.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4136543",
+      "requested_block_height": "4136543",
+      "sha256": "6de53075b5b17486ba4bf4571c57d26628233501695e5143cd40437f70ac0761",
+      "size_bytes": 24647
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4151534.f5ed1e10ac76ec14.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4151534",
+      "requested_block_height": "4151534",
+      "sha256": "985bb62e5ec3885a1362aa834e1012354ec9a78bf8eea35c09519567ac9d5266",
+      "size_bytes": 23071
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4151933.a4795d8fc40f90aa.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4151933",
+      "requested_block_height": "4151933",
+      "sha256": "b09c4c5fb821f730fc98b4587eee3c39f6bad01d50119c200db5dff47183181e",
+      "size_bytes": 22155
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4151934.499262e3f10269b2.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4151934",
+      "requested_block_height": "4151934",
+      "sha256": "61d4eb0c5e5f272d417156d7572715b58cfc31d28121693435f5a56b75f614a2",
+      "size_bytes": 22155
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4166925.2bef4166d8c81d33.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4166925",
+      "requested_block_height": "4166925",
+      "sha256": "c6c635aec52eaff58bcd5f3f0ea5d04c983cfdfdee0b468e7a505076f73b4815",
+      "size_bytes": 23379
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4167324.669d7b400f332282.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4167324",
+      "requested_block_height": "4167324",
+      "sha256": "3c3bd9b33e4193bd425fd62ebc4225b3b60c8f07cc321d42a1eb80799c1a638c",
+      "size_bytes": 24271
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4167325.19f3b3101ee0c591.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4167325",
+      "requested_block_height": "4167325",
+      "sha256": "b32e6d206c4d76916a052f4b44922a06cb2152e18575db09434d31d06a3ba4d6",
+      "size_bytes": 25831
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4182316.6be092b4e8558522.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4182316",
+      "requested_block_height": "4182316",
+      "sha256": "585664071f931da3fc7d78b9acf4d1f38bc4d457a1204fe6f652b2e10d010a29",
+      "size_bytes": 23047
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4182715.dde940ab2921bb2a.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4182715",
+      "requested_block_height": "4182715",
+      "sha256": "8823475e25b7e757f878c9f00ef1f880ae86e8f2a3f2c747fbdfe7e63770632d",
+      "size_bytes": 22155
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4182716.e747278d39ef8446.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4182716",
+      "requested_block_height": "4182716",
+      "sha256": "a2734797f5b3a7f224b948fc5cd12ba889c35aefa994845114d5040f24ae8bbb",
+      "size_bytes": 24303
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4197707.77bd4c2cf0167a9c.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4197707",
+      "requested_block_height": "4197707",
+      "sha256": "27a857b39c3486b6d34dcb9195c951441b5d7b2cc2c32b9934addceb787a3144",
+      "size_bytes": 21543
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4198106.10f65caee530bcbd.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4198106",
+      "requested_block_height": "4198106",
+      "sha256": "6ea183bbae23332aa5d661bf982fd65da36de132657d18137d9f236eace3e627",
+      "size_bytes": 21543
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4198107.02ba2f7022ade8db.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4198107",
+      "requested_block_height": "4198107",
+      "sha256": "0e1f9ed76b6bb70cfdc21f447e65dbe6e2e38db003a96b80426a42186540a6a2",
+      "size_bytes": 21543
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4213098.d0866ecc6852fd98.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4213098",
+      "requested_block_height": "4213098",
+      "sha256": "524e543cd317ef91e6a6100da94acb601f84634e74d9975853f94bddcada6d48",
+      "size_bytes": 23487
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4213497.ca13445748b4a7be.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4213497",
+      "requested_block_height": "4213497",
+      "sha256": "a9b31e3691033af463c8cae31eddff27c392667b96be1e62ba9fe6df0ba837d9",
+      "size_bytes": 21543
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4213498.4d13708fbf6fd5ce.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4213498",
+      "requested_block_height": "4213498",
+      "sha256": "e617aca2098abe767cf63168da5084db2192b852c542cfa5fe6bd08597c27898",
+      "size_bytes": 21543
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4228489.954d3bf4d6364b1a.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4228489",
+      "requested_block_height": "4228489",
+      "sha256": "774d8d0762d56bba816470b5c3b6563e77229ca5b187526f963ada2e6c85b7aa",
+      "size_bytes": 25827
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4228888.0670a1f4ee47f24c.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4228888",
+      "requested_block_height": "4228888",
+      "sha256": "8967541cb67c9840c92bac49123a3a605fe0300cf1d5e4a5cc9b5b900a124d71",
+      "size_bytes": 27007
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4228889.e2ebc468d8f3734e.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4228889",
+      "requested_block_height": "4228889",
+      "sha256": "fd9d4d93a54f1ccdea6bd0726c347200a0951013d2b39cc2f161b3a02a63d0e1",
+      "size_bytes": 25827
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4243880.44e55cada5846a9c.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4243880",
+      "requested_block_height": "4243880",
+      "sha256": "30ea07c4f1fb3866e44e3f5edf1f65097fc7376a518f9ff2ef0d3b18ac4430c6",
+      "size_bytes": 22767
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4244279.c2c020c69bb74c57.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4244279",
+      "requested_block_height": "4244279",
+      "sha256": "4bc17c664147742ae0a51fb26c41be27f421cb740f63d9089372f3be8d4c169f",
+      "size_bytes": 24555
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4244280.f32101a9fc12bd08.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4244280",
+      "requested_block_height": "4244280",
+      "sha256": "9442c548ed4a2c0c44ca510aead73dbc03b73c7c8e5eaec7a0202867f555a962",
+      "size_bytes": 22767
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4259271.df833ef3d36ccf97.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4259271",
+      "requested_block_height": "4259271",
+      "sha256": "39a2a00d787af4cea7c96a60b9c92c7b8ab820066560ba311d253a860c9f92c9",
+      "size_bytes": 26439
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4259670.f3079fe7abb679e4.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4259670",
+      "requested_block_height": "4259670",
+      "sha256": "225f93112d2db23a1d64d3670f43a363a3af82616bd21a3c26bc27c7bb1b54a3",
+      "size_bytes": 27779
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4259671.d059fe81bbd13a1e.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4259671",
+      "requested_block_height": "4259671",
+      "sha256": "1cb8de70026311b637c7c061e9f1ff662e7fe66c6e2d3dfd2ba8f38a4686bc18",
+      "size_bytes": 26439
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4267300.d483434c3f659c54.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4267300",
+      "requested_block_height": "4267300",
+      "sha256": "f34acb19a2627d58e4b0f469c49848c447642ee04473f888df613b376f066517",
+      "size_bytes": 25497
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4274662.dd19099e7cae8cd8.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4274662",
+      "requested_block_height": "4274662",
+      "sha256": "ffc81c8fa5835b9282f176c438978caca99e6f1f75d5b34e28d78492aa95514e",
+      "size_bytes": 21543
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4275061.3d401a0269c91af4.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4275061",
+      "requested_block_height": "4275061",
+      "sha256": "2df89969feff14870f7406b67d6f296b2a7cf2a8522a6a4120ce5b718b4b48fa",
+      "size_bytes": 21543
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4275062.1adb1a45b4753853.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4275062",
+      "requested_block_height": "4275062",
+      "sha256": "3ec5d35be75b7ca5dcec55ab2fca2262099a5db31f7c9bcb6fa21f750f8e3c00",
+      "size_bytes": 21543
+    },
+    {
+      "cache_file": "raw_stage_cache/block_headers/cosmos_base_tendermint_v1beta1_blocks_4290452.03107365a0cbbbef.json",
+      "consumer": "epoch_upgrade_timeline",
+      "inferred_endpoint": "/cosmos/base/tendermint/v1beta1/blocks/4290452",
+      "requested_block_height": "4290452",
+      "sha256": "a2d0c1519bbfaaef1a30aee9b4a3a57607ddb77b1658a7e58eacb722a6b72303",
+      "size_bytes": 25583
+    },
+    {
       "cache_file": "raw_stage_cache/height_4073650_productscience_inference_inference_params.352ae5d10a795cd2.json",
       "consumer": "old_formula_replay;new_algorithm_replay",
       "inferred_endpoint": "/productscience/inference/inference/params",
@@ -511,6 +879,1310 @@
       "requested_block_height": "4268059",
       "sha256": "f3956a435bdabd746cab13122bab5e6dfe312b6c7e817234848fe331c26c4362",
       "size_bytes": 4028
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4284918_productscience_inference_inference_epoch_group_data_277.e9086336dfc1d7b5.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/277",
+      "requested_block_height": "4284918",
+      "sha256": "2320796e3dda6f24c8596121545d626bcf68e91cddafa461cb004bef73646bca",
+      "size_bytes": 29637
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4284919_productscience_inference_inference_epoch_group_data_277.65986bd16111f87d.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/277",
+      "requested_block_height": "4284919",
+      "sha256": "55f30a0de2a68439075ff47043b5d68aef75fa6a43d29841586ed48047b157f2",
+      "size_bytes": 29622
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4284919_productscience_inference_inference_params.5b951c7259b021f3.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4284919",
+      "sha256": "896e46b79c6915048c6e56297f2782a050717ad6faec563a6fe7b53634ac00e9",
+      "size_bytes": 12053
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4284919_productscience_inference_inference_participant_gonka168rtjfkszuhcggg4dfyse4yh7xn9zwfglnkns2.c5bea6dcf292bb83.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka168rtjfkszuhcggg4dfyse4yh7xn9zwfglnkns2",
+      "requested_block_height": "4284919",
+      "sha256": "a486225e183ff3f6d1285a375e009a748720f1656217fdce9e289fb025b2e256",
+      "size_bytes": 1055
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4284919_productscience_inference_inference_participant_gonka19u92d2744vrmjg2y8wpeguz48vv52damsc5uv5.440e1a5ba59d80e6.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka19u92d2744vrmjg2y8wpeguz48vv52damsc5uv5",
+      "requested_block_height": "4284919",
+      "sha256": "3f1195c43e75bd27594c74a16ff575dc78668993d9ee761820bb766f02e4d399",
+      "size_bytes": 1020
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4284919_productscience_inference_inference_participant_gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww.f0ed1e4ad87d497d.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww",
+      "requested_block_height": "4284919",
+      "sha256": "45097dfba521c80bc092f717e0f306990aa959750f20c1f139dd5b9137f3dd11",
+      "size_bytes": 1033
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4284919_productscience_inference_inference_participant_gonka1pksqg5wpgqsnezrr0nw7l35y7u8v4vvjdavpem.b7d788f080896b2e.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1pksqg5wpgqsnezrr0nw7l35y7u8v4vvjdavpem",
+      "requested_block_height": "4284919",
+      "sha256": "908b9539c774516616e98c3f51f8d635215d7f6cd2a68e4af89807ca88e2eb1d",
+      "size_bytes": 1020
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4284919_productscience_inference_inference_participant_gonka1y7mt2r8qalzdca9eq3pvf86c0puv0xfa60wl8w.fb88cb0afd19316d.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1y7mt2r8qalzdca9eq3pvf86c0puv0xfa60wl8w",
+      "requested_block_height": "4284919",
+      "sha256": "9fccce32ab333c9adc47265640f26b09775e7cbcc2124fcd5a8f11d248aac3ae",
+      "size_bytes": 1020
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4284919_productscience_inference_inference_participant_gonka1zfj67rvrz86q4uu2vdyt24gwf06yl9cqmy58np.5a3aca57f038b118.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1zfj67rvrz86q4uu2vdyt24gwf06yl9cqmy58np",
+      "requested_block_height": "4284919",
+      "sha256": "7b09322f1e69ee63df55d0e67976ffaf23c021f9f476d5b980f0b214af07afee",
+      "size_bytes": 1020
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4291096_productscience_inference_inference_epoch_group_data_278.63c0282741bd84ab.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/278",
+      "requested_block_height": "4291096",
+      "sha256": "9b9846ef608ea11ec7f59a482bdb4a17d3ac2916f8286e95fc52261b75d18fd0",
+      "size_bytes": 30262
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4291097_productscience_inference_inference_epoch_group_data_278.d5ab9f6b55aa2082.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/278",
+      "requested_block_height": "4291097",
+      "sha256": "6b74edd015d1c9b1319c8e9d15bb9cfb20bedefac5b3e92acd8e308d708e307b",
+      "size_bytes": 30259
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4291097_productscience_inference_inference_params.9f77e6fca3f120f6.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4291097",
+      "sha256": "896e46b79c6915048c6e56297f2782a050717ad6faec563a6fe7b53634ac00e9",
+      "size_bytes": 12053
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4291097_productscience_inference_inference_participant_gonka1qnj39ysxpzknvrr5dw9rdl7cx5q7dpkwerryrs.5ed016ff371625ad.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1qnj39ysxpzknvrr5dw9rdl7cx5q7dpkwerryrs",
+      "requested_block_height": "4291097",
+      "sha256": "828f1bd28ebb8a08d548df5ab4c12352bb17f97178e904f2ba9bb0de126b54fe",
+      "size_bytes": 1019
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4295574_productscience_inference_inference_epoch_group_data_278.a6e389492d38b218.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/278",
+      "requested_block_height": "4295574",
+      "sha256": "6b74edd015d1c9b1319c8e9d15bb9cfb20bedefac5b3e92acd8e308d708e307b",
+      "size_bytes": 30259
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4295575_productscience_inference_inference_epoch_group_data_278.d2265dcdc62dc2d1.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/278",
+      "requested_block_height": "4295575",
+      "sha256": "de23cf85e5aae5ef84072acbd97549a4c84b6c992aaf781f26e9995c0067fb53",
+      "size_bytes": 30253
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4295575_productscience_inference_inference_params.5684b51864c84bf8.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4295575",
+      "sha256": "896e46b79c6915048c6e56297f2782a050717ad6faec563a6fe7b53634ac00e9",
+      "size_bytes": 12053
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4295575_productscience_inference_inference_participant_gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww.8e28c80d393ab6b1.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww",
+      "requested_block_height": "4295575",
+      "sha256": "45097dfba521c80bc092f717e0f306990aa959750f20c1f139dd5b9137f3dd11",
+      "size_bytes": 1033
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4295575_productscience_inference_inference_participant_gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3.8b4eeffc5a0edf78.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3",
+      "requested_block_height": "4295575",
+      "sha256": "f4458986d62da33479cd3a5615e2d3df8769d2aab37bc82ada2c2bddb487778a",
+      "size_bytes": 1032
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4295575_productscience_inference_inference_participant_gonka1scskt6wpnjnumsah6kjphmdu87vjgvcxmn4rxv.cd33c7b29867b5f6.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1scskt6wpnjnumsah6kjphmdu87vjgvcxmn4rxv",
+      "requested_block_height": "4295575",
+      "sha256": "a3c0c007abe802888e21c8374a3464438021d64902cda1a936911c9906a001ae",
+      "size_bytes": 1034
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4295575_productscience_inference_inference_participant_gonka1tlvg4kjx7ljd5thgd5fkgh39q6lu8cmxupktgg.2d190d75935682ae.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1tlvg4kjx7ljd5thgd5fkgh39q6lu8cmxupktgg",
+      "requested_block_height": "4295575",
+      "sha256": "09eba07c2f3057be9de32f83194a322ab570308b69557b203f253289c1674a65",
+      "size_bytes": 1053
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4296551_productscience_inference_inference_epoch_group_data_278.32b9e1e33b5d2f99.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/278",
+      "requested_block_height": "4296551",
+      "sha256": "de23cf85e5aae5ef84072acbd97549a4c84b6c992aaf781f26e9995c0067fb53",
+      "size_bytes": 30253
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4296552_productscience_inference_inference_epoch_group_data_278.58503ce40fbc62a6.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/278",
+      "requested_block_height": "4296552",
+      "sha256": "7b259bd5cb7de4518504343e6913ec7a7443a370d3fb31ec327c0f9def093ed7",
+      "size_bytes": 30251
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4296552_productscience_inference_inference_params.27f2738e1aba80ad.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4296552",
+      "sha256": "896e46b79c6915048c6e56297f2782a050717ad6faec563a6fe7b53634ac00e9",
+      "size_bytes": 12053
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4296552_productscience_inference_inference_participant_gonka10egxskdvc0a5w2r5q44wvuxmjyplx6yn8l97fd.6824b308e3ca2c30.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka10egxskdvc0a5w2r5q44wvuxmjyplx6yn8l97fd",
+      "requested_block_height": "4296552",
+      "sha256": "2ff5542860fb3d0de821acfc6ae6b79faf5d893d1335f7002d29b47ddb3b910c",
+      "size_bytes": 1020
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4302132_productscience_inference_inference_epoch_group_data_278.f68273d87a9add57.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/278",
+      "requested_block_height": "4302132",
+      "sha256": "7b259bd5cb7de4518504343e6913ec7a7443a370d3fb31ec327c0f9def093ed7",
+      "size_bytes": 30251
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4302133_productscience_inference_inference_epoch_group_data_278.ee6ac13c6a4c56fd.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/278",
+      "requested_block_height": "4302133",
+      "sha256": "f5ebe6fb59d9e14788f9b1ab38780d5f346d0ffab9597536de0347cace28eb40",
+      "size_bytes": 30236
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4302133_productscience_inference_inference_params.fc361d1168a9fc70.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4302133",
+      "sha256": "896e46b79c6915048c6e56297f2782a050717ad6faec563a6fe7b53634ac00e9",
+      "size_bytes": 12053
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4302133_productscience_inference_inference_participant_gonka19u92d2744vrmjg2y8wpeguz48vv52damsc5uv5.2741151bd5d5e3b8.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka19u92d2744vrmjg2y8wpeguz48vv52damsc5uv5",
+      "requested_block_height": "4302133",
+      "sha256": "3f1195c43e75bd27594c74a16ff575dc78668993d9ee761820bb766f02e4d399",
+      "size_bytes": 1020
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4302133_productscience_inference_inference_participant_gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p.27b6e95310c86925.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p",
+      "requested_block_height": "4302133",
+      "sha256": "99c8972450913c3580cde7302e529cfcf4cb70c0f43f64d2affce616560b7135",
+      "size_bytes": 1034
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4302133_productscience_inference_inference_participant_gonka1pksqg5wpgqsnezrr0nw7l35y7u8v4vvjdavpem.6f5681e214426ca0.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1pksqg5wpgqsnezrr0nw7l35y7u8v4vvjdavpem",
+      "requested_block_height": "4302133",
+      "sha256": "908b9539c774516616e98c3f51f8d635215d7f6cd2a68e4af89807ca88e2eb1d",
+      "size_bytes": 1020
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4302133_productscience_inference_inference_participant_gonka1q5xt54wncgzk7dxv9x64uln68455g83wu9tugg.207e1e9dd4145074.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1q5xt54wncgzk7dxv9x64uln68455g83wu9tugg",
+      "requested_block_height": "4302133",
+      "sha256": "94d92bd948331f09a5e2e489b4da19c46dc254d851d9ab1301892fb0856278f0",
+      "size_bytes": 1033
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4302133_productscience_inference_inference_participant_gonka1y7mt2r8qalzdca9eq3pvf86c0puv0xfa60wl8w.7631a1f9833426df.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1y7mt2r8qalzdca9eq3pvf86c0puv0xfa60wl8w",
+      "requested_block_height": "4302133",
+      "sha256": "9fccce32ab333c9adc47265640f26b09775e7cbcc2124fcd5a8f11d248aac3ae",
+      "size_bytes": 1020
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4302133_productscience_inference_inference_participant_gonka1zfj67rvrz86q4uu2vdyt24gwf06yl9cqmy58np.6b695e4a5db33323.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1zfj67rvrz86q4uu2vdyt24gwf06yl9cqmy58np",
+      "requested_block_height": "4302133",
+      "sha256": "a6440d25dc11c4c7aabeb139b9358a9c315d0a12d841aec287d0f108221f2dab",
+      "size_bytes": 1035
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4316677_productscience_inference_inference_epoch_group_data_279.320c0814e462a35f.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/279",
+      "requested_block_height": "4316677",
+      "sha256": "3206372d6a915ed8125f77961a25f347ad7f80b46fb5a2089de77fcf38cdf853",
+      "size_bytes": 30277
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4316678_productscience_inference_inference_epoch_group_data_279.092a828d17791790.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/279",
+      "requested_block_height": "4316678",
+      "sha256": "18c3b0dd36c0a6d57c8e7bce8a91a064728d210bf0778258e6dc9685243a63e1",
+      "size_bytes": 30257
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4316678_productscience_inference_inference_params.e8d3ea9e2cd574b1.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4316678",
+      "sha256": "896e46b79c6915048c6e56297f2782a050717ad6faec563a6fe7b53634ac00e9",
+      "size_bytes": 12053
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4316678_productscience_inference_inference_participant_gonka10egxskdvc0a5w2r5q44wvuxmjyplx6yn8l97fd.49540d5f0a429760.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka10egxskdvc0a5w2r5q44wvuxmjyplx6yn8l97fd",
+      "requested_block_height": "4316678",
+      "sha256": "2ff5542860fb3d0de821acfc6ae6b79faf5d893d1335f7002d29b47ddb3b910c",
+      "size_bytes": 1020
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4316678_productscience_inference_inference_participant_gonka19ghzvgfr065s3fr5awuvs3nhy9fq4n7wrr9kel.45ab88d3e8ed833f.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka19ghzvgfr065s3fr5awuvs3nhy9fq4n7wrr9kel",
+      "requested_block_height": "4316678",
+      "sha256": "0ba0b766855c248f5f185b18a1c909883e023d0163f5e756cee0733c52d69066",
+      "size_bytes": 1103
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4316678_productscience_inference_inference_participant_gonka19u92d2744vrmjg2y8wpeguz48vv52damsc5uv5.532524fb68f18f8a.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka19u92d2744vrmjg2y8wpeguz48vv52damsc5uv5",
+      "requested_block_height": "4316678",
+      "sha256": "3f1195c43e75bd27594c74a16ff575dc78668993d9ee761820bb766f02e4d399",
+      "size_bytes": 1020
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4316678_productscience_inference_inference_participant_gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww.7b9b25cfe0cc14d6.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww",
+      "requested_block_height": "4316678",
+      "sha256": "45097dfba521c80bc092f717e0f306990aa959750f20c1f139dd5b9137f3dd11",
+      "size_bytes": 1033
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4316678_productscience_inference_inference_participant_gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3.1e7c542ecfa0825a.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3",
+      "requested_block_height": "4316678",
+      "sha256": "f4458986d62da33479cd3a5615e2d3df8769d2aab37bc82ada2c2bddb487778a",
+      "size_bytes": 1032
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4316678_productscience_inference_inference_participant_gonka1pksqg5wpgqsnezrr0nw7l35y7u8v4vvjdavpem.69fa083084356199.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1pksqg5wpgqsnezrr0nw7l35y7u8v4vvjdavpem",
+      "requested_block_height": "4316678",
+      "sha256": "908b9539c774516616e98c3f51f8d635215d7f6cd2a68e4af89807ca88e2eb1d",
+      "size_bytes": 1020
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4316678_productscience_inference_inference_participant_gonka1y7mt2r8qalzdca9eq3pvf86c0puv0xfa60wl8w.23c47531b8c219bb.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1y7mt2r8qalzdca9eq3pvf86c0puv0xfa60wl8w",
+      "requested_block_height": "4316678",
+      "sha256": "cd9a8c9aae69b4ad6a8bbe73db7a2b5e6e5bcfacf50015e4631f05062e05a9bc",
+      "size_bytes": 1071
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4316678_productscience_inference_inference_participant_gonka1zfj67rvrz86q4uu2vdyt24gwf06yl9cqmy58np.ab64e948974c7dfe.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1zfj67rvrz86q4uu2vdyt24gwf06yl9cqmy58np",
+      "requested_block_height": "4316678",
+      "sha256": "7b09322f1e69ee63df55d0e67976ffaf23c021f9f476d5b980f0b214af07afee",
+      "size_bytes": 1020
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4323405_productscience_inference_inference_epoch_group_data_280.b322fe3448b22b2b.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/280",
+      "requested_block_height": "4323405",
+      "sha256": "bbb23a459e852a0c7a7efe35567d217eee1531757d4a184c6d8a8b003f5fe82a",
+      "size_bytes": 28376
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4323406_productscience_inference_inference_epoch_group_data_280.a83404493be4a6f4.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/280",
+      "requested_block_height": "4323406",
+      "sha256": "39303b025134fd6b2fac94b4377e46bb0ed07a8dd62f3a59e202e5154950b9dc",
+      "size_bytes": 28371
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4323406_productscience_inference_inference_params.c1e4c8eedbc4a13f.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4323406",
+      "sha256": "896e46b79c6915048c6e56297f2782a050717ad6faec563a6fe7b53634ac00e9",
+      "size_bytes": 12053
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4323406_productscience_inference_inference_participant_gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww.a5cc04e305f85f86.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww",
+      "requested_block_height": "4323406",
+      "sha256": "45097dfba521c80bc092f717e0f306990aa959750f20c1f139dd5b9137f3dd11",
+      "size_bytes": 1033
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4323406_productscience_inference_inference_participant_gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3.7a7fdaf0ee5a9751.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3",
+      "requested_block_height": "4323406",
+      "sha256": "f4458986d62da33479cd3a5615e2d3df8769d2aab37bc82ada2c2bddb487778a",
+      "size_bytes": 1032
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4338823_productscience_inference_inference_epoch_group_data_281.756d8f0120e4c4a1.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/281",
+      "requested_block_height": "4338823",
+      "sha256": "87c0b008c0e9e7ae1a11852bead8a58c27ad62b27c0dd95f15fc850b40928694",
+      "size_bytes": 31241
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4338824_productscience_inference_inference_epoch_group_data_281.0450714d55795e8e.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/281",
+      "requested_block_height": "4338824",
+      "sha256": "d7c9f025a02dc0a49ca06a3b6bddc275ae794689401468713feff9a2013469c8",
+      "size_bytes": 31236
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4338824_productscience_inference_inference_params.cf2c8ca4c5693e38.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4338824",
+      "sha256": "896e46b79c6915048c6e56297f2782a050717ad6faec563a6fe7b53634ac00e9",
+      "size_bytes": 12053
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4338824_productscience_inference_inference_participant_gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww.d20c51e1ccb50f29.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww",
+      "requested_block_height": "4338824",
+      "sha256": "45097dfba521c80bc092f717e0f306990aa959750f20c1f139dd5b9137f3dd11",
+      "size_bytes": 1033
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4338824_productscience_inference_inference_participant_gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3.783e7c7fa656df09.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3",
+      "requested_block_height": "4338824",
+      "sha256": "f4458986d62da33479cd3a5615e2d3df8769d2aab37bc82ada2c2bddb487778a",
+      "size_bytes": 1032
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4352981_productscience_inference_inference_epoch_group_data_282.158c769bfd35adc3.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/282",
+      "requested_block_height": "4352981",
+      "sha256": "d1f701f7d6624bf98ed3efd6251a79c21529298507d8ca61514246f75254504a",
+      "size_bytes": 32672
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4352982_productscience_inference_inference_epoch_group_data_282.81d2ad988bc2bb3e.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/282",
+      "requested_block_height": "4352982",
+      "sha256": "77d32561c947a276d4065bb8df5bf960c7e74426dfe5c463bf3552e534248020",
+      "size_bytes": 32653
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4352982_productscience_inference_inference_params.bd0c29def041dee8.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4352982",
+      "sha256": "896e46b79c6915048c6e56297f2782a050717ad6faec563a6fe7b53634ac00e9",
+      "size_bytes": 12053
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4352982_productscience_inference_inference_participant_gonka14tqh62mangwzrma2lgg2dm375rcjzn2ydy8ttm.dfef27a185571856.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka14tqh62mangwzrma2lgg2dm375rcjzn2ydy8ttm",
+      "requested_block_height": "4352982",
+      "sha256": "d1bf95449316109cf8e6fa2aa03403e84e2d71e614065c2ecac58a628e11d045",
+      "size_bytes": 1033
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4352982_productscience_inference_inference_participant_gonka1ce02jjduga8jvwj8jx39mxn0jr345vgkx7lk2n.a317157ae8a5976f.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1ce02jjduga8jvwj8jx39mxn0jr345vgkx7lk2n",
+      "requested_block_height": "4352982",
+      "sha256": "ca8cedefa8321dbf30febffedf7e9f20b5ff345b11796aa3898409406366a42d",
+      "size_bytes": 1034
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4352982_productscience_inference_inference_participant_gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww.8b426e5c37f96e30.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww",
+      "requested_block_height": "4352982",
+      "sha256": "45097dfba521c80bc092f717e0f306990aa959750f20c1f139dd5b9137f3dd11",
+      "size_bytes": 1033
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4352982_productscience_inference_inference_participant_gonka1f0u3y2wneer8zhz3ypw4x54h38cpa0qsy8ts3e.d954b137fba37325.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1f0u3y2wneer8zhz3ypw4x54h38cpa0qsy8ts3e",
+      "requested_block_height": "4352982",
+      "sha256": "97d2ebe5bd61a23c12d1ebf5fe2e3e7039043f90dc13c55c8d33b4787d9cc9ac",
+      "size_bytes": 1049
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4352982_productscience_inference_inference_participant_gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3.6f74d2677a096739.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3",
+      "requested_block_height": "4352982",
+      "sha256": "f4458986d62da33479cd3a5615e2d3df8769d2aab37bc82ada2c2bddb487778a",
+      "size_bytes": 1032
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4352982_productscience_inference_inference_participant_gonka1yal0ysgzc860zt3y8cds8656tnueusgymftvkw.9f2489be327c3e55.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1yal0ysgzc860zt3y8cds8656tnueusgymftvkw",
+      "requested_block_height": "4352982",
+      "sha256": "68a7513525e805470141bbb1bcbff86d4a9647fbdfa63bc4a92f7de1f3c79a60",
+      "size_bytes": 1034
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4356354_productscience_inference_inference_epoch_group_data_282.3592a0d28b324ae8.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/282",
+      "requested_block_height": "4356354",
+      "sha256": "77d32561c947a276d4065bb8df5bf960c7e74426dfe5c463bf3552e534248020",
+      "size_bytes": 32653
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4356355_productscience_inference_inference_epoch_group_data_282.856ef9c1ea1c8d3a.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/282",
+      "requested_block_height": "4356355",
+      "sha256": "02f70f9d874cee64b3dc098e6f2fc97a6350ea367ac256a1a64b0c5a92bb3750",
+      "size_bytes": 32648
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4356355_productscience_inference_inference_params.6d89e353b410fe26.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4356355",
+      "sha256": "896e46b79c6915048c6e56297f2782a050717ad6faec563a6fe7b53634ac00e9",
+      "size_bytes": 12053
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4356355_productscience_inference_inference_participant_gonka10egxskdvc0a5w2r5q44wvuxmjyplx6yn8l97fd.161bf194c1156258.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka10egxskdvc0a5w2r5q44wvuxmjyplx6yn8l97fd",
+      "requested_block_height": "4356355",
+      "sha256": "4511b876e986baf080c3cfc4e14cd267f1d14a7f710075057111f0de628952f3",
+      "size_bytes": 1034
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4356355_productscience_inference_inference_participant_gonka1p2lhgng7tcqju7emk989s5fpdr7k2c3ek6h26m.04e930ce5dead1ed.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1p2lhgng7tcqju7emk989s5fpdr7k2c3ek6h26m",
+      "requested_block_height": "4356355",
+      "sha256": "f292e1a24a57ae5c050808093bf2e222322cb026ffd19f7206e5cf997be4a651",
+      "size_bytes": 1023
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4356355_productscience_inference_inference_participant_gonka1qnj39ysxpzknvrr5dw9rdl7cx5q7dpkwerryrs.69f9e98b8690cf5c.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1qnj39ysxpzknvrr5dw9rdl7cx5q7dpkwerryrs",
+      "requested_block_height": "4356355",
+      "sha256": "b4d3c34766d34f13d582b2889f8d4093e0a6c8c4cf9a41e2846b9e289a29881a",
+      "size_bytes": 1034
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4356355_productscience_inference_inference_participant_gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx.50b34a969267ac78.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx",
+      "requested_block_height": "4356355",
+      "sha256": "527dfd1a865ef14f698906ae68e9efada2e836b326df6c885ccdc432e9905a82",
+      "size_bytes": 1048
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4360728_productscience_inference_inference_epoch_group_data_282.89b9e9f67ed1f842.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/282",
+      "requested_block_height": "4360728",
+      "sha256": "02f70f9d874cee64b3dc098e6f2fc97a6350ea367ac256a1a64b0c5a92bb3750",
+      "size_bytes": 32648
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4360729_productscience_inference_inference_epoch_group_data_282.1305add4a70ecc43.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/282",
+      "requested_block_height": "4360729",
+      "sha256": "88103a24c0c72b9be258ac5d3e54b69a9cf9d09e5aa1c1904b33983034e1edf0",
+      "size_bytes": 32640
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4360729_productscience_inference_inference_params.141d718693e51990.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4360729",
+      "sha256": "896e46b79c6915048c6e56297f2782a050717ad6faec563a6fe7b53634ac00e9",
+      "size_bytes": 12053
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4360729_productscience_inference_inference_participant_gonka1pksqg5wpgqsnezrr0nw7l35y7u8v4vvjdavpem.58018608f9a5427d.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1pksqg5wpgqsnezrr0nw7l35y7u8v4vvjdavpem",
+      "requested_block_height": "4360729",
+      "sha256": "6b6c8339a85eace963116e0929b201330ea3058590df9d0bd6dafeee5696ba95",
+      "size_bytes": 1075
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4360729_productscience_inference_inference_participant_gonka1y7mt2r8qalzdca9eq3pvf86c0puv0xfa60wl8w.f3996fb5738d1859.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1y7mt2r8qalzdca9eq3pvf86c0puv0xfa60wl8w",
+      "requested_block_height": "4360729",
+      "sha256": "65b61374722c6734c69958791ae7190c585d9632d515c1137c129df0b1766905",
+      "size_bytes": 1074
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4365738_productscience_inference_inference_epoch_group_data_282.f5dafc007569f427.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/282",
+      "requested_block_height": "4365738",
+      "sha256": "be9dcd7d5eb76404e4cef4373aed4de494d4b55a22d9fae8d17b4029728f610c",
+      "size_bytes": 32640
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4365739_productscience_inference_inference_epoch_group_data_282.a4ae695ee3336319.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/282",
+      "requested_block_height": "4365739",
+      "sha256": "dae347d69215c527634686423ff52b5079cc9a3234829b418563dc906b314f84",
+      "size_bytes": 32635
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4365739_productscience_inference_inference_params.62f72b863a1ba0b4.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4365739",
+      "sha256": "896e46b79c6915048c6e56297f2782a050717ad6faec563a6fe7b53634ac00e9",
+      "size_bytes": 12053
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4365739_productscience_inference_inference_participant_gonka1amlmhjym02shahjv8ldmupg4cx0qc66q6f85rj.7eeb55f79ea8fba2.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1amlmhjym02shahjv8ldmupg4cx0qc66q6f85rj",
+      "requested_block_height": "4365739",
+      "sha256": "0e04bd4d2a229e5b75f848982d8bb5cf9f6a37af61cfb513427b6e89315d1acd",
+      "size_bytes": 1033
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4365739_productscience_inference_inference_participant_gonka1myu058axjs62mc3e7na9krwvqpfl9z3gtcw9es.2849ad69bead4d77.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1myu058axjs62mc3e7na9krwvqpfl9z3gtcw9es",
+      "requested_block_height": "4365739",
+      "sha256": "b7e7ffceae8c2aeae7a8e5acac875d8c102bd889b28a6f680eeaa1405e7cfcb2",
+      "size_bytes": 1094
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4371203_productscience_inference_inference_epoch_group_data_283.e813a84fd66cb1e4.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/283",
+      "requested_block_height": "4371203",
+      "sha256": "51ca59f565c47a0409d90ad2d7bac24e33d54dda864afb7c13b9d411d64e70d5",
+      "size_bytes": 29334
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4371204_productscience_inference_inference_epoch_group_data_283.340f2b3f2fa2b441.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/283",
+      "requested_block_height": "4371204",
+      "sha256": "590384df0bc623760dd37673fe2aac1a461d62ef67ac980abea5415d5b2ce4c4",
+      "size_bytes": 29324
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4371204_productscience_inference_inference_params.1c96344ee0c4722c.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4371204",
+      "sha256": "896e46b79c6915048c6e56297f2782a050717ad6faec563a6fe7b53634ac00e9",
+      "size_bytes": 12053
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4371204_productscience_inference_inference_participant_gonka10egxskdvc0a5w2r5q44wvuxmjyplx6yn8l97fd.868d63389b17eb5c.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka10egxskdvc0a5w2r5q44wvuxmjyplx6yn8l97fd",
+      "requested_block_height": "4371204",
+      "sha256": "65a9cd5e9453e1953fa85891ba02d4670b6b1492e9d630cc8a7dd3e11a7e0c34",
+      "size_bytes": 1035
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4371204_productscience_inference_inference_participant_gonka125n6kr5gvdup0lndfkps7t6rd6592panhrg3np.4eb341e4ee2a7ddd.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka125n6kr5gvdup0lndfkps7t6rd6592panhrg3np",
+      "requested_block_height": "4371204",
+      "sha256": "4a650935539b3fd971b43a5fd29080f558e2b12a26729d714ef0287140f08e3e",
+      "size_bytes": 1046
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4371204_productscience_inference_inference_participant_gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3.e893c6f686e5acdc.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3",
+      "requested_block_height": "4371204",
+      "sha256": "f4458986d62da33479cd3a5615e2d3df8769d2aab37bc82ada2c2bddb487778a",
+      "size_bytes": 1032
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4371204_productscience_inference_inference_participant_gonka1qnj39ysxpzknvrr5dw9rdl7cx5q7dpkwerryrs.d8eef06aadd97974.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1qnj39ysxpzknvrr5dw9rdl7cx5q7dpkwerryrs",
+      "requested_block_height": "4371204",
+      "sha256": "828f1bd28ebb8a08d548df5ab4c12352bb17f97178e904f2ba9bb0de126b54fe",
+      "size_bytes": 1019
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4371204_productscience_inference_inference_participant_gonka1xu8fgywyg8aauydpdr2gtu30zv0x0330k249ua.22a8da7a77c74127.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1xu8fgywyg8aauydpdr2gtu30zv0x0330k249ua",
+      "requested_block_height": "4371204",
+      "sha256": "6a468195d29939845fe043b34a34bcfdc9ee3e0cc823981f6b306d35c84ee381",
+      "size_bytes": 1020
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4373378_productscience_inference_inference_epoch_group_data_283.a6e10054bf6a187f.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/283",
+      "requested_block_height": "4373378",
+      "sha256": "590384df0bc623760dd37673fe2aac1a461d62ef67ac980abea5415d5b2ce4c4",
+      "size_bytes": 29324
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4373379_productscience_inference_inference_epoch_group_data_283.7fe220bab7669f50.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/283",
+      "requested_block_height": "4373379",
+      "sha256": "d6995ad618be576e96d1cf352cfecb7f0d4662d3ec84b735839f5a67ad5467a1",
+      "size_bytes": 29316
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4373379_productscience_inference_inference_params.85973340433ee546.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "4373379",
+      "sha256": "896e46b79c6915048c6e56297f2782a050717ad6faec563a6fe7b53634ac00e9",
+      "size_bytes": 12053
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/height_4373379_productscience_inference_inference_participant_gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww.d196e8c43f2fc7dd.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/participant/gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww",
+      "requested_block_height": "4373379",
+      "sha256": "45097dfba521c80bc092f717e0f306990aa959750f20c1f139dd5b9137f3dd11",
+      "size_bytes": 1033
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_all_poc_v2_store_commits_4284638.0e314d10ee71b97f.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4284638",
+      "requested_block_height": "latest",
+      "sha256": "4e1e6d86fd5a3891854b8dc6fe53c5068dfd495515cacb22f5989a3d7aad91d7",
+      "size_bytes": 16725
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_all_poc_v2_store_commits_4290816.f39748eebf1b6a43.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4290816",
+      "requested_block_height": "latest",
+      "sha256": "5ed8c53a3f86bf2a070534299f88a6203b6548c494dd5c7571a8efae185efddd",
+      "size_bytes": 17913
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_all_poc_v2_store_commits_4295294.8dfe007f33dbe7b8.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4295294",
+      "requested_block_height": "latest",
+      "sha256": "33dd5bdec1408f89149bb86b2607c8a785a04a10b13287d504542de582ef5068",
+      "size_bytes": 18241
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_all_poc_v2_store_commits_4296271.7845e466cda8c0a1.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4296271",
+      "requested_block_height": "latest",
+      "sha256": "01ae4aee1e4859001922a5014f90fa37045bff38d15c4c0c74fe8cfe992e9951",
+      "size_bytes": 17914
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_all_poc_v2_store_commits_4301852.fd75f87b32f19de1.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4301852",
+      "requested_block_height": "latest",
+      "sha256": "f8b176f66ce310296d3b417040f8ffcd20b8e54b58a549f92c333201902bb3dd",
+      "size_bytes": 17880
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_all_poc_v2_store_commits_4316397.4e7a58f82a14d18f.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4316397",
+      "requested_block_height": "latest",
+      "sha256": "7f8abfb01930551f656fe015acc0b754d232ede8e87c6ce70bd1b1b31a4ae99d",
+      "size_bytes": 19807
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_all_poc_v2_store_commits_4323125.78f9ff120301b0b4.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4323125",
+      "requested_block_height": "latest",
+      "sha256": "a3776109f1f75a3e35863881451db51d7b1acd52d5ddf9f290bb19090743a337",
+      "size_bytes": 20445
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_all_poc_v2_store_commits_4338543.912357d623f4ee62.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4338543",
+      "requested_block_height": "latest",
+      "sha256": "c4b9decd4bee218c4e145f531c2c27c39d972ded09b571e02e206633693c99b6",
+      "size_bytes": 21745
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_all_poc_v2_store_commits_4352701.2c2f26e6a2bae03d.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4352701",
+      "requested_block_height": "latest",
+      "sha256": "83654488a2b92e1cc24dcf1026610786fd7a219765da68f3219b2696fe405fd1",
+      "size_bytes": 20828
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_all_poc_v2_store_commits_4356074.7a2fd7cc15d858ef.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4356074",
+      "requested_block_height": "latest",
+      "sha256": "d7633c53b33b5e43952fe952e7be457a79cd02a3f0c23ed5267cf23030f89f62",
+      "size_bytes": 20808
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_all_poc_v2_store_commits_4360448.a3a20d3d7137141e.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4360448",
+      "requested_block_height": "latest",
+      "sha256": "cbd23edc446f273a303eabfad9770e2d881711fe0b44aa1d4920a0d1d75cf2be",
+      "size_bytes": 21122
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_all_poc_v2_store_commits_4365458.27a934be28f1e2b4.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4365458",
+      "requested_block_height": "latest",
+      "sha256": "9902c53c6896bf2e62cfbcd344004e81856f721a887b25b6ef5eee85cd8d1eb1",
+      "size_bytes": 19842
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_all_poc_v2_store_commits_4370923.b6d261b5f20a1b22.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4370923",
+      "requested_block_height": "latest",
+      "sha256": "1599b3d917b00fe5de7d4752806bdcddc9826b8e0484cbb2d5366de8de8bb295",
+      "size_bytes": 20517
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_all_poc_v2_store_commits_4373098.f2967ae79ff0c382.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/all_poc_v2_store_commits/4373098",
+      "requested_block_height": "latest",
+      "sha256": "11bd0b93b0cd1dd5a856d56631b423c37725afba28bdf70d1adf85f5618079a6",
+      "size_bytes": 20499
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_confirmation_poc_events_277.9d33fcb53722dde4.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/confirmation_poc_events/277",
+      "requested_block_height": "latest",
+      "sha256": "72d748d6823d68b4370349e8938ae1bc0043d244300d2a9890b2e260c4b8ca05",
+      "size_bytes": 311
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_confirmation_poc_events_278.2398f7961c6152df.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/confirmation_poc_events/278",
+      "requested_block_height": "latest",
+      "sha256": "b7e6272ccd6fd8d363cbfeda0ce58cbacfad339ea1eee133e01adba16b2de7a5",
+      "size_bytes": 1181
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_confirmation_poc_events_279.6c586ff87e721448.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/confirmation_poc_events/279",
+      "requested_block_height": "latest",
+      "sha256": "6efa2ac59fe6713be5865bfff35fece69d26f52228c017a2017c7d736aadadbd",
+      "size_bytes": 311
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_confirmation_poc_events_280.e9eb84bb5f50f338.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/confirmation_poc_events/280",
+      "requested_block_height": "latest",
+      "sha256": "cd288e09c8ec5301f04a4f497cc43cdbcf00a1d59266ec7a3a8780158bc9c8e0",
+      "size_bytes": 1471
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_confirmation_poc_events_281.aadef45cf8028527.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/confirmation_poc_events/281",
+      "requested_block_height": "latest",
+      "sha256": "65c7ff6db939870a9584994718e9bca8b88907b6d655a58816c31d737700cccd",
+      "size_bytes": 601
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_confirmation_poc_events_282.aed4a2a062788d29.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/confirmation_poc_events/282",
+      "requested_block_height": "latest",
+      "sha256": "00b7aa612704157b52e939a629d14124873fb25c8073b8347bc9e9d2587eeab3",
+      "size_bytes": 1471
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_confirmation_poc_events_283.bc403a9255242fdd.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/confirmation_poc_events/283",
+      "requested_block_height": "latest",
+      "sha256": "a28bcc7d5474165b8e1b88eb53987e630afb0556b4e129ee7d8d3fd3cc2437cf",
+      "size_bytes": 601
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_group_data_277.3daf6d926a1fb86a.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/277",
+      "requested_block_height": "latest",
+      "sha256": "afd20f2eda71828c2a07c60d99b98305961ceddd545b86ec6d2e69532c97def2",
+      "size_bytes": 29628
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_group_data_277__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.c8f42677bc2dfbf7.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/277?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "c0b6b7037f9855a7fb5f0c1ab77fa9017f3f47aa5eb3edc7dfaddac1c34a68c0",
+      "size_bytes": 49504
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_group_data_277__model_id_moonshotai_2FKimi-K2.6.2c04721dab38355e.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/277?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "3b27200748a3374a8de4f2f1613c6c5a0a38aabed537a071ab504c8776d39de0",
+      "size_bytes": 20476
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_group_data_278.0e2b6a33158aad2b.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/278",
+      "requested_block_height": "latest",
+      "sha256": "bf8cad1a958eccf3f186ea4970dc2d877bd7a6d702564e5ec73068ab9c2b6b7f",
+      "size_bytes": 30242
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_group_data_278__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.9d26039c790669b7.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/278?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "0b2650337d72e56e61ba778f59e225b3c3fd4a38ed07b08fda86fe8ce974a236",
+      "size_bytes": 46671
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_group_data_278__model_id_moonshotai_2FKimi-K2.6.152c9c1517366281.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/278?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "53a51ff79adb9ca5340bcafd7275bbf3a71bf8f1f7e22008c31491c315fe7774",
+      "size_bytes": 18692
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_group_data_279.5535accd2fffe496.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/279",
+      "requested_block_height": "latest",
+      "sha256": "2b8a9bbb8666d8737b978b8d6e80376977b17b2139fa1d7e4d7c7d0610fc049d",
+      "size_bytes": 30263
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_group_data_279__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.c8d0b6cf80e09f3d.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/279?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "3cb967781227db94b5732352e4f125ebcb4615dd64c9e5832da186227ac4825e",
+      "size_bytes": 41209
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_group_data_279__model_id_moonshotai_2FKimi-K2.6.df184dcaae8db8e2.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/279?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "75e6d504e8257394b541f868fb70bf9e348ea051332e318f143f4a695ca8511d",
+      "size_bytes": 17459
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_group_data_280.270fe77ea389b9cb.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/280",
+      "requested_block_height": "latest",
+      "sha256": "deb09ee89b4f5fdf890cf5268e1bf1d5717caa79a444cd5db2345958fd115db9",
+      "size_bytes": 28374
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_group_data_280__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.ac7d1159de2e26db.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/280?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "167ad187dae059659e816076c0455866ba9e5630bb8288a4cf96cacc478bf651",
+      "size_bytes": 33886
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_group_data_280__model_id_moonshotai_2FKimi-K2.6.7e2d5f70a9984146.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/280?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "126e059586753cde812b6e03370347a2e30fb50f555da761fbf14f816554d4d2",
+      "size_bytes": 17903
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_group_data_281.b8b88f0fc64b36d2.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/281",
+      "requested_block_height": "latest",
+      "sha256": "934240d82ad751d0041b80e61f44182e284aedd8281b503767b9f9bfd5c6e9ee",
+      "size_bytes": 31242
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_group_data_281__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.a32572e8c42bab3a.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/281?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "8dc9fc90f57a2f3f780bfa423bfeaee51be908c7b23f587ec784dc2cfcc60c3b",
+      "size_bytes": 34241
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_group_data_281__model_id_moonshotai_2FKimi-K2.6.eee64407e8a5173c.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/281?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "63eb0c0ae9da657fa93781d8fb43fef3cd73540b11b069e11ed2d8776f83b14c",
+      "size_bytes": 22482
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_group_data_282.12f8d2363634a0f7.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/282",
+      "requested_block_height": "latest",
+      "sha256": "33b2caa3a59a88ba0fad73a1de5dd6807ee17394351efe9df1805302c5387853",
+      "size_bytes": 32641
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_group_data_282__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.8923fc2d0147d680.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/282?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "95cc0cb4a475350c8309bea37225b0359fb775495a7628f1858eacc18a792154",
+      "size_bytes": 33669
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_group_data_282__model_id_moonshotai_2FKimi-K2.6.4db70aa8efc6a54d.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/282?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "ddaa1cafa9f497b613be6f892964c31ea0755b5ebb81b888949d0ab7036d00f7",
+      "size_bytes": 19303
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_group_data_283.9dccba5be723f18c.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/283",
+      "requested_block_height": "latest",
+      "sha256": "d6995ad618be576e96d1cf352cfecb7f0d4662d3ec84b735839f5a67ad5467a1",
+      "size_bytes": 29316
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_group_data_283__model_id_Qwen_2FQwen3-235B-A22B-Instruct-2507-FP8.24afbd99ab0b977e.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/283?model_id=Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+      "requested_block_height": "latest",
+      "sha256": "d839311d8870862f6a883d85c706b240dbc368032a4a2663e62bc7ff2b39a28c",
+      "size_bytes": 32379
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_group_data_283__model_id_moonshotai_2FKimi-K2.6.be1dcf7e63f1d6bc.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_group_data/283?model_id=moonshotai/Kimi-K2.6",
+      "requested_block_height": "latest",
+      "sha256": "9816171968879aeb66852d2bb2bcaeb53393f6602007c4bcf983e135ddce18d1",
+      "size_bytes": 15478
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_performance_summary_277.d76c59d15a4c391f.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_performance_summary/277",
+      "requested_block_height": "latest",
+      "sha256": "e5d27a397a2004aad3103988f69f0c68f58e354d1647ca90431c76e7d0d5d329",
+      "size_bytes": 20674
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_performance_summary_278.95280e8c723db441.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_performance_summary/278",
+      "requested_block_height": "latest",
+      "sha256": "92b36c9db75996b9243472d995f6ea89ed1a74cec2b20b14197dfca573b8436f",
+      "size_bytes": 20562
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_performance_summary_279.33040e764fef3461.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_performance_summary/279",
+      "requested_block_height": "latest",
+      "sha256": "c1bbaaa982cd0ffec90b4c998e8c9d423b3f3fa96027a3b813c557cddd09b214",
+      "size_bytes": 21153
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_performance_summary_280.f0d7add2191b6a9b.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_performance_summary/280",
+      "requested_block_height": "latest",
+      "sha256": "8f8f9787dbc42c5d6b4a1c77b5e7d3d545a3b979085055d4c713278c4d68a88f",
+      "size_bytes": 19716
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_performance_summary_281.51fe189433ddf470.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_performance_summary/281",
+      "requested_block_height": "latest",
+      "sha256": "2933fce8f1db4b0d23a33cd13fa30be6e8ab52be1249c6456e4749be8d954df0",
+      "size_bytes": 21355
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_performance_summary_282.b4df57fd2afd1fe2.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_performance_summary/282",
+      "requested_block_height": "latest",
+      "sha256": "0331115e36e6b9904272353c2115d499795b86ced901ecf4b965b04afb48f0db",
+      "size_bytes": 22968
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_epoch_performance_summary_283.70c88fc792fb89e2.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/epoch_performance_summary/283",
+      "requested_block_height": "latest",
+      "sha256": "0e42d687fb66be1abd7ae8e017df870be7bb19f478a3b42fc133ff2f3b34c47f",
+      "size_bytes": 36
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_excluded_participants_277.a28c0a2048beb903.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/excluded_participants/277",
+      "requested_block_height": "latest",
+      "sha256": "5deac4a55b1a1f0239b10365eddfbfa3adec9b296554856c0fff33455724cf5b",
+      "size_bytes": 1166
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_excluded_participants_278.67cad78636ec69e8.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/excluded_participants/278",
+      "requested_block_height": "latest",
+      "sha256": "1709dca7a50928bb6e38e3f7c32c28d444aa05b1b455ff97624f384839e8f515",
+      "size_bytes": 2312
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_excluded_participants_279.b3b22e79c9c9f35c.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/excluded_participants/279",
+      "requested_block_height": "latest",
+      "sha256": "181bb53e24f33c09c55a4ee48b9a794bbb419ec5d8d71d23127d2486474fd1c4",
+      "size_bytes": 1548
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_excluded_participants_280.25461450c493915d.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/excluded_participants/280",
+      "requested_block_height": "latest",
+      "sha256": "9cec2234a66f03e8cc2fdddef0ff10f0a515bb5e1db3076a025ef4334cf77f3b",
+      "size_bytes": 402
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_excluded_participants_281.f08779de9acd5354.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/excluded_participants/281",
+      "requested_block_height": "latest",
+      "sha256": "6cbeab33779b7799077ea1b42658ab4cb160739c25505fe5589285d0cb0f0133",
+      "size_bytes": 402
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_excluded_participants_282.5094a649f89d4e2d.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/excluded_participants/282",
+      "requested_block_height": "latest",
+      "sha256": "6f978acb2889836407279135e2c723e11139107e53e692bb2992365e0edb662f",
+      "size_bytes": 2694
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_excluded_participants_283.c7a4beeabf9f1501.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/excluded_participants/283",
+      "requested_block_height": "latest",
+      "sha256": "4e26e0c6b5b93b673d568019cc59376c0ba46b3384354635bca217d246e39af6",
+      "size_bytes": 1166
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_params.86be103211921202.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/params",
+      "requested_block_height": "latest",
+      "sha256": "896e46b79c6915048c6e56297f2782a050717ad6faec563a6fe7b53634ac00e9",
+      "size_bytes": 12053
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_poc_v2_validations_for_stage_4284638.a2cad99d5cc50d39.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4284638",
+      "requested_block_height": "latest",
+      "sha256": "f1130ca7c4f7cd63ab9c5274c3b9aba862cac62950aea1aad468fed2ef7eef32",
+      "size_bytes": 498361
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_poc_v2_validations_for_stage_4290816.fddcf926ab597d43.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4290816",
+      "requested_block_height": "latest",
+      "sha256": "c905bd52e0d7d20579bb8c25799c8127ac8266cd90f097d383129855c45ab555",
+      "size_bytes": 420578
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_poc_v2_validations_for_stage_4295294.2c5c2aff209b705b.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4295294",
+      "requested_block_height": "latest",
+      "sha256": "141ba2507f787061cbd7031183ed9995b080d7e4c0f1ee88bef51a4e3016644c",
+      "size_bytes": 426270
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_poc_v2_validations_for_stage_4296271.73e24faa4d0b04b4.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4296271",
+      "requested_block_height": "latest",
+      "sha256": "686bf4d417c3d1e38123783129cdfe024895672b7c677d9a2e94555fbe991fff",
+      "size_bytes": 424149
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_poc_v2_validations_for_stage_4301852.964711ef58c22b94.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4301852",
+      "requested_block_height": "latest",
+      "sha256": "cbfadf4ce6bb6d00fc9c675825f6c8b35ad5825b964d9f96bf060c2bd08777d0",
+      "size_bytes": 431461
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_poc_v2_validations_for_stage_4316397.775572b1bb1b5e8f.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4316397",
+      "requested_block_height": "latest",
+      "sha256": "d5285db40a50fa225f654cd5ee70e5d2ca9eb0015194604992cf153290bc2f67",
+      "size_bytes": 527840
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_poc_v2_validations_for_stage_4323125.3390f01d0bee0095.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4323125",
+      "requested_block_height": "latest",
+      "sha256": "34d52d9e7469980b9f7a3986e7ef671841ddc0e259beab9fda7b25c0116cc8e3",
+      "size_bytes": 498916
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_poc_v2_validations_for_stage_4338543.dcb01e9a7c7dfaf0.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4338543",
+      "requested_block_height": "latest",
+      "sha256": "fd6af59128a17a5efb733e08dabc3a738122103ff8e8b36acc3deef363271dc5",
+      "size_bytes": 609942
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_poc_v2_validations_for_stage_4352701.12ca615faa16e9a8.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4352701",
+      "requested_block_height": "latest",
+      "sha256": "c7922ece9a48549f2e087e1edd0c148d3ec4c0aba88e16171cbb5e2a55946fb5",
+      "size_bytes": 588383
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_poc_v2_validations_for_stage_4356074.d38026a9c232c143.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4356074",
+      "requested_block_height": "latest",
+      "sha256": "bd3efe67178fd6f3d378b1bb24396e6092b793d59970676503ffd2fc3eb67bce",
+      "size_bytes": 540527
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_poc_v2_validations_for_stage_4360448.7eee1322bd53ac70.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4360448",
+      "requested_block_height": "latest",
+      "sha256": "c73f3573c7c9a7254a43cf4f26cddd421a03fddf6863ed106acb150c2391e32b",
+      "size_bytes": 592845
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_poc_v2_validations_for_stage_4365458.c1ceabd00b9d8f54.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4365458",
+      "requested_block_height": "latest",
+      "sha256": "f57dba01f49036665a73380aa646fb8e0be339d5fcdbbeb39485be5434a36d0c",
+      "size_bytes": 507601
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_poc_v2_validations_for_stage_4370923.659c842b1dc96998.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4370923",
+      "requested_block_height": "latest",
+      "sha256": "a426391b37993e5f7360f289e28d663c27e7a050056a83c219ce0f615a9ce718",
+      "size_bytes": 533274
+    },
+    {
+      "cache_file": "raw_stage_cache/post_upgrade_scan/productscience_inference_inference_poc_v2_validations_for_stage_4373098.b45bf5476b83d462.json",
+      "consumer": "post_upgrade_regression_scan",
+      "inferred_endpoint": "/productscience/inference/inference/poc_v2_validations_for_stage/4373098",
+      "requested_block_height": "latest",
+      "sha256": "ab401e97b65db81e15ecf32815921ff5dd62d49f1ca1dc885c013a79c20a4954",
+      "size_bytes": 546834
     },
     {
       "cache_file": "raw_stage_cache/productscience_inference_inference_all_poc_v2_store_commits_4073650.6194d53efc4cac7a.json",

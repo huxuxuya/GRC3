@@ -55,7 +55,7 @@ def pct(value: str) -> str:
 
 
 def amount(value: Decimal | str) -> str:
-    return f"{Decimal(value):,.12f}"
+    return f"{Decimal(value):,.9f}"
 
 
 def compact_model(row: dict[str, str] | None) -> str:
@@ -288,6 +288,9 @@ def write_decision_summary(path: Path, rows: list[dict[str, Any]]) -> None:
         f"| `review` | `{action_counts['review']}` | `{amount(review_loss)}` | Compare against P4-CAND-01 before payout. |",
         f"| `blocked` | `{action_counts['blocked']}` | `{amount(blocked_loss)}` | Resolve P3-CAND-04 duplicate risk first. |",
         "",
+        "For a full calculation that includes all rows before overlap filtering, see",
+        "`case6_gross_compensation_calculation.md`.",
+        "",
         "## Overlap Split",
         "",
         "| Overlap status | Rows |",
@@ -303,9 +306,10 @@ def write_decision_summary(path: Path, rows: list[dict[str, Any]]) -> None:
             "",
             "1. `case6_decision_summary.md` for the one-page conclusion.",
             "2. `case6_evidence_ledger.md` for row-by-row evidence.",
-            "3. `case6_full_old_formula_replay.md` for formula reconciliation.",
-            "4. `case6_new_algorithm_replay.md` for the bounded post-fix counterfactual.",
-            "5. `case6_overlap_matrix.md` before any payout decision.",
+            "3. `case6_gross_compensation_calculation.md` for the all-row gross table.",
+            "4. `case6_full_old_formula_replay.md` for formula reconciliation.",
+            "5. `case6_new_algorithm_replay.md` for the bounded post-fix counterfactual.",
+            "6. `case6_overlap_matrix.md` before any payout decision.",
             "",
         ]
     )

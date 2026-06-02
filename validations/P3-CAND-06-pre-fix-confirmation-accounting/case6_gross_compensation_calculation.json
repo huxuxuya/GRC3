@@ -1,0 +1,682 @@
+{
+  "by_epoch": [
+    {
+      "epoch": "263",
+      "gross_compensation_gonka": "8719.070532944",
+      "rows": 3,
+      "unique_participants": 3
+    },
+    {
+      "epoch": "264",
+      "gross_compensation_gonka": "6010.126484192",
+      "rows": 3,
+      "unique_participants": 3
+    },
+    {
+      "epoch": "265",
+      "gross_compensation_gonka": "335.927643572",
+      "rows": 1,
+      "unique_participants": 1
+    },
+    {
+      "epoch": "268",
+      "gross_compensation_gonka": "25309.087745610",
+      "rows": 1,
+      "unique_participants": 1
+    },
+    {
+      "epoch": "269",
+      "gross_compensation_gonka": "2764.396118755",
+      "rows": 2,
+      "unique_participants": 2
+    },
+    {
+      "epoch": "271",
+      "gross_compensation_gonka": "139.200061369",
+      "rows": 1,
+      "unique_participants": 1
+    },
+    {
+      "epoch": "272",
+      "gross_compensation_gonka": "31070.826328522",
+      "rows": 4,
+      "unique_participants": 4
+    },
+    {
+      "epoch": "273",
+      "gross_compensation_gonka": "3237.649981278",
+      "rows": 2,
+      "unique_participants": 2
+    },
+    {
+      "epoch": "274",
+      "gross_compensation_gonka": "310.429493665",
+      "rows": 2,
+      "unique_participants": 2
+    },
+    {
+      "epoch": "275",
+      "gross_compensation_gonka": "126.220428182",
+      "rows": 1,
+      "unique_participants": 1
+    },
+    {
+      "epoch": "276",
+      "gross_compensation_gonka": "42799.389553703",
+      "rows": 4,
+      "unique_participants": 4
+    }
+  ],
+  "by_overlap_reference": [
+    {
+      "gross_compensation_gonka": "17356.095656742",
+      "overlap_status_reference_only": "known_p3_cand_04_same_address",
+      "rows": 1
+    },
+    {
+      "gross_compensation_gonka": "14729.197017136",
+      "overlap_status_reference_only": "no_known_overlap_in_local_repo",
+      "rows": 6
+    },
+    {
+      "gross_compensation_gonka": "25443.293896961",
+      "overlap_status_reference_only": "p3_cand_04_epoch_overlap_unresolved",
+      "rows": 3
+    },
+    {
+      "gross_compensation_gonka": "63293.737800953",
+      "overlap_status_reference_only": "p4_cand_01_epoch_range_overlap",
+      "rows": 14
+    }
+  ],
+  "by_participant": [
+    {
+      "epochs": "268, 272",
+      "gross_compensation_gonka": "47830.124048154",
+      "overlap_statuses_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1q5xt54wncgzk7dxv9x64uln68455g83wu9tugg",
+      "pass_models": "Kimi",
+      "rows": 2
+    },
+    {
+      "epochs": "276",
+      "gross_compensation_gonka": "17356.095656742",
+      "overlap_statuses_reference_only": "known_p3_cand_04_same_address",
+      "participant": "gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09",
+      "pass_models": "Qwen+Kimi",
+      "rows": 1
+    },
+    {
+      "epochs": "263, 276",
+      "gross_compensation_gonka": "14970.660343414",
+      "overlap_statuses_reference_only": "no_known_overlap_in_local_repo, p3_cand_04_epoch_overlap_unresolved",
+      "participant": "gonka1ujnc662v6g69jm6fgxnr79a2m7ehzeut059239",
+      "pass_models": "Kimi, Qwen",
+      "rows": 2
+    },
+    {
+      "epochs": "276",
+      "gross_compensation_gonka": "11765.489995489",
+      "overlap_statuses_reference_only": "p3_cand_04_epoch_overlap_unresolved",
+      "participant": "gonka14tqh62mangwzrma2lgg2dm375rcjzn2ydy8ttm",
+      "pass_models": "Kimi",
+      "rows": 1
+    },
+    {
+      "epochs": "272",
+      "gross_compensation_gonka": "8037.485696859",
+      "overlap_statuses_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1ym3np7guxart483yfdxnlztuazx22cjt0e4a2p",
+      "pass_models": "Qwen",
+      "rows": 1
+    },
+    {
+      "epochs": "276",
+      "gross_compensation_gonka": "3557.528990032",
+      "overlap_statuses_reference_only": "p3_cand_04_epoch_overlap_unresolved",
+      "participant": "gonka1f0u3y2wneer8zhz3ypw4x54h38cpa0qsy8ts3e",
+      "pass_models": "Qwen",
+      "rows": 1
+    },
+    {
+      "epochs": "273",
+      "gross_compensation_gonka": "3018.788733411",
+      "overlap_statuses_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx",
+      "pass_models": "Qwen",
+      "rows": 1
+    },
+    {
+      "epochs": "269",
+      "gross_compensation_gonka": "2228.595538500",
+      "overlap_statuses_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1007py6y2qfn2vaqrthqhtchkwx64hgzc6w544w",
+      "pass_models": "Kimi",
+      "rows": 1
+    },
+    {
+      "epochs": "264",
+      "gross_compensation_gonka": "2019.930762224",
+      "overlap_statuses_reference_only": "no_known_overlap_in_local_repo",
+      "participant": "gonka14g78ez2zy08k8sssue483zmfpgd4qut8zcwlqc",
+      "pass_models": "Kimi",
+      "rows": 1
+    },
+    {
+      "epochs": "264",
+      "gross_compensation_gonka": "2019.930762224",
+      "overlap_statuses_reference_only": "no_known_overlap_in_local_repo",
+      "participant": "gonka18xeqnspxpg2vncufnjne485rkaagwvz7whyn0d",
+      "pass_models": "Kimi",
+      "rows": 1
+    },
+    {
+      "epochs": "264",
+      "gross_compensation_gonka": "1970.264959744",
+      "overlap_statuses_reference_only": "no_known_overlap_in_local_repo",
+      "participant": "gonka1xwkesaxvdadh9wt9yyladu0r260s7whklcktds",
+      "pass_models": "Kimi",
+      "rows": 1
+    },
+    {
+      "epochs": "263",
+      "gross_compensation_gonka": "1953.032509538",
+      "overlap_statuses_reference_only": "no_known_overlap_in_local_repo",
+      "participant": "gonka1830lqug50lse998x2lakk4pj5ypfumz5pasz0y",
+      "pass_models": "Kimi",
+      "rows": 1
+    },
+    {
+      "epochs": "263",
+      "gross_compensation_gonka": "1915.652591432",
+      "overlap_statuses_reference_only": "no_known_overlap_in_local_repo",
+      "participant": "gonka19cjm4c5mt3j3qdr8vhytmm4hef3pnkvkm0x7m2",
+      "pass_models": "Kimi",
+      "rows": 1
+    },
+    {
+      "epochs": "272, 273, 274, 275",
+      "gross_compensation_gonka": "847.691711099",
+      "overlap_statuses_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p",
+      "pass_models": "Qwen",
+      "rows": 4
+    },
+    {
+      "epochs": "269",
+      "gross_compensation_gonka": "535.800580255",
+      "overlap_statuses_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3",
+      "pass_models": "Qwen",
+      "rows": 1
+    },
+    {
+      "epochs": "265",
+      "gross_compensation_gonka": "335.927643572",
+      "overlap_statuses_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww",
+      "pass_models": "Qwen",
+      "rows": 1
+    },
+    {
+      "epochs": "274",
+      "gross_compensation_gonka": "173.159717563",
+      "overlap_statuses_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1qwfrtz9c7kcrfkrrlne2pkcye74mj6ce33xdkl",
+      "pass_models": "Qwen",
+      "rows": 1
+    },
+    {
+      "epochs": "272",
+      "gross_compensation_gonka": "146.964070171",
+      "overlap_statuses_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1nku7u6d5mz80h35ty8ydeh0k5xydesvt9w0vjr",
+      "pass_models": "Qwen",
+      "rows": 1
+    },
+    {
+      "epochs": "271",
+      "gross_compensation_gonka": "139.200061369",
+      "overlap_statuses_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka16xa2sdc8qe2289nzr4e6vmdyzlke8g8fn8e75s",
+      "pass_models": "Qwen",
+      "rows": 1
+    }
+  ],
+  "by_pass_models": [
+    {
+      "gross_compensation_gonka": "81823.296078745",
+      "pass_models": "Kimi",
+      "rows": 10,
+      "unique_participants": 9
+    },
+    {
+      "gross_compensation_gonka": "21642.932636305",
+      "pass_models": "Qwen",
+      "rows": 13,
+      "unique_participants": 10
+    },
+    {
+      "gross_compensation_gonka": "17356.095656742",
+      "pass_models": "Qwen+Kimi",
+      "rows": 1,
+      "unique_participants": 1
+    }
+  ],
+  "rows": [
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "263",
+      "event_trigger_height": "4073650",
+      "exclusion_height": "4073931",
+      "gross_compensation_gonka": "1953.032509538",
+      "kimi_pass_weight": true,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "no_known_overlap_in_local_repo",
+      "participant": "gonka1830lqug50lse998x2lakk4pj5ypfumz5pasz0y",
+      "pass_models": "Kimi",
+      "qwen_pass_weight": false,
+      "stored_ratio_percent": "35.0447%",
+      "technical_status": "formula_reconciled_policy_required"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "263",
+      "event_trigger_height": "4073650",
+      "exclusion_height": "4073931",
+      "gross_compensation_gonka": "1915.652591432",
+      "kimi_pass_weight": true,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "no_known_overlap_in_local_repo",
+      "participant": "gonka19cjm4c5mt3j3qdr8vhytmm4hef3pnkvkm0x7m2",
+      "pass_models": "Kimi",
+      "qwen_pass_weight": false,
+      "stored_ratio_percent": "2.7391%",
+      "technical_status": "formula_reconciled_policy_required"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "263",
+      "event_trigger_height": "4073650",
+      "exclusion_height": "4073931",
+      "gross_compensation_gonka": "4850.385431974",
+      "kimi_pass_weight": false,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "no_known_overlap_in_local_repo",
+      "participant": "gonka1ujnc662v6g69jm6fgxnr79a2m7ehzeut059239",
+      "pass_models": "Qwen",
+      "qwen_pass_weight": true,
+      "stored_ratio_percent": "14.7717%",
+      "technical_status": "formula_reconciled_policy_required"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "264",
+      "event_trigger_height": "4075202",
+      "exclusion_height": "4075483",
+      "gross_compensation_gonka": "2019.930762224",
+      "kimi_pass_weight": true,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "no_known_overlap_in_local_repo",
+      "participant": "gonka14g78ez2zy08k8sssue483zmfpgd4qut8zcwlqc",
+      "pass_models": "Kimi",
+      "qwen_pass_weight": false,
+      "stored_ratio_percent": "6.0014%",
+      "technical_status": "formula_reconciled_policy_required"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "264",
+      "event_trigger_height": "4075202",
+      "exclusion_height": "4075483",
+      "gross_compensation_gonka": "2019.930762224",
+      "kimi_pass_weight": true,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "no_known_overlap_in_local_repo",
+      "participant": "gonka18xeqnspxpg2vncufnjne485rkaagwvz7whyn0d",
+      "pass_models": "Kimi",
+      "qwen_pass_weight": false,
+      "stored_ratio_percent": "49.2523%",
+      "technical_status": "formula_reconciled_policy_required"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "264",
+      "event_trigger_height": "4075202",
+      "exclusion_height": "4075483",
+      "gross_compensation_gonka": "1970.264959744",
+      "kimi_pass_weight": true,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "no_known_overlap_in_local_repo",
+      "participant": "gonka1xwkesaxvdadh9wt9yyladu0r260s7whklcktds",
+      "pass_models": "Kimi",
+      "qwen_pass_weight": false,
+      "stored_ratio_percent": "39.8189%",
+      "technical_status": "formula_reconciled_policy_required"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "265",
+      "event_trigger_height": "4102890",
+      "exclusion_height": "4103171",
+      "gross_compensation_gonka": "335.927643572",
+      "kimi_pass_weight": false,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww",
+      "pass_models": "Qwen",
+      "qwen_pass_weight": true,
+      "stored_ratio_percent": "20.7038%",
+      "technical_status": "formula_reconciled_policy_required"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "268",
+      "event_trigger_height": "4144898",
+      "exclusion_height": "4145179",
+      "gross_compensation_gonka": "25309.087745610",
+      "kimi_pass_weight": true,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1q5xt54wncgzk7dxv9x64uln68455g83wu9tugg",
+      "pass_models": "Kimi",
+      "qwen_pass_weight": false,
+      "stored_ratio_percent": "17.3837%",
+      "technical_status": "formula_reconciled_policy_required"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "269",
+      "event_trigger_height": "4164861",
+      "exclusion_height": "4165142",
+      "gross_compensation_gonka": "2228.595538500",
+      "kimi_pass_weight": true,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1007py6y2qfn2vaqrthqhtchkwx64hgzc6w544w",
+      "pass_models": "Kimi",
+      "qwen_pass_weight": false,
+      "stored_ratio_percent": "45.1393%",
+      "technical_status": "formula_reconciled_policy_required"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "269",
+      "event_trigger_height": "4153434",
+      "exclusion_height": "4153715",
+      "gross_compensation_gonka": "535.800580255",
+      "kimi_pass_weight": false,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3",
+      "pass_models": "Qwen",
+      "qwen_pass_weight": true,
+      "stored_ratio_percent": "45.8992%",
+      "technical_status": "formula_reconciled_policy_required"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "271",
+      "event_trigger_height": "4184386",
+      "exclusion_height": "4184667",
+      "gross_compensation_gonka": "139.200061369",
+      "kimi_pass_weight": false,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka16xa2sdc8qe2289nzr4e6vmdyzlke8g8fn8e75s",
+      "pass_models": "Qwen",
+      "qwen_pass_weight": true,
+      "stored_ratio_percent": "33.0943%",
+      "technical_status": "formula_reconciled_policy_required"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "272",
+      "event_trigger_height": "4202293",
+      "exclusion_height": "4202574",
+      "gross_compensation_gonka": "365.340258948",
+      "kimi_pass_weight": false,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p",
+      "pass_models": "Qwen",
+      "qwen_pass_weight": true,
+      "stored_ratio_percent": "28.7372%",
+      "technical_status": "formula_reconciled_policy_required"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "272",
+      "event_trigger_height": "4202293",
+      "exclusion_height": "4202574",
+      "gross_compensation_gonka": "146.964070171",
+      "kimi_pass_weight": false,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1nku7u6d5mz80h35ty8ydeh0k5xydesvt9w0vjr",
+      "pass_models": "Qwen",
+      "qwen_pass_weight": true,
+      "stored_ratio_percent": "19.6229%",
+      "technical_status": "formula_reconciled_policy_required"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "272",
+      "event_trigger_height": "4209686",
+      "exclusion_height": "4209967",
+      "gross_compensation_gonka": "22521.036302544",
+      "kimi_pass_weight": true,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1q5xt54wncgzk7dxv9x64uln68455g83wu9tugg",
+      "pass_models": "Kimi",
+      "qwen_pass_weight": false,
+      "stored_ratio_percent": "40.2573%",
+      "technical_status": "formula_reconciled_policy_required"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "272",
+      "event_trigger_height": "4202293",
+      "exclusion_height": "4202574",
+      "gross_compensation_gonka": "8037.485696859",
+      "kimi_pass_weight": false,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1ym3np7guxart483yfdxnlztuazx22cjt0e4a2p",
+      "pass_models": "Qwen",
+      "qwen_pass_weight": true,
+      "stored_ratio_percent": "19.0604%",
+      "technical_status": "formula_reconciled_policy_required"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "273",
+      "event_trigger_height": "4215427",
+      "exclusion_height": "4215708",
+      "gross_compensation_gonka": "218.861247867",
+      "kimi_pass_weight": false,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p",
+      "pass_models": "Qwen",
+      "qwen_pass_weight": true,
+      "stored_ratio_percent": "49.0130%",
+      "technical_status": "formula_reconciled_policy_required"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "273",
+      "event_trigger_height": "4215427",
+      "exclusion_height": "4215708",
+      "gross_compensation_gonka": "3018.788733411",
+      "kimi_pass_weight": false,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx",
+      "pass_models": "Qwen",
+      "qwen_pass_weight": true,
+      "stored_ratio_percent": "31.5761%",
+      "technical_status": "formula_reconciled_policy_required"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "274",
+      "event_trigger_height": "4231815",
+      "exclusion_height": "4232096",
+      "gross_compensation_gonka": "137.269776102",
+      "kimi_pass_weight": false,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p",
+      "pass_models": "Qwen",
+      "qwen_pass_weight": true,
+      "stored_ratio_percent": "29.0542%",
+      "technical_status": "formula_reconciled_policy_required"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "274",
+      "event_trigger_height": "4232787",
+      "exclusion_height": "4233068",
+      "gross_compensation_gonka": "173.159717563",
+      "kimi_pass_weight": false,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1qwfrtz9c7kcrfkrrlne2pkcye74mj6ce33xdkl",
+      "pass_models": "Qwen",
+      "qwen_pass_weight": true,
+      "stored_ratio_percent": "30.4095%",
+      "technical_status": "formula_reconciled_policy_required"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "275",
+      "event_trigger_height": "4258197",
+      "exclusion_height": "4258478",
+      "gross_compensation_gonka": "126.220428182",
+      "kimi_pass_weight": false,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "p4_cand_01_epoch_range_overlap",
+      "participant": "gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p",
+      "pass_models": "Qwen",
+      "qwen_pass_weight": true,
+      "stored_ratio_percent": "33.4816%",
+      "technical_status": "formula_reconciled_policy_required"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "276",
+      "event_trigger_height": "4267778",
+      "exclusion_height": "4268059",
+      "gross_compensation_gonka": "17356.095656742",
+      "kimi_pass_weight": true,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "False",
+      "overlap_status_reference_only": "known_p3_cand_04_same_address",
+      "participant": "gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09",
+      "pass_models": "Qwen+Kimi",
+      "qwen_pass_weight": true,
+      "stored_ratio_percent": "35.2638%",
+      "technical_status": "blocked_epoch276_overlap"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "276",
+      "event_trigger_height": "4264130",
+      "exclusion_height": "4264411",
+      "gross_compensation_gonka": "11765.489995489",
+      "kimi_pass_weight": true,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "False",
+      "overlap_status_reference_only": "p3_cand_04_epoch_overlap_unresolved",
+      "participant": "gonka14tqh62mangwzrma2lgg2dm375rcjzn2ydy8ttm",
+      "pass_models": "Kimi",
+      "qwen_pass_weight": false,
+      "stored_ratio_percent": "37.1301%",
+      "technical_status": "blocked_epoch276_overlap"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "276",
+      "event_trigger_height": "4265965",
+      "exclusion_height": "4266246",
+      "gross_compensation_gonka": "3557.528990032",
+      "kimi_pass_weight": false,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "p3_cand_04_epoch_overlap_unresolved",
+      "participant": "gonka1f0u3y2wneer8zhz3ypw4x54h38cpa0qsy8ts3e",
+      "pass_models": "Qwen",
+      "qwen_pass_weight": true,
+      "stored_ratio_percent": "16.9861%",
+      "technical_status": "blocked_epoch276_overlap"
+    },
+    {
+      "bounded_new_algorithm_would_pass_alpha": "False",
+      "calculation_scope": "included_before_overlap_review",
+      "epoch": "276",
+      "event_trigger_height": "4264130",
+      "exclusion_height": "4264411",
+      "gross_compensation_gonka": "10120.274911440",
+      "kimi_pass_weight": true,
+      "note": "Gross candidate amount; do not treat as approved payout until policy and overlap review are complete.",
+      "old_formula_matches_stored": "True",
+      "overlap_status_reference_only": "p3_cand_04_epoch_overlap_unresolved",
+      "participant": "gonka1ujnc662v6g69jm6fgxnr79a2m7ehzeut059239",
+      "pass_models": "Kimi",
+      "qwen_pass_weight": false,
+      "stored_ratio_percent": "36.3655%",
+      "technical_status": "blocked_epoch276_overlap"
+    }
+  ],
+  "summary": {
+    "gross_compensation_gonka": "120822.324371792",
+    "rows": 24,
+    "scope": "before_overlap_review",
+    "unique_participants": 19
+  }
+}

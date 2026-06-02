@@ -75,6 +75,21 @@ def fmt_percent_from_ratio(value: str | int | float) -> str:
 
 
 def model_cell(row: dict[str, Any], prefix: str) -> str:
+    if row.get("row_type") in {"poc_baseline", "next_epoch_poc"}:
+        result = row.get(f"{prefix}_poc_result")
+        if result == "not_in_epoch_group":
+            return "not in epoch group"
+        if result != "in_epoch_group":
+            return ""
+        parts = [
+            f"PoC weight {fmt_int(row.get(f'{prefix}_poc_weight'))}",
+            f"voting {fmt_int(row.get(f'{prefix}_poc_voting_power'))}",
+            f"CW {fmt_int(row.get(f'{prefix}_poc_confirmation_weight'))}",
+        ]
+        nodes = row.get(f"{prefix}_poc_nodes")
+        if nodes:
+            parts.append(f"nodes {nodes}")
+        return "; ".join(parts)
     if not row.get(f"{prefix}_result"):
         return ""
     submitted = int(row[f"{prefix}_submitted_count"])
@@ -151,19 +166,48 @@ def build_rows() -> list[dict[str, Any]]:
         events = sorted(events, key=lambda item: int(item["event_sequence"]))
         model_votes = {model: scan.model_voting_power(group) for model, group in model_groups.items()}
         next_epoch_group = scan.get_epoch_group(base, CACHE_DIR, epoch + 1, None, False)
+        next_epoch_model_groups = {
+            model: scan.get_epoch_group(base, CACHE_DIR, epoch + 1, model, False) for model in MODELS
+        }
         epoch_cache[epoch] = {
             "root_group": root_group,
             "root_weights": scan.root_weight_map(root_group),
             "total_network_weight": int(root_group["total_weight"]),
             "events": events,
+            "model_groups": model_groups,
             "model_votes": model_votes,
             "poc_start": int(root_group["poc_start_block_height"]),
             "effective_start": int(root_group["effective_block_height"]),
             "next_epoch_height": int(next_epoch_group["poc_start_block_height"]),
             "next_epoch_root_weights": scan.root_weight_map(next_epoch_group),
             "next_epoch_total_network_weight": int(next_epoch_group["total_weight"]),
+            "next_epoch_model_groups": next_epoch_model_groups,
         }
         return epoch_cache[epoch]
+
+    def model_poc_fields(data: dict[str, Any], participant: str, prefix: str, model: str, *, next_epoch: bool = False) -> dict[str, Any]:
+        groups_key = "next_epoch_model_groups" if next_epoch else "model_groups"
+        group = data[groups_key][model]
+        for item in group.get("validation_weights") or []:
+            if item.get("member_address") != participant:
+                continue
+            nodes = item.get("ml_nodes") or []
+            return {
+                f"{prefix}_poc_result": "in_epoch_group",
+                f"{prefix}_poc_weight": item.get("weight", ""),
+                f"{prefix}_poc_voting_power": item.get("voting_power", ""),
+                f"{prefix}_poc_confirmation_weight": item.get("confirmation_weight", ""),
+                f"{prefix}_poc_nodes": ";".join(
+                    f"{node.get('node_id')}:{node.get('poc_weight') or node.get('weight') or ''}" for node in nodes
+                ),
+            }
+        return {
+            f"{prefix}_poc_result": "not_in_epoch_group",
+            f"{prefix}_poc_weight": "",
+            f"{prefix}_poc_voting_power": "",
+            f"{prefix}_poc_confirmation_weight": "",
+            f"{prefix}_poc_nodes": "",
+        }
 
     def group_at(epoch: int, height: int) -> dict[str, Any]:
         key = (epoch, height)
@@ -185,8 +229,7 @@ def build_rows() -> list[dict[str, Any]]:
         exclusion_height = int(failed["exclusion_height"])
         poc_utc, poc_msk = block_time(base, data["poc_start"])
 
-        rows.append(
-            {
+        poc_row = {
                 "participant": participant,
                 "epoch": epoch,
                 "event_epoch": epoch,
@@ -226,7 +269,9 @@ def build_rows() -> list[dict[str, Any]]:
                 "loss_gonka": "",
                 "note": "epoch PoC baseline before any confirmation PoC event",
             }
-        )
+        poc_row.update(model_poc_fields(data, participant, "qwen", QWEN))
+        poc_row.update(model_poc_fields(data, participant, "kimi", KIMI))
+        rows.append(poc_row)
 
         events = data["events"]
         for index, event in enumerate(events):
@@ -323,8 +368,7 @@ def build_rows() -> list[dict[str, Any]]:
         next_root_weights = data["next_epoch_root_weights"]
         next_root_weight = next_root_weights.get(participant, 0)
         next_network_weight = data["next_epoch_total_network_weight"]
-        rows.append(
-            {
+        next_poc_row = {
                 "participant": participant,
                 "epoch": epoch,
                 "event_epoch": epoch + 1,
@@ -364,7 +408,9 @@ def build_rows() -> list[dict[str, Any]]:
                 "loss_gonka": "",
                 "note": "next epoch PoC baseline; use this to see whether participant weight restored",
             }
-        )
+        next_poc_row.update(model_poc_fields(data, participant, "qwen", QWEN, next_epoch=True))
+        next_poc_row.update(model_poc_fields(data, participant, "kimi", KIMI, next_epoch=True))
+        rows.append(next_poc_row)
     return rows
 
 
@@ -385,8 +431,10 @@ def write_markdown(path: Path, rows: list[dict[str, Any]]) -> None:
         "",
         "- Each participant/epoch section starts with the epoch PoC baseline and ends with the next epoch PoC baseline.",
         "- `PoC weight` is the participant root weight for that row's event epoch.",
+        "- For PoC baseline rows, `Qwen` and `Kimi` show model-level PoC weight, voting power, confirmation weight, and node ids.",
+        "- For cPoC rows, `Qwen` and `Kimi` show submitted nonce count, validating weight, and validation result.",
         "- `CW before -> after` is root confirmation weight before the cPoC effect and at the post-cPoC snapshot.",
-        "- `CW before -> after` is intentionally blank for PoC baseline rows; those rows show root/PoC weight only.",
+        "- `CW before -> after` is intentionally blank for PoC baseline rows; those rows show PoC model membership instead.",
         "- For non-failing cPoC rows, the post-cPoC snapshot is the block before the next cPoC trigger.",
         "- For the failing cPoC row, the post-cPoC snapshot is the exclusion block.",
         "- For cPoC rows after `LOST`, the post-cPoC snapshot continues to the next cPoC or the next epoch PoC.",
@@ -513,10 +561,20 @@ def main() -> None:
         "qwen_valid_weight",
         "qwen_valid_weight_percent",
         "qwen_result",
+        "qwen_poc_result",
+        "qwen_poc_weight",
+        "qwen_poc_voting_power",
+        "qwen_poc_confirmation_weight",
+        "qwen_poc_nodes",
         "kimi_submitted_count",
         "kimi_valid_weight",
         "kimi_valid_weight_percent",
         "kimi_result",
+        "kimi_poc_result",
+        "kimi_poc_weight",
+        "kimi_poc_voting_power",
+        "kimi_poc_confirmation_weight",
+        "kimi_poc_nodes",
         "event_status",
         "exclusion_height",
         "blocks_to_next_epoch_from_snapshot",

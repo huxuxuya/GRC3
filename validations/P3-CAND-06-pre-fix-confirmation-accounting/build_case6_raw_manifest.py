@@ -24,6 +24,9 @@ def sha256(path: Path) -> str:
 
 
 def infer_height(name: str) -> str:
+    block_match = re.search(r"blocks_(\d+)", name)
+    if block_match:
+        return block_match.group(1)
     if not name.startswith("height_"):
         return "latest"
     parts = name.split("_", 2)
@@ -31,6 +34,10 @@ def infer_height(name: str) -> str:
 
 
 def infer_consumer(name: str) -> str:
+    if "post_upgrade_scan/" in name:
+        return "post_upgrade_regression_scan"
+    if "cosmos_base_tendermint_v1beta1_blocks" in name:
+        return "epoch_upgrade_timeline"
     if "all_poc_v2_store_commits" in name:
         return "submission_validator_evidence;old_formula_replay"
     if "poc_v2_validations_for_stage" in name:
@@ -53,6 +60,10 @@ def infer_endpoint(name: str) -> str:
     if base.startswith("height_"):
         base = base.split("_", 2)[2]
     base = base.rsplit(".", 2)[0]
+
+    block_match = re.match(r"^cosmos_base_tendermint_v1beta1_blocks_(\d+)$", base)
+    if block_match:
+        return f"/cosmos/base/tendermint/v1beta1/blocks/{block_match.group(1)}"
 
     prefix = "productscience_inference_inference_"
     if not base.startswith(prefix):
@@ -83,6 +94,26 @@ def infer_endpoint(name: str) -> str:
             r"^all_mlnode_weight_distributions_(\d+)$",
             "/productscience/inference/inference/all_mlnode_weight_distributions/{0}",
         ),
+        (
+            r"^epoch_group_data_(\d+)$",
+            "/productscience/inference/inference/epoch_group_data/{0}",
+        ),
+        (
+            r"^epoch_performance_summary_(\d+)$",
+            "/productscience/inference/inference/epoch_performance_summary/{0}",
+        ),
+        (
+            r"^excluded_participants_(\d+)$",
+            "/productscience/inference/inference/excluded_participants/{0}",
+        ),
+        (
+            r"^confirmation_poc_events_(\d+)$",
+            "/productscience/inference/inference/confirmation_poc_events/{0}",
+        ),
+        (
+            r"^participant_(gonka[0-9a-z]+)$",
+            "/productscience/inference/inference/participant/{0}",
+        ),
     ]
     for pattern, endpoint in endpoint_patterns:
         match = re.match(pattern, suffix)
@@ -99,17 +130,18 @@ def infer_endpoint(name: str) -> str:
 
 def build_rows() -> list[dict[str, Any]]:
     rows = []
-    for path in sorted(CACHE_DIR.glob("*.json")):
+    for path in sorted(CACHE_DIR.rglob("*.json")):
         stat = path.stat()
         name = path.name
+        cache_file = str(path.relative_to(CASE_DIR))
         rows.append(
             {
-                "cache_file": str(path.relative_to(CASE_DIR)),
+                "cache_file": cache_file,
                 "requested_block_height": infer_height(name),
                 "size_bytes": stat.st_size,
                 "sha256": sha256(path),
                 "inferred_endpoint": infer_endpoint(name),
-                "consumer": infer_consumer(name),
+                "consumer": infer_consumer(cache_file),
             }
         )
     return rows
@@ -145,7 +177,7 @@ def write_md(path: Path, rows: list[dict[str, Any]]) -> None:
         "| Metric | Value |",
         "|---|---:|",
         f"| Cache files | `{len(rows)}` |",
-        f"| Total cache size | `{total_size}` bytes |",
+        f"| Total cache size | `{total_size}` bytes (`{total_size / 1_000_000:.1f} MB`) |",
         "",
         "## Files By Consumer",
         "",

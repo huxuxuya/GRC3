@@ -1,0 +1,38 @@
+{
+  "participant": {
+    "address": "gonka1tlvg4kjx7ljd5thgd5fkgh39q6lu8cmxupktgg",
+    "coin_balance": "0",
+    "consecutive_invalid_inferences": "0",
+    "current_epoch_stats": {
+      "burned_coins": "0",
+      "confirmationPoCRatio": {
+        "exponent": -16,
+        "value": "1998073052732751"
+      },
+      "earned_coins": "0",
+      "inactiveLLR": {
+        "exponent": 0,
+        "value": "0"
+      },
+      "inference_count": "0",
+      "invalidLLR": {
+        "exponent": 0,
+        "value": "0"
+      },
+      "invalidated_inferences": "0",
+      "missed_requests": "0",
+      "rewarded_coins": "0",
+      "validated_inferences": "0"
+    },
+    "epochs_completed": 0,
+    "index": "gonka1tlvg4kjx7ljd5thgd5fkgh39q6lu8cmxupktgg",
+    "inference_url": "http://gnk.antifreeze.dev:8000",
+    "join_height": "3036862",
+    "join_time": "1773206021944",
+    "last_inference_time": "1779185333948",
+    "status": "INACTIVE",
+    "validator_key": "1lTDgkHP4xflr3onskHMNWHtKeNqzjWNhfHxKlxFhxA=",
+    "weight": -1,
+    "worker_public_key": ""
+  }
+}

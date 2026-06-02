@@ -9,8 +9,10 @@ Column notes:
 
 - Each participant/epoch section starts with the epoch PoC baseline and ends with the next epoch PoC baseline.
 - `PoC weight` is the participant root weight for that row's event epoch.
+- For PoC baseline rows, `Qwen` and `Kimi` show model-level PoC weight, voting power, confirmation weight, and node ids.
+- For cPoC rows, `Qwen` and `Kimi` show submitted nonce count, validating weight, and validation result.
 - `CW before -> after` is root confirmation weight before the cPoC effect and at the post-cPoC snapshot.
-- `CW before -> after` is intentionally blank for PoC baseline rows; those rows show root/PoC weight only.
+- `CW before -> after` is intentionally blank for PoC baseline rows; those rows show PoC model membership instead.
 - For non-failing cPoC rows, the post-cPoC snapshot is the block before the next cPoC trigger.
 - For the failing cPoC row, the post-cPoC snapshot is the exclusion block.
 - For cPoC rows after `LOST`, the post-cPoC snapshot continues to the next cPoC or the next epoch PoC.
@@ -38,14 +40,14 @@ Candidate epochs: `269`. Candidate loss sum: `2228.595538500` GONKA.
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,151,534` / `2026-05-19 17:33:15 MSK` | `5,324` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,151,534` / `2026-05-19 17:33:15 MSK` | `5,324` | not in epoch group | PoC weight 6,145; voting 5,324; CW 7,755; nodes node1:6145 |  |  |  | PoC |
 | `cPoC #0` | `4,153,434` / `2026-05-19 20:19:10 MSK` | `4,155,549` / `2026-05-19 23:23:22 MSK` | `5,324` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 7,232; valid 589,387 (86.7515%) | `7,755` -> `7,755` | `0` | `145.6612%` | kept |
 | `cPoC #1` | `4,155,550` / `2026-05-19 23:23:27 MSK` | `4,157,968` / `2026-05-20 02:53:44 MSK` | `5,324` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 7,232; valid 589,387 (86.7515%) | `7,755` -> `7,755` | `0` | `145.6612%` | kept |
 | `cPoC #2` | `4,157,969` / `2026-05-20 02:53:49 MSK` | `4,162,915` / `2026-05-20 10:03:53 MSK` | `5,324` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 7,232; valid 589,387 (86.7515%) | `7,755` -> `7,755` | `0` | `145.6612%` | kept |
 | `cPoC #3` | `4,162,916` / `2026-05-20 10:03:55 MSK` | `4,163,711` / `2026-05-20 11:13:07 MSK` | `5,324` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 7,232; valid 589,387 (86.7515%) | `7,755` -> `7,755` | `0` | `145.6612%` | kept |
 | `cPoC #4` | `4,163,712` / `2026-05-20 11:13:13 MSK` | `4,164,860` / `2026-05-20 12:53:09 MSK` | `5,324` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 7,232; valid 584,213 (85.9899%) | `7,755` -> `7,755` | `0` | `145.6612%` | kept |
 | `cPoC #5` | `4,164,861` / `2026-05-20 12:53:15 MSK` | `4,165,142` / `2026-05-20 13:17:44 MSK` | `5,324` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 2,784; valid 570,600 (83.9862%) | `7,755` -> `3,182` | `-4,573` | `59.7671%` | LOST |
-| `PoC epoch 270` |  | `4,166,925` / `2026-05-20 15:52:11 MSK` | `0` |  |  |  |  |  | next PoC |
+| `PoC epoch 270` |  | `4,166,925` / `2026-05-20 15:52:11 MSK` | `0` | not in epoch group | not in epoch group |  |  |  | next PoC |
 
 Loss point: at cPoC `#5` confirmation weight moves from `7,755` to `3,182`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -69,12 +71,12 @@ Candidate epochs: `276`. Candidate loss sum: `17356.095656742` GONKA.
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,259,271` / `2026-05-26 05:59:12 MSK` | `48,865` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,259,271` / `2026-05-26 05:59:12 MSK` | `48,865` | PoC weight 22,007; voting 48,865; CW 67,553; nodes node1:10872;node7:11135 | PoC weight 47,260; voting 49,367; CW 67,553; nodes node2:11874;node3:12011;node4:11818;node5:11557 |  |  |  | PoC |
 | `cPoC #0` | `4,264,130` / `2026-05-26 13:03:34 MSK` | `4,265,964` / `2026-05-26 15:43:16 MSK` | `48,865` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 51,904; valid 687,806 (86.1881%) | `67,553` -> `67,553` | `0` | `138.2441%` | kept |
 | `cPoC #1` | `4,265,965` / `2026-05-26 15:43:21 MSK` | `4,267,777` / `2026-05-26 18:24:58 MSK` | `48,865` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 38,048; valid 642,096 (80.4602%) | `67,553` -> `65,994` | `-1,559` | `135.0537%` | reduced |
 | `cPoC #2` | `4,267,778` / `2026-05-26 18:25:04 MSK` | `4,268,059` / `2026-05-26 18:49:39 MSK` | `48,865` | pass_weight; sub 11,552; valid 694,173 (86.9859%) | pass_weight; sub 12,160; valid 628,214 (78.7207%) | `65,994` -> `21,654` | `-44,340` | `44.3139%` | LOST |
 | `cPoC #3` | `4,270,605` / `2026-05-26 22:36:05 MSK` | `4,274,661` / `2026-05-27 04:36:32 MSK` | `48,865` | pass_weight; sub 12,096; valid 703,765 (88.1879%) | pass_weight; sub 12,768; valid 629,637 (78.8990%) | `21,654` -> `18,447` | `-3,207` | `37.7509%` | after loss |
-| `PoC epoch 277` |  | `4,274,662` / `2026-05-27 04:36:37 MSK` | `12,961` |  |  |  |  |  | next PoC |
+| `PoC epoch 277` |  | `4,274,662` / `2026-05-27 04:36:37 MSK` | `12,961` | PoC weight 10,861; voting 12,961; CW 12,961; nodes node7:10861 | PoC weight 11,615; voting 12,961; CW 12,961; nodes node5:11615 |  |  |  | next PoC |
 
 Loss point: at cPoC `#2` confirmation weight moves from `65,994` to `21,654`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -98,10 +100,10 @@ Candidate epochs: `264`. Candidate loss sum: `2019.930762224` GONKA.
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,074,579` / `2026-05-15 03:53:30 MSK` | `7,158` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,074,579` / `2026-05-15 03:53:30 MSK` | `7,158` | not in epoch group | PoC weight 5,970; voting 7,158; CW 7,534; nodes node607:5970 |  |  |  | PoC |
 | `cPoC #0` | `4,075,202` / `2026-05-15 04:47:04 MSK` | `4,075,483` / `2026-05-15 05:11:12 MSK` | `7,158` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 352; valid 713,388 (70.6191%) | `7,534` -> `411` | `-7,123` | `5.7418%` | LOST |
 | `cPoC #1` | `4,075,770` / `2026-05-15 05:35:44 MSK` | `4,089,969` / `2026-05-16 01:48:37 MSK` | `7,158` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 2,272; valid 724,283 (71.6976%) | `411` -> `411` | `0` | `5.7418%` | after loss |
-| `PoC epoch 265` |  | `4,089,970` / `2026-05-16 01:48:39 MSK` | `0` |  |  |  |  |  | next PoC |
+| `PoC epoch 265` |  | `4,089,970` / `2026-05-16 01:48:39 MSK` | `0` | not in epoch group | not in epoch group |  |  |  | next PoC |
 
 Loss point: at cPoC `#0` confirmation weight moves from `7,534` to `411`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -125,12 +127,12 @@ Candidate epochs: `276`. Candidate loss sum: `11765.489995489` GONKA.
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,259,271` / `2026-05-26 05:59:12 MSK` | `33,125` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,259,271` / `2026-05-26 05:59:12 MSK` | `33,125` | not in epoch group | PoC weight 40,259; voting 33,125; CW 50,810; nodes gonka-v-8b300-110:6738;gonka-v-8b300-111:6710;gonka-v-8b300-118:6710;gonka-v-8b300-119:6654;gonka-v-8b300-122:6737;gonka-v-8b300-123:6710 |  |  |  | PoC |
 | `cPoC #0` | `4,264,130` / `2026-05-26 13:03:34 MSK` | `4,264,411` / `2026-05-26 13:28:07 MSK` | `33,125` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 14,784; valid 687,806 (86.1881%) | `50,810` -> `17,149` | `-33,661` | `51.7706%` | LOST |
 | `cPoC #1` | `4,265,965` / `2026-05-26 15:43:21 MSK` | `4,267,777` / `2026-05-26 18:24:58 MSK` | `33,125` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `17,149` -> `0` | `-17,149` | `0.0000%` | after loss |
 | `cPoC #2` | `4,267,778` / `2026-05-26 18:25:04 MSK` | `4,270,604` / `2026-05-26 22:36:00 MSK` | `33,125` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `0` -> `0` | `0` | `0.0000%` | after loss |
 | `cPoC #3` | `4,270,605` / `2026-05-26 22:36:05 MSK` | `4,274,661` / `2026-05-27 04:36:32 MSK` | `33,125` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `0` -> `0` | `0` | `0.0000%` | after loss |
-| `PoC epoch 277` |  | `4,274,662` / `2026-05-27 04:36:37 MSK` | `4,448` |  |  |  |  |  | next PoC |
+| `PoC epoch 277` |  | `4,274,662` / `2026-05-27 04:36:37 MSK` | `4,448` | not in epoch group | PoC weight 6,003; voting 4,448; CW 4,682; nodes gonka-v-8b300-128:6003 |  |  |  | next PoC |
 
 Loss point: at cPoC `#0` confirmation weight moves from `50,810` to `17,149`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -154,7 +156,7 @@ Candidate epochs: `271`. Candidate loss sum: `139.200061369` GONKA.
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,182,316` / `2026-05-21 14:12:07 MSK` | `390` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,182,316` / `2026-05-21 14:12:07 MSK` | `390` | PoC weight 6,393; voting 390; CW 2,297; nodes machine:6393 | not in epoch group |  |  |  | PoC |
 | `cPoC #0` | `4,184,386` / `2026-05-21 17:12:37 MSK` | `4,184,667` / `2026-05-21 17:37:04 MSK` | `390` | pass_weight; sub 2,125; valid 622,966 (78.2591%) | no_submission; sub 0; valid 0 (0.0000%) | `2,297` -> `691` | `-1,606` | `177.1795%` | LOST |
 | `cPoC #1` | `4,185,816` / `2026-05-21 19:17:22 MSK` | `4,186,812` / `2026-05-21 20:44:20 MSK` | `390` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `691` -> `0` | `-691` | `0.0000%` | after loss |
 | `cPoC #2` | `4,186,813` / `2026-05-21 20:44:25 MSK` | `4,190,337` / `2026-05-22 01:51:35 MSK` | `390` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `0` -> `0` | `0` | `0.0000%` | after loss |
@@ -162,7 +164,7 @@ Candidate epochs: `271`. Candidate loss sum: `139.200061369` GONKA.
 | `cPoC #4` | `4,191,446` / `2026-05-22 03:28:08 MSK` | `4,193,852` / `2026-05-22 06:57:35 MSK` | `390` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `0` -> `0` | `0` | `0.0000%` | after loss |
 | `cPoC #5` | `4,193,853` / `2026-05-22 06:57:40 MSK` | `4,194,322` / `2026-05-22 07:38:32 MSK` | `390` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `0` -> `0` | `0` | `0.0000%` | after loss |
 | `cPoC #6` | `4,194,323` / `2026-05-22 07:38:37 MSK` | `4,197,706` / `2026-05-22 12:32:37 MSK` | `390` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `0` -> `0` | `0` | `0.0000%` | after loss |
-| `PoC epoch 272` |  | `4,197,707` / `2026-05-22 12:32:39 MSK` | `397` |  |  |  |  |  | next PoC |
+| `PoC epoch 272` |  | `4,197,707` / `2026-05-22 12:32:39 MSK` | `397` | PoC weight 6,510; voting 397; CW 2,339; nodes machine:6510 | not in epoch group |  |  |  | next PoC |
 
 Loss point: at cPoC `#0` confirmation weight moves from `2,297` to `691`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -186,9 +188,9 @@ Candidate epochs: `263`. Candidate loss sum: `1953.032509538` GONKA.
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,059,188` / `2026-05-14 05:51:04 MSK` | `7,158` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,059,188` / `2026-05-14 05:51:04 MSK` | `7,158` | not in epoch group | PoC weight 5,970; voting 7,158; CW 7,534; nodes node802:5970 |  |  |  | PoC |
 | `cPoC #0` | `4,073,650` / `2026-05-15 02:33:51 MSK` | `4,073,931` / `2026-05-15 02:58:01 MSK` | `7,158` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 2,080; valid 798,165 (76.3582%) | `7,534` -> `2,400` | `-5,134` | `33.5289%` | LOST |
-| `PoC epoch 264` |  | `4,074,579` / `2026-05-15 03:53:30 MSK` | `6,404` |  |  |  |  |  | next PoC |
+| `PoC epoch 264` |  | `4,074,579` / `2026-05-15 03:53:30 MSK` | `6,404` | not in epoch group | PoC weight 5,970; voting 6,404; CW 7,534; nodes node802:5970 |  |  |  | next PoC |
 
 Loss point: at cPoC `#0` confirmation weight moves from `7,534` to `2,400`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -212,10 +214,10 @@ Candidate epochs: `264`. Candidate loss sum: `2019.930762224` GONKA.
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,074,579` / `2026-05-15 03:53:30 MSK` | `7,158` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,074,579` / `2026-05-15 03:53:30 MSK` | `7,158` | not in epoch group | PoC weight 5,970; voting 7,158; CW 7,534; nodes node803:5970 |  |  |  | PoC |
 | `cPoC #0` | `4,075,202` / `2026-05-15 04:47:04 MSK` | `4,075,483` / `2026-05-15 05:11:12 MSK` | `7,158` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 2,880; valid 713,388 (70.6191%) | `7,534` -> `3,373` | `-4,161` | `47.1221%` | LOST |
 | `cPoC #1` | `4,075,770` / `2026-05-15 05:35:44 MSK` | `4,089,969` / `2026-05-16 01:48:37 MSK` | `7,158` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `3,373` -> `3,373` | `0` | `47.1221%` | after loss |
-| `PoC epoch 265` |  | `4,089,970` / `2026-05-16 01:48:39 MSK` | `14,284` |  |  |  |  |  | next PoC |
+| `PoC epoch 265` |  | `4,089,970` / `2026-05-16 01:48:39 MSK` | `14,284` | not in epoch group | PoC weight 11,913; voting 14,284; CW 15,035; nodes node803:5970;node813:5943 |  |  |  | next PoC |
 
 Loss point: at cPoC `#0` confirmation weight moves from `7,534` to `3,373`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -239,9 +241,9 @@ Candidate epochs: `263`. Candidate loss sum: `1915.652591432` GONKA.
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,059,188` / `2026-05-14 05:51:04 MSK` | `7,021` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,059,188` / `2026-05-14 05:51:04 MSK` | `7,021` | not in epoch group | PoC weight 5,856; voting 7,021; CW 7,390; nodes node218:5856 |  |  |  | PoC |
 | `cPoC #0` | `4,073,650` / `2026-05-15 02:33:51 MSK` | `4,073,931` / `2026-05-15 02:58:01 MSK` | `7,021` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 160; valid 798,165 (76.3582%) | `7,390` -> `184` | `-7,206` | `2.6207%` | LOST |
-| `PoC epoch 264` |  | `4,074,579` / `2026-05-15 03:53:30 MSK` | `6,282` |  |  |  |  |  | next PoC |
+| `PoC epoch 264` |  | `4,074,579` / `2026-05-15 03:53:30 MSK` | `6,282` | not in epoch group | PoC weight 5,856; voting 6,282; CW 7,390; nodes node218:5856 |  |  |  | next PoC |
 
 Loss point: at cPoC `#0` confirmation weight moves from `7,390` to `184`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -265,11 +267,11 @@ Candidate epochs: `265`. Candidate loss sum: `335.927643572` GONKA.
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,089,970` / `2026-05-16 01:48:39 MSK` | `1,066` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,089,970` / `2026-05-16 01:48:39 MSK` | `1,066` | PoC weight 3,491; voting 1,066; CW 1,254; nodes node1:3491 | not in epoch group |  |  |  | PoC |
 | `cPoC #0` | `4,095,682` / `2026-05-16 09:55:01 MSK` | `4,098,878` / `2026-05-16 14:25:55 MSK` | `1,066` | pass_weight; sub 4,960; valid 639,915 (70.7732%) | no_submission; sub 0; valid 0 (0.0000%) | `1,254` -> `1,254` | `0` | `117.6360%` | kept |
 | `cPoC #1` | `4,098,879` / `2026-05-16 14:26:01 MSK` | `4,102,889` / `2026-05-16 20:05:14 MSK` | `1,066` | pass_weight; sub 5,696; valid 669,448 (74.0395%) | no_submission; sub 0; valid 0 (0.0000%) | `1,254` -> `1,254` | `0` | `117.6360%` | kept |
 | `cPoC #2` | `4,102,890` / `2026-05-16 20:05:17 MSK` | `4,103,171` / `2026-05-16 20:29:07 MSK` | `1,066` | pass_weight; sub 704; valid 629,010 (69.5671%) | no_submission; sub 0; valid 0 (0.0000%) | `1,254` -> `236` | `-1,018` | `22.1388%` | LOST |
-| `PoC epoch 266` |  | `4,105,361` / `2026-05-16 23:31:35 MSK` | `1,084` |  |  |  |  |  | next PoC |
+| `PoC epoch 266` |  | `4,105,361` / `2026-05-16 23:31:35 MSK` | `1,084` | PoC weight 3,551; voting 1,084; CW 1,275; nodes node1:3551 | not in epoch group |  |  |  | next PoC |
 
 Loss point: at cPoC `#2` confirmation weight moves from `1,254` to `236`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -293,12 +295,12 @@ Candidate epochs: `276`. Candidate loss sum: `3557.528990032` GONKA.
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,259,271` / `2026-05-26 05:59:12 MSK` | `10,016` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,259,271` / `2026-05-26 05:59:12 MSK` | `10,016` | PoC weight 3,822; voting 78,781; CW 8,698; nodes node207:3822 | PoC weight 5,804; voting 10,016; CW 8,698; nodes node217:5804 |  |  |  | PoC |
 | `cPoC #0` | `4,264,130` / `2026-05-26 13:03:34 MSK` | `4,265,964` / `2026-05-26 15:43:16 MSK` | `10,016` | pass_weight; sub 4,224; valid 614,628 (77.0183%) | no_submission; sub 0; valid 0 (0.0000%) | `8,698` -> `8,698` | `0` | `86.8411%` | kept |
 | `cPoC #1` | `4,265,965` / `2026-05-26 15:43:21 MSK` | `4,266,246` / `2026-05-26 16:07:52 MSK` | `10,016` | pass_weight; sub 4,128; valid 613,141 (76.8319%) | no_submission; sub 0; valid 0 (0.0000%) | `8,698` -> `1,343` | `-7,355` | `13.4085%` | LOST |
 | `cPoC #2` | `4,267,778` / `2026-05-26 18:25:04 MSK` | `4,270,604` / `2026-05-26 22:36:00 MSK` | `10,016` | pass_weight; sub 4,128; valid 694,624 (87.0425%) | no_submission; sub 0; valid 0 (0.0000%) | `1,343` -> `1,343` | `0` | `13.4085%` | after loss |
 | `cPoC #3` | `4,270,605` / `2026-05-26 22:36:05 MSK` | `4,274,661` / `2026-05-27 04:36:32 MSK` | `10,016` | pass_weight; sub 4,224; valid 704,216 (88.2444%) | no_submission; sub 0; valid 0 (0.0000%) | `1,343` -> `1,343` | `0` | `13.4085%` | after loss |
-| `PoC epoch 277` |  | `4,274,662` / `2026-05-27 04:36:37 MSK` | `7,533` |  |  |  |  |  | next PoC |
+| `PoC epoch 277` |  | `4,274,662` / `2026-05-27 04:36:37 MSK` | `7,533` | PoC weight 3,713; voting 38,463; CW 5,907; nodes node207:3713 | PoC weight 5,863; voting 7,533; CW 5,907; nodes node217:5863 |  |  |  | next PoC |
 
 Loss point: at cPoC `#1` confirmation weight moves from `8,698` to `1,343`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -322,13 +324,13 @@ Candidate epochs: `272, 273, 274, 275`. Candidate loss sum: `847.691711099` GONK
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,197,707` / `2026-05-22 12:32:39 MSK` | `1,059` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,197,707` / `2026-05-22 12:32:39 MSK` | `1,059` | PoC weight 3,101; voting 1,059; CW 1,114; nodes node1:3101 | not in epoch group |  |  |  | PoC |
 | `cPoC #0` | `4,202,293` / `2026-05-22 19:12:26 MSK` | `4,202,574` / `2026-05-22 19:37:00 MSK` | `1,059` | pass_weight; sub 896; valid 794,373 (96.5002%) | no_submission; sub 0; valid 0 (0.0000%) | `1,114` -> `291` | `-823` | `27.4788%` | LOST |
 | `cPoC #1` | `4,202,715` / `2026-05-22 19:49:20 MSK` | `4,208,127` / `2026-05-23 03:41:03 MSK` | `1,059` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `291` -> `0` | `-291` | `0.0000%` | after loss |
 | `cPoC #2` | `4,208,128` / `2026-05-23 03:41:08 MSK` | `4,209,685` / `2026-05-23 05:56:56 MSK` | `1,059` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `0` -> `0` | `0` | `0.0000%` | after loss |
 | `cPoC #3` | `4,209,686` / `2026-05-23 05:57:01 MSK` | `4,211,723` / `2026-05-23 08:54:11 MSK` | `1,059` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `0` -> `0` | `0` | `0.0000%` | after loss |
 | `cPoC #4` | `4,211,724` / `2026-05-23 08:54:16 MSK` | `4,213,097` / `2026-05-23 10:53:45 MSK` | `1,059` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `0` -> `0` | `0` | `0.0000%` | after loss |
-| `PoC epoch 273` |  | `4,213,098` / `2026-05-23 10:53:51 MSK` | `585` |  |  |  |  |  | next PoC |
+| `PoC epoch 273` |  | `4,213,098` / `2026-05-23 10:53:51 MSK` | `585` | PoC weight 1,714; voting 585; CW 615; nodes node1:1714 | not in epoch group |  |  |  | next PoC |
 
 Loss point: at cPoC `#0` confirmation weight moves from `1,114` to `291`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -348,9 +350,9 @@ Loss point: at cPoC `#0` confirmation weight moves from `1,114` to `291`; this i
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,213,098` / `2026-05-23 10:53:51 MSK` | `585` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,213,098` / `2026-05-23 10:53:51 MSK` | `585` | PoC weight 1,714; voting 585; CW 615; nodes node1:1714 | not in epoch group |  |  |  | PoC |
 | `cPoC #0` | `4,215,427` / `2026-05-23 14:16:57 MSK` | `4,215,708` / `2026-05-23 14:41:29 MSK` | `585` | pass_weight; sub 832; valid 566,480 (74.6631%) | no_submission; sub 0; valid 0 (0.0000%) | `615` -> `274` | `-341` | `46.8376%` | LOST |
-| `PoC epoch 274` |  | `4,228,489` / `2026-05-24 09:11:40 MSK` | `371` |  |  |  |  |  | next PoC |
+| `PoC epoch 274` |  | `4,228,489` / `2026-05-24 09:11:40 MSK` | `371` | PoC weight 1,086; voting 371; CW 390; nodes node1:1086 | not in epoch group |  |  |  | next PoC |
 
 Loss point: at cPoC `#0` confirmation weight moves from `615` to `274`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -370,13 +372,13 @@ Loss point: at cPoC `#0` confirmation weight moves from `615` to `274`; this is 
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,228,489` / `2026-05-24 09:11:40 MSK` | `371` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,228,489` / `2026-05-24 09:11:40 MSK` | `371` | PoC weight 1,086; voting 371; CW 390; nodes node1:1086 | not in epoch group |  |  |  | PoC |
 | `cPoC #0` | `4,229,666` / `2026-05-24 10:54:36 MSK` | `4,231,814` / `2026-05-24 14:02:37 MSK` | `371` | pass_weight; sub 960; valid 528,504 (68.9230%) | no_submission; sub 0; valid 0 (0.0000%) | `390` -> `312` | `-78` | `84.0970%` | reduced |
 | `cPoC #1` | `4,231,815` / `2026-05-24 14:02:43 MSK` | `4,232,096` / `2026-05-24 14:27:23 MSK` | `371` | pass_weight; sub 320; valid 639,375 (83.3818%) | no_submission; sub 0; valid 0 (0.0000%) | `312` -> `103` | `-209` | `27.7628%` | LOST |
 | `cPoC #2` | `4,232,787` / `2026-05-24 15:27:37 MSK` | `4,234,330` / `2026-05-24 17:42:30 MSK` | `371` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `103` -> `0` | `-103` | `0.0000%` | after loss |
 | `cPoC #3` | `4,234,331` / `2026-05-24 17:42:36 MSK` | `4,242,456` / `2026-05-25 05:27:16 MSK` | `371` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `0` -> `0` | `0` | `0.0000%` | after loss |
 | `cPoC #4` | `4,242,457` / `2026-05-25 05:27:22 MSK` | `4,243,879` / `2026-05-25 07:31:22 MSK` | `371` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `0` -> `0` | `0` | `0.0000%` | after loss |
-| `PoC epoch 275` |  | `4,243,880` / `2026-05-25 07:31:28 MSK` | `328` |  |  |  |  |  | next PoC |
+| `PoC epoch 275` |  | `4,243,880` / `2026-05-25 07:31:28 MSK` | `328` | PoC weight 962; voting 328; CW 345; nodes node1:962 | not in epoch group |  |  |  | next PoC |
 
 Loss point: at cPoC `#1` confirmation weight moves from `312` to `103`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -396,11 +398,11 @@ Loss point: at cPoC `#1` confirmation weight moves from `312` to `103`; this is 
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,243,880` / `2026-05-25 07:31:28 MSK` | `328` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,243,880` / `2026-05-25 07:31:28 MSK` | `328` | PoC weight 962; voting 328; CW 345; nodes node1:962 | not in epoch group |  |  |  | PoC |
 | `cPoC #0` | `4,248,892` / `2026-05-25 14:50:15 MSK` | `4,249,773` / `2026-05-25 16:07:25 MSK` | `328` | pass_weight; sub 896; valid 663,716 (90.0656%) | no_submission; sub 0; valid 0 (0.0000%) | `345` -> `289` | `-56` | `88.1098%` | reduced |
 | `cPoC #1` | `4,249,774` / `2026-05-25 16:07:31 MSK` | `4,258,196` / `2026-05-26 04:25:02 MSK` | `328` | pass_weight; sub 960; valid 548,096 (74.3761%) | no_submission; sub 0; valid 0 (0.0000%) | `289` -> `289` | `0` | `88.1098%` | kept |
 | `cPoC #2` | `4,258,197` / `2026-05-26 04:25:08 MSK` | `4,258,478` / `2026-05-26 04:49:49 MSK` | `328` | pass_weight; sub 320; valid 666,218 (90.4051%) | no_submission; sub 0; valid 0 (0.0000%) | `289` -> `105` | `-184` | `32.0122%` | LOST |
-| `PoC epoch 276` |  | `4,259,271` / `2026-05-26 05:59:12 MSK` | `328` |  |  |  |  |  | next PoC |
+| `PoC epoch 276` |  | `4,259,271` / `2026-05-26 05:59:12 MSK` | `328` | PoC weight 962; voting 328; CW 345; nodes node1:962 | not in epoch group |  |  |  | next PoC |
 
 Loss point: at cPoC `#2` confirmation weight moves from `289` to `105`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -424,14 +426,14 @@ Candidate epochs: `269`. Candidate loss sum: `535.800580255` GONKA.
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,151,534` / `2026-05-19 17:33:15 MSK` | `1,280` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,151,534` / `2026-05-19 17:33:15 MSK` | `1,280` | PoC weight 3,750; voting 1,280; CW 1,347; nodes node1:3750 | not in epoch group |  |  |  | PoC |
 | `cPoC #0` | `4,153,434` / `2026-05-19 20:19:10 MSK` | `4,153,715` / `2026-05-19 20:43:43 MSK` | `1,280` | pass_weight; sub 1,728; valid 594,093 (87.4442%) | no_submission; sub 0; valid 0 (0.0000%) | `1,347` -> `562` | `-785` | `43.9062%` | LOST |
 | `cPoC #1` | `4,155,550` / `2026-05-19 23:23:27 MSK` | `4,157,968` / `2026-05-20 02:53:44 MSK` | `1,280` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `562` -> `562` | `0` | `43.9062%` | after loss |
 | `cPoC #2` | `4,157,969` / `2026-05-20 02:53:49 MSK` | `4,162,915` / `2026-05-20 10:03:53 MSK` | `1,280` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `562` -> `0` | `-562` | `0.0000%` | after loss |
 | `cPoC #3` | `4,162,916` / `2026-05-20 10:03:55 MSK` | `4,163,711` / `2026-05-20 11:13:07 MSK` | `1,280` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `0` -> `0` | `0` | `0.0000%` | after loss |
 | `cPoC #4` | `4,163,712` / `2026-05-20 11:13:13 MSK` | `4,164,860` / `2026-05-20 12:53:09 MSK` | `1,280` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `0` -> `0` | `0` | `0.0000%` | after loss |
 | `cPoC #5` | `4,164,861` / `2026-05-20 12:53:15 MSK` | `4,166,924` / `2026-05-20 15:52:05 MSK` | `1,280` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `0` -> `0` | `0` | `0.0000%` | after loss |
-| `PoC epoch 270` |  | `4,166,925` / `2026-05-20 15:52:11 MSK` | `0` |  |  |  |  |  | next PoC |
+| `PoC epoch 270` |  | `4,166,925` / `2026-05-20 15:52:11 MSK` | `0` | not in epoch group | not in epoch group |  |  |  | next PoC |
 
 Loss point: at cPoC `#0` confirmation weight moves from `1,347` to `562`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -455,13 +457,13 @@ Candidate epochs: `272`. Candidate loss sum: `146.964070171` GONKA.
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,197,707` / `2026-05-22 12:32:39 MSK` | `426` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,197,707` / `2026-05-22 12:32:39 MSK` | `426` | PoC weight 6,975; voting 426; CW 2,506; nodes MLNODE:6975 | not in epoch group |  |  |  | PoC |
 | `cPoC #0` | `4,202,293` / `2026-05-22 19:12:26 MSK` | `4,202,574` / `2026-05-22 19:37:00 MSK` | `426` | pass_weight; sub 1,375; valid 793,001 (96.3335%) | no_submission; sub 0; valid 0 (0.0000%) | `2,506` -> `447` | `-2,059` | `104.9296%` | LOST |
 | `cPoC #1` | `4,202,715` / `2026-05-22 19:49:20 MSK` | `4,208,127` / `2026-05-23 03:41:03 MSK` | `426` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `447` -> `0` | `-447` | `0.0000%` | after loss |
 | `cPoC #2` | `4,208,128` / `2026-05-23 03:41:08 MSK` | `4,209,685` / `2026-05-23 05:56:56 MSK` | `426` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `0` -> `0` | `0` | `0.0000%` | after loss |
 | `cPoC #3` | `4,209,686` / `2026-05-23 05:57:01 MSK` | `4,211,723` / `2026-05-23 08:54:11 MSK` | `426` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `0` -> `0` | `0` | `0.0000%` | after loss |
 | `cPoC #4` | `4,211,724` / `2026-05-23 08:54:16 MSK` | `4,213,097` / `2026-05-23 10:53:45 MSK` | `426` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `0` -> `0` | `0` | `0.0000%` | after loss |
-| `PoC epoch 273` |  | `4,213,098` / `2026-05-23 10:53:51 MSK` | `436` |  |  |  |  |  | next PoC |
+| `PoC epoch 273` |  | `4,213,098` / `2026-05-23 10:53:51 MSK` | `436` | PoC weight 7,141; voting 436; CW 2,565; nodes MLNODE:7141 | not in epoch group |  |  |  | next PoC |
 
 Loss point: at cPoC `#0` confirmation weight moves from `2,506` to `447`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -485,7 +487,7 @@ Candidate epochs: `268, 272`. Candidate loss sum: `47830.124048154` GONKA.
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,136,143` / `2026-05-18 19:14:41 MSK` | `62,145` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,136,143` / `2026-05-18 19:14:41 MSK` | `62,145` | not in epoch group | PoC weight 72,591; voting 127,192; CW 91,616; nodes k202:12434;k203:12094;k205:11981;k206:12009;x207:12178;x301:11895 |  |  |  | PoC |
 | `cPoC #0` | `4,136,924` / `2026-05-18 20:22:09 MSK` | `4,139,231` / `2026-05-18 23:42:55 MSK` | `62,145` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 77,984; valid 575,036 (82.3080%) | `91,616` -> `90,027` | `-1,589` | `144.8660%` | reduced |
 | `cPoC #1` | `4,139,232` / `2026-05-18 23:43:01 MSK` | `4,141,308` / `2026-05-19 02:43:44 MSK` | `62,145` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 77,504; valid 579,803 (82.9904%) | `90,027` -> `89,471` | `-556` | `143.9714%` | reduced |
 | `cPoC #2` | `4,141,309` / `2026-05-19 02:43:50 MSK` | `4,144,897` / `2026-05-19 07:56:14 MSK` | `62,145` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 77,120; valid 588,609 (84.2508%) | `89,471` -> `89,030` | `-441` | `143.2617%` | reduced |
@@ -493,7 +495,7 @@ Candidate epochs: `268, 272`. Candidate loss sum: `47830.124048154` GONKA.
 | `cPoC #4` | `4,148,831` / `2026-05-19 13:39:06 MSK` | `4,149,819` / `2026-05-19 15:04:43 MSK` | `62,145` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `14,477` -> `0` | `-14,477` | `0.0000%` | after loss |
 | `cPoC #5` | `4,149,820` / `2026-05-19 15:04:49 MSK` | `4,150,412` / `2026-05-19 15:56:09 MSK` | `62,145` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `0` -> `0` | `0` | `0.0000%` | after loss |
 | `cPoC #6` | `4,150,413` / `2026-05-19 15:56:15 MSK` | `4,151,533` / `2026-05-19 17:33:09 MSK` | `62,145` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `0` -> `0` | `0` | `0.0000%` | after loss |
-| `PoC epoch 269` |  | `4,151,534` / `2026-05-19 17:33:15 MSK` | `23,602` |  |  |  |  |  | next PoC |
+| `PoC epoch 269` |  | `4,151,534` / `2026-05-19 17:33:15 MSK` | `23,602` | not in epoch group | PoC weight 23,667; voting 87,650; CW 29,869; nodes k201:11772;x301:11895 |  |  |  | next PoC |
 
 Loss point: at cPoC `#3` confirmation weight moves from `89,030` to `14,477`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -513,13 +515,13 @@ Loss point: at cPoC `#3` confirmation weight moves from `89,030` to `14,477`; th
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,197,707` / `2026-05-22 12:32:39 MSK` | `65,281` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,197,707` / `2026-05-22 12:32:39 MSK` | `65,281` | not in epoch group | PoC weight 59,384; voting 128,777; CW 74,947; nodes k201:12212;k202:11989;k302:11654;k303:11709;x301:11820 |  |  |  | PoC |
 | `cPoC #0` | `4,202,293` / `2026-05-22 19:12:26 MSK` | `4,202,714` / `2026-05-22 19:49:14 MSK` | `65,281` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 38,944; valid 715,470 (86.9151%) | `74,947` -> `44,527` | `-30,420` | `68.2082%` | reduced |
 | `cPoC #1` | `4,202,715` / `2026-05-22 19:49:20 MSK` | `4,208,127` / `2026-05-23 03:41:03 MSK` | `65,281` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 25,792; valid 757,571 (92.0295%) | `44,527` -> `44,339` | `-188` | `67.9202%` | reduced |
 | `cPoC #2` | `4,208,128` / `2026-05-23 03:41:08 MSK` | `4,209,685` / `2026-05-23 05:56:56 MSK` | `65,281` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 38,368; valid 745,006 (90.5031%) | `44,339` -> `44,078` | `-261` | `67.5204%` | reduced |
 | `cPoC #3` | `4,209,686` / `2026-05-23 05:57:01 MSK` | `4,209,967` / `2026-05-23 06:21:32 MSK` | `65,281` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 23,872; valid 748,261 (90.8985%) | `44,078` -> `27,426` | `-16,652` | `42.0122%` | LOST |
 | `cPoC #4` | `4,211,724` / `2026-05-23 08:54:16 MSK` | `4,213,097` / `2026-05-23 10:53:45 MSK` | `65,281` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 13,184; valid 774,646 (94.1037%) | `27,426` -> `27,426` | `0` | `42.0122%` | after loss |
-| `PoC epoch 273` |  | `4,213,098` / `2026-05-23 10:53:51 MSK` | `21,183` |  |  |  |  |  | next PoC |
+| `PoC epoch 273` |  | `4,213,098` / `2026-05-23 10:53:51 MSK` | `21,183` | not in epoch group | PoC weight 23,458; voting 84,620; CW 29,606; nodes k302:11654;x301:11804 |  |  |  | next PoC |
 
 Loss point: at cPoC `#3` confirmation weight moves from `44,078` to `27,426`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -543,13 +545,13 @@ Candidate epochs: `274`. Candidate loss sum: `173.159717563` GONKA.
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,228,489` / `2026-05-24 09:11:40 MSK` | `468` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,228,489` / `2026-05-24 09:11:40 MSK` | `468` | PoC weight 1,371; voting 468; CW 492; nodes node1:1371 | not in epoch group |  |  |  | PoC |
 | `cPoC #0` | `4,229,666` / `2026-05-24 10:54:36 MSK` | `4,231,814` / `2026-05-24 14:02:37 MSK` | `468` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `492` -> `492` | `0` | `105.1282%` | kept |
 | `cPoC #1` | `4,231,815` / `2026-05-24 14:02:43 MSK` | `4,232,786` / `2026-05-24 15:27:32 MSK` | `468` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `492` -> `492` | `0` | `105.1282%` | kept |
 | `cPoC #2` | `4,232,787` / `2026-05-24 15:27:37 MSK` | `4,233,068` / `2026-05-24 15:52:09 MSK` | `468` | pass_weight; sub 416; valid 612,200 (79.8379%) | no_submission; sub 0; valid 0 (0.0000%) | `492` -> `136` | `-356` | `29.0598%` | LOST |
 | `cPoC #3` | `4,234,331` / `2026-05-24 17:42:36 MSK` | `4,242,456` / `2026-05-25 05:27:16 MSK` | `468` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `136` -> `136` | `0` | `29.0598%` | after loss |
 | `cPoC #4` | `4,242,457` / `2026-05-25 05:27:22 MSK` | `4,243,879` / `2026-05-25 07:31:22 MSK` | `468` | pass_weight; sub 1,600; valid 675,634 (88.1104%) | no_submission; sub 0; valid 0 (0.0000%) | `136` -> `136` | `0` | `29.0598%` | after loss |
-| `PoC epoch 275` |  | `4,243,880` / `2026-05-25 07:31:28 MSK` | `419` |  |  |  |  |  | next PoC |
+| `PoC epoch 275` |  | `4,243,880` / `2026-05-25 07:31:28 MSK` | `419` | PoC weight 1,371; voting 419; CW 492; nodes node1:1371 | not in epoch group |  |  |  | next PoC |
 
 Loss point: at cPoC `#2` confirmation weight moves from `492` to `136`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -573,9 +575,9 @@ Candidate epochs: `263, 276`. Candidate loss sum: `14970.660343414` GONKA.
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,059,188` / `2026-05-14 05:51:04 MSK` | `17,777` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,059,188` / `2026-05-14 05:51:04 MSK` | `17,777` | PoC weight 6,812; voting 17,777; CW 17,777; nodes node100-2:6812 | PoC weight 12,147; voting 17,777; CW 17,777; nodes node300-7:12147 |  |  |  | PoC |
 | `cPoC #0` | `4,073,650` / `2026-05-15 02:33:51 MSK` | `4,073,931` / `2026-05-15 02:58:01 MSK` | `17,777` | pass_weight; sub 7,264; valid 726,111 (69.4650%) | no_submission; sub 0; valid 0 (0.0000%) | `17,777` -> `2,387` | `-15,390` | `13.4275%` | LOST |
-| `PoC epoch 264` |  | `4,074,579` / `2026-05-15 03:53:30 MSK` | `17,777` |  |  |  |  |  | next PoC |
+| `PoC epoch 264` |  | `4,074,579` / `2026-05-15 03:53:30 MSK` | `17,777` | PoC weight 6,812; voting 17,777; CW 17,777; nodes node100-2:6812 | PoC weight 12,147; voting 17,777; CW 17,777; nodes node300-7:12147 |  |  |  | next PoC |
 
 Loss point: at cPoC `#0` confirmation weight moves from `17,777` to `2,387`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -595,12 +597,12 @@ Loss point: at cPoC `#0` confirmation weight moves from `17,777` to `2,387`; thi
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,259,271` / `2026-05-26 05:59:12 MSK` | `28,493` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,259,271` / `2026-05-26 05:59:12 MSK` | `28,493` | not in epoch group | PoC weight 38,704; voting 28,493; CW 48,847; nodes node300-7:12837;node300-8:12865;node300-va-1:13002 |  |  |  | PoC |
 | `cPoC #0` | `4,264,130` / `2026-05-26 13:03:34 MSK` | `4,264,411` / `2026-05-26 13:28:07 MSK` | `28,493` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 13,920; valid 595,705 (74.6470%) | `48,847` -> `16,147` | `-32,700` | `56.6701%` | LOST |
 | `cPoC #1` | `4,265,965` / `2026-05-26 15:43:21 MSK` | `4,267,777` / `2026-05-26 18:24:58 MSK` | `28,493` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 14,112; valid 628,376 (78.7410%) | `16,147` -> `16,135` | `-12` | `56.6279%` | after loss |
 | `cPoC #2` | `4,267,778` / `2026-05-26 18:25:04 MSK` | `4,270,604` / `2026-05-26 22:36:00 MSK` | `28,493` | no_submission; sub 0; valid 0 (0.0000%) | no_submission; sub 0; valid 0 (0.0000%) | `16,135` -> `0` | `-16,135` | `0.0000%` | after loss |
 | `cPoC #3` | `4,270,605` / `2026-05-26 22:36:05 MSK` | `4,274,661` / `2026-05-27 04:36:32 MSK` | `28,493` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 13,568; valid 629,637 (78.8990%) | `0` -> `0` | `0` | `0.0000%` | after loss |
-| `PoC epoch 277` |  | `4,274,662` / `2026-05-27 04:36:37 MSK` | `8,997` |  |  |  |  |  | next PoC |
+| `PoC epoch 277` |  | `4,274,662` / `2026-05-27 04:36:37 MSK` | `8,997` | not in epoch group | PoC weight 12,816; voting 8,997; CW 9,996; nodes node300-va-1:12816 |  |  |  | next PoC |
 
 Loss point: at cPoC `#0` confirmation weight moves from `48,847` to `16,147`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -624,10 +626,10 @@ Candidate epochs: `264`. Candidate loss sum: `1970.264959744` GONKA.
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,074,579` / `2026-05-15 03:53:30 MSK` | `6,982` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,074,579` / `2026-05-15 03:53:30 MSK` | `6,982` | not in epoch group | PoC weight 5,823; voting 6,982; CW 7,349; nodes node801:5823 |  |  |  | PoC |
 | `cPoC #0` | `4,075,202` / `2026-05-15 04:47:04 MSK` | `4,075,483` / `2026-05-15 05:11:12 MSK` | `6,982` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 2,272; valid 713,388 (70.6191%) | `7,349` -> `2,660` | `-4,689` | `38.0980%` | LOST |
 | `cPoC #1` | `4,075,770` / `2026-05-15 05:35:44 MSK` | `4,089,969` / `2026-05-16 01:48:37 MSK` | `6,982` | no_submission; sub 0; valid 0 (0.0000%) | pass_weight; sub 4,800; valid 724,283 (71.6976%) | `2,660` -> `2,660` | `0` | `38.0980%` | after loss |
-| `PoC epoch 265` |  | `4,089,970` / `2026-05-16 01:48:39 MSK` | `0` |  |  |  |  |  | next PoC |
+| `PoC epoch 265` |  | `4,089,970` / `2026-05-16 01:48:39 MSK` | `0` | not in epoch group | not in epoch group |  |  |  | next PoC |
 
 Loss point: at cPoC `#0` confirmation weight moves from `7,349` to `2,660`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -651,13 +653,13 @@ Candidate epochs: `272`. Candidate loss sum: `8037.485696859` GONKA.
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,197,707` / `2026-05-22 12:32:39 MSK` | `23,298` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,197,707` / `2026-05-22 12:32:39 MSK` | `23,298` | PoC weight 68,255; voting 23,298; CW 24,524; nodes D1:9852;D6:9825;G2:9879;G3:9798;G4:9879;G5:9824;U5:1220;U57:7978 | not in epoch group |  |  |  | PoC |
 | `cPoC #0` | `4,202,293` / `2026-05-22 19:12:26 MSK` | `4,202,574` / `2026-05-22 19:37:00 MSK` | `23,298` | pass_weight; sub 13,056; valid 792,893 (96.3204%) | no_submission; sub 0; valid 0 (0.0000%) | `24,524` -> `4,249` | `-20,275` | `18.2376%` | LOST |
 | `cPoC #1` | `4,202,715` / `2026-05-22 19:49:20 MSK` | `4,208,127` / `2026-05-23 03:41:03 MSK` | `23,298` | pass_weight; sub 8,640; valid 705,182 (85.6653%) | no_submission; sub 0; valid 0 (0.0000%) | `4,249` -> `3,263` | `-986` | `14.0055%` | after loss |
 | `cPoC #2` | `4,208,128` / `2026-05-23 03:41:08 MSK` | `4,209,685` / `2026-05-23 05:56:56 MSK` | `23,298` | pass_weight; sub 8,768; valid 712,788 (86.5893%) | no_submission; sub 0; valid 0 (0.0000%) | `3,263` -> `3,263` | `0` | `14.0055%` | after loss |
 | `cPoC #3` | `4,209,686` / `2026-05-23 05:57:01 MSK` | `4,211,723` / `2026-05-23 08:54:11 MSK` | `23,298` | pass_weight; sub 8,640; valid 709,757 (86.2210%) | no_submission; sub 0; valid 0 (0.0000%) | `3,263` -> `3,263` | `0` | `14.0055%` | after loss |
 | `cPoC #4` | `4,211,724` / `2026-05-23 08:54:16 MSK` | `4,213,097` / `2026-05-23 10:53:45 MSK` | `23,298` | pass_weight; sub 8,896; valid 702,463 (85.3350%) | no_submission; sub 0; valid 0 (0.0000%) | `3,263` -> `3,263` | `0` | `14.0055%` | after loss |
-| `PoC epoch 273` |  | `4,213,098` / `2026-05-23 10:53:51 MSK` | `3,128` |  |  |  |  |  | next PoC |
+| `PoC epoch 273` |  | `4,213,098` / `2026-05-23 10:53:51 MSK` | `3,128` | PoC weight 9,165; voting 3,128; CW 3,292; nodes U5:1220;U57:7945 | not in epoch group |  |  |  | next PoC |
 
 Loss point: at cPoC `#0` confirmation weight moves from `24,524` to `4,249`; this is the row where the participant becomes a candidate for lost reward accounting.
 
@@ -681,8 +683,8 @@ Candidate epochs: `273`. Candidate loss sum: `3018.788733411` GONKA.
 
 | Event | Trigger / MSK | Snapshot / MSK | PoC weight | Qwen | Kimi | CW before -> after | Delta | After/PoC weight | Status |
 |---:|---|---|---:|---|---|---:|---:|---:|---|
-| `PoC` |  | `4,213,098` / `2026-05-23 10:53:51 MSK` | `8,069` |  |  |  |  |  | PoC |
+| `PoC` |  | `4,213,098` / `2026-05-23 10:53:51 MSK` | `8,069` | PoC weight 8,716; voting 8,069; CW 10,669; nodes lra_1:7662;ovh_ma:1054 | PoC weight 5,973; voting 8,069; CW 10,669; nodes ml-mo:5973 |  |  |  | PoC |
 | `cPoC #0` | `4,215,427` / `2026-05-23 14:16:57 MSK` | `4,215,708` / `2026-05-23 14:41:29 MSK` | `8,069` | pass_weight; sub 8,128; valid 558,411 (73.5996%) | no_submission; sub 0; valid 0 (0.0000%) | `10,669` -> `3,062` | `-7,607` | `37.9477%` | LOST |
-| `PoC epoch 274` |  | `4,228,489` / `2026-05-24 09:11:40 MSK` | `7,339` |  |  |  |  |  | next PoC |
+| `PoC epoch 274` |  | `4,228,489` / `2026-05-24 09:11:40 MSK` | `7,339` | PoC weight 24,031; voting 7,339; CW 8,634; nodes gpc_1:7659;lra_1:7659;lra_2:7659;ovh_ma:1054 | not in epoch group |  |  |  | next PoC |
 
 Loss point: at cPoC `#0` confirmation weight moves from `10,669` to `3,062`; this is the row where the participant becomes a candidate for lost reward accounting.
