@@ -1,0 +1,6 @@
+epoch,cpoc_sequence,cpoc_trigger_height,cpoc_trigger_msk,relation,excluded_at_stage,affected_rows_attributed,dropped_attributed,reduced_attributed,lost_cw_attributed,compensation_ngonka_attributed,compensation_gnk_attributed,loss_attribution
+276,0,4264130,2026-05-26 13:03:34 MSK,pre_upgrade,6,0,0,0,0,0,0.000000000,no_affected_rows_directly_attributed
+276,1,4265965,2026-05-26 15:43:21 MSK,pre_upgrade,2,0,0,0,0,0,0.000000000,no_affected_rows_directly_attributed
+276,2,4267778,2026-05-26 18:25:04 MSK,post_upgrade,5,5,5,0,85614,23216721558783,23216.721558783,direct_exclusion_height
+276,3,4270605,2026-05-26 22:36:05 MSK,post_upgrade,2,2,2,0,1480,401344965858,401.344965858,direct_exclusion_height
+276,final_snapshot_delta,,,post_upgrade_observed_by_h_after,,12,0,12,46432,12591384766710,12591.384766710,reduced_rows_have_no_exclusion_row; loss observed between h_before and h_after

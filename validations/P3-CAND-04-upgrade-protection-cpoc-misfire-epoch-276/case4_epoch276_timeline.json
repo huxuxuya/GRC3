@@ -1,0 +1,86 @@
+[
+  {
+    "blocks_after_upgrade": "",
+    "cpoc_sequence": 0,
+    "cpoc_trigger_height": 4248892,
+    "cpoc_trigger_msk": "2026-05-25 14:50:15 MSK",
+    "effective_height": 4244280,
+    "epoch": 275,
+    "excluded_at_stage": 6,
+    "last_height": 4259670,
+    "poc_start_height": 4243880,
+    "relation": "pre_upgrade"
+  },
+  {
+    "blocks_after_upgrade": "",
+    "cpoc_sequence": 1,
+    "cpoc_trigger_height": 4258197,
+    "cpoc_trigger_msk": "2026-05-26 04:25:08 MSK",
+    "effective_height": 4244280,
+    "epoch": 275,
+    "excluded_at_stage": 1,
+    "last_height": 4259670,
+    "poc_start_height": 4243880,
+    "relation": "pre_upgrade"
+  },
+  {
+    "blocks_after_upgrade": "",
+    "cpoc_sequence": 0,
+    "cpoc_trigger_height": 4264130,
+    "cpoc_trigger_msk": "2026-05-26 13:03:34 MSK",
+    "effective_height": 4259671,
+    "epoch": 276,
+    "excluded_at_stage": 6,
+    "last_height": 4275061,
+    "poc_start_height": 4259271,
+    "relation": "pre_upgrade"
+  },
+  {
+    "blocks_after_upgrade": "",
+    "cpoc_sequence": 1,
+    "cpoc_trigger_height": 4265965,
+    "cpoc_trigger_msk": "2026-05-26 15:43:21 MSK",
+    "effective_height": 4259671,
+    "epoch": 276,
+    "excluded_at_stage": 2,
+    "last_height": 4275061,
+    "poc_start_height": 4259271,
+    "relation": "pre_upgrade"
+  },
+  {
+    "blocks_after_upgrade": 478,
+    "cpoc_sequence": 2,
+    "cpoc_trigger_height": 4267778,
+    "cpoc_trigger_msk": "2026-05-26 18:25:04 MSK",
+    "effective_height": 4259671,
+    "epoch": 276,
+    "excluded_at_stage": 5,
+    "last_height": 4275061,
+    "poc_start_height": 4259271,
+    "relation": "post_upgrade"
+  },
+  {
+    "blocks_after_upgrade": 3305,
+    "cpoc_sequence": 3,
+    "cpoc_trigger_height": 4270605,
+    "cpoc_trigger_msk": "2026-05-26 22:36:05 MSK",
+    "effective_height": 4259671,
+    "epoch": 276,
+    "excluded_at_stage": 2,
+    "last_height": 4275061,
+    "poc_start_height": 4259271,
+    "relation": "post_upgrade"
+  },
+  {
+    "blocks_after_upgrade": 17338,
+    "cpoc_sequence": 0,
+    "cpoc_trigger_height": 4284638,
+    "cpoc_trigger_msk": "2026-05-27 19:23:22 MSK",
+    "effective_height": 4275062,
+    "epoch": 277,
+    "excluded_at_stage": 6,
+    "last_height": 4290452,
+    "poc_start_height": 4274662,
+    "relation": "post_upgrade_clean_epoch"
+  }
+]

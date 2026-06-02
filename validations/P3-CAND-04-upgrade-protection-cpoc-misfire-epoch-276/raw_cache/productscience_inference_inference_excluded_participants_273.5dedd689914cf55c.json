@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "address": "gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx",
+      "epoch_index": "273",
+      "exclusion_block_height": "4215708",
+      "reason": "failed_confirmation_poc"
+    },
+    {
+      "address": "gonka1yal0ysgzc860zt3y8cds8656tnueusgymftvkw",
+      "epoch_index": "273",
+      "exclusion_block_height": "4215708",
+      "reason": "failed_confirmation_poc"
+    },
+    {
+      "address": "gonka18x5f3q6g0r3n7rgslwq66d2hd6tp5mgxwxnmc3",
+      "epoch_index": "273",
+      "exclusion_block_height": "4215708",
+      "reason": "failed_confirmation_poc"
+    },
+    {
+      "address": "gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p",
+      "epoch_index": "273",
+      "exclusion_block_height": "4215708",
+      "reason": "failed_confirmation_poc"
+    },
+    {
+      "address": "gonka125n6kr5gvdup0lndfkps7t6rd6592panhrg3np",
+      "epoch_index": "273",
+      "exclusion_block_height": "4215708",
+      "reason": "failed_confirmation_poc"
+    },
+    {
+      "address": "gonka1tl5m3vuqsx333v7095ymwjdc4vdk2wd9r5hqws",
+      "epoch_index": "273",
+      "exclusion_block_height": "4215708",
+      "reason": "failed_confirmation_poc"
+    },
+    {
+      "address": "gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3",
+      "epoch_index": "273",
+      "exclusion_block_height": "4215708",
+      "reason": "failed_confirmation_poc"
+    },
+    {
+      "address": "gonka15munkmx6x7k6rqqeexjet4556p7at39ks9qgr5",
+      "epoch_index": "273",
+      "exclusion_block_height": "4215708",
+      "reason": "failed_confirmation_poc"
+    },
+    {
+      "address": "gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww",
+      "epoch_index": "273",
+      "exclusion_block_height": "4215708",
+      "reason": "failed_confirmation_poc"
+    },
+    {
+      "address": "gonka1mmlyd5xxu5l68yx8wzclrkxkxvm88mhq5tp5s0",
+      "epoch_index": "273",
+      "exclusion_block_height": "4215708",
+      "reason": "failed_confirmation_poc"
+    },
+    {
+      "address": "gonka1ujnc662v6g69jm6fgxnr79a2m7ehzeut059239",
+      "epoch_index": "273",
+      "exclusion_block_height": "4215708",
+      "reason": "failed_confirmation_poc"
+    }
+  ]
+}

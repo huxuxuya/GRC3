@@ -1,0 +1,192 @@
+[
+  {
+    "address": "gonka14ljarev2nlzu4ej50vx7ylj2rvg4n20fnq2ysc",
+    "case4_compensation_gnk": "88.946722163",
+    "epoch": 276,
+    "overlap_references": "",
+    "p3_cand_06_same_address_epoch276": 0,
+    "p4_known_same_address_epoch276": 0,
+    "reason": "no same-address overlap found in local normalized references",
+    "recommended_action": "no_local_overlap_signal"
+  },
+  {
+    "address": "gonka17pw6099q758qwzewtrqmqpf5c2lrhr97fwqexu",
+    "case4_compensation_gnk": "1030.751496775",
+    "epoch": 276,
+    "overlap_references": "",
+    "p3_cand_06_same_address_epoch276": 0,
+    "p4_known_same_address_epoch276": 0,
+    "reason": "no same-address overlap found in local normalized references",
+    "recommended_action": "no_local_overlap_signal"
+  },
+  {
+    "address": "gonka1amlmhjym02shahjv8ldmupg4cx0qc66q6f85rj",
+    "case4_compensation_gnk": "242.705232731",
+    "epoch": 276,
+    "overlap_references": "",
+    "p3_cand_06_same_address_epoch276": 0,
+    "p4_known_same_address_epoch276": 0,
+    "reason": "no same-address overlap found in local normalized references",
+    "recommended_action": "no_local_overlap_signal"
+  },
+  {
+    "address": "gonka1ce02jjduga8jvwj8jx39mxn0jr345vgkx7lk2n",
+    "case4_compensation_gnk": "11.118340270",
+    "epoch": 276,
+    "overlap_references": "",
+    "p3_cand_06_same_address_epoch276": 0,
+    "p4_known_same_address_epoch276": 0,
+    "reason": "no same-address overlap found in local normalized references",
+    "recommended_action": "no_local_overlap_signal"
+  },
+  {
+    "address": "gonka1d694r00czmq75txghwjcuk07lxvc8d4ekgsha0",
+    "case4_compensation_gnk": "126.369428439",
+    "epoch": 276,
+    "overlap_references": "",
+    "p3_cand_06_same_address_epoch276": 0,
+    "p4_known_same_address_epoch276": 0,
+    "reason": "no same-address overlap found in local normalized references",
+    "recommended_action": "no_local_overlap_signal"
+  },
+  {
+    "address": "gonka1duuaqdx06sx8v2dzggltwwmqyuw8lvjkjq7xll",
+    "case4_compensation_gnk": "180.062876574",
+    "epoch": 276,
+    "overlap_references": "",
+    "p3_cand_06_same_address_epoch276": 0,
+    "p4_known_same_address_epoch276": 0,
+    "reason": "no same-address overlap found in local normalized references",
+    "recommended_action": "no_local_overlap_signal"
+  },
+  {
+    "address": "gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p",
+    "case4_compensation_gnk": "0.813537092",
+    "epoch": 276,
+    "overlap_references": "",
+    "p3_cand_06_same_address_epoch276": 0,
+    "p4_known_same_address_epoch276": 0,
+    "reason": "no same-address overlap found in local normalized references",
+    "recommended_action": "no_local_overlap_signal"
+  },
+  {
+    "address": "gonka1gyk0aahvr3qeju4zx0nplfreej6cy4jjk8svc5",
+    "case4_compensation_gnk": "93.556765689",
+    "epoch": 276,
+    "overlap_references": "",
+    "p3_cand_06_same_address_epoch276": 0,
+    "p4_known_same_address_epoch276": 0,
+    "reason": "no same-address overlap found in local normalized references",
+    "recommended_action": "no_local_overlap_signal"
+  },
+  {
+    "address": "gonka1mmlyd5xxu5l68yx8wzclrkxkxvm88mhq5tp5s0",
+    "case4_compensation_gnk": "3953.519092736",
+    "epoch": 276,
+    "overlap_references": "",
+    "p3_cand_06_same_address_epoch276": 0,
+    "p4_known_same_address_epoch276": 0,
+    "reason": "no same-address overlap found in local normalized references",
+    "recommended_action": "no_local_overlap_signal"
+  },
+  {
+    "address": "gonka1rcpc45n6zch9qlkn4m3cwngekad89xu8mcr09v",
+    "case4_compensation_gnk": "3.254148371",
+    "epoch": 276,
+    "overlap_references": "",
+    "p3_cand_06_same_address_epoch276": 0,
+    "p4_known_same_address_epoch276": 0,
+    "reason": "no same-address overlap found in local normalized references",
+    "recommended_action": "no_local_overlap_signal"
+  },
+  {
+    "address": "gonka1u4zxypjgcr8khlzefwjr0vwdaj2uzruw2cehj3",
+    "case4_compensation_gnk": "274.975537419",
+    "epoch": 276,
+    "overlap_references": "",
+    "p3_cand_06_same_address_epoch276": 0,
+    "p4_known_same_address_epoch276": 0,
+    "reason": "no same-address overlap found in local normalized references",
+    "recommended_action": "no_local_overlap_signal"
+  },
+  {
+    "address": "gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx",
+    "case4_compensation_gnk": "645.406093745",
+    "epoch": 276,
+    "overlap_references": "",
+    "p3_cand_06_same_address_epoch276": 0,
+    "p4_known_same_address_epoch276": 0,
+    "reason": "no same-address overlap found in local normalized references",
+    "recommended_action": "no_local_overlap_signal"
+  },
+  {
+    "address": "gonka10079cnl3nuh2k82mhkm04dj0slhtw9kmjewwau",
+    "case4_compensation_gnk": "4038.669308466",
+    "epoch": 276,
+    "overlap_references": "P4-CAND-01",
+    "p3_cand_06_same_address_epoch276": 0,
+    "p4_known_same_address_epoch276": 1,
+    "reason": "same address appears in another local candidate covering epoch 276",
+    "recommended_action": "review_before_payment"
+  },
+  {
+    "address": "gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09",
+    "case4_compensation_gnk": "17896.188970852",
+    "epoch": 276,
+    "overlap_references": "P3-CAND-06",
+    "p3_cand_06_same_address_epoch276": 1,
+    "p4_known_same_address_epoch276": 0,
+    "reason": "same address appears in another local candidate covering epoch 276",
+    "recommended_action": "review_before_payment"
+  },
+  {
+    "address": "gonka168rtjfkszuhcggg4dfyse4yh7xn9zwfglnkns2",
+    "case4_compensation_gnk": "38.236243368",
+    "epoch": 276,
+    "overlap_references": "P4-CAND-01",
+    "p3_cand_06_same_address_epoch276": 0,
+    "p4_known_same_address_epoch276": 1,
+    "reason": "same address appears in another local candidate covering epoch 276",
+    "recommended_action": "review_before_payment"
+  },
+  {
+    "address": "gonka1gvrrhjmy4w4mayvs2s5l23edj8ertcmtd2v4zr",
+    "case4_compensation_gnk": "3785.930451587",
+    "epoch": 276,
+    "overlap_references": "P4-CAND-01",
+    "p3_cand_06_same_address_epoch276": 0,
+    "p4_known_same_address_epoch276": 1,
+    "reason": "same address appears in another local candidate covering epoch 276",
+    "recommended_action": "review_before_payment"
+  },
+  {
+    "address": "gonka1kx9mca3xm8u8ypzfuhmxey66u0ufxhs7nm6wc5",
+    "case4_compensation_gnk": "12.203056394",
+    "epoch": 276,
+    "overlap_references": "P4-CAND-01",
+    "p3_cand_06_same_address_epoch276": 0,
+    "p4_known_same_address_epoch276": 1,
+    "reason": "same address appears in another local candidate covering epoch 276",
+    "recommended_action": "review_before_payment"
+  },
+  {
+    "address": "gonka1scskt6wpnjnumsah6kjphmdu87vjgvcxmn4rxv",
+    "case4_compensation_gnk": "3731.965824421",
+    "epoch": 276,
+    "overlap_references": "P4-CAND-01",
+    "p3_cand_06_same_address_epoch276": 0,
+    "p4_known_same_address_epoch276": 1,
+    "reason": "same address appears in another local candidate covering epoch 276",
+    "recommended_action": "review_before_payment"
+  },
+  {
+    "address": "gonka1yal0ysgzc860zt3y8cds8656tnueusgymftvkw",
+    "case4_compensation_gnk": "54.778164259",
+    "epoch": 276,
+    "overlap_references": "P4-CAND-01",
+    "p3_cand_06_same_address_epoch276": 0,
+    "p4_known_same_address_epoch276": 1,
+    "reason": "same address appears in another local candidate covering epoch 276",
+    "recommended_action": "review_before_payment"
+  }
+]

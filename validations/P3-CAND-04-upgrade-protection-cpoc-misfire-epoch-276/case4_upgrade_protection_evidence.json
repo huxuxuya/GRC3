@@ -1,0 +1,23 @@
+{
+  "chain_upgrade_protection_window": 500,
+  "last_upgrade_height_state": "not directly decoded by this script; DevOps evidence reports it was not written, and observed post-upgrade cPoCs prove the skip did not apply",
+  "post_upgrade_cpoc_stages": [
+    {
+      "blocks_after_upgrade": 478,
+      "cpoc_trigger_height": 4267778,
+      "excluded_at_stage": 5,
+      "inside_chain_param_window_500": true,
+      "inside_reported_window_10000": true
+    },
+    {
+      "blocks_after_upgrade": 3305,
+      "cpoc_trigger_height": 4270605,
+      "excluded_at_stage": 2,
+      "inside_chain_param_window_500": false,
+      "inside_reported_window_10000": true
+    }
+  ],
+  "reported_release_window": 10000,
+  "upgrade_height": 4267300,
+  "upgrade_msk": "2026-05-26 17:39:41 MSK"
+}

@@ -1,0 +1,95 @@
+{
+  "expected_behavior_sources": {
+    "pr_1143": "https://github.com/gonka-ai/gonka/pull/1143",
+    "pr_1268_branch": "https://github.com/gonka-ai/gonka/tree/upgrade-v0.2.14",
+    "pr_1268_fix": "https://github.com/gonka-ai/gonka/pull/1268",
+    "release_announcement": "https://gonka.ai/release-announcements/"
+  },
+  "last_upgrade_height_state": {
+    "latest_null_confirmed": true,
+    "queries": [
+      {
+        "error": "",
+        "height_requested": "latest",
+        "query_status": "ok",
+        "response_height": "4377778",
+        "rpc_source": "default_node1",
+        "state_key_base64_observed": "Gw==",
+        "state_key_hex": "0x1b",
+        "value_base64": null,
+        "value_is_null": 1
+      },
+      {
+        "error": "",
+        "height_requested": 4267299,
+        "query_status": "ok",
+        "response_height": "4267299",
+        "rpc_source": "default_node1",
+        "state_key_base64_observed": "Gw==",
+        "state_key_hex": "0x1b",
+        "value_base64": null,
+        "value_is_null": 1
+      },
+      {
+        "error": "",
+        "height_requested": 4267300,
+        "query_status": "ok",
+        "response_height": "4267300",
+        "rpc_source": "default_node1",
+        "state_key_base64_observed": "Gw==",
+        "state_key_hex": "0x1b",
+        "value_base64": null,
+        "value_is_null": 1
+      },
+      {
+        "error": "",
+        "height_requested": 4267778,
+        "query_status": "ok",
+        "response_height": "4267778",
+        "rpc_source": "default_node1",
+        "state_key_base64_observed": "Gw==",
+        "state_key_hex": "0x1b",
+        "value_base64": null,
+        "value_is_null": 1
+      },
+      {
+        "error": "",
+        "height_requested": 4270605,
+        "query_status": "ok",
+        "response_height": "4270605",
+        "rpc_source": "default_node1",
+        "state_key_base64_observed": "Gw==",
+        "state_key_hex": "0x1b",
+        "value_base64": null,
+        "value_is_null": 1
+      },
+      {
+        "error": "",
+        "height_requested": 4274661,
+        "query_status": "ok",
+        "response_height": "4274661",
+        "rpc_source": "default_node1",
+        "state_key_base64_observed": "Gw==",
+        "state_key_hex": "0x1b",
+        "value_base64": null,
+        "value_is_null": 1
+      }
+    ],
+    "rpc_base_kind": "chain-rpc",
+    "state_key": "LastUpgradeHeight",
+    "state_key_hex": "0x1b"
+  },
+  "summary": {
+    "assessment": "root cause strongly supported; code fix identified in PR #1268",
+    "case4_like_cpoc_triggers": [
+      4267778,
+      4270605
+    ],
+    "fix_branch": "https://github.com/gonka-ai/gonka/tree/upgrade-v0.2.14",
+    "fix_deployment_status": "code fix merged to upgrade-v0.2.14 branch; on-chain deployment requires separate confirmation",
+    "fix_pr": "https://github.com/gonka-ai/gonka/pull/1268",
+    "latest_last_upgrade_height_null": 1
+  },
+  "upgrade_height": 4267300,
+  "upgrade_msk": "2026-05-26 17:39:41 MSK"
+}
