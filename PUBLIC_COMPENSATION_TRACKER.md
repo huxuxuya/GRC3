@@ -10,6 +10,28 @@ Lost-reward destinations in the case tables below refer to the chain `gov` modul
 |---|---|---:|---|---|
 | `gov` module account | `gonka10d07y265gmmuvt4z0w9aw880jnsr700j2h5m33` | **1,078,335.309119497 GNK** (`1,078,335,309,119,497 ngonka`) | `4,286,541`; 2026-05-27 19:12:25 UTC | [Account balance](http://node1.gonka.ai:8000/chain-api/cosmos/bank/v1beta1/balances/gonka10d07y265gmmuvt4z0w9aw880jnsr700j2h5m33/by_denom?denom=ngonka); [Module accounts](http://node1.gonka.ai:8000/chain-api/cosmos/auth/v1beta1/module_accounts) |
 
+## Compensation Summary
+
+This summary includes compensation cases only. Observation / triage records are
+kept out of this table because no compensation amount is asserted for them.
+`Accepted / compensated` means included in an accepted governance proposal;
+all pending, disputed, scope-required, gross, or contested amounts are not final
+payouts.
+
+| Case | Affected | Calculated Compensation | Decision / Acceptance Status | Notes |
+|---|---:|---:|---|---|
+| [`P2-C01`](cases/P2-C01-inactive-status-epoch-247.md)<br>Inactive status mid-epoch | 9 claimed participants | 0 GNK | Rejected | Rejected during Proposal #2 preparation. |
+| [`P2-C02`](cases/P2-C02-preserver-weight-double-scaling.md)<br>Preserver weight double-scaling | 34 participant/node pairs | 30,318.50 GNK | Accepted / compensated | Included in accepted Proposal #2. |
+| [`P2-C03`](cases/P2-C03-epoch-loss-restitution.md)<br>Epoch loss restitution | Subpackage-based; do not sum without deduplication | 217,612.83 GNK | Accepted / compensated | Included in accepted Proposal #2; current docs do not provide one deduped address count. |
+| [`P2-C04`](cases/P2-C04-api-startup-blocking-epoch-254.md)<br>API startup blocking | 14 addresses | 58,375.96 GNK | Accepted / compensated | Included in accepted Proposal #2. |
+| [`P3-CAND-01`](public_cases/P3-CAND-01-devshard-miss-rate.md)<br>Devshard / high miss rate | 6 identified addresses; final scope pending | 30,715.490665898 GNK | Ready for validation; not accepted | Needs devshard/root-cause validation. |
+| [`P3-CAND-02`](public_cases/P3-CAND-02-negative-coin-balance.md)<br>Negative coin balance / settle-drop | 19 miners | 1,075.336150923 GNK | Coordinator validated; inclusion pending | Exact independent match; governance inclusion still pending. |
+| [`P3-CAND-03`](public_cases/P3-CAND-03-failed-cpoc-epoch-267.md)<br>Failed cPoC / preserved Kimi shortfall | 1 primary claimant | 10,262.057515369 GNK | Independently validated; eligibility disputed | Epoch 265 same-address candidate `20,896.527179100 GNK` remains separate scope review and is not included here. |
+| [`P3-CAND-04`](public_cases/P3-CAND-04-upgrade-cpoc-misfire-epoch-276.md)<br>UpgradeProtectionWindow / cPoC misfire | 19 miners | 36,209.451291351 GNK | Independently validated; inclusion pending | Requires inclusion and overlap decision. |
+| [`P3-CAND-05`](public_cases/P3-CAND-05-ml3-reregistration.md)<br>`ml3` hardware re-registration | 1 known claimant | TBD / not calculated | Scope decision required; not accepted | On-chain compensable loss not proven. |
+| [`P3-CAND-06`](cases/P3-CAND-06-pre-fix-confirmation-accounting.md)<br>Pre-fix confirmation accounting | 19 unique participants / 24 rows | 120,822.324371792 GNK gross | Eligibility and overlap review required; not accepted | Gross before overlap review; not final payout. |
+| [`P4-CAND-01`](public_cases/P4-CAND-01-kimi-restitution.md)<br>Kimi restitution / GroupCap | 52 unique addresses | 710,772.72 GNK published; contested | Not included in GRC; community proposal possible | Methodology disputed; overlaps require review. |
+
 ## Proposal #3 Candidates
 
 | Case | Epochs | Status | Reported By | Affected / Detail Contact | Investigator / Result | Validator(s) / Further Analysis | Estimate | Lost Reward Destination | Fix |
