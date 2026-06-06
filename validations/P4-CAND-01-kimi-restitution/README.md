@@ -19,6 +19,8 @@ on rerunning the investigator's scripts.
 | [`p4_e266_commit_final_group_check.csv`](p4_e266_commit_final_group_check.csv) | Derived address-level check for the nine e266 DevOps-listed PoC submitters against final epoch group data. |
 | [`p4_audit_pass_02_e265.md`](p4_audit_pass_02_e265.md) | Epoch 265 row classifier separating strict Case-3-like cPoC shortfall, broader failed-confirmation candidate, and rewarded confirmation-weight drop. |
 | [`p4_e265_row_classifier.csv`](p4_e265_row_classifier.csv) | Machine-readable classifier for the three epoch 265 rows in the P4 source package. |
+| [`p4_audit_pass_03_e265_gonka1830.md`](p4_audit_pass_03_e265_gonka1830.md) | Row-level cPoC evidence for `gonka1830...`, showing no raw Kimi/Qwen submission or validation record at final cPoC stage `4102890`. |
+| [`p4_e265_gonka1830_cpoc_evidence.csv`](p4_e265_gonka1830_cpoc_evidence.csv) | Machine-readable commit/validation/voting-power evidence for the epoch 265 disputed rows. |
 
 ## Current Result
 
