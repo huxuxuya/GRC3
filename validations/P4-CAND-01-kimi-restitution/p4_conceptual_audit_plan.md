@@ -39,6 +39,17 @@ investigator's arithmetic.
 | Code/protocol evidence | chain code, PRs, upgrade heights, params | Can prove protocol behavior and mitigations. |
 | Committee policy | scope decisions, prior votes, eligibility rules | Required when the issue is real but restitution eligibility is not technical. |
 
+## Problem Files
+
+| Problem | File | Purpose |
+|---|---|---|
+| e265 scope | [`p4_problem_01_e265_scope.md`](p4_problem_01_e265_scope.md) | Split Case 3 overlap from broader e265 rows. |
+| e266 nonce | [`p4_problem_02_e266_nonce_scope.md`](p4_problem_02_e266_nonce_scope.md) | Split narrow excluded-operator rows from reconstruction/top-up rows. |
+| e266 delegation | [`p4_problem_03_e266_delegation.md`](p4_problem_03_e266_delegation.md) | Separate confirmed delegation mechanics from indirect-loss eligibility. |
+| e267-e276 GroupCap | [`p4_problem_04_groupcap_denominator.md`](p4_problem_04_groupcap_denominator.md) | Separate cap fact from compensability, denominator, and e276 proration. |
+| aggregate total / overlaps | [`p4_problem_05_overlap_and_total.md`](p4_problem_05_overlap_and_total.md) | Explain why the full source total is not a single ready payout. |
+| decision matrix | [`p4_decision_matrix.md`](p4_decision_matrix.md) | Track-level decision order and current working position. |
+
 ## Claim Checklist
 
 | # | Claim / statement | Evidence required | Current evidence | Status | Next action |

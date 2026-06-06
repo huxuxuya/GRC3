@@ -14,6 +14,12 @@ on rerunning the investigator's scripts.
 |---|---|
 | [`votkon_repo_truth_review.md`](votkon_repo_truth_review.md) | Claim-by-claim review of the current upstream repository, including confirmed facts, internal inconsistencies, and open methodology risks. |
 | [`p4_conceptual_audit_plan.md`](p4_conceptual_audit_plan.md) | Working checklist for auditing claims, evidence, root cause, eligibility, overlap, and policy boundaries without reproducing arithmetic. |
+| [`p4_decision_matrix.md`](p4_decision_matrix.md) | Split P4 decision matrix with the recommended voting order and per-track policy gates. |
+| [`p4_problem_01_e265_scope.md`](p4_problem_01_e265_scope.md) | Epoch 265 scope note: separates Case 3 overlap from non-strict direct cPoC rows. |
+| [`p4_problem_02_e266_nonce_scope.md`](p4_problem_02_e266_nonce_scope.md) | Epoch 266 nonce note: separates 9 excluded operators from broader reconstruction/top-up rows. |
+| [`p4_problem_03_e266_delegation.md`](p4_problem_03_e266_delegation.md) | Epoch 266 delegation note: confirmed chain mechanics and unresolved indirect-loss policy. |
+| [`p4_problem_04_groupcap_denominator.md`](p4_problem_04_groupcap_denominator.md) | Epochs 267-276 GroupCap note: denominator alternatives and e276 proration issue. |
+| [`p4_problem_05_overlap_and_total.md`](p4_problem_05_overlap_and_total.md) | Aggregate total and overlap note: explains why `946,509.925002` GONKA should not be approved as one package. |
 | [`raw_chain_cache_manifest.md`](raw_chain_cache_manifest.md) | Manifest of raw node responses saved during P4 audit passes, with endpoints, hashes, and limitations. |
 | [`p4_audit_pass_01.md`](p4_audit_pass_01.md) | First evidence pass: e266 final-set absence, e266 commit endpoint limitation, and e267/e275 Kimi cap-effect evidence. |
 | [`p4_e266_commit_final_group_check.csv`](p4_e266_commit_final_group_check.csv) | Derived address-level check for the nine e266 DevOps-listed PoC submitters against final epoch group data. |
