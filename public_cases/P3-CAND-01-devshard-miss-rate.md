@@ -6,12 +6,12 @@
 | Epochs | 272; epochs 273-280 checked for recurrence |
 | Status | Ready for validation |
 | Reported by | Votkon; technical reports by Nik |
-| Affected / detail contact | Six epoch 272 addresses identified below; Nik; claimant `A` |
+| Affected / detail contact | Six confirmed epoch 272 addresses identified below; one additional manual-review row; Nik; claimant `A` |
 | Case investigator | @OpenMindedPerson |
 | Case validator | @mikenosov |
 | Result so far | Investigation and preliminary calculation published; 6 affected participants identified for epoch 272 |
 | Further analysis | Required: independent validation using devshard data and root-cause confirmation |
-| Compensation | 30,715.490665898 GNK estimated; not approved |
+| Compensation | 35,040.581153560 GNK confirmed-six source amount; 35,109.923355683 GNK if the manual-review row is included; not approved |
 | Lost reward destination | Under fixed-reward settlement logic, downtime / miss-rate reductions remain undistributed and are transferred to governance rather than redistributed to other participants. |
 
 ## Message Log
@@ -30,11 +30,20 @@
 ## Findings
 
 - The published investigation identifies 6 epoch 272 participants with work/signatures but zero rewards through the downtime/binomial-test outcome.
-- The preliminary compensation estimate is `30,715.490665898 GNK`.
+- The current calculation repository reports `35,040.581153560 GNK` for the
+  six confirmed reported addresses.
+- The same repository reports `35,109.923355683 GNK` if one additional
+  manual-review row is included.
 - Epochs 273-280 were checked and the same pattern was not found again.
 - The case has an epoch-level overlap with the Kimi restitution package in epoch 272, but no same-address overlap was found in the checked aggregate compensation data.
 - Devshard-level retained data is still required for independent validation and final eligibility.
-- DevOps evidence identifies these epoch 272 addresses: `gonka1wt8sr9jxzpec65j7zkxsgh6edk3m6r8nlf5za4`, `gonka10079cnl3nuh2k82mhkm04dj0slhtw9kmjewwau`, `gonka1007g0ut3u4wjkay9hegqfev4pj90qgexwskmcw`, `gonka1007dchuqgdnute4qam70kmn56j2vfw38mhyrqv`, `gonka15munkmx6x7k6rqqeexjet4556p7at39ks9qgr5`, and `gonka1ce02jjduga8jvwj8jx39mxn0jr345vgkx7lk2n`.
+- DevOps evidence identifies these epoch 272 confirmed addresses:
+  `gonka1wt8sr9jxzpec65j7zkxsgh6edk3m6r8nlf5za4`,
+  `gonka10079cnl3nuh2k82mhkm04dj0slhtw9kmjewwau`,
+  `gonka1007g0ut3u4wjkay9hegqfev4pj90qgexwskmcw`,
+  `gonka1007dchuqgdnute4qam70kmn56j2vfw38mhyrqv`,
+  `gonka15munkmx6x7k6rqqeexjet4556p7at39ks9qgr5`, and
+  `gonka1ce02jjduga8jvwj8jx39mxn0jr345vgkx7lk2n`.
 
 ## Mitigation / Fix Status
 

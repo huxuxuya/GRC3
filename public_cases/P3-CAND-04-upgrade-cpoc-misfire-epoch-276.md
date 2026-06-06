@@ -4,14 +4,14 @@
 |---|---|
 | Proposal | Proposal #3 candidate |
 | Epochs | 276 |
-| Status | Calculated; inclusion pending |
+| Status | Source changed; revalidation required |
 | Reported by | Votkon; calculation by Evgenii Maksimenkov |
 | Affected / detail contact | 19 miners; Evgenii Maksimenkov; Vas Ily for `gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09` |
 | Case investigator | @maksimenkoff; calculation: [gonkavip/payout276](https://github.com/gonkavip/payout276) |
 | Case validators | @votkon; @OpenMindedPerson |
-| Result so far | Calculation published and reproduced once; DevOps discussion confirms unintended cPoC behaviour |
-| Further analysis | Required: independent validation and inclusion decision |
-| Compensation | 36,209.451 GNK |
+| Result so far | Calculation published; DevOps discussion confirms unintended cPoC behaviour; current source repo amount differs from older locally validated CSV |
+| Further analysis | Required: revalidate current source amount, then decide inclusion and overlap handling |
+| Compensation | 32,429.966254822 GNK current source amount; older local validation matched 36,209.451291351 GNK |
 | Lost reward destination | Confirmation-weight share lost through unintended cPoC is not redistributed; under fixed-reward settlement it is transferred to governance remainder. |
 
 ## Message Log
@@ -29,7 +29,10 @@
 ## Findings
 
 - Published calculation includes `7` dropped miners and `12` miners with reduced confirmation weight.
-- Total calculated payout: `36,209.451 GNK`.
+- Current source repository total: `32,429.966254822 GNK`.
+- Older local validation matched a previously published CSV total of
+  `36,209.451291351 GNK`; because the source repo changed, the current amount
+  needs revalidation before it is treated as locally validated.
 - Inputs are archive-node snapshots at fixed historical block heights.
 - The calculation compares chain state at block heights `4267299` and `4274661`.
 - The case has confirmed same-address epoch-276 overlap with `P4-CAND-01`; duplicate-compensation handling is required if the Kimi restitution package is pursued separately.
