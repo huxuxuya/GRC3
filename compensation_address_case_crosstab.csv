@@ -1,0 +1,84 @@
+address,case_family_count,case_track_count,component_rows,epochs_present,exact_address_epoch_overlap_keys,status_groups,case_tracks,P3-CAND-01_gonka,P3-CAND-02_gonka,P3-CAND-03_gonka,P3-CAND-04_gonka,P3-CAND-06_gonka,P4-CAND-01_gonka,total_gonka_if_naively_summed
+gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09,3,4,12,"266,267,268,269,270,271,272,273,274,275,276",1,"disputed_not_aggregate,pending_estimate,pending_estimate_revalidation_required",P3-CAND-04; P3-CAND-06; P4-GroupCap-source; P4-e266-nonce,,,,16028.213179615,17356.095656742,66487.744752217,99872.053588574
+gonka10079cnl3nuh2k82mhkm04dj0slhtw9kmjewwau,3,3,10,"268,269,270,271,272,273,274,275,276",1,"disputed_not_aggregate,pending_estimate,pending_estimate_revalidation_required",P3-CAND-01-confirmed; P3-CAND-04; P4-GroupCap-source,5700.549989479,,,3617.119418189,,20610.390027954,29928.059435622
+gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6,2,4,4,"265,266,267",1,"disputed_not_aggregate,local_validated_recommended,pending_estimate",P3-CAND-03; P3-CAND-03-EXT; P4-e265-source-cpoc; P4-e266-nonce,,,31158.584694469,,,39809.676543013,70968.261237482
+gonka1yal0ysgzc860zt3y8cds8656tnueusgymftvkw,2,3,6,"266,267,270,275,276",1,"disputed_not_aggregate,pending_estimate,pending_estimate_revalidation_required",P3-CAND-04; P4-GroupCap-source; P4-e266-nonce,,,,49.060506444,,17630.158097135,17679.218603579
+gonka168rtjfkszuhcggg4dfyse4yh7xn9zwfglnkns2,2,2,6,"267,269,270,273,276",1,"disputed_not_aggregate,pending_estimate_revalidation_required",P3-CAND-04; P4-GroupCap-source,,,,34.245204993,,11021.183080111,11055.428285104
+gonka1gvrrhjmy4w4mayvs2s5l23edj8ertcmtd2v4zr,2,2,9,"269,270,271,272,273,274,275,276",1,"disputed_not_aggregate,pending_estimate_revalidation_required",P3-CAND-04; P4-GroupCap-source,,,,3390.761041922,,52290.195675726,55680.956717648
+gonka1kx9mca3xm8u8ypzfuhmxey66u0ufxhs7nm6wc5,2,2,8,"267,269,270,271,272,275,276",1,"disputed_not_aggregate,pending_estimate_revalidation_required",P3-CAND-04; P4-GroupCap-source,,,,10.929320742,,3018.840187451,3029.769508193
+gonka1scskt6wpnjnumsah6kjphmdu87vjgvcxmn4rxv,2,2,3,"275,276",1,"disputed_not_aggregate,pending_estimate_revalidation_required",P3-CAND-04; P4-GroupCap-source,,,,3342.429156860,,5645.801436758,8988.230593618
+gonka14ef2pxjge75gflqftn7m2wy0xv59gq9uc7qnct,1,2,2,266,1,pending_estimate,P4-e266-delegation; P4-e266-nonce,,,,,,276.414090986,276.414090986
+gonka1ce02jjduga8jvwj8jx39mxn0jr345vgkx7lk2n,3,3,4,"272,273,274,276",0,"disputed_not_aggregate,pending_estimate,pending_estimate_revalidation_required",P3-CAND-01-confirmed; P3-CAND-04; P4-GroupCap-source,1965.730685067,,,9.957825565,,1753.409171279,3729.097681911
+gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p,3,3,6,"266,272,273,274,275,276",0,"pending_estimate,pending_estimate_revalidation_required",P3-CAND-04; P3-CAND-06; P4-e266-delegation,,,,0.728621382,847.691711099,113.864833864,962.285166345
+gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx,3,3,5,"267,271,272,273,276",0,"disputed_not_aggregate,pending_estimate,pending_estimate_revalidation_required",P3-CAND-04; P3-CAND-06; P4-GroupCap-source,,,,578.039630382,3018.788733411,2392.222959397,5989.051323190
+gonka17pw6099q758qwzewtrqmqpf5c2lrhr97fwqexu,2,4,4,"265,266,267,276",0,"disputed_not_aggregate,pending_estimate,pending_estimate_revalidation_required",P3-CAND-04; P4-GroupCap-source; P4-e265-source-cpoc; P4-e266-nonce,,,,923.163292052,,101147.807218599,102070.970510651
+gonka1830lqug50lse998x2lakk4pj5ypfumz5pasz0y,2,3,5,"263,265,267,273,275",0,"disputed_not_aggregate,pending_estimate",P3-CAND-06; P4-GroupCap-source; P4-e265-source-cpoc,,,,,1953.032509538,13958.367773340,15911.400282878
+gonka18xeqnspxpg2vncufnjne485rkaagwvz7whyn0d,2,3,4,"264,266,267,273",0,"disputed_not_aggregate,pending_estimate",P3-CAND-06; P4-GroupCap-source; P4-e266-nonce,,,,,2019.930762224,6820.652573831,8840.583336055
+gonka1f0u3y2wneer8zhz3ypw4x54h38cpa0qsy8ts3e,2,3,4,"266,267,270,276",0,"disputed_not_aggregate,pending_estimate",P3-CAND-06; P4-GroupCap-source; P4-e266-nonce,,,,,3557.528990032,4673.802241961,8231.331231993
+gonka1q5xt54wncgzk7dxv9x64uln68455g83wu9tugg,2,3,10,"266,267,268,269,270,271,272,273,275,276",0,"disputed_not_aggregate,pending_estimate",P3-CAND-06; P4-GroupCap-source; P4-e266-nonce,,,,,47830.124048154,73073.708453292,120903.832501446
+gonka1ujnc662v6g69jm6fgxnr79a2m7ehzeut059239,2,3,4,"263,266,275,276",0,"disputed_not_aggregate,pending_estimate",P3-CAND-06; P4-GroupCap-source; P4-e266-nonce,,,,,14970.660343414,12612.234865692,27582.895209106
+gonka1xwkesaxvdadh9wt9yyladu0r260s7whklcktds,2,3,5,"264,266,267,272,273",0,"disputed_not_aggregate,pending_estimate",P3-CAND-06; P4-GroupCap-source; P4-e266-nonce,,,,,1970.264959744,9768.694504061,11738.959463805
+gonka1007dchuqgdnute4qam70kmn56j2vfw38mhyrqv,2,2,6,"268,269,270,271,272,273",0,"disputed_not_aggregate,pending_estimate",P3-CAND-01-confirmed; P4-GroupCap-source,7287.485958471,,,,,11262.520197774,18550.006156245
+gonka1007g0ut3u4wjkay9hegqfev4pj90qgexwskmcw,2,2,6,"268,269,270,271,272,273",0,"disputed_not_aggregate,pending_estimate",P3-CAND-01-confirmed; P4-GroupCap-source,7238.152949000,,,,,11688.555563236,18926.708512236
+gonka14g78ez2zy08k8sssue483zmfpgd4qut8zcwlqc,2,2,2,"264,267",0,"disputed_not_aggregate,pending_estimate",P3-CAND-06; P4-GroupCap-source,,,,,2019.930762224,2602.055673919,4621.986436143
+gonka14ljarev2nlzu4ej50vx7ylj2rvg4n20fnq2ysc,2,2,4,"272,273,274,276",0,"disputed_not_aggregate,pending_estimate_revalidation_required",P3-CAND-04; P4-GroupCap-source,,,,79.662604523,,4444.392150972,4524.054755495
+gonka15munkmx6x7k6rqqeexjet4556p7at39ks9qgr5,2,2,6,"267,268,269,270,271,272",0,"disputed_not_aggregate,pending_estimate",P3-CAND-01-confirmed; P4-GroupCap-source,4064.625997098,,,,,18234.887510983,22299.513508081
+gonka16xa2sdc8qe2289nzr4e6vmdyzlke8g8fn8e75s,2,2,2,"271,272",0,pending_estimate,P3-CAND-01-manual-review; P3-CAND-06,69.342202123,,,,139.200061369,,208.542263492
+gonka19cjm4c5mt3j3qdr8vhytmm4hef3pnkvkm0x7m2,2,2,6,"263,267,269,270,271,273",0,"disputed_not_aggregate,pending_estimate",P3-CAND-06; P4-GroupCap-source,,,,,1915.652591432,8441.669467829,10357.322059261
+gonka1cuwejs77gectp3n32wg8q27hlsa4m3hqspf4ww,2,2,2,"265,266",0,pending_estimate,P3-CAND-06; P4-e266-delegation,,,,,335.927643572,108.366531966,444.294175538
+gonka1gyk0aahvr3qeju4zx0nplfreej6cy4jjk8svc5,2,2,2,"266,276",0,"pending_estimate,pending_estimate_revalidation_required",P3-CAND-04; P4-e266-delegation,,,,83.791459026,,30.990428883,114.781887909
+gonka1mmlyd5xxu5l68yx8wzclrkxkxvm88mhq5tp5s0,2,2,5,"267,271,274,275,276",0,"disputed_not_aggregate,pending_estimate_revalidation_required",P3-CAND-04; P4-GroupCap-source,,,,3540.857046786,,6618.057560512,10158.914607298
+gonka1wt8sr9jxzpec65j7zkxsgh6edk3m6r8nlf5za4,2,2,6,"270,271,272,273,275,276",0,"disputed_not_aggregate,pending_estimate",P3-CAND-01-confirmed; P4-GroupCap-source,8784.035574445,,,,,10934.181496134,19718.217070579
+gonka125n6kr5gvdup0lndfkps7t6rd6592panhrg3np,1,2,3,"266,267,275",0,"disputed_not_aggregate,pending_estimate",P4-GroupCap-source; P4-e266-nonce,,,,,,9423.072516255,9423.072516255
+gonka1c6fwzedfsmpu4jnjekv4cn7mvr7x7fuqd6uqt9,1,2,3,"266,267,268",0,"disputed_not_aggregate,pending_estimate",P4-GroupCap-source; P4-e266-nonce,,,,,,11366.419253907,11366.419253907
+gonka1jrgm47v5eg876udmzg6j6glqcsd5x0vk6crpax,1,2,4,"266,267,268,269",0,"disputed_not_aggregate,pending_estimate",P4-GroupCap-source; P4-e266-nonce,,,,,,33750.579636210,33750.579636210
+gonka1qa90tgczc0k5dvk4l5nvlf5y6phgm6mg22sfjv,1,2,11,"266,267,268,269,270,271,272,273,274,275,276",0,"disputed_not_aggregate,pending_estimate",P4-GroupCap-source; P4-e266-nonce,,,,,,158541.879455919,158541.879455919
+gonka1tlvg4kjx7ljd5thgd5fkgh39q6lu8cmxupktgg,1,2,7,"266,270,271,272,273,275,276",0,"disputed_not_aggregate,pending_estimate",P4-GroupCap-source; P4-e266-delegation,,,,,,2293.694674600,2293.694674600
+gonka1wkgawwdzj623ss8eywayzdj6qcgr2llygactje,1,2,4,"266,267,272,273",0,"disputed_not_aggregate,pending_estimate",P4-GroupCap-source; P4-e266-nonce,,,,,,10456.612261496,10456.612261496
+gonka1wthc28t25pg63hzvl07rl8e8r6km6hesl6jhsz,1,2,5,"266,267,268,269,270",0,"disputed_not_aggregate,pending_estimate",P4-GroupCap-source; P4-e266-nonce,,,,,,79247.555226990,79247.555226990
+gonka10070xwkwv00sulsa7gdfwkgh8w069stkjjf39x,1,1,1,269,0,disputed_not_aggregate,P4-GroupCap-source,,,,,,1017.602508283,1017.602508283
+gonka10075dz43h94zhqu5hwdj3nyjay6v8mzwvpxr0s,1,1,1,269,0,disputed_not_aggregate,P4-GroupCap-source,,,,,,1017.602508283,1017.602508283
+gonka1007lnkyhdh7aq0vjdcdwcerkdh4yy85rymjdg6,1,1,1,269,0,disputed_not_aggregate,P4-GroupCap-source,,,,,,1007.974841606,1007.974841606
+gonka1007n977a7uda3pd9m6hftw8xcql0tc20m96myu,1,1,2,"268,269",0,disputed_not_aggregate,P4-GroupCap-source,,,,,,3396.492511794,3396.492511794
+gonka1007py6y2qfn2vaqrthqhtchkwx64hgzc6w544w,1,1,1,269,0,pending_estimate,P3-CAND-06,,,,,2228.595538500,,2228.595538500
+gonka105ce4495mj0mwkxqeasgdzqfq5jjrfq32eza5l,1,1,1,132,0,local_validated_recommended,P3-CAND-02,,14.096689777,,,,,14.096689777
+gonka10kmsyy00yxnky2xfqy9wce0l7uaadq4jjp3ykg,1,1,1,112,0,local_validated_recommended,P3-CAND-02,,7.993576578,,,,,7.993576578
+gonka12l3fwycgvs9tdpze59za89zq4cexhkxddafxdh,1,1,1,116,0,local_validated_recommended,P3-CAND-02,,150.749450599,,,,,150.749450599
+gonka12pcu9mcrpa4w4sjd9y3dsksnvu495ss6f9r4ra,1,1,1,266,0,pending_estimate,P4-e266-delegation,,,,,,1166.439755518,1166.439755518
+gonka13a4v8gxxjav5t4xq5y9cv9d8rfnvkjfw5adqz3,1,1,1,266,0,pending_estimate,P4-e266-nonce,,,,,,521.637814838,521.637814838
+gonka14tqh62mangwzrma2lgg2dm375rcjzn2ydy8ttm,1,1,1,276,0,pending_estimate,P3-CAND-06,,,,,11765.489995489,,11765.489995489
+gonka1598sglu00mktw3973jmwsu3vdw29mgcfjleju2,1,1,1,116,0,local_validated_recommended,P3-CAND-02,,71.065864191,,,,,71.065864191
+gonka15fpzwc7d2z3r4y5475p6k7uqknnkj38gsus3d9,1,1,1,116,0,local_validated_recommended,P3-CAND-02,,7.100517600,,,,,7.100517600
+gonka15p7s7w2hx0y8095lddd4ummm2y0kwpwljk00aq,1,1,2,"267,275",0,disputed_not_aggregate,P4-GroupCap-source,,,,,,2034.501080557,2034.501080557
+gonka170wwtpvhwzgghd638z84z35gjggl7cvyzrkh8p,1,1,1,116,0,local_validated_recommended,P3-CAND-02,,156.696892692,,,,,156.696892692
+gonka19nd876302m3ll2h7sd55hp9pqzv2hpqalh8pjj,1,1,1,97,0,local_validated_recommended,P3-CAND-02,,8.432384134,,,,,8.432384134
+gonka1amlmhjym02shahjv8ldmupg4cx0qc66q6f85rj,1,1,1,276,0,pending_estimate_revalidation_required,P3-CAND-04,,,,217.372045879,,,217.372045879
+gonka1d694r00czmq75txghwjcuk07lxvc8d4ekgsha0,1,1,1,276,0,pending_estimate_revalidation_required,P3-CAND-04,,,,113.179188133,,,113.179188133
+gonka1duuaqdx06sx8v2dzggltwwmqyuw8lvjkjq7xll,1,1,1,276,0,pending_estimate_revalidation_required,P3-CAND-04,,,,161.268199400,,,161.268199400
+gonka1h9asnq9x2kux2m8pcwaeegljzmd4ym4h26p07n,1,1,1,116,0,local_validated_recommended,P3-CAND-02,,33.560566095,,,,,33.560566095
+gonka1hjjse9r0zfe0q8k4hfe4t5xuzstjqvky7dnj05,1,1,1,116,0,local_validated_recommended,P3-CAND-02,,56.561388067,,,,,56.561388067
+gonka1hmjjq6ghykww8f8ujajnnmu2dpk2drrth8mtva,1,1,1,116,0,local_validated_recommended,P3-CAND-02,,11.227314154,,,,,11.227314154
+gonka1hwvel7n3zuk6wruefuzc356l9myske9stckwnz,1,1,1,266,0,pending_estimate,P4-e266-delegation,,,,,,1575.513416778,1575.513416778
+gonka1jt5mqrx0yg5k6qdqhnkc4kpya4mzy52ngyh34c,1,1,1,116,0,local_validated_recommended,P3-CAND-02,,19.116778155,,,,,19.116778155
+gonka1l8jd2nz92mnem0xwgwkltcw2952cnlphs5arsa,1,1,2,"273,275",0,disputed_not_aggregate,P4-GroupCap-source,,,,,,4167.200640617,4167.200640617
+gonka1lh0danzlvxm5qtaly7myqd3n5sus0fq92n8shx,1,1,1,116,0,local_validated_recommended,P3-CAND-02,,182.307306602,,,,,182.307306602
+gonka1mmwngrtpc4fd4jquv5vfsnscqdzmcz0zgrvy0g,1,1,1,116,0,local_validated_recommended,P3-CAND-02,,15.900304370,,,,,15.900304370
+gonka1myu058axjs62mc3e7na9krwvqpfl9z3gtcw9es,1,1,1,266,0,pending_estimate,P4-e266-nonce,,,,,,279.015575378,279.015575378
+gonka1naxyjmun6kl23htjdujwd6c5z5avgwapsrmfk3,1,1,1,269,0,pending_estimate,P3-CAND-06,,,,,535.800580255,,535.800580255
+gonka1nku7u6d5mz80h35ty8ydeh0k5xydesvt9w0vjr,1,1,1,272,0,pending_estimate,P3-CAND-06,,,,,146.964070171,,146.964070171
+gonka1pks9m29wqac2kxdj8v8acq58rjshh6u8y2a772,1,1,1,116,0,local_validated_recommended,P3-CAND-02,,243.541684885,,,,,243.541684885
+gonka1q3n37e2uc4npkheyjllx2ztx5yh42rk6vz3kgn,1,1,1,116,0,local_validated_recommended,P3-CAND-02,,27.431059448,,,,,27.431059448
+gonka1qwfrtz9c7kcrfkrrlne2pkcye74mj6ce33xdkl,1,1,1,274,0,pending_estimate,P3-CAND-06,,,,,173.159717563,,173.159717563
+gonka1qx3znmtpxqgmz3t4tgpdk68dsfxuccn6cxnp8s,1,1,1,116,0,local_validated_recommended,P3-CAND-02,,25.489037540,,,,,25.489037540
+gonka1rcpc45n6zch9qlkn4m3cwngekad89xu8mcr09v,1,1,1,276,0,pending_estimate_revalidation_required,P3-CAND-04,,,,2.914485531,,,2.914485531
+gonka1t88kkvnrayz5l2u043tccd2pks4rt8y346z9dv,1,1,1,116,0,local_validated_recommended,P3-CAND-02,,4.551613846,,,,,4.551613846
+gonka1t8jjpaq2m0svru73kh9l0m62e7lr7qxxw6uvea,1,1,1,129,0,local_validated_recommended,P3-CAND-02,,7.470360710,,,,,7.470360710
+gonka1tja3g2da45efhe2p83gk3whtussmgmtsdlgprt,1,1,1,266,0,pending_estimate,P4-e266-delegation,,,,,,1805.142497891,1805.142497891
+gonka1tl5m3vuqsx333v7095ymwjdc4vdk2wd9r5hqws,1,1,1,267,0,disputed_not_aggregate,P4-GroupCap-source,,,,,,2731.396085272,2731.396085272
+gonka1tmk2tzdneht6smu34pkmqdvu7p34qavvmwtwq2,1,1,1,266,0,pending_estimate,P4-e266-delegation,,,,,,100.568940182,100.568940182
+gonka1u4zxypjgcr8khlzefwjr0vwdaj2uzruw2cehj3,1,1,1,276,0,pending_estimate_revalidation_required,P3-CAND-04,,,,246.274027398,,,246.274027398
+gonka1uhqpup9fev3zahlx6n326lp0krznc6usjtx6lu,1,1,7,"270,271,272,273,274,275,276",0,disputed_not_aggregate,P4-GroupCap-source,,,,,,96601.320933414,96601.320933414
+gonka1wvv656pt2d8x2khcvytqeessck5uzjnxzsa8f6,1,1,3,"269,270,271",0,disputed_not_aggregate,P4-GroupCap-source,,,,,,5511.598438612,5511.598438612
+gonka1xy9py6zlxsum2m0z422qwa0um6au7ls4r65ky8,1,1,1,116,0,local_validated_recommended,P3-CAND-02,,32.043361480,,,,,32.043361480
+gonka1y2a9p56kv044327uycmqdexl7zs82fs5ryv5le,1,1,1,267,0,disputed_not_aggregate,P4-GroupCap-source,,,,,,1025.259358283,1025.259358283
+gonka1ym3np7guxart483yfdxnlztuazx22cjt0e4a2p,1,1,1,272,0,pending_estimate,P3-CAND-06,,,,,8037.485696859,,8037.485696859

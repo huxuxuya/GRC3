@@ -7,6 +7,8 @@ Address/epoch overlap ledger:
 [`COMPENSATION_OVERLAP_MATRIX.md`](COMPENSATION_OVERLAP_MATRIX.md).
 Case/epoch crosstab:
 [`COMPENSATION_EPOCH_CROSSTAB.md`](COMPENSATION_EPOCH_CROSSTAB.md).
+Address/case crosstab:
+[`COMPENSATION_ADDRESS_CROSSTAB.md`](COMPENSATION_ADDRESS_CROSSTAB.md).
 Calculation repo reconciliation:
 [`CALCULATION_REPO_RECONCILIATION.md`](CALCULATION_REPO_RECONCILIATION.md).
 
@@ -61,6 +63,8 @@ payouts.
 Amounts are in GNK and are calculated estimates from the linked public repositories. Empty cells mean no compensation amount was found for that case and epoch.
 Detailed generated case/epoch crosstab:
 [`COMPENSATION_EPOCH_CROSSTAB.md`](COMPENSATION_EPOCH_CROSSTAB.md).
+Recipient-level generated crosstab:
+[`COMPENSATION_ADDRESS_CROSSTAB.md`](COMPENSATION_ADDRESS_CROSSTAB.md).
 
 | Case | Source | 97 | 112 | 116 | 129 | 132 | 265 | 266 | 267 | 268 | 269 | 270 | 271 | 272 | 273 | 274 | 275 | 276 | Total | Overlap Notes |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|

@@ -547,6 +547,147 @@ def write_epoch_crosstab_markdown(rows: list[Row], overlaps: list[dict[str, str]
     path.write_text("\n".join(lines) + "\n")
 
 
+def address_overlap_counts(overlaps: list[dict[str, str]]) -> dict[str, int]:
+    counts: dict[str, int] = defaultdict(int)
+    for row in overlaps:
+        counts[row["address"]] += 1
+    return counts
+
+
+def address_case_rows(rows: list[Row], overlaps: list[dict[str, str]]) -> list[dict[str, object]]:
+    families = sorted({row.case_family for row in rows})
+    by_address: dict[str, list[Row]] = defaultdict(list)
+    exact_counts = address_overlap_counts(overlaps)
+    for row in rows:
+        by_address[row.address].append(row)
+
+    result: list[dict[str, object]] = []
+    for address, group in by_address.items():
+        family_amounts = {family: 0 for family in families}
+        for row in group:
+            family_amounts[row.case_family] += row.amount_ngonka
+        result.append(
+            {
+                "address": address,
+                "case_family_count": len({row.case_family for row in group}),
+                "case_track_count": len({row.case_track for row in group}),
+                "component_rows": len(group),
+                "epochs_present": ",".join(str(epoch) for epoch in sorted({row.epoch for row in group})),
+                "exact_address_epoch_overlap_keys": exact_counts.get(address, 0),
+                "status_groups": ",".join(sorted({row.status_group for row in group})),
+                "case_tracks": "; ".join(sorted({row.case_track for row in group})),
+                "family_amounts": family_amounts,
+                "total_ngonka": sum(row.amount_ngonka for row in group),
+            }
+        )
+    return sorted(
+        result,
+        key=lambda row: (
+            -int(row["exact_address_epoch_overlap_keys"]),
+            -int(row["case_family_count"]),
+            -int(row["case_track_count"]),
+            str(row["address"]),
+        ),
+    )
+
+
+def write_address_crosstab_csv(rows: list[Row], overlaps: list[dict[str, str]], path: Path) -> None:
+    families = sorted({row.case_family for row in rows})
+    fieldnames = [
+        "address",
+        "case_family_count",
+        "case_track_count",
+        "component_rows",
+        "epochs_present",
+        "exact_address_epoch_overlap_keys",
+        "status_groups",
+        "case_tracks",
+        *[f"{family}_gonka" for family in families],
+        "total_gonka_if_naively_summed",
+    ]
+    with path.open("w", newline="") as fh:
+        writer = csv.DictWriter(fh, fieldnames=fieldnames, lineterminator="\n")
+        writer.writeheader()
+        for row in address_case_rows(rows, overlaps):
+            family_amounts = row["family_amounts"]
+            assert isinstance(family_amounts, dict)
+            out = {
+                "address": row["address"],
+                "case_family_count": row["case_family_count"],
+                "case_track_count": row["case_track_count"],
+                "component_rows": row["component_rows"],
+                "epochs_present": row["epochs_present"],
+                "exact_address_epoch_overlap_keys": row["exact_address_epoch_overlap_keys"],
+                "status_groups": row["status_groups"],
+                "case_tracks": row["case_tracks"],
+                "total_gonka_if_naively_summed": format_gonka(int(row["total_ngonka"])),
+            }
+            for family in families:
+                out[f"{family}_gonka"] = format_cell(int(family_amounts[family]))
+            writer.writerow(out)
+
+
+def append_address_table(lines: list[str], rows_for_table: list[dict[str, object]], families: list[str]) -> None:
+    lines += [
+        "| Address | Families | Tracks | Rows | Epochs | Exact overlap keys | "
+        + " | ".join(families)
+        + " | Naive total |",
+        "|---|---:|---:|---:|---|---:|"
+        + "|".join("---:" for _ in families)
+        + "|---:|",
+    ]
+    for row in rows_for_table:
+        family_amounts = row["family_amounts"]
+        assert isinstance(family_amounts, dict)
+        family_cells = [format_cell(int(family_amounts[family])) for family in families]
+        lines.append(
+            f"| `{row['address']}` | {row['case_family_count']} | {row['case_track_count']} | {row['component_rows']} | `{row['epochs_present']}` | {row['exact_address_epoch_overlap_keys']} | "
+            + " | ".join(f"`{cell}`" if cell else "" for cell in family_cells)
+            + f" | `{format_gonka(int(row['total_ngonka']))}` |"
+        )
+
+
+def write_address_crosstab_markdown(rows: list[Row], overlaps: list[dict[str, str]], path: Path) -> None:
+    families = sorted({row.case_family for row in rows})
+    address_rows = address_case_rows(rows, overlaps)
+    review_rows = [
+        row
+        for row in address_rows
+        if int(row["case_family_count"]) > 1
+        or int(row["case_track_count"]) > 1
+        or int(row["exact_address_epoch_overlap_keys"]) > 0
+    ]
+
+    lines = [
+        "# Compensation Address/Case Crosstab",
+        "",
+        "Generated by `scripts/build_compensation_address_epoch_ledger.py` from the address/epoch ledger inputs.",
+        "",
+        "Machine-readable file: `compensation_address_case_crosstab.csv`.",
+        "",
+        "Amounts are grouped by address and case family. `Naive total` is useful for review, but it must not be treated as final payout when a row has multiple case families, multiple tracks, or exact address/epoch overlap keys.",
+        "",
+        "## Summary",
+        "",
+        f"- Unique compensated addresses in ledger: `{len(address_rows)}`",
+        f"- Addresses with more than one case family: `{sum(1 for row in address_rows if int(row['case_family_count']) > 1)}`",
+        f"- Addresses with more than one case track: `{sum(1 for row in address_rows if int(row['case_track_count']) > 1)}`",
+        f"- Addresses with exact address/epoch overlap keys: `{sum(1 for row in address_rows if int(row['exact_address_epoch_overlap_keys']) > 0)}`",
+        "",
+        "## Addresses Requiring Review",
+        "",
+    ]
+    append_address_table(lines, review_rows, families)
+
+    lines += [
+        "",
+        "## Full Address/Case Crosstab",
+        "",
+    ]
+    append_address_table(lines, address_rows, families)
+    path.write_text("\n".join(lines) + "\n")
+
+
 def write_markdown(rows: list[Row], overlaps: list[dict[str, str]], path: Path) -> None:
     by_track: dict[str, list[Row]] = defaultdict(list)
     by_status: dict[str, list[Row]] = defaultdict(list)
@@ -630,13 +771,17 @@ def main() -> None:
     write_ledger(rows, BASE / "compensation_address_epoch_ledger.csv")
     write_overlap_csv(overlaps, BASE / "compensation_overlap_matrix.csv")
     write_epoch_crosstab_csv(rows, BASE / "compensation_epoch_crosstab.csv")
+    write_address_crosstab_csv(rows, overlaps, BASE / "compensation_address_case_crosstab.csv")
     write_markdown(rows, overlaps, BASE / "COMPENSATION_OVERLAP_MATRIX.md")
     write_epoch_crosstab_markdown(rows, overlaps, BASE / "COMPENSATION_EPOCH_CROSSTAB.md")
+    write_address_crosstab_markdown(rows, overlaps, BASE / "COMPENSATION_ADDRESS_CROSSTAB.md")
 
     print(f"ledger_rows={len(rows)}")
     print(f"unique_epoch_address={len({(row.epoch, row.address) for row in rows})}")
+    print(f"unique_addresses={len({row.address for row in rows})}")
     print(f"overlap_keys={len(overlaps)}")
     print(f"epoch_overlap_rows={len(epoch_overlap_summary(rows, overlaps))}")
+    print(f"address_review_rows={len([row for row in address_case_rows(rows, overlaps) if int(row['case_family_count']) > 1 or int(row['case_track_count']) > 1 or int(row['exact_address_epoch_overlap_keys']) > 0])}")
 
 
 if __name__ == "__main__":
