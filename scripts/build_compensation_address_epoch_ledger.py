@@ -17,6 +17,7 @@ from pathlib import Path
 BASE = Path(__file__).resolve().parents[1]
 NGONKA = Decimal("1000000000")
 EXCLUDED_FROM_CURRENT_CROSSTAB = {"P3-CAND-06"}
+PAID_REFERENCE_FAMILIES = {"P4-CAND-01"}
 
 
 @dataclass(frozen=True)
@@ -318,9 +319,7 @@ def write_ledger(rows: list[Row], path: Path) -> None:
 
 
 def build_overlaps(rows: list[Row]) -> list[dict[str, str]]:
-    by_key: dict[tuple[int, str], list[Row]] = defaultdict(list)
-    for row in rows:
-        by_key[(row.epoch, row.address)].append(row)
+    by_key = group_by_epoch_address(rows)
 
     overlaps: list[dict[str, str]] = []
     for (epoch, address), group in sorted(by_key.items()):
@@ -344,6 +343,47 @@ def build_overlaps(rows: list[Row]) -> list[dict[str, str]]:
             }
         )
     return overlaps
+
+
+def group_by_epoch_address(rows: list[Row]) -> dict[tuple[int, str], list[Row]]:
+    by_key: dict[tuple[int, str], list[Row]] = defaultdict(list)
+    for row in rows:
+        by_key[(row.epoch, row.address)].append(row)
+    return by_key
+
+
+def is_current_case_family(case_family: str) -> bool:
+    return case_family not in EXCLUDED_FROM_CURRENT_CROSSTAB and case_family not in PAID_REFERENCE_FAMILIES
+
+
+def paid_reference_intersection_groups(rows: list[Row]) -> list[list[Row]]:
+    groups = []
+    for group in group_by_epoch_address(rows).values():
+        families = {row.case_family for row in group}
+        if families & PAID_REFERENCE_FAMILIES and any(is_current_case_family(family) for family in families):
+            groups.append(sorted(group, key=lambda r: (r.epoch, r.address, r.case_track, r.source_scope)))
+    return sorted(groups, key=lambda group: (group[0].epoch, group[0].address))
+
+
+def paid_reference_intersection_summary(rows: list[Row]) -> list[dict[str, str]]:
+    summary = []
+    for group in paid_reference_intersection_groups(rows):
+        current_rows = [row for row in group if is_current_case_family(row.case_family)]
+        paid_reference_rows = [row for row in group if row.case_family in PAID_REFERENCE_FAMILIES]
+        current_total = sum(row.amount_ngonka for row in current_rows)
+        paid_reference_total = sum(row.amount_ngonka for row in paid_reference_rows)
+        summary.append(
+            {
+                "epoch": str(group[0].epoch),
+                "address": group[0].address,
+                "current_tracks": "; ".join(row.case_track for row in current_rows),
+                "current_amount_gonka": format_gonka(current_total),
+                "paid_reference_tracks": "; ".join(row.case_track for row in paid_reference_rows),
+                "paid_reference_amount_gonka": format_gonka(paid_reference_total),
+                "naive_total_gonka": format_gonka(current_total + paid_reference_total),
+            }
+        )
+    return summary
 
 
 def write_overlap_csv(overlaps: list[dict[str, str]], path: Path) -> None:
@@ -371,7 +411,13 @@ def format_cell(amount_ngonka: int) -> str:
 
 
 def current_crosstab_rows(rows: list[Row]) -> list[Row]:
-    return [row for row in rows if row.case_family not in EXCLUDED_FROM_CURRENT_CROSSTAB]
+    current_addresses = {row.address for row in rows if is_current_case_family(row.case_family)}
+    return [
+        row
+        for row in rows
+        if row.case_family not in EXCLUDED_FROM_CURRENT_CROSSTAB
+        and (row.case_family not in PAID_REFERENCE_FAMILIES or row.address in current_addresses)
+    ]
 
 
 def sum_by(rows: list[Row], key_name: str) -> dict[str, dict[int, int]]:
@@ -516,6 +562,7 @@ def write_epoch_crosstab_markdown(rows: list[Row], overlaps: list[dict[str, str]
         "Machine-readable file: `compensation_epoch_crosstab.csv`.",
         "",
         "Current crosstab scope excludes `P3-CAND-06`; that case remains in the raw address/epoch ledger as reference data, but is not part of this payout-scope view.",
+        "`P4-CAND-01` is already paid and rejected as a case; this crosstab keeps only P4 rows whose recipient address also appears in a current case.",
         "",
         "The crosstab shows epoch-level overlap only. Exact duplicate-risk review still uses `COMPENSATION_OVERLAP_MATRIX.md`, because duplicate payout risk requires the same `epoch + address`, not just the same epoch.",
         "",
@@ -698,12 +745,13 @@ def write_address_crosstab_markdown(rows: list[Row], overlaps: list[dict[str, st
         "Machine-readable file: `compensation_address_case_crosstab.csv`.",
         "",
         "Current crosstab scope excludes `P3-CAND-06`; that case remains in the raw address/epoch ledger as reference data, but is not part of this payout-scope view.",
+        "`P4-CAND-01` is already paid and rejected as a case; this crosstab keeps only P4 rows whose recipient address also appears in a current case.",
         "",
         "Amounts are grouped by address and case family. `Naive total` is useful for review, but it must not be treated as final payout when a row has multiple case families, multiple tracks, or exact address/epoch overlap keys.",
         "",
         "## Summary",
         "",
-        f"- Unique compensated addresses in ledger: `{len(address_rows)}`",
+        f"- Unique addresses in current crosstab scope: `{len(address_rows)}`",
         f"- Addresses with more than one case family: `{sum(1 for row in address_rows if int(row['case_family_count']) > 1)}`",
         f"- Addresses with more than one case track: `{sum(1 for row in address_rows if int(row['case_track_count']) > 1)}`",
         f"- Addresses with exact address/epoch overlap keys: `{sum(1 for row in address_rows if int(row['exact_address_epoch_overlap_keys']) > 0)}`",
@@ -732,6 +780,7 @@ def write_address_crosstab_markdown(rows: list[Row], overlaps: list[dict[str, st
 def write_markdown(rows: list[Row], overlaps: list[dict[str, str]], path: Path) -> None:
     by_track: dict[str, list[Row]] = defaultdict(list)
     by_status: dict[str, list[Row]] = defaultdict(list)
+    paid_reference_summary = paid_reference_intersection_summary(rows)
     for row in rows:
         by_track[row.case_track].append(row)
         by_status[row.status_group].append(row)
@@ -750,6 +799,7 @@ def write_markdown(rows: list[Row], overlaps: list[dict[str, str]], path: Path) 
         f"- Ledger rows: `{len(rows)}`",
         f"- Unique `(epoch,address)` keys: `{len({(row.epoch, row.address) for row in rows})}`",
         f"- Overlap keys: `{len(overlaps)}`",
+        f"- Current-case exact overlaps with paid P4 rows: `{len(paid_reference_summary)}`",
         "",
         "## Totals By Track",
         "",
@@ -776,6 +826,32 @@ def write_markdown(rows: list[Row], overlaps: list[dict[str, str]], path: Path) 
     for status in sorted(by_status):
         group = by_status[status]
         lines.append(f"| `{status}` | {len(group)} | `{format_gonka(sum(row.amount_ngonka for row in group))}` |")
+
+    lines += [
+        "",
+        "## Current Case / Paid P4 Exact Intersections",
+        "",
+        "`P4-CAND-01` was rejected as a case but was fully paid. This table isolates exact `epoch + address` intersections between current case candidates and paid P4 rows.",
+        "",
+        "| Epoch | Address | Current tracks | Current amount, GONKA | Paid P4 tracks | Paid P4 amount, GONKA | Naive total, GONKA |",
+        "|---:|---|---|---:|---|---:|---:|",
+    ]
+    current_total = 0
+    paid_reference_total = 0
+    for row in paid_reference_summary:
+        current_total += int(Decimal(row["current_amount_gonka"]) * NGONKA)
+        paid_reference_total += int(Decimal(row["paid_reference_amount_gonka"]) * NGONKA)
+        lines.append(
+            "| {epoch} | `{address}` | {current_tracks} | `{current_amount_gonka}` | {paid_reference_tracks} | `{paid_reference_amount_gonka}` | `{naive_total_gonka}` |".format(
+                **row
+            )
+        )
+    if paid_reference_summary:
+        lines.append(
+            f"| **Total** |  |  | `{format_gonka(current_total)}` |  | `{format_gonka(paid_reference_total)}` | `{format_gonka(current_total + paid_reference_total)}` |"
+        )
+    else:
+        lines.append("| | | | | | | |")
 
     lines += [
         "",
