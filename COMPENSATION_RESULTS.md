@@ -13,6 +13,9 @@ Address/epoch ledger:
 Overlap matrix:
 [`COMPENSATION_OVERLAP_MATRIX.md`](COMPENSATION_OVERLAP_MATRIX.md) and
 [`compensation_overlap_matrix.csv`](compensation_overlap_matrix.csv).
+Case/epoch crosstab:
+[`COMPENSATION_EPOCH_CROSSTAB.md`](COMPENSATION_EPOCH_CROSSTAB.md) and
+[`compensation_epoch_crosstab.csv`](compensation_epoch_crosstab.csv).
 
 ## Status Groups
 
@@ -61,6 +64,7 @@ Overlap matrix:
 
 - Calculation repo reconciliation: [`CALCULATION_REPO_RECONCILIATION.md`](CALCULATION_REPO_RECONCILIATION.md).
 - Address/epoch overlap matrix: [`COMPENSATION_OVERLAP_MATRIX.md`](COMPENSATION_OVERLAP_MATRIX.md).
+- Case/epoch crosstab: [`COMPENSATION_EPOCH_CROSSTAB.md`](COMPENSATION_EPOCH_CROSSTAB.md).
 - Main public tracker: [`PUBLIC_COMPENSATION_TRACKER.md`](PUBLIC_COMPENSATION_TRACKER.md).
 - Case 3 validation: [`validations/P3-CAND-03-failed-cpoc-epoch-267/README.md`](validations/P3-CAND-03-failed-cpoc-epoch-267/README.md).
 - Case 4 validation: [`validations/P3-CAND-04-upgrade-protection-cpoc-misfire-epoch-276/README.md`](validations/P3-CAND-04-upgrade-protection-cpoc-misfire-epoch-276/README.md).

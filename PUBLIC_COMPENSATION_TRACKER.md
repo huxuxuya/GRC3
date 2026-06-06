@@ -5,6 +5,8 @@ Public status tracker for proposals under preparation. Amounts are calculated es
 Working local results ledger: [`COMPENSATION_RESULTS.md`](COMPENSATION_RESULTS.md).
 Address/epoch overlap ledger:
 [`COMPENSATION_OVERLAP_MATRIX.md`](COMPENSATION_OVERLAP_MATRIX.md).
+Case/epoch crosstab:
+[`COMPENSATION_EPOCH_CROSSTAB.md`](COMPENSATION_EPOCH_CROSSTAB.md).
 Calculation repo reconciliation:
 [`CALCULATION_REPO_RECONCILIATION.md`](CALCULATION_REPO_RECONCILIATION.md).
 
@@ -57,6 +59,8 @@ payouts.
 ## Compensation By Epoch / Overlap Matrix
 
 Amounts are in GNK and are calculated estimates from the linked public repositories. Empty cells mean no compensation amount was found for that case and epoch.
+Detailed generated case/epoch crosstab:
+[`COMPENSATION_EPOCH_CROSSTAB.md`](COMPENSATION_EPOCH_CROSSTAB.md).
 
 | Case | Source | 97 | 112 | 116 | 129 | 132 | 265 | 266 | 267 | 268 | 269 | 270 | 271 | 272 | 273 | 274 | 275 | 276 | Total | Overlap Notes |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|

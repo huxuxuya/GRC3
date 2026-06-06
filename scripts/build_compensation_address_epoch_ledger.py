@@ -365,6 +365,188 @@ def write_overlap_csv(overlaps: list[dict[str, str]], path: Path) -> None:
         writer.writerows(overlaps)
 
 
+def format_cell(amount_ngonka: int) -> str:
+    return format_gonka(amount_ngonka) if amount_ngonka else ""
+
+
+def sum_by(rows: list[Row], key_name: str) -> dict[str, dict[int, int]]:
+    result: dict[str, dict[int, int]] = defaultdict(lambda: defaultdict(int))
+    for row in rows:
+        key = getattr(row, key_name)
+        result[key][row.epoch] += row.amount_ngonka
+    return result
+
+
+def write_epoch_crosstab_csv(rows: list[Row], path: Path) -> None:
+    epochs = sorted({row.epoch for row in rows})
+    by_track = sum_by(rows, "case_track")
+    rows_by_track: dict[str, list[Row]] = defaultdict(list)
+    for row in rows:
+        rows_by_track[row.case_track].append(row)
+
+    fieldnames = [
+        "case_track",
+        "case_family",
+        "status_groups",
+        "component_rows",
+        "unique_positive_addresses",
+        "epochs_present",
+        *[f"epoch_{epoch}_gonka" for epoch in epochs],
+        "total_gonka",
+    ]
+    with path.open("w", newline="") as fh:
+        writer = csv.DictWriter(fh, fieldnames=fieldnames, lineterminator="\n")
+        writer.writeheader()
+        for track in sorted(by_track):
+            group = rows_by_track[track]
+            amounts = by_track[track]
+            out = {
+                "case_track": track,
+                "case_family": ",".join(sorted({row.case_family for row in group})),
+                "status_groups": ",".join(sorted({row.status_group for row in group})),
+                "component_rows": str(len(group)),
+                "unique_positive_addresses": str(len({row.address for row in group})),
+                "epochs_present": ",".join(str(epoch) for epoch in sorted(amounts)),
+                "total_gonka": format_gonka(sum(amounts.values())),
+            }
+            for epoch in epochs:
+                out[f"epoch_{epoch}_gonka"] = format_cell(amounts.get(epoch, 0))
+            writer.writerow(out)
+
+
+def epoch_overlap_summary(rows: list[Row], overlaps: list[dict[str, str]]) -> list[dict[str, str]]:
+    by_epoch: dict[int, list[Row]] = defaultdict(list)
+    exact_overlap_count: dict[int, int] = defaultdict(int)
+    for row in rows:
+        by_epoch[row.epoch].append(row)
+    for row in overlaps:
+        exact_overlap_count[int(row["epoch"])] += 1
+
+    result: list[dict[str, str]] = []
+    for epoch in sorted(by_epoch):
+        group = by_epoch[epoch]
+        families = sorted({row.case_family for row in group})
+        tracks = sorted({row.case_track for row in group})
+        if len(families) < 2 and len(tracks) < 2:
+            continue
+        result.append(
+            {
+                "epoch": str(epoch),
+                "case_families": "; ".join(families),
+                "case_family_count": str(len(families)),
+                "case_tracks": "; ".join(tracks),
+                "case_track_count": str(len(tracks)),
+                "component_rows": str(len(group)),
+                "unique_addresses": str(len({row.address for row in group})),
+                "total_amount_gonka_if_naively_summed": format_gonka(sum(row.amount_ngonka for row in group)),
+                "exact_address_epoch_overlap_keys": str(exact_overlap_count.get(epoch, 0)),
+            }
+        )
+    return result
+
+
+def append_crosstab_section(
+    lines: list[str],
+    *,
+    title: str,
+    grouped_amounts: dict[str, dict[int, int]],
+    row_counts: dict[str, int],
+    address_counts: dict[str, int],
+    statuses: dict[str, str],
+    epochs: list[int],
+) -> None:
+    lines += [
+        "",
+        f"## {title}",
+        "",
+        "| Case / track | Status | Rows | Addresses | " + " | ".join(str(epoch) for epoch in epochs) + " | Total |",
+        "|---|---|---:|---:|" + "|".join("---:" for _ in epochs) + "|---:|",
+    ]
+    for key in sorted(grouped_amounts):
+        amounts = grouped_amounts[key]
+        cells = [format_cell(amounts.get(epoch, 0)) for epoch in epochs]
+        lines.append(
+            f"| `{key}` | `{statuses[key]}` | {row_counts[key]} | {address_counts[key]} | "
+            + " | ".join(f"`{cell}`" if cell else "" for cell in cells)
+            + f" | `{format_gonka(sum(amounts.values()))}` |"
+        )
+
+
+def write_epoch_crosstab_markdown(rows: list[Row], overlaps: list[dict[str, str]], path: Path) -> None:
+    epochs = sorted({row.epoch for row in rows})
+    by_family = sum_by(rows, "case_family")
+    by_track = sum_by(rows, "case_track")
+
+    family_rows: dict[str, list[Row]] = defaultdict(list)
+    track_rows: dict[str, list[Row]] = defaultdict(list)
+    for row in rows:
+        family_rows[row.case_family].append(row)
+        track_rows[row.case_track].append(row)
+
+    family_statuses = {
+        family: ",".join(sorted({row.status_group for row in group}))
+        for family, group in family_rows.items()
+    }
+    track_statuses = {
+        track: ",".join(sorted({row.status_group for row in group}))
+        for track, group in track_rows.items()
+    }
+    family_row_counts = {family: len(group) for family, group in family_rows.items()}
+    track_row_counts = {track: len(group) for track, group in track_rows.items()}
+    family_address_counts = {
+        family: len({row.address for row in group})
+        for family, group in family_rows.items()
+    }
+    track_address_counts = {
+        track: len({row.address for row in group})
+        for track, group in track_rows.items()
+    }
+
+    summary = epoch_overlap_summary(rows, overlaps)
+    lines = [
+        "# Compensation Epoch Crosstab",
+        "",
+        "Generated by `scripts/build_compensation_address_epoch_ledger.py` from the address/epoch ledger inputs.",
+        "",
+        "Machine-readable file: `compensation_epoch_crosstab.csv`.",
+        "",
+        "The crosstab shows epoch-level overlap only. Exact duplicate-risk review still uses `COMPENSATION_OVERLAP_MATRIX.md`, because duplicate payout risk requires the same `epoch + address`, not just the same epoch.",
+        "",
+        "## Epoch Overlap Summary",
+        "",
+        "| Epoch | Families | Tracks | Component rows | Unique addresses | Naive total, GONKA | Exact address/epoch overlap keys |",
+        "|---:|---:|---:|---:|---:|---:|---:|",
+    ]
+    for item in summary:
+        lines.append(
+            "| {epoch} | {case_family_count}: {case_families} | {case_track_count}: {case_tracks} | {component_rows} | {unique_addresses} | `{total_amount_gonka_if_naively_summed}` | {exact_address_epoch_overlap_keys} |".format(
+                **item
+            )
+        )
+    if not summary:
+        lines.append("| | | | | | | |")
+
+    append_crosstab_section(
+        lines,
+        title="Case-Family Crosstab",
+        grouped_amounts=by_family,
+        row_counts=family_row_counts,
+        address_counts=family_address_counts,
+        statuses=family_statuses,
+        epochs=epochs,
+    )
+    append_crosstab_section(
+        lines,
+        title="Track-Level Crosstab",
+        grouped_amounts=by_track,
+        row_counts=track_row_counts,
+        address_counts=track_address_counts,
+        statuses=track_statuses,
+        epochs=epochs,
+    )
+    path.write_text("\n".join(lines) + "\n")
+
+
 def write_markdown(rows: list[Row], overlaps: list[dict[str, str]], path: Path) -> None:
     by_track: dict[str, list[Row]] = defaultdict(list)
     by_status: dict[str, list[Row]] = defaultdict(list)
@@ -447,11 +629,14 @@ def main() -> None:
     overlaps = build_overlaps(rows)
     write_ledger(rows, BASE / "compensation_address_epoch_ledger.csv")
     write_overlap_csv(overlaps, BASE / "compensation_overlap_matrix.csv")
+    write_epoch_crosstab_csv(rows, BASE / "compensation_epoch_crosstab.csv")
     write_markdown(rows, overlaps, BASE / "COMPENSATION_OVERLAP_MATRIX.md")
+    write_epoch_crosstab_markdown(rows, overlaps, BASE / "COMPENSATION_EPOCH_CROSSTAB.md")
 
     print(f"ledger_rows={len(rows)}")
     print(f"unique_epoch_address={len({(row.epoch, row.address) for row in rows})}")
     print(f"overlap_keys={len(overlaps)}")
+    print(f"epoch_overlap_rows={len(epoch_overlap_summary(rows, overlaps))}")
 
 
 if __name__ == "__main__":

@@ -13,10 +13,14 @@ Main entry points:
   comparison against current external calculation repositories.
 - [`COMPENSATION_OVERLAP_MATRIX.md`](COMPENSATION_OVERLAP_MATRIX.md) -
   address/epoch overlap matrix for duplicate-compensation review.
+- [`COMPENSATION_EPOCH_CROSSTAB.md`](COMPENSATION_EPOCH_CROSSTAB.md) -
+  case/epoch crosstab for epoch-level overlap review.
 - [`compensation_address_epoch_ledger.csv`](compensation_address_epoch_ledger.csv)
   - machine-readable per-address, per-epoch compensation component ledger.
 - [`compensation_overlap_matrix.csv`](compensation_overlap_matrix.csv) -
   machine-readable repeated `(epoch,address)` keys.
+- [`compensation_epoch_crosstab.csv`](compensation_epoch_crosstab.csv) -
+  machine-readable case/epoch crosstab.
 
 Generated address/epoch files are rebuilt with:
 

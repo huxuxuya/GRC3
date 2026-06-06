@@ -1,0 +1,12 @@
+case_track,case_family,status_groups,component_rows,unique_positive_addresses,epochs_present,epoch_97_gonka,epoch_112_gonka,epoch_116_gonka,epoch_129_gonka,epoch_132_gonka,epoch_263_gonka,epoch_264_gonka,epoch_265_gonka,epoch_266_gonka,epoch_267_gonka,epoch_268_gonka,epoch_269_gonka,epoch_270_gonka,epoch_271_gonka,epoch_272_gonka,epoch_273_gonka,epoch_274_gonka,epoch_275_gonka,epoch_276_gonka,total_gonka
+P3-CAND-01-confirmed,P3-CAND-01,pending_estimate,6,6,272,,,,,,,,,,,,,,,35040.581153560,,,,,35040.581153560
+P3-CAND-01-manual-review,P3-CAND-01,pending_estimate,1,1,272,,,,,,,,,,,,,,,69.342202123,,,,,69.342202123
+P3-CAND-02,P3-CAND-02,local_validated_recommended,19,19,"97,112,116,129,132",8.432384134,7.993576578,1037.343139724,7.470360710,14.096689777,,,,,,,,,,,,,,,1075.336150923
+P3-CAND-03,P3-CAND-03,local_validated_recommended,1,1,267,,,,,,,,,,10262.057515369,,,,,,,,,,10262.057515369
+P3-CAND-03-EXT,P3-CAND-03,local_validated_recommended,1,1,265,,,,,,,,20896.527179100,,,,,,,,,,,,20896.527179100
+P3-CAND-04,P3-CAND-04,pending_estimate_revalidation_required,19,19,276,,,,,,,,,,,,,,,,,,,32429.966254822,32429.966254822
+P3-CAND-06,P3-CAND-06,pending_estimate,24,19,"263,264,265,268,269,271,272,273,274,275,276",,,,,,8719.070532944,6010.126484192,335.927643572,,,25309.087745610,2764.396118755,,139.200061369,31070.826328522,3237.649981278,310.429493665,126.220428182,42799.389553703,120822.324371792
+P4-GroupCap-source,P4-CAND-01,disputed_not_aggregate,151,41,"267,268,269,270,271,272,273,274,275,276",,,,,,,,,,246471.823957226,42634.684509205,47504.581758505,76870.083553475,28422.154068920,16988.149548048,86243.303557245,41818.441790908,89984.775198122,50281.353229327,727219.351170981
+P4-e265-source-cpoc,P4-CAND-01,disputed_not_aggregate,3,3,265,,,,,,,,30592.104861828,,,,,,,,,,,,30592.104861828
+P4-e266-delegation,P4-CAND-01,pending_estimate,9,9,266,,,,,,,,,5092.727156782,,,,,,,,,,,5092.727156782
+P4-e266-nonce,P4-CAND-01,pending_estimate,18,18,266,,,,,,,,,183605.741811967,,,,,,,,,,,183605.741811967
