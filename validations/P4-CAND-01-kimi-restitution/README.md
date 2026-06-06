@@ -16,6 +16,7 @@ on rerunning the investigator's scripts.
 | [`p4_conceptual_audit_plan.md`](p4_conceptual_audit_plan.md) | Working checklist for auditing claims, evidence, root cause, eligibility, overlap, and policy boundaries without reproducing arithmetic. |
 | [`raw_chain_cache_manifest.md`](raw_chain_cache_manifest.md) | Manifest of raw node responses saved during P4 audit passes, with endpoints, hashes, and limitations. |
 | [`p4_audit_pass_01.md`](p4_audit_pass_01.md) | First evidence pass: e266 final-set absence, e266 commit endpoint limitation, and e267/e275 Kimi cap-effect evidence. |
+| [`p4_e266_commit_final_group_check.csv`](p4_e266_commit_final_group_check.csv) | Derived address-level check for the nine e266 DevOps-listed PoC submitters against final epoch group data. |
 
 ## Current Result
 

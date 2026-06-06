@@ -13,7 +13,7 @@ Raw inputs for this pass are listed in
 |---|---|
 | Raw data retention | Confirmed: all node responses fetched in this pass are stored under `raw_chain_cache/`. |
 | e266 final-set absence for the nine DevOps-listed addresses | Confirmed from saved `epoch_group_data_266` and `epoch_performance_summary_266`: all nine are absent from final group and performance rows. |
-| e266 nonce-submission proof | Blocked on current `node1` LCD: current commit endpoint returns empty commits, and historical-height queries return a state-load error. |
+| e266 PoC commit proof for the nine DevOps-listed addresses | Confirmed from archive CLI query at height `4120751`: all nine have PoC v2 store commits at stage start `4105361`. |
 | e267/e275 `ComputeGroupCap` effect | Confirmed as a real chain-state pattern: Kimi model rows materially exceed root settlement group weights/confirmation-weight proportions. |
 | Compensation eligibility | Not decided in this pass. |
 
@@ -23,32 +23,36 @@ The DevOps evidence lists nine addresses as PoC submitters that did not enter
 the final epoch `266` set. The saved final group/performance data confirms the
 absence part of that statement:
 
-| Address | In `epoch_group_data_266` final group | In `epoch_performance_summary_266` |
-|---|---:|---:|
-| `gonka125n6kr5gvdup0lndfkps7t6rd6592panhrg3np` | no | no |
-| `gonka18xeqnspxpg2vncufnjne485rkaagwvz7whyn0d` | no | no |
-| `gonka1c6fwzedfsmpu4jnjekv4cn7mvr7x7fuqd6uqt9` | no | no |
-| `gonka1jrgm47v5eg876udmzg6j6glqcsd5x0vk6crpax` | no | no |
-| `gonka1q5xt54wncgzk7dxv9x64uln68455g83wu9tugg` | no | no |
-| `gonka1qa90tgczc0k5dvk4l5nvlf5y6phgm6mg22sfjv` | no | no |
-| `gonka1wkgawwdzj623ss8eywayzdj6qcgr2llygactje` | no | no |
-| `gonka1xwkesaxvdadh9wt9yyladu0r260s7whklcktds` | no | no |
-| `gonka1yal0ysgzc860zt3y8cds8656tnueusgymftvkw` | no | no |
+| Address | PoC commit count | In `epoch_group_data_266` final group | In `epoch_performance_summary_266` |
+|---|---:|---:|---:|
+| `gonka125n6kr5gvdup0lndfkps7t6rd6592panhrg3np` | `6,048` | no | no |
+| `gonka18xeqnspxpg2vncufnjne485rkaagwvz7whyn0d` | `6,080` | no | no |
+| `gonka1c6fwzedfsmpu4jnjekv4cn7mvr7x7fuqd6uqt9` | `12,384` | no | no |
+| `gonka1jrgm47v5eg876udmzg6j6glqcsd5x0vk6crpax` | `25,664` | no | no |
+| `gonka1q5xt54wncgzk7dxv9x64uln68455g83wu9tugg` | `89,984` | no | no |
+| `gonka1qa90tgczc0k5dvk4l5nvlf5y6phgm6mg22sfjv` | `55,552` | no | no |
+| `gonka1wkgawwdzj623ss8eywayzdj6qcgr2llygactje` | `6,496` | no | no |
+| `gonka1xwkesaxvdadh9wt9yyladu0r260s7whklcktds` | `12,896` | no | no |
+| `gonka1yal0ysgzc860zt3y8cds8656tnueusgymftvkw` | `5,664` | no | no |
 
 Interpretation:
 
-- Confirmed: these nine addresses are not present in the saved final epoch
-  `266` group and not present in saved epoch `266` performance rows.
-- Not confirmed yet from our node data: that these nine submitted Kimi PoC
-  nonces at epoch start `4105361`.
-- Current blocker: `node1_all_poc_v2_store_commits_4105361.json` has an empty
-  `commits` array, and the historical-height version returns a state-load
-  error. This looks like endpoint/history availability, not a substantive
-  disproof of the claim.
+- Confirmed: archive CLI query
+  `all-poc-v2-store-commits 4105361 --height 4120751` returns `44` PoC commit
+  rows and `41` unique submitters.
+- Confirmed: all nine DevOps-listed addresses have positive PoC commit counts
+  and are absent from the final epoch `266` group.
+- Confirmed: these nine addresses are not present in saved epoch `266`
+  performance rows.
+- Current limitation: the CLI output contains `participant_address`, `count`,
+  `root_hash`, and `hex_pub_key`, but not `model_id`. Therefore this pass
+  confirms PoC commit submission and final-set absence; the "Kimi submitter"
+  label still depends on DevOps/source context or a richer raw commit extract.
 
-Next action: add an archive raw source for
-`all_poc_v2_store_commits/4105361` at epoch-end height `4120751`, then compare
-commit submitters against the final group.
+Derived files:
+
+- `p4_e266_commit_final_group_check.csv`
+- `p4_e266_commit_final_group_check.json`
 
 ## e267: Kimi Model Rows vs Root Settlement Rows
 
@@ -111,17 +115,16 @@ Interpretation:
 
 | Checklist item | Updated status | Reason |
 |---:|---|---|
-| 7 | `Partially confirmed` | Final-set absence is confirmed for the nine listed addresses; nonce-submission proof remains blocked pending archive commit data. |
+| 7 | `Confirmed` | Archive CLI raw data confirms PoC commits for all nine listed addresses at stage `4105361`; final group/performance raw data confirms all nine are absent from the epoch `266` final set. |
 | 12 | `Confirmed` | Saved root and Kimi model-group data for e267/e275 show the cap/weight-pressure pattern directly. |
 | 14 | `Partially confirmed` | Confirmed work/weight pressure exists, but underpayment still depends on accepted counterfactual reward model. |
 | 15 | `Policy required` | The top-up denominator remains a methodology choice, not a chain-only fact. |
 
 ## Next Checks
 
-1. Obtain archive raw data for epoch `266` PoC commits at start height
-   `4105361` and epoch-end height `4120751`.
-2. Build an address-level e266 commit-vs-final-group table from saved raw data.
-3. Build an e265 row classifier separating strict Case 3-like cPoC failure
+1. Add richer e266 commit evidence if available, ideally including `model_id`,
+   to independently confirm the Kimi-specific part of the submitter claim.
+2. Build an e265 row classifier separating strict Case 3-like cPoC failure
    from broader confirmation-weight-drop rows.
-4. Build a P4 overlap matrix against Case 3, Case 4, Case 6, and prior payout
+3. Build a P4 overlap matrix against Case 3, Case 4, Case 6, and prior payout
    records.

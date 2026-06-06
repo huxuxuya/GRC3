@@ -1,0 +1,64 @@
+{
+  "source_commits": "raw_chain_cache/archive_cli_height_4120751_all_poc_v2_store_commits_4105361_stdout.json",
+  "source_group": "raw_chain_cache/archive_lcd_epoch_group_data_266.json",
+  "poc_start_height": 4105361,
+  "query_height": 4120751,
+  "commit_rows": 44,
+  "unique_commit_submitters": 41,
+  "rows": [
+    {
+      "address": "gonka125n6kr5gvdup0lndfkps7t6rd6592panhrg3np",
+      "commit_count": 6048,
+      "in_final_group": false,
+      "final_weight": null
+    },
+    {
+      "address": "gonka18xeqnspxpg2vncufnjne485rkaagwvz7whyn0d",
+      "commit_count": 6080,
+      "in_final_group": false,
+      "final_weight": null
+    },
+    {
+      "address": "gonka1c6fwzedfsmpu4jnjekv4cn7mvr7x7fuqd6uqt9",
+      "commit_count": 12384,
+      "in_final_group": false,
+      "final_weight": null
+    },
+    {
+      "address": "gonka1jrgm47v5eg876udmzg6j6glqcsd5x0vk6crpax",
+      "commit_count": 25664,
+      "in_final_group": false,
+      "final_weight": null
+    },
+    {
+      "address": "gonka1q5xt54wncgzk7dxv9x64uln68455g83wu9tugg",
+      "commit_count": 89984,
+      "in_final_group": false,
+      "final_weight": null
+    },
+    {
+      "address": "gonka1qa90tgczc0k5dvk4l5nvlf5y6phgm6mg22sfjv",
+      "commit_count": 55552,
+      "in_final_group": false,
+      "final_weight": null
+    },
+    {
+      "address": "gonka1wkgawwdzj623ss8eywayzdj6qcgr2llygactje",
+      "commit_count": 6496,
+      "in_final_group": false,
+      "final_weight": null
+    },
+    {
+      "address": "gonka1xwkesaxvdadh9wt9yyladu0r260s7whklcktds",
+      "commit_count": 12896,
+      "in_final_group": false,
+      "final_weight": null
+    },
+    {
+      "address": "gonka1yal0ysgzc860zt3y8cds8656tnueusgymftvkw",
+      "commit_count": 5664,
+      "in_final_group": false,
+      "final_weight": null
+    }
+  ]
+}
