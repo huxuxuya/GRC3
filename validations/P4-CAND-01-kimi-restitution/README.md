@@ -17,6 +17,8 @@ on rerunning the investigator's scripts.
 | [`raw_chain_cache_manifest.md`](raw_chain_cache_manifest.md) | Manifest of raw node responses saved during P4 audit passes, with endpoints, hashes, and limitations. |
 | [`p4_audit_pass_01.md`](p4_audit_pass_01.md) | First evidence pass: e266 final-set absence, e266 commit endpoint limitation, and e267/e275 Kimi cap-effect evidence. |
 | [`p4_e266_commit_final_group_check.csv`](p4_e266_commit_final_group_check.csv) | Derived address-level check for the nine e266 DevOps-listed PoC submitters against final epoch group data. |
+| [`p4_audit_pass_02_e265.md`](p4_audit_pass_02_e265.md) | Epoch 265 row classifier separating strict Case-3-like cPoC shortfall, broader failed-confirmation candidate, and rewarded confirmation-weight drop. |
+| [`p4_e265_row_classifier.csv`](p4_e265_row_classifier.csv) | Machine-readable classifier for the three epoch 265 rows in the P4 source package. |
 
 ## Current Result
 

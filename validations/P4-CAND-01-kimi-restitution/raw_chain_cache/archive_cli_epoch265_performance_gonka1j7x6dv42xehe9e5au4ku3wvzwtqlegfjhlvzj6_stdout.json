@@ -1,0 +1,10 @@
+{
+  "epochPerformanceSummary": {
+    "epoch_index": "265",
+    "participant_id": "gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6",
+    "inference_count": "45444",
+    "missed_requests": "12",
+    "validated_inferences": "45437",
+    "invalidated_inferences": "7"
+  }
+}

@@ -1,0 +1,4 @@
+address,root_weight,healthy_confirmation_weight,end_confirmation_weight,excluded,exclusion_reason,exclusion_block,rewarded_coins,classification,status,next_action
+gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6,66311,66311,323,true,failed_confirmation_poc,4103171,0,strict_case3_like_direct_cpoc_shortfall,confirmed,Keep in Case 3 e265 extension if committee accepts extension
+gonka17pw6099q758qwzewtrqmqpf5c2lrhr97fwqexu,189884,186719,172607,false,,,54393492283376,broader_confirmation_weight_drop,policy_required,Do not classify as direct zero-reward cPoC victim without separate policy and cause proof
+gonka1830lqug50lse998x2lakk4pj5ypfumz5pasz0y,13490,7031,0,true,failed_confirmation_poc,4103171,0,failed_confirmation_poc_broader_candidate,needs_row_level_cpoc_model_proof,Verify cPoC submissions/validator path before accepting as direct Kimi restitution victim
