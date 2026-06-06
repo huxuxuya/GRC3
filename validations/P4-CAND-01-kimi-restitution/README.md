@@ -40,6 +40,27 @@ on rerunning the investigator's scripts.
 | [`p4_e267_e276_groupcap_denominator_check.csv`](p4_e267_e276_groupcap_denominator_check.csv) | Machine-readable e267-e276 denominator comparison and e276 upgrade-in-epoch flag. |
 | [`source_cache_manifest.md`](source_cache_manifest.md) | Manifest of copied source artifacts from the pinned Votkon repository used as claim labels. |
 
+## Source Compensation Split
+
+The pinned source total `946,509.925002 GONKA` is not one homogeneous
+compensation class. It is composed of separate tracks:
+
+| Track | Source amount, GONKA | Problem file | Local status |
+|---|---:|---|---|
+| Epoch `265` cPoC / attack-attributed rows | `30,592.104861828` | [`p4_problem_01_e265_scope.md`](p4_problem_01_e265_scope.md) | Mixed scope: one row overlaps Case 3; two rows are not confirmed as strict direct cPoC victims. |
+| Epoch `266` nonce + delegation | `188,698.468968749` | [`p4_problem_02_e266_nonce_scope.md`](p4_problem_02_e266_nonce_scope.md), [`p4_problem_03_e266_delegation.md`](p4_problem_03_e266_delegation.md) | Split into 9 absent operators, 5 zero-reward rows, 4 already-rewarded top-up rows, and 9 indirect delegator rows. |
+| Epochs `267..276` GroupCap top-up | `727,219.351170981` | [`p4_problem_04_groupcap_denominator.md`](p4_problem_04_groupcap_denominator.md) | Source model is reproducible, but compensability, denominator, and e276 treatment are policy choices. |
+| Full source package | `946,509.925002` | [`p4_problem_05_overlap_and_total.md`](p4_problem_05_overlap_and_total.md) | Not validated as one aggregate GRC payout. |
+
+Detailed e266 nonce split:
+
+| Sub-track | Count | Problem file | Local status |
+|---|---:|---|---|
+| Absent final-set operators | `9` | [`p4_problem_02_e266_nonce_scope.md`](p4_problem_02_e266_nonce_scope.md) | Raw commits and raw validations confirmed; no final group/performance row. |
+| In-final-group zero-reward rows | `5` | [`p4_problem_02a_e266_zero_reward_rows.md`](p4_problem_02a_e266_zero_reward_rows.md) | Formal remark `P4-E266-ZR-01`: `failed_confirmation_poc`, not absent operators. |
+| In-final-group rewarded top-up rows | `4` | [`p4_problem_02b_e266_rewarded_topup_rows.md`](p4_problem_02b_e266_rewarded_topup_rows.md) | Formal remark `P4-E266-TOPUP-01`: already rewarded; top-up policy required. |
+| Delegation rows | `9` | [`p4_problem_03_e266_delegation.md`](p4_problem_03_e266_delegation.md) | Chain mechanics confirmed; indirect-loss eligibility policy required. |
+
 ## Current Result
 
 The repository contains real on-chain signals for Kimi weight degradation,
