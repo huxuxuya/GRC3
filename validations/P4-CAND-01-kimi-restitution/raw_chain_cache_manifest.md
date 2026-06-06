@@ -73,6 +73,28 @@ Default node used for this pass:
 | `node1_epoch_group_data_275.json` | `GET /productscience/inference/inference/epoch_group_data/275` | `d8425fb96f9e344f2cde420a756d51f287ca5b9c08d90917b0edd1c394b52413` | Root epoch `275` group data: `55` rows, `total_weight=736925`, summed confirmation weight `945908`. |
 | `node1_epoch_group_data_275_model_kimi.json` | `GET /productscience/inference/inference/epoch_group_data/275?model_id=moonshotai%2FKimi-K2.6` | `b3c8e4804279288988f47d8fa325ac8206c7402b0824d8a06d96b6813846fb17` | Epoch `275` Kimi model rows: `24` rows, model-row weight sum `589904`, confirmation-weight sum `763391`. |
 
+## Pass 06 GroupCap Raw Files
+
+The pass 06 scan saved root epoch group data, Kimi model-group data, and epoch
+performance summaries for every epoch `267..276` from
+`http://node1.gonka.ai:8000/chain-api`.
+
+| Epoch | Root group SHA-256 | Kimi model group SHA-256 | Performance summary SHA-256 |
+|---:|---|---|---|
+| `267` | `db78c6276b813d3421db997f49ccb86e22d748029f6a3ff20374fb6c2b7fe3da` | `4edeaabe053b23eac623c473115ac6b8158a9de40b57d82e3e19e06af532b342` | `2b2f94b5856385ad67f296b738f088d80e671b03cfaaa03901434d0958775528` |
+| `268` | `92d61eb9ba3d049fd7d381804d8b6cef09b2f901495e944da56def2de8c77beb` | `09baae0dfafda61823cc8830c00cc0f5593035ff93f0a9af39b9393e11b287b3` | `46f634b5d320fa213f1f8f6bfed8a54fd77cd61c51cdb88f86b94749b9cd8547` |
+| `269` | `46ec8aa8ec7fb6cb704426524167d048ea9d4326a1b2c5db332aa1e521c57e38` | `2c6e70195615eb82ff311074493cbac2b51a80bc9c35519932f64bc4ab2fd6ab` | `558f767f029c9a8c0e54e50c12cb0365a54e5197616a5f9963566682a54ed1c6` |
+| `270` | `a8eef9021083d79e7044053e8b847fddf7af67eee46e35550791b1e15d7d1cab` | `c3e0a9429228ba5e526295dfff924be952098fb3f24bcbd881de86dcac08cc60` | `89228652a17b999cdefdabc3b85562031f031f32fa271bad4f13c23d1d61f63e` |
+| `271` | `36a42f9cbe3513e83597b1b1f22a31153b0ba7473c08c132fb179f07234944c6` | `5b916c348a4fdaa706a1435a03e0542df196ec3417751d95991adde35514bebe` | `010d97499a5de56afc88d8015024ab25c175e4e9d42fc7d15268cd7bd3036987` |
+| `272` | `ae428c77e3822a880ed6f4dbd0e39a71f444729be9e63f83f76dbc3345e87cb9` | `e58742facb4918944f7fd8614b73aa54f07f5ed014e28a8cc101bf6ae3a5fe5a` | `a78e178995e3d75d1a7575d0a07af74d8711a1fb8545343294e5781a8f5bcc08` |
+| `273` | `8843022be7caabfaff93f68467a0dc8c868ba24e98d45d85e9e72a918a81d747` | `60b29655d4dbc0d584dd90740703ad61a78b90c22f24d0caec8997345af67958` | `baaf44b8d7587a71e26ffd938add732cecdccd94a6740ea958420536c5e607be` |
+| `274` | `6cc394c98a300dc8e9023a6c49a9b4663094691d9385fd1ab842b3b0d8ce6f3e` | `62b3307bfc31952cfd09d017774c58c0f0ad3f052d8ebebf20ebe1db28da3f3f` | `eae6659bcbb9ffcfa1d14152b258e154c8bd895d8e87d5efec497ed75517c6ca` |
+| `275` | `d8425fb96f9e344f2cde420a756d51f287ca5b9c08d90917b0edd1c394b52413` | `b3c8e4804279288988f47d8fa325ac8206c7402b0824d8a06d96b6813846fb17` | `5a62dfa9bd0020561c5aa58fcb265ef79b4097eeca2a0aae42329c377f109155` |
+| `276` | `e2e0be3f8b22bf53b55e025d34019b3b592133bcec83a31ebc6630128a3ec2c0` | `ee4de8c23dc8aa1212014d4c0eea1b86cfb6c222465922afdd6df09aec4635f8` | `39e5cff979cc4630d16dbe54e9296037b09c506ef9ddb3d03983576a67707105` |
+
+The matching pass 06 `.stderr.txt` files are empty with SHA-256
+`e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`.
+
 ## Current Limitations
 
 - Current-state LCD endpoints do not expose historical PoC commit data for

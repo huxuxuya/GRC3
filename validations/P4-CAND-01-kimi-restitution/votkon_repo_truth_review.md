@@ -71,8 +71,8 @@ upstream repository total: `946,509.925002 GONKA` and `53` addresses.
 | Delegators in e266 lost extra weight because their operator was excluded. | `Chain facts confirmed, policy required` | Audit pass 05 confirms all 9 source rows had raw Kimi delegation to `gonka1q5xt54...` at snapshot height `4104861`; that operator was absent from the final epoch group; and chain params give `0.15 - 0.05 = 0.10`. Eligibility still depends on accepting indirect delegator losses as compensable. |
 | `ComputeGroupCap` reduced Kimi weight in e267+. | `Confirmed as protocol behavior` | The cap effect itself is real. DevOps evidence and repo data both describe the `75%` cap and Kimi scaling. |
 | `ComputeGroupCap` underpayment should be compensated. | `Not technically settled` | The cap is an intended protocol mechanism. Compensation requires a policy decision that this intended mechanism produced an unfair/restorable loss. |
-| e267+ formula is chain-correct. | `Methodology contested` | The scripts use `correct_reward = confirmation_weight / root_total_weight * epoch_reward`, then subtract actual rewards. This is a top-up against the capped settlement denominator, not a full uncapped network settlement replay. |
-| e276 should be included at full epoch amount. | `Unresolved` | The repo states `v0.2.13` activated at block `4,267,300` during epoch `276`, but the e276 script calculates against true epoch end without a visible proration rule. |
+| e267+ formula is chain-correct. | `Methodology contested` | Pass 06 verifies the source rows against raw chain data and reproduces the source top-up model, but denominator choice changes the e267-e276 total materially: `727,219.351170981`, `503,653.983658046`, or `360,858.547914700` GONKA under the checked models. |
+| e276 should be included at full epoch amount. | `Unresolved` | Pass 06 confirms upgrade block `4,267,300` is inside epoch `276`, with about `0.4957` of the effective epoch block span before the upgrade. Full-epoch treatment still needs a policy/proration decision. |
 
 ## Main Methodology Problem
 
@@ -98,6 +98,15 @@ A full uncapped replay would need to:
 The repository explicitly rejects this stricter approach by arguing that Qwen
 rewards were already paid and cannot be clawed back. That is a policy argument,
 not a chain-style settlement replay.
+
+Audit pass 06 confirms the source top-up formula is reproducible from raw chain
+rows, but also quantifies the methodology risk across epochs `267..276`:
+
+| Denominator model | Total, GONKA |
+|---|---:|
+| Source top-up using capped root denominator | `727,219.351170981` |
+| All root `confirmation_weight` denominator | `503,653.983658046` |
+| Replace affected capped weight with affected confirmation weight | `360,858.547914700` |
 
 ## Internal Inconsistencies / Weak Points
 

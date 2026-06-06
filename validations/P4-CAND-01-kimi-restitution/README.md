@@ -25,6 +25,8 @@ on rerunning the investigator's scripts.
 | [`p4_e266_nonce_scope_classifier.csv`](p4_e266_nonce_scope_classifier.csv) | Machine-readable e266 nonce scope classification for the 18 source nonce-compensation rows. |
 | [`p4_audit_pass_05_e266_delegation.md`](p4_audit_pass_05_e266_delegation.md) | Epoch 266 delegation evidence: verifies raw Kimi delegations, operator absence, and chain penalty parameters while leaving eligibility as policy. |
 | [`p4_e266_delegation_evidence.csv`](p4_e266_delegation_evidence.csv) | Machine-readable e266 delegation evidence for the 9 source delegation-compensation rows. |
+| [`p4_audit_pass_06_e267_e276_groupcap.md`](p4_audit_pass_06_e267_e276_groupcap.md) | Epochs 267-276 GroupCap denominator check: verifies source rows against raw chain data and compares three counterfactual denominator models. |
+| [`p4_e267_e276_groupcap_denominator_check.csv`](p4_e267_e276_groupcap_denominator_check.csv) | Machine-readable e267-e276 denominator comparison and e276 upgrade-in-epoch flag. |
 | [`source_cache_manifest.md`](source_cache_manifest.md) | Manifest of copied source artifacts from the pinned Votkon repository used as claim labels. |
 
 ## Current Result
