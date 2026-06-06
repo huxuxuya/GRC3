@@ -30,6 +30,7 @@ Checked independently, without running prior case solution code:
 | [`case5_poc_endpoint_check.csv`](case5_poc_endpoint_check.csv) | Machine-readable endpoint counts for the PoC evidence check. |
 | [`case5_chain_rules_review.md`](case5_chain_rules_review.md) | Code-level preserved-node mechanics review. |
 | [`case5_conclusion.md`](case5_conclusion.md) | Validation conclusion and remaining policy decision. |
+| [`case5_conceptual_review_plan.md`](case5_conceptual_review_plan.md) | Step-by-step conceptual review checklist with evidence status per issue. |
 
 ## Main On-Chain Timeline
 
