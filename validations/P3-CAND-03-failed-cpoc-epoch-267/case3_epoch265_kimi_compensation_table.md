@@ -44,6 +44,28 @@ row is the archive-confirmed failure stage and uses the cPoC snapshot denominato
 | `1` | `4,098,879` | `43,328` | `535,847` | short by `66,938` diagnostic | `960` | `406,730` | short by `196,055` diagnostic | `904,177` diagnostic | `602,785` diagnostic | not reconstructed in local raw cache | not finalized |
 | `2` | `4,102,890` | `52,028` | `256,727` | short by `231,826` | `960` | `35,370` | short by `453,183` | `732,828` cPoC snapshot | `488,553` | Kimi: `1 valid / 1 invalid / 1 no_vote`, no guardian pass; Qwen: `2 valid / 0 invalid / 1 no_vote`, guardian pass | `66,311 -> 323` at block `4,103,171` |
 
+## Reward-Weight Projection By Stage
+
+This table separates three different layers:
+
+- raw model weight: the participant's model-specific PoC weight entering the epoch;
+- confirmed raw model weight: which model row would be treated as confirmed at that stage;
+- reward numerator: the weight used in the epoch reward formula after applying the
+  Kimi-only scale/residual interpretation.
+
+Rows `cPoC 0` and `cPoC 1` are diagnostic because the local archive does not
+contain the raw guardian/final-reading cache for those two intermediate stages.
+The final chain-applied stage is `cPoC 2`.
+
+| Stage | Height | Kimi input raw weight | Qwen input raw weight | Kimi confirmed raw weight | Qwen confirmed raw weight | Kimi reward numerator | Qwen/residual reward numerator | Total reward numerator | Calculated reward, GONKA | Notes |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| Epoch entry | before cPoC | `52,279` | `923` | not applicable | not applicable | not decomposed | not decomposed | `66,311` | `20,896.527179100` | Full active participant/root weight on epoch entry. This is the full-root upper bound, not Kimi-only. |
+| `cPoC 0` diagnostic | `4,095,682` | `52,279` | `923` | `52,279` | `0` by weight diagnostic | `40,777` | `0` | `40,777` | `12,850.020189443` | Kimi validating power clears the diagnostic threshold; Qwen validating power is short. Guardian outcome was not reconstructed locally. |
+| `cPoC 1` diagnostic | `4,098,879` | `52,279` | `923` | `0` by weight diagnostic | `0` by weight diagnostic | `0` | `0` | `0` | `0.000000000000` | Both Kimi and Qwen are short by voting-power diagnostic. Guardian outcome was not reconstructed locally. |
+| `cPoC 2` chain-applied result | `4,102,890` | `52,279` | `923` | `0` | `923` by guardian pass | `0` | `323` | `323` | `101.786706260` | Kimi has voting shortfall and no guardian pass. Qwen has voting shortfall but `2 valid / 0 invalid / 1 no_vote`; chain stores residual confirmation weight `323` after exclusion. |
+| `cPoC 2` Kimi-restored counterfactual | `4,102,890` | `52,279` | `923` | `52,279` restored | `923` retained by guardian pass | `40,777` | `323` | `41,100` | `12,951.806895703` | Narrow Kimi-only compensation view: keep the chain-observed residual and add scaled Kimi weight. |
+| Full-row restore counterfactual | `4,102,890` | `52,279` | `923` | full participant row | full participant row | not decomposed | not decomposed | `66,311` | `20,896.527179100` | Broader policy view: restore the whole failed participant epoch row. This is not model-only compensation. |
+
 ## Compensation Interpretations
 
 | Interpretation | Reward numerator | Formula | Amount, GONKA | What it compensates |
