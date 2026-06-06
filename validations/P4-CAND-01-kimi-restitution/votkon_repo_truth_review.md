@@ -58,9 +58,8 @@ Per-epoch totals from the checked JSON files:
 | `275` | `89,984.775198122` | `ComputeGroupCap` top-up |
 | `276` | `50,281.353229327` | `ComputeGroupCap` top-up |
 
-Important repository-sync note: the existing public case page in this repo
-still says `710,772.72 GNK` and `52` addresses. That is stale relative to the
-current upstream repository checked in this review.
+Repository-sync note: the public case page has been updated to the current
+upstream repository total: `946,509.925002 GONKA` and `53` addresses.
 
 ## Claim Review
 
@@ -104,7 +103,7 @@ not a chain-style settlement replay.
 
 | Item | Why it matters |
 |---|---|
-| Public case metadata is stale | Current upstream repo says `946,509.925002 GONKA` / `53` addresses, while our public case note says `710,772.72 GNK` / `52` addresses. |
+| Public case metadata changed materially | The current upstream repo says `946,509.925002 GONKA` / `53` addresses. Earlier local metadata used `710,772.72 GNK` / `52` addresses, so downstream references should pin the upstream commit. |
 | e265 script docstring and code disagree | The docstring says `confirmation_weight_i / total_confirmation_weight`, but the code uses `weight / total_epoch_weight`. The resulting numbers use weight, not the docstring formula. |
 | e267 `GROUP_CAP.md` contains two denominator descriptions | It first describes `confirmation_weight / total_uncapped_confirmation_weight`, then says using `confirmation_weight / EpochGroupData.total_weight` is correct. These are different denominators. |
 | e276 no-proration assumption is not justified in the calculation | The upgrade is described as mid-epoch, but the script uses the full epoch end state. |
@@ -143,5 +142,5 @@ Recommended committee treatment:
    - top-up using capped `root_total_weight`, as the repo does; or
    - full uncapped settlement replay with a recomputed denominator.
 4. Require a specific e276 proration or non-proration justification.
-5. Update public case metadata if the current upstream repository version is
-   used as the source of truth.
+5. Pin any public discussion to the upstream commit used for the totals:
+   `5462c55a6b95d50dfb53bdc4211cdcd31369c2ea`.

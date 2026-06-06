@@ -5,14 +5,14 @@
 | **Case** | `P4-CAND-01` - Kimi Restitution |
 | Proposal | Not included in current GRC proposal; external/community proposal possible |
 | Epochs affected | 265-276 |
-| Affected participants | 52 unique addresses |
-| Estimated compensation | 710,772.72 GNK |
+| Affected participants | 53 unique addresses |
+| Estimated compensation | 946,509.925002 GONKA |
 | **Cause and evidence** | CPoC degradation in epoch 265, nonce/delegation losses in epoch 266, and ComputeGroupCap underpayment in epochs 267-276. Evidence: [calculation repository](https://github.com/votkon/gonka-kimi-restitution) and [DevOps chat log](sources/P4-CAND-01-devops-chat.md). |
 | **Can it happen again?** | Reduced risk after `v0.2.13`; `ComputeGroupCap` still exists as an intended protocol rule, so recurrence risk should be reviewed. |
 | **Mitigation / fix** | Partially mitigated by PR [#1143](https://github.com/gonka-ai/gonka/pull/1143) in `v0.2.13`: confirmation PoC weight loss during new-model bootstrap was fixed, and Kimi `WeightScaleFactor` was recalibrated to `0.78`. |
 | **Compensation overlap** | Overlaps by epoch with `P3-CAND-03` at epoch 267, `P3-CAND-01` at epoch 272, and `P3-CAND-04` at epoch 276. Confirmed same-address overlap was found only with `P3-CAND-04` in epoch 276; validators must ensure no duplicate compensation for those addresses. |
 | **Current decision** | GRC voted against including this case in a GRC proposal; published findings remain usable for a community proposal. |
-| **Review focus** | Investigator: @votkon. @maksimenkoff reviewed the numbers as generally correct but questioned GroupCap compensation; @mikenosov raised scope, denominator, epoch-276 proration and reproducibility objections. |
+| **Review focus** | Investigator: @votkon. @maksimenkoff reviewed the numbers as generally correct but questioned GroupCap compensation; @mikenosov raised scope, denominator, epoch-276 proration and reproducibility objections. Local review snapshot: upstream HEAD `5462c55a6b95d50dfb53bdc4211cdcd31369c2ea`. |
 
 ## Message Log
 
@@ -32,12 +32,40 @@
 ## Findings
 
 - The published package covers epoch 265 CPoC degradation, epoch 266 nonce/delegation losses, and epochs 267-276 ComputeGroupCap underpayment.
-- It reports `52` unique affected addresses and `710,772.72 GNK`.
+- The current upstream repository snapshot reports `53` unique affected addresses and `946,509.925002 GONKA`.
 - GRC voted against including the case in a GRC proposal because the root event was framed as a third-party attack / operator-disruption case.
 - Evgenii Maksimenkov reviewed the numbers as generally correct, but did not support compensating all later GroupCap effects without qualification.
 - Mike raised additional methodological concerns: scope exclusion for e265-e266, denominator correctness for e267-e276, proration for e276, and an e266 script/output mismatch.
 - Any approval must check overlap with the separate epoch 276 CPoC-misfire candidate. The checked data shows six same-address epoch-276 overlaps with `P3-CAND-04`.
 - DevOps evidence includes named addresses and publicly described methods for recovering PoC/validation evidence.
+
+## Current Upstream Amounts
+
+The following values are taken from `aggregate_compensation.json` and the
+per-epoch JSON outputs in upstream commit
+`5462c55a6b95d50dfb53bdc4211cdcd31369c2ea`.
+
+| Epoch | Component | Compensation, GONKA |
+|---:|---|---:|
+| 265 | CPoC degradation / attack attribution | 30,592.104861828 |
+| 266 | nonce exclusion + delegation | 188,698.468968749 |
+| 267 | ComputeGroupCap top-up | 246,471.823957226 |
+| 268 | ComputeGroupCap top-up | 42,634.684509205 |
+| 269 | ComputeGroupCap top-up | 47,504.581758505 |
+| 270 | ComputeGroupCap top-up | 76,870.083553475 |
+| 271 | ComputeGroupCap top-up | 28,422.154068920 |
+| 272 | ComputeGroupCap top-up | 16,988.149548048 |
+| 273 | ComputeGroupCap top-up | 86,243.303557245 |
+| 274 | ComputeGroupCap top-up | 41,818.441790908 |
+| 275 | ComputeGroupCap top-up | 89,984.775198122 |
+| 276 | ComputeGroupCap top-up | 50,281.353229327 |
+| **Total** |  | **946,509.925002000** |
+
+These numbers should be read as the investigator repository's current proposed
+amounts, not as a validated GRC payout. The local validation note in
+[`../validations/P4-CAND-01-kimi-restitution/votkon_repo_truth_review.md`](../validations/P4-CAND-01-kimi-restitution/votkon_repo_truth_review.md)
+records the main unresolved methodology issues: external-attack scope,
+`ComputeGroupCap` eligibility, denominator choice, and epoch-276 proration.
 
 ## Mitigation / Fix Status
 
