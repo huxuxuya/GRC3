@@ -23,6 +23,8 @@ on rerunning the investigator's scripts.
 | [`p4_e265_gonka1830_cpoc_evidence.csv`](p4_e265_gonka1830_cpoc_evidence.csv) | Machine-readable commit/validation/voting-power evidence for the epoch 265 disputed rows. |
 | [`p4_audit_pass_04_e266_nonce_scope.md`](p4_audit_pass_04_e266_nonce_scope.md) | Epoch 266 nonce scope classifier: separates nine absent operators from in-final-group reconstruction/top-up rows. |
 | [`p4_e266_nonce_scope_classifier.csv`](p4_e266_nonce_scope_classifier.csv) | Machine-readable e266 nonce scope classification for the 18 source nonce-compensation rows. |
+| [`p4_audit_pass_05_e266_delegation.md`](p4_audit_pass_05_e266_delegation.md) | Epoch 266 delegation evidence: verifies raw Kimi delegations, operator absence, and chain penalty parameters while leaving eligibility as policy. |
+| [`p4_e266_delegation_evidence.csv`](p4_e266_delegation_evidence.csv) | Machine-readable e266 delegation evidence for the 9 source delegation-compensation rows. |
 | [`source_cache_manifest.md`](source_cache_manifest.md) | Manifest of copied source artifacts from the pinned Votkon repository used as claim labels. |
 
 ## Current Result
