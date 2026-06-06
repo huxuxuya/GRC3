@@ -410,12 +410,19 @@ def format_cell(amount_ngonka: int) -> str:
 
 
 def current_crosstab_rows(rows: list[Row]) -> list[Row]:
-    current_addresses = {row.address for row in rows if is_current_case_family(row.case_family)}
+    current_epoch_addresses = {
+        (row.epoch, row.address)
+        for row in rows
+        if is_current_case_family(row.case_family)
+    }
     return [
         row
         for row in rows
         if row.case_family not in EXCLUDED_FROM_CURRENT_CROSSTAB
-        and (row.case_family not in PAID_REFERENCE_FAMILIES or row.address in current_addresses)
+        and (
+            row.case_family not in PAID_REFERENCE_FAMILIES
+            or (row.epoch, row.address) in current_epoch_addresses
+        )
     ]
 
 
@@ -584,7 +591,7 @@ def write_epoch_crosstab_markdown(rows: list[Row], overlaps: list[dict[str, str]
         "Machine-readable file: `compensation_epoch_crosstab.csv`.",
         "",
         "Current crosstab scope excludes `P3-CAND-06`; that case remains in the raw address/epoch ledger as reference data, but is not part of this payout-scope view.",
-        "`P4-CAND-01` is already paid and rejected as a case; this crosstab keeps only P4 rows whose recipient address also appears in a current case.",
+        "`P4-CAND-01` is already paid and rejected as a case; this crosstab keeps only P4 rows whose exact `epoch + address` also appears in a current case.",
         "",
         "The crosstab shows epoch-level overlap only. Exact duplicate-risk review still uses `COMPENSATION_OVERLAP_MATRIX.md`, because duplicate payout risk requires the same `epoch + address`, not just the same epoch.",
         "",
@@ -810,7 +817,7 @@ def write_address_crosstab_markdown(rows: list[Row], overlaps: list[dict[str, st
         "Machine-readable file: `compensation_address_case_crosstab.csv`.",
         "",
         "Current crosstab scope excludes `P3-CAND-06`; that case remains in the raw address/epoch ledger as reference data, but is not part of this payout-scope view.",
-        "`P4-CAND-01` is already paid and rejected as a case; this crosstab keeps only P4 rows whose recipient address also appears in a current case.",
+        "`P4-CAND-01` is already paid and rejected as a case; this crosstab keeps only P4 rows whose exact `epoch + address` also appears in a current case.",
         "",
         "Amounts are grouped by address and case family. Totals are shown at the bottom of each table; rows with multiple case families, multiple tracks, or exact address/epoch overlap keys still require dedupe review.",
         "",
@@ -965,7 +972,7 @@ def write_address_epoch_crosstab_markdown(rows: list[Row], path: Path) -> None:
         "Machine-readable file: `compensation_address_epoch_case_crosstab.csv`.",
         "",
         "Current crosstab scope excludes `P3-CAND-06`; that case remains in the raw address/epoch ledger as reference data, but is not part of this payout-scope view.",
-        "`P4-CAND-01` is already paid and rejected as a case; this crosstab keeps only P4 rows whose recipient address also appears in a current case.",
+        "`P4-CAND-01` is already paid and rejected as a case; this crosstab keeps only P4 rows whose exact `epoch + address` also appears in a current case.",
         "",
         "Amounts are grouped by exact `epoch + address` and split by case family. Totals are shown at the bottom of each table.",
         "",
