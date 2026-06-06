@@ -37,6 +37,14 @@ Primary local evidence:
 - That Qwen or non-Kimi paid rewards should be ignored when constructing the
   counterfactual denominator.
 
+## Audit Remarks
+
+| Remark | Issue | Impact |
+|---|---|---|
+| `P4-GC-01` | `ComputeGroupCap` appears to be an intended protocol rule, not a simple accidental accounting bug. | Compensability must be a committee policy decision before any amount is discussed. |
+| `P4-GC-02` | The source denominator model is reproducible, but not unique. Pass 06 shows totals of `727,219.351170981`, `503,653.983658046`, or `360,858.547914700` GONKA under three defensible denominator choices. | The source total cannot be called the only chain-style settlement result. |
+| `P4-GC-03` | Epoch `276` includes upgrade block `4,267,300` inside the epoch window. | Full-epoch e276 compensation is not automatically justified; full, prorated, or excluded treatment must be explicit. |
+
 ## Epoch 276 Proration Issue
 
 Raw epoch `276` group data:
@@ -58,3 +66,12 @@ Do not approve the e267-e276 source total by default. First decide:
 1. Is intended `ComputeGroupCap` compensable at all?
 2. If yes, which denominator model is accepted?
 3. Should epoch `276` be full, prorated, or excluded?
+
+## Voting-Ready Options
+
+| Option | Meaning |
+|---|---|
+| Reject GroupCap compensation | Treat `ComputeGroupCap` as intended protocol behavior and exclude e267-e276 from P4 payout. |
+| Approve source top-up model | Accept capped-root denominator and source e267-e276 amount `727,219.351170981` GONKA, subject to e276 treatment. |
+| Approve alternate denominator model | Accept compensation in principle but require a different denominator, such as all-root-confirmation or replace-affected denominator. |
+| Defer GroupCap decision | Keep raw facts confirmed but postpone payout until compensability, denominator, and e276 proration are explicitly defined. |
