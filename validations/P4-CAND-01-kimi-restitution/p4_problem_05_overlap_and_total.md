@@ -39,3 +39,6 @@ Can the full source total `946,509.925002 GONKA` be approved as one P4 payout?
 Reject "approve P4 as one number" as the decision shape. Use separate
 track-level decisions and build a final overlap matrix before any payout
 recommendation.
+
+Current recommendation draft:
+[`p4_recommendation_draft.md`](p4_recommendation_draft.md).

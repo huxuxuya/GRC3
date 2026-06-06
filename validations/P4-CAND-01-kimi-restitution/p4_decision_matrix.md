@@ -3,6 +3,8 @@
 This file splits P4 into independent committee decisions. It is not a payout
 approval.
 
+Recommendation draft: [`p4_recommendation_draft.md`](p4_recommendation_draft.md).
+
 ## Decision Blocks
 
 | Block | File | Technical status | Policy status | Suggested decision shape |

@@ -15,6 +15,7 @@ on rerunning the investigator's scripts.
 | [`votkon_repo_truth_review.md`](votkon_repo_truth_review.md) | Claim-by-claim review of the current upstream repository, including confirmed facts, internal inconsistencies, and open methodology risks. |
 | [`p4_conceptual_audit_plan.md`](p4_conceptual_audit_plan.md) | Working checklist for auditing claims, evidence, root cause, eligibility, overlap, and policy boundaries without reproducing arithmetic. |
 | [`p4_decision_matrix.md`](p4_decision_matrix.md) | Split P4 decision matrix with the recommended voting order and per-track policy gates. |
+| [`p4_recommendation_draft.md`](p4_recommendation_draft.md) | Draft recommendation: do not approve aggregate P4 total; split into separate committee decisions. |
 | [`p4_problem_01_e265_scope.md`](p4_problem_01_e265_scope.md) | Epoch 265 scope note: separates Case 3 overlap from non-strict direct cPoC rows. |
 | [`p4_problem_02_e266_nonce_scope.md`](p4_problem_02_e266_nonce_scope.md) | Epoch 266 nonce note: separates 9 excluded operators from broader reconstruction/top-up rows. |
 | [`p4_problem_02a_e266_zero_reward_rows.md`](p4_problem_02a_e266_zero_reward_rows.md) | Epoch 266 zero-reward note: row-level evidence for the 5 in-final-group failed-confirmation nonce candidates. |
