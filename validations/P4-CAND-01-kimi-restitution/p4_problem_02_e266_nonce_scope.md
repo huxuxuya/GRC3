@@ -10,7 +10,9 @@ are broader reconstruction/top-up rows?
 Primary local evidence:
 
 - [`p4_audit_pass_04_e266_nonce_scope.md`](p4_audit_pass_04_e266_nonce_scope.md)
+- [`p4_problem_02a_e266_zero_reward_rows.md`](p4_problem_02a_e266_zero_reward_rows.md)
 - [`p4_e266_nonce_scope_classifier.csv`](p4_e266_nonce_scope_classifier.csv)
+- [`p4_e266_zero_reward_rows.csv`](p4_e266_zero_reward_rows.csv)
 - raw commit and validation cache listed in
   [`raw_chain_cache_manifest.md`](raw_chain_cache_manifest.md)
 - source labels listed in
@@ -22,7 +24,7 @@ Primary local evidence:
 |---|---:|---|---|
 | Source-listed excluded operators | `9` | Raw PoC commit rows exist, raw validation records exist, no final epoch-group row, no performance row. | Chain facts confirmed; compensation still depends on external-attack scope. |
 | In-final-group rewarded top-up rows | `4` | Participants were in final group and already received rewards. | Policy required; this is not final-set exclusion. |
-| In-final-group zero-reward rows | `5` | Participants were in final group but had zero reward / failed confirmation. | Row-level cause review required before treating as attack victims. |
+| In-final-group zero-reward rows | `5` | Pass 02a confirms they were in final group, had raw commits/validations, then ended with `confirmation_weight=0`, `rewarded_coins=0`, and `failed_confirmation_poc`. Three are Qwen-only by source labels, one is Kimi-only, and one is mixed Kimi+Qwen. | Row-level cause and policy required before treating as attack victims. |
 
 ## What Is Proven
 

@@ -17,6 +17,7 @@ on rerunning the investigator's scripts.
 | [`p4_decision_matrix.md`](p4_decision_matrix.md) | Split P4 decision matrix with the recommended voting order and per-track policy gates. |
 | [`p4_problem_01_e265_scope.md`](p4_problem_01_e265_scope.md) | Epoch 265 scope note: separates Case 3 overlap from non-strict direct cPoC rows. |
 | [`p4_problem_02_e266_nonce_scope.md`](p4_problem_02_e266_nonce_scope.md) | Epoch 266 nonce note: separates 9 excluded operators from broader reconstruction/top-up rows. |
+| [`p4_problem_02a_e266_zero_reward_rows.md`](p4_problem_02a_e266_zero_reward_rows.md) | Epoch 266 zero-reward note: row-level evidence for the 5 in-final-group failed-confirmation nonce candidates. |
 | [`p4_problem_03_e266_delegation.md`](p4_problem_03_e266_delegation.md) | Epoch 266 delegation note: confirmed chain mechanics and unresolved indirect-loss policy. |
 | [`p4_problem_04_groupcap_denominator.md`](p4_problem_04_groupcap_denominator.md) | Epochs 267-276 GroupCap note: denominator alternatives and e276 proration issue. |
 | [`p4_problem_05_overlap_and_total.md`](p4_problem_05_overlap_and_total.md) | Aggregate total and overlap note: explains why `946,509.925002` GONKA should not be approved as one package. |
@@ -29,6 +30,7 @@ on rerunning the investigator's scripts.
 | [`p4_e265_gonka1830_cpoc_evidence.csv`](p4_e265_gonka1830_cpoc_evidence.csv) | Machine-readable commit/validation/voting-power evidence for the epoch 265 disputed rows. |
 | [`p4_audit_pass_04_e266_nonce_scope.md`](p4_audit_pass_04_e266_nonce_scope.md) | Epoch 266 nonce scope classifier: separates nine absent operators from in-final-group reconstruction/top-up rows. |
 | [`p4_e266_nonce_scope_classifier.csv`](p4_e266_nonce_scope_classifier.csv) | Machine-readable e266 nonce scope classification for the 18 source nonce-compensation rows. |
+| [`p4_e266_zero_reward_rows.csv`](p4_e266_zero_reward_rows.csv) | Machine-readable e266 zero-reward evidence for the 5 in-final-group failed-confirmation rows. |
 | [`p4_audit_pass_05_e266_delegation.md`](p4_audit_pass_05_e266_delegation.md) | Epoch 266 delegation evidence: verifies raw Kimi delegations, operator absence, and chain penalty parameters while leaving eligibility as policy. |
 | [`p4_e266_delegation_evidence.csv`](p4_e266_delegation_evidence.csv) | Machine-readable e266 delegation evidence for the 9 source delegation-compensation rows. |
 | [`p4_audit_pass_06_e267_e276_groupcap.md`](p4_audit_pass_06_e267_e276_groupcap.md) | Epochs 267-276 GroupCap denominator check: verifies source rows against raw chain data and compares three counterfactual denominator models. |
