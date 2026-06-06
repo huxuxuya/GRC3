@@ -7,7 +7,7 @@ Machine-readable file: `compensation_address_case_crosstab.csv`.
 Current crosstab scope excludes `P3-CAND-06`; that case remains in the raw address/epoch ledger as reference data, but is not part of this payout-scope view.
 `P4-CAND-01` is already paid and rejected as a case; this crosstab keeps only P4 rows whose recipient address also appears in a current case.
 
-Amounts are grouped by address and case family. `Naive total` is useful for review, but it must not be treated as final payout when a row has multiple case families, multiple tracks, or exact address/epoch overlap keys.
+Amounts are grouped by address and case family. Totals are shown at the bottom of each table; rows with multiple case families, multiple tracks, or exact address/epoch overlap keys still require dedupe review.
 
 ## Summary
 
@@ -18,76 +18,78 @@ Amounts are grouped by address and case family. `Naive total` is useful for revi
 
 ## All Recipients Address/Case Crosstab
 
-| Address | Families | Tracks | Rows | Epochs | Exact overlap keys | P3-CAND-01 | P3-CAND-02 | P3-CAND-03 | P3-CAND-04 | P4-CAND-01 | Naive total |
-|---|---:|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|
-| `gonka10079cnl3nuh2k82mhkm04dj0slhtw9kmjewwau` | 3 | 3 | 10 | `268,269,270,271,272,273,274,275,276` | 1 | `5700.549989479` |  |  | `3617.119418189` | `20610.390027954` | `29928.059435622` |
-| `gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6` | 2 | 4 | 4 | `265,266,267` | 1 |  |  | `31158.584694469` |  | `39809.676543013` | `70968.261237482` |
-| `gonka1yal0ysgzc860zt3y8cds8656tnueusgymftvkw` | 2 | 3 | 6 | `266,267,270,275,276` | 1 |  |  |  | `49.060506444` | `17630.158097135` | `17679.218603579` |
-| `gonka168rtjfkszuhcggg4dfyse4yh7xn9zwfglnkns2` | 2 | 2 | 6 | `267,269,270,273,276` | 1 |  |  |  | `34.245204993` | `11021.183080111` | `11055.428285104` |
-| `gonka1gvrrhjmy4w4mayvs2s5l23edj8ertcmtd2v4zr` | 2 | 2 | 9 | `269,270,271,272,273,274,275,276` | 1 |  |  |  | `3390.761041922` | `52290.195675726` | `55680.956717648` |
-| `gonka1kx9mca3xm8u8ypzfuhmxey66u0ufxhs7nm6wc5` | 2 | 2 | 8 | `267,269,270,271,272,275,276` | 1 |  |  |  | `10.929320742` | `3018.840187451` | `3029.769508193` |
-| `gonka1scskt6wpnjnumsah6kjphmdu87vjgvcxmn4rxv` | 2 | 2 | 3 | `275,276` | 1 |  |  |  | `3342.429156860` | `5645.801436758` | `8988.230593618` |
-| `gonka1ce02jjduga8jvwj8jx39mxn0jr345vgkx7lk2n` | 3 | 3 | 4 | `272,273,274,276` | 0 | `1965.730685067` |  |  | `9.957825565` | `1753.409171279` | `3729.097681911` |
-| `gonka17pw6099q758qwzewtrqmqpf5c2lrhr97fwqexu` | 2 | 4 | 4 | `265,266,267,276` | 0 |  |  |  | `923.163292052` | `101147.807218599` | `102070.970510651` |
-| `gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09` | 2 | 3 | 11 | `266,267,268,269,270,271,272,273,274,275,276` | 0 |  |  |  | `16028.213179615` | `66487.744752217` | `82515.957931832` |
-| `gonka1007dchuqgdnute4qam70kmn56j2vfw38mhyrqv` | 2 | 2 | 6 | `268,269,270,271,272,273` | 0 | `7287.485958471` |  |  |  | `11262.520197774` | `18550.006156245` |
-| `gonka1007g0ut3u4wjkay9hegqfev4pj90qgexwskmcw` | 2 | 2 | 6 | `268,269,270,271,272,273` | 0 | `7238.152949000` |  |  |  | `11688.555563236` | `18926.708512236` |
-| `gonka14ljarev2nlzu4ej50vx7ylj2rvg4n20fnq2ysc` | 2 | 2 | 4 | `272,273,274,276` | 0 |  |  |  | `79.662604523` | `4444.392150972` | `4524.054755495` |
-| `gonka15munkmx6x7k6rqqeexjet4556p7at39ks9qgr5` | 2 | 2 | 6 | `267,268,269,270,271,272` | 0 | `4064.625997098` |  |  |  | `18234.887510983` | `22299.513508081` |
-| `gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p` | 2 | 2 | 2 | `266,276` | 0 |  |  |  | `0.728621382` | `113.864833864` | `114.593455246` |
-| `gonka1gyk0aahvr3qeju4zx0nplfreej6cy4jjk8svc5` | 2 | 2 | 2 | `266,276` | 0 |  |  |  | `83.791459026` | `30.990428883` | `114.781887909` |
-| `gonka1mmlyd5xxu5l68yx8wzclrkxkxvm88mhq5tp5s0` | 2 | 2 | 5 | `267,271,274,275,276` | 0 |  |  |  | `3540.857046786` | `6618.057560512` | `10158.914607298` |
-| `gonka1wt8sr9jxzpec65j7zkxsgh6edk3m6r8nlf5za4` | 2 | 2 | 6 | `270,271,272,273,275,276` | 0 | `8784.035574445` |  |  |  | `10934.181496134` | `19718.217070579` |
-| `gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx` | 2 | 2 | 4 | `267,271,272,276` | 0 |  |  |  | `578.039630382` | `2392.222959397` | `2970.262589779` |
-| `gonka105ce4495mj0mwkxqeasgdzqfq5jjrfq32eza5l` | 1 | 1 | 1 | `132` | 0 |  | `14.096689777` |  |  |  | `14.096689777` |
-| `gonka10kmsyy00yxnky2xfqy9wce0l7uaadq4jjp3ykg` | 1 | 1 | 1 | `112` | 0 |  | `7.993576578` |  |  |  | `7.993576578` |
-| `gonka12l3fwycgvs9tdpze59za89zq4cexhkxddafxdh` | 1 | 1 | 1 | `116` | 0 |  | `150.749450599` |  |  |  | `150.749450599` |
-| `gonka1598sglu00mktw3973jmwsu3vdw29mgcfjleju2` | 1 | 1 | 1 | `116` | 0 |  | `71.065864191` |  |  |  | `71.065864191` |
-| `gonka15fpzwc7d2z3r4y5475p6k7uqknnkj38gsus3d9` | 1 | 1 | 1 | `116` | 0 |  | `7.100517600` |  |  |  | `7.100517600` |
-| `gonka16xa2sdc8qe2289nzr4e6vmdyzlke8g8fn8e75s` | 1 | 1 | 1 | `272` | 0 | `69.342202123` |  |  |  |  | `69.342202123` |
-| `gonka170wwtpvhwzgghd638z84z35gjggl7cvyzrkh8p` | 1 | 1 | 1 | `116` | 0 |  | `156.696892692` |  |  |  | `156.696892692` |
-| `gonka19nd876302m3ll2h7sd55hp9pqzv2hpqalh8pjj` | 1 | 1 | 1 | `97` | 0 |  | `8.432384134` |  |  |  | `8.432384134` |
-| `gonka1amlmhjym02shahjv8ldmupg4cx0qc66q6f85rj` | 1 | 1 | 1 | `276` | 0 |  |  |  | `217.372045879` |  | `217.372045879` |
-| `gonka1d694r00czmq75txghwjcuk07lxvc8d4ekgsha0` | 1 | 1 | 1 | `276` | 0 |  |  |  | `113.179188133` |  | `113.179188133` |
-| `gonka1duuaqdx06sx8v2dzggltwwmqyuw8lvjkjq7xll` | 1 | 1 | 1 | `276` | 0 |  |  |  | `161.268199400` |  | `161.268199400` |
-| `gonka1h9asnq9x2kux2m8pcwaeegljzmd4ym4h26p07n` | 1 | 1 | 1 | `116` | 0 |  | `33.560566095` |  |  |  | `33.560566095` |
-| `gonka1hjjse9r0zfe0q8k4hfe4t5xuzstjqvky7dnj05` | 1 | 1 | 1 | `116` | 0 |  | `56.561388067` |  |  |  | `56.561388067` |
-| `gonka1hmjjq6ghykww8f8ujajnnmu2dpk2drrth8mtva` | 1 | 1 | 1 | `116` | 0 |  | `11.227314154` |  |  |  | `11.227314154` |
-| `gonka1jt5mqrx0yg5k6qdqhnkc4kpya4mzy52ngyh34c` | 1 | 1 | 1 | `116` | 0 |  | `19.116778155` |  |  |  | `19.116778155` |
-| `gonka1lh0danzlvxm5qtaly7myqd3n5sus0fq92n8shx` | 1 | 1 | 1 | `116` | 0 |  | `182.307306602` |  |  |  | `182.307306602` |
-| `gonka1mmwngrtpc4fd4jquv5vfsnscqdzmcz0zgrvy0g` | 1 | 1 | 1 | `116` | 0 |  | `15.900304370` |  |  |  | `15.900304370` |
-| `gonka1pks9m29wqac2kxdj8v8acq58rjshh6u8y2a772` | 1 | 1 | 1 | `116` | 0 |  | `243.541684885` |  |  |  | `243.541684885` |
-| `gonka1q3n37e2uc4npkheyjllx2ztx5yh42rk6vz3kgn` | 1 | 1 | 1 | `116` | 0 |  | `27.431059448` |  |  |  | `27.431059448` |
-| `gonka1qx3znmtpxqgmz3t4tgpdk68dsfxuccn6cxnp8s` | 1 | 1 | 1 | `116` | 0 |  | `25.489037540` |  |  |  | `25.489037540` |
-| `gonka1rcpc45n6zch9qlkn4m3cwngekad89xu8mcr09v` | 1 | 1 | 1 | `276` | 0 |  |  |  | `2.914485531` |  | `2.914485531` |
-| `gonka1t88kkvnrayz5l2u043tccd2pks4rt8y346z9dv` | 1 | 1 | 1 | `116` | 0 |  | `4.551613846` |  |  |  | `4.551613846` |
-| `gonka1t8jjpaq2m0svru73kh9l0m62e7lr7qxxw6uvea` | 1 | 1 | 1 | `129` | 0 |  | `7.470360710` |  |  |  | `7.470360710` |
-| `gonka1u4zxypjgcr8khlzefwjr0vwdaj2uzruw2cehj3` | 1 | 1 | 1 | `276` | 0 |  |  |  | `246.274027398` |  | `246.274027398` |
-| `gonka1xy9py6zlxsum2m0z422qwa0um6au7ls4r65ky8` | 1 | 1 | 1 | `116` | 0 |  | `32.043361480` |  |  |  | `32.043361480` |
+| Address | Families | Tracks | Rows | Epochs | Exact overlap keys | P3-CAND-01 | P3-CAND-02 | P3-CAND-03 | P3-CAND-04 | P4-CAND-01 |
+|---|---:|---:|---:|---|---:|---:|---:|---:|---:|---:|
+| `gonka10079cnl3nuh2k82mhkm04dj0slhtw9kmjewwau` | 3 | 3 | 10 | `268,269,270,271,272,273,274,275,276` | 1 | `5700.549989479` |  |  | `3617.119418189` | `20610.390027954` |
+| `gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6` | 2 | 4 | 4 | `265,266,267` | 1 |  |  | `31158.584694469` |  | `39809.676543013` |
+| `gonka1yal0ysgzc860zt3y8cds8656tnueusgymftvkw` | 2 | 3 | 6 | `266,267,270,275,276` | 1 |  |  |  | `49.060506444` | `17630.158097135` |
+| `gonka168rtjfkszuhcggg4dfyse4yh7xn9zwfglnkns2` | 2 | 2 | 6 | `267,269,270,273,276` | 1 |  |  |  | `34.245204993` | `11021.183080111` |
+| `gonka1gvrrhjmy4w4mayvs2s5l23edj8ertcmtd2v4zr` | 2 | 2 | 9 | `269,270,271,272,273,274,275,276` | 1 |  |  |  | `3390.761041922` | `52290.195675726` |
+| `gonka1kx9mca3xm8u8ypzfuhmxey66u0ufxhs7nm6wc5` | 2 | 2 | 8 | `267,269,270,271,272,275,276` | 1 |  |  |  | `10.929320742` | `3018.840187451` |
+| `gonka1scskt6wpnjnumsah6kjphmdu87vjgvcxmn4rxv` | 2 | 2 | 3 | `275,276` | 1 |  |  |  | `3342.429156860` | `5645.801436758` |
+| `gonka1ce02jjduga8jvwj8jx39mxn0jr345vgkx7lk2n` | 3 | 3 | 4 | `272,273,274,276` | 0 | `1965.730685067` |  |  | `9.957825565` | `1753.409171279` |
+| `gonka17pw6099q758qwzewtrqmqpf5c2lrhr97fwqexu` | 2 | 4 | 4 | `265,266,267,276` | 0 |  |  |  | `923.163292052` | `101147.807218599` |
+| `gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09` | 2 | 3 | 11 | `266,267,268,269,270,271,272,273,274,275,276` | 0 |  |  |  | `16028.213179615` | `66487.744752217` |
+| `gonka1007dchuqgdnute4qam70kmn56j2vfw38mhyrqv` | 2 | 2 | 6 | `268,269,270,271,272,273` | 0 | `7287.485958471` |  |  |  | `11262.520197774` |
+| `gonka1007g0ut3u4wjkay9hegqfev4pj90qgexwskmcw` | 2 | 2 | 6 | `268,269,270,271,272,273` | 0 | `7238.152949000` |  |  |  | `11688.555563236` |
+| `gonka14ljarev2nlzu4ej50vx7ylj2rvg4n20fnq2ysc` | 2 | 2 | 4 | `272,273,274,276` | 0 |  |  |  | `79.662604523` | `4444.392150972` |
+| `gonka15munkmx6x7k6rqqeexjet4556p7at39ks9qgr5` | 2 | 2 | 6 | `267,268,269,270,271,272` | 0 | `4064.625997098` |  |  |  | `18234.887510983` |
+| `gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p` | 2 | 2 | 2 | `266,276` | 0 |  |  |  | `0.728621382` | `113.864833864` |
+| `gonka1gyk0aahvr3qeju4zx0nplfreej6cy4jjk8svc5` | 2 | 2 | 2 | `266,276` | 0 |  |  |  | `83.791459026` | `30.990428883` |
+| `gonka1mmlyd5xxu5l68yx8wzclrkxkxvm88mhq5tp5s0` | 2 | 2 | 5 | `267,271,274,275,276` | 0 |  |  |  | `3540.857046786` | `6618.057560512` |
+| `gonka1wt8sr9jxzpec65j7zkxsgh6edk3m6r8nlf5za4` | 2 | 2 | 6 | `270,271,272,273,275,276` | 0 | `8784.035574445` |  |  |  | `10934.181496134` |
+| `gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx` | 2 | 2 | 4 | `267,271,272,276` | 0 |  |  |  | `578.039630382` | `2392.222959397` |
+| `gonka105ce4495mj0mwkxqeasgdzqfq5jjrfq32eza5l` | 1 | 1 | 1 | `132` | 0 |  | `14.096689777` |  |  |  |
+| `gonka10kmsyy00yxnky2xfqy9wce0l7uaadq4jjp3ykg` | 1 | 1 | 1 | `112` | 0 |  | `7.993576578` |  |  |  |
+| `gonka12l3fwycgvs9tdpze59za89zq4cexhkxddafxdh` | 1 | 1 | 1 | `116` | 0 |  | `150.749450599` |  |  |  |
+| `gonka1598sglu00mktw3973jmwsu3vdw29mgcfjleju2` | 1 | 1 | 1 | `116` | 0 |  | `71.065864191` |  |  |  |
+| `gonka15fpzwc7d2z3r4y5475p6k7uqknnkj38gsus3d9` | 1 | 1 | 1 | `116` | 0 |  | `7.100517600` |  |  |  |
+| `gonka16xa2sdc8qe2289nzr4e6vmdyzlke8g8fn8e75s` | 1 | 1 | 1 | `272` | 0 | `69.342202123` |  |  |  |  |
+| `gonka170wwtpvhwzgghd638z84z35gjggl7cvyzrkh8p` | 1 | 1 | 1 | `116` | 0 |  | `156.696892692` |  |  |  |
+| `gonka19nd876302m3ll2h7sd55hp9pqzv2hpqalh8pjj` | 1 | 1 | 1 | `97` | 0 |  | `8.432384134` |  |  |  |
+| `gonka1amlmhjym02shahjv8ldmupg4cx0qc66q6f85rj` | 1 | 1 | 1 | `276` | 0 |  |  |  | `217.372045879` |  |
+| `gonka1d694r00czmq75txghwjcuk07lxvc8d4ekgsha0` | 1 | 1 | 1 | `276` | 0 |  |  |  | `113.179188133` |  |
+| `gonka1duuaqdx06sx8v2dzggltwwmqyuw8lvjkjq7xll` | 1 | 1 | 1 | `276` | 0 |  |  |  | `161.268199400` |  |
+| `gonka1h9asnq9x2kux2m8pcwaeegljzmd4ym4h26p07n` | 1 | 1 | 1 | `116` | 0 |  | `33.560566095` |  |  |  |
+| `gonka1hjjse9r0zfe0q8k4hfe4t5xuzstjqvky7dnj05` | 1 | 1 | 1 | `116` | 0 |  | `56.561388067` |  |  |  |
+| `gonka1hmjjq6ghykww8f8ujajnnmu2dpk2drrth8mtva` | 1 | 1 | 1 | `116` | 0 |  | `11.227314154` |  |  |  |
+| `gonka1jt5mqrx0yg5k6qdqhnkc4kpya4mzy52ngyh34c` | 1 | 1 | 1 | `116` | 0 |  | `19.116778155` |  |  |  |
+| `gonka1lh0danzlvxm5qtaly7myqd3n5sus0fq92n8shx` | 1 | 1 | 1 | `116` | 0 |  | `182.307306602` |  |  |  |
+| `gonka1mmwngrtpc4fd4jquv5vfsnscqdzmcz0zgrvy0g` | 1 | 1 | 1 | `116` | 0 |  | `15.900304370` |  |  |  |
+| `gonka1pks9m29wqac2kxdj8v8acq58rjshh6u8y2a772` | 1 | 1 | 1 | `116` | 0 |  | `243.541684885` |  |  |  |
+| `gonka1q3n37e2uc4npkheyjllx2ztx5yh42rk6vz3kgn` | 1 | 1 | 1 | `116` | 0 |  | `27.431059448` |  |  |  |
+| `gonka1qx3znmtpxqgmz3t4tgpdk68dsfxuccn6cxnp8s` | 1 | 1 | 1 | `116` | 0 |  | `25.489037540` |  |  |  |
+| `gonka1rcpc45n6zch9qlkn4m3cwngekad89xu8mcr09v` | 1 | 1 | 1 | `276` | 0 |  |  |  | `2.914485531` |  |
+| `gonka1t88kkvnrayz5l2u043tccd2pks4rt8y346z9dv` | 1 | 1 | 1 | `116` | 0 |  | `4.551613846` |  |  |  |
+| `gonka1t8jjpaq2m0svru73kh9l0m62e7lr7qxxw6uvea` | 1 | 1 | 1 | `129` | 0 |  | `7.470360710` |  |  |  |
+| `gonka1u4zxypjgcr8khlzefwjr0vwdaj2uzruw2cehj3` | 1 | 1 | 1 | `276` | 0 |  |  |  | `246.274027398` |  |
+| `gonka1xy9py6zlxsum2m0z422qwa0um6au7ls4r65ky8` | 1 | 1 | 1 | `116` | 0 |  | `32.043361480` |  |  |  |
+| **Total** |  |  | 131 |  | 7 | `35109.923355683` | `1075.336150923` | `31158.584694469` | `32429.966254822` | `385134.878891998` |
 
 ## Addresses Requiring Review
 
-| Address | Families | Tracks | Rows | Epochs | Exact overlap keys | P3-CAND-01 | P3-CAND-02 | P3-CAND-03 | P3-CAND-04 | P4-CAND-01 | Naive total |
-|---|---:|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|
-| `gonka10079cnl3nuh2k82mhkm04dj0slhtw9kmjewwau` | 3 | 3 | 10 | `268,269,270,271,272,273,274,275,276` | 1 | `5700.549989479` |  |  | `3617.119418189` | `20610.390027954` | `29928.059435622` |
-| `gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6` | 2 | 4 | 4 | `265,266,267` | 1 |  |  | `31158.584694469` |  | `39809.676543013` | `70968.261237482` |
-| `gonka1yal0ysgzc860zt3y8cds8656tnueusgymftvkw` | 2 | 3 | 6 | `266,267,270,275,276` | 1 |  |  |  | `49.060506444` | `17630.158097135` | `17679.218603579` |
-| `gonka168rtjfkszuhcggg4dfyse4yh7xn9zwfglnkns2` | 2 | 2 | 6 | `267,269,270,273,276` | 1 |  |  |  | `34.245204993` | `11021.183080111` | `11055.428285104` |
-| `gonka1gvrrhjmy4w4mayvs2s5l23edj8ertcmtd2v4zr` | 2 | 2 | 9 | `269,270,271,272,273,274,275,276` | 1 |  |  |  | `3390.761041922` | `52290.195675726` | `55680.956717648` |
-| `gonka1kx9mca3xm8u8ypzfuhmxey66u0ufxhs7nm6wc5` | 2 | 2 | 8 | `267,269,270,271,272,275,276` | 1 |  |  |  | `10.929320742` | `3018.840187451` | `3029.769508193` |
-| `gonka1scskt6wpnjnumsah6kjphmdu87vjgvcxmn4rxv` | 2 | 2 | 3 | `275,276` | 1 |  |  |  | `3342.429156860` | `5645.801436758` | `8988.230593618` |
-| `gonka1ce02jjduga8jvwj8jx39mxn0jr345vgkx7lk2n` | 3 | 3 | 4 | `272,273,274,276` | 0 | `1965.730685067` |  |  | `9.957825565` | `1753.409171279` | `3729.097681911` |
-| `gonka17pw6099q758qwzewtrqmqpf5c2lrhr97fwqexu` | 2 | 4 | 4 | `265,266,267,276` | 0 |  |  |  | `923.163292052` | `101147.807218599` | `102070.970510651` |
-| `gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09` | 2 | 3 | 11 | `266,267,268,269,270,271,272,273,274,275,276` | 0 |  |  |  | `16028.213179615` | `66487.744752217` | `82515.957931832` |
-| `gonka1007dchuqgdnute4qam70kmn56j2vfw38mhyrqv` | 2 | 2 | 6 | `268,269,270,271,272,273` | 0 | `7287.485958471` |  |  |  | `11262.520197774` | `18550.006156245` |
-| `gonka1007g0ut3u4wjkay9hegqfev4pj90qgexwskmcw` | 2 | 2 | 6 | `268,269,270,271,272,273` | 0 | `7238.152949000` |  |  |  | `11688.555563236` | `18926.708512236` |
-| `gonka14ljarev2nlzu4ej50vx7ylj2rvg4n20fnq2ysc` | 2 | 2 | 4 | `272,273,274,276` | 0 |  |  |  | `79.662604523` | `4444.392150972` | `4524.054755495` |
-| `gonka15munkmx6x7k6rqqeexjet4556p7at39ks9qgr5` | 2 | 2 | 6 | `267,268,269,270,271,272` | 0 | `4064.625997098` |  |  |  | `18234.887510983` | `22299.513508081` |
-| `gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p` | 2 | 2 | 2 | `266,276` | 0 |  |  |  | `0.728621382` | `113.864833864` | `114.593455246` |
-| `gonka1gyk0aahvr3qeju4zx0nplfreej6cy4jjk8svc5` | 2 | 2 | 2 | `266,276` | 0 |  |  |  | `83.791459026` | `30.990428883` | `114.781887909` |
-| `gonka1mmlyd5xxu5l68yx8wzclrkxkxvm88mhq5tp5s0` | 2 | 2 | 5 | `267,271,274,275,276` | 0 |  |  |  | `3540.857046786` | `6618.057560512` | `10158.914607298` |
-| `gonka1wt8sr9jxzpec65j7zkxsgh6edk3m6r8nlf5za4` | 2 | 2 | 6 | `270,271,272,273,275,276` | 0 | `8784.035574445` |  |  |  | `10934.181496134` | `19718.217070579` |
-| `gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx` | 2 | 2 | 4 | `267,271,272,276` | 0 |  |  |  | `578.039630382` | `2392.222959397` | `2970.262589779` |
+| Address | Families | Tracks | Rows | Epochs | Exact overlap keys | P3-CAND-01 | P3-CAND-02 | P3-CAND-03 | P3-CAND-04 | P4-CAND-01 |
+|---|---:|---:|---:|---|---:|---:|---:|---:|---:|---:|
+| `gonka10079cnl3nuh2k82mhkm04dj0slhtw9kmjewwau` | 3 | 3 | 10 | `268,269,270,271,272,273,274,275,276` | 1 | `5700.549989479` |  |  | `3617.119418189` | `20610.390027954` |
+| `gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6` | 2 | 4 | 4 | `265,266,267` | 1 |  |  | `31158.584694469` |  | `39809.676543013` |
+| `gonka1yal0ysgzc860zt3y8cds8656tnueusgymftvkw` | 2 | 3 | 6 | `266,267,270,275,276` | 1 |  |  |  | `49.060506444` | `17630.158097135` |
+| `gonka168rtjfkszuhcggg4dfyse4yh7xn9zwfglnkns2` | 2 | 2 | 6 | `267,269,270,273,276` | 1 |  |  |  | `34.245204993` | `11021.183080111` |
+| `gonka1gvrrhjmy4w4mayvs2s5l23edj8ertcmtd2v4zr` | 2 | 2 | 9 | `269,270,271,272,273,274,275,276` | 1 |  |  |  | `3390.761041922` | `52290.195675726` |
+| `gonka1kx9mca3xm8u8ypzfuhmxey66u0ufxhs7nm6wc5` | 2 | 2 | 8 | `267,269,270,271,272,275,276` | 1 |  |  |  | `10.929320742` | `3018.840187451` |
+| `gonka1scskt6wpnjnumsah6kjphmdu87vjgvcxmn4rxv` | 2 | 2 | 3 | `275,276` | 1 |  |  |  | `3342.429156860` | `5645.801436758` |
+| `gonka1ce02jjduga8jvwj8jx39mxn0jr345vgkx7lk2n` | 3 | 3 | 4 | `272,273,274,276` | 0 | `1965.730685067` |  |  | `9.957825565` | `1753.409171279` |
+| `gonka17pw6099q758qwzewtrqmqpf5c2lrhr97fwqexu` | 2 | 4 | 4 | `265,266,267,276` | 0 |  |  |  | `923.163292052` | `101147.807218599` |
+| `gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09` | 2 | 3 | 11 | `266,267,268,269,270,271,272,273,274,275,276` | 0 |  |  |  | `16028.213179615` | `66487.744752217` |
+| `gonka1007dchuqgdnute4qam70kmn56j2vfw38mhyrqv` | 2 | 2 | 6 | `268,269,270,271,272,273` | 0 | `7287.485958471` |  |  |  | `11262.520197774` |
+| `gonka1007g0ut3u4wjkay9hegqfev4pj90qgexwskmcw` | 2 | 2 | 6 | `268,269,270,271,272,273` | 0 | `7238.152949000` |  |  |  | `11688.555563236` |
+| `gonka14ljarev2nlzu4ej50vx7ylj2rvg4n20fnq2ysc` | 2 | 2 | 4 | `272,273,274,276` | 0 |  |  |  | `79.662604523` | `4444.392150972` |
+| `gonka15munkmx6x7k6rqqeexjet4556p7at39ks9qgr5` | 2 | 2 | 6 | `267,268,269,270,271,272` | 0 | `4064.625997098` |  |  |  | `18234.887510983` |
+| `gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p` | 2 | 2 | 2 | `266,276` | 0 |  |  |  | `0.728621382` | `113.864833864` |
+| `gonka1gyk0aahvr3qeju4zx0nplfreej6cy4jjk8svc5` | 2 | 2 | 2 | `266,276` | 0 |  |  |  | `83.791459026` | `30.990428883` |
+| `gonka1mmlyd5xxu5l68yx8wzclrkxkxvm88mhq5tp5s0` | 2 | 2 | 5 | `267,271,274,275,276` | 0 |  |  |  | `3540.857046786` | `6618.057560512` |
+| `gonka1wt8sr9jxzpec65j7zkxsgh6edk3m6r8nlf5za4` | 2 | 2 | 6 | `270,271,272,273,275,276` | 0 | `8784.035574445` |  |  |  | `10934.181496134` |
+| `gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx` | 2 | 2 | 4 | `267,271,272,276` | 0 |  |  |  | `578.039630382` | `2392.222959397` |
+| **Total** |  |  | 106 |  | 7 | `35040.581153560` |  | `31158.584694469` | `31688.958308481` | `385134.878891998` |
 
 ## P3-CAND-02 Recipients
 
@@ -112,3 +114,4 @@ Amounts are grouped by address and case family. `Naive total` is useful for revi
 | `gonka1t88kkvnrayz5l2u043tccd2pks4rt8y346z9dv` | `116` | `4.551613846` | 0 | 0 |
 | `gonka1t8jjpaq2m0svru73kh9l0m62e7lr7qxxw6uvea` | `129` | `7.470360710` | 0 | 0 |
 | `gonka1xy9py6zlxsum2m0z422qwa0um6au7ls4r65ky8` | `116` | `32.043361480` | 0 | 0 |
+| **Total** |  | `1075.336150923` |  | 0 |

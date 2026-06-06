@@ -42,16 +42,16 @@ Primary machine-readable files:
 
 `P4-CAND-01` was rejected as a case but was fully paid. This table isolates exact `epoch + address` intersections between current case candidates and paid P4 rows.
 
-| Epoch | Address | Current tracks | Current amount, GONKA | Paid P4 tracks | Paid P4 amount, GONKA | Naive total, GONKA |
-|---:|---|---|---:|---|---:|---:|
-| 265 | `gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6` | P3-CAND-03-EXT | `20896.527179100` | P4-e265-source-cpoc | `20896.527179100` | `41793.054358200` |
-| 276 | `gonka10079cnl3nuh2k82mhkm04dj0slhtw9kmjewwau` | P3-CAND-04 | `3617.119418189` | P4-GroupCap-source | `3427.176240497` | `7044.295658686` |
-| 276 | `gonka168rtjfkszuhcggg4dfyse4yh7xn9zwfglnkns2` | P3-CAND-04 | `34.245204993` | P4-GroupCap-source | `1590.871839692` | `1625.117044685` |
-| 276 | `gonka1gvrrhjmy4w4mayvs2s5l23edj8ertcmtd2v4zr` | P3-CAND-04 | `3390.761041922` | P4-GroupCap-source | `5081.270939637` | `8472.031981559` |
-| 276 | `gonka1kx9mca3xm8u8ypzfuhmxey66u0ufxhs7nm6wc5` | P3-CAND-04 | `10.929320742` | P4-GroupCap-source | `351.632757601` | `362.562078343` |
-| 276 | `gonka1scskt6wpnjnumsah6kjphmdu87vjgvcxmn4rxv` | P3-CAND-04 | `3342.429156860` | P4-GroupCap-source | `1811.086293948` | `5153.515450808` |
-| 276 | `gonka1yal0ysgzc860zt3y8cds8656tnueusgymftvkw` | P3-CAND-04 | `49.060506444` | P4-GroupCap-source | `1786.223371693` | `1835.283878137` |
-| **Total** |  |  | `31341.071828250` |  | `34944.788622168` | `66285.860450418` |
+| Epoch | Address | Current tracks | Current amount, GONKA | Paid P4 tracks | Paid P4 amount, GONKA |
+|---:|---|---|---:|---|---:|
+| 265 | `gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6` | P3-CAND-03-EXT | `20896.527179100` | P4-e265-source-cpoc | `20896.527179100` |
+| 276 | `gonka10079cnl3nuh2k82mhkm04dj0slhtw9kmjewwau` | P3-CAND-04 | `3617.119418189` | P4-GroupCap-source | `3427.176240497` |
+| 276 | `gonka168rtjfkszuhcggg4dfyse4yh7xn9zwfglnkns2` | P3-CAND-04 | `34.245204993` | P4-GroupCap-source | `1590.871839692` |
+| 276 | `gonka1gvrrhjmy4w4mayvs2s5l23edj8ertcmtd2v4zr` | P3-CAND-04 | `3390.761041922` | P4-GroupCap-source | `5081.270939637` |
+| 276 | `gonka1kx9mca3xm8u8ypzfuhmxey66u0ufxhs7nm6wc5` | P3-CAND-04 | `10.929320742` | P4-GroupCap-source | `351.632757601` |
+| 276 | `gonka1scskt6wpnjnumsah6kjphmdu87vjgvcxmn4rxv` | P3-CAND-04 | `3342.429156860` | P4-GroupCap-source | `1811.086293948` |
+| 276 | `gonka1yal0ysgzc860zt3y8cds8656tnueusgymftvkw` | P3-CAND-04 | `49.060506444` | P4-GroupCap-source | `1786.223371693` |
+| **Total** |  |  | `31341.071828250` |  | `34944.788622168` |
 
 ## Overlap Keys
 
@@ -68,3 +68,4 @@ These are exact same `epoch + address` collisions. They are not all duplicate pa
 | 276 | `gonka1kx9mca3xm8u8ypzfuhmxey66u0ufxhs7nm6wc5` | 2 | 2 | `362.562078343` | P3-CAND-04; P4-GroupCap-source | 10.929320742; 351.632757601 | `dedupe_against_p4_before_any_p4_vote_or_payout` |
 | 276 | `gonka1scskt6wpnjnumsah6kjphmdu87vjgvcxmn4rxv` | 2 | 2 | `5153.515450808` | P3-CAND-04; P4-GroupCap-source | 3342.429156860; 1811.086293948 | `dedupe_against_p4_before_any_p4_vote_or_payout` |
 | 276 | `gonka1yal0ysgzc860zt3y8cds8656tnueusgymftvkw` | 2 | 2 | `1835.283878137` | P3-CAND-04; P4-GroupCap-source | 49.060506444; 1786.223371693 | `dedupe_against_p4_before_any_p4_vote_or_payout` |
+| **Total** |  | 18 |  | `99946.583377761` |  |  |  |

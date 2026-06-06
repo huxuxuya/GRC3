@@ -380,7 +380,6 @@ def paid_reference_intersection_summary(rows: list[Row]) -> list[dict[str, str]]
                 "current_amount_gonka": format_gonka(current_total),
                 "paid_reference_tracks": "; ".join(row.case_track for row in paid_reference_rows),
                 "paid_reference_amount_gonka": format_gonka(paid_reference_total),
-                "naive_total_gonka": format_gonka(current_total + paid_reference_total),
             }
         )
     return summary
@@ -443,11 +442,11 @@ def write_epoch_crosstab_csv(rows: list[Row], path: Path) -> None:
         "unique_positive_addresses",
         "epochs_present",
         *[f"epoch_{epoch}_gonka" for epoch in epochs],
-        "total_gonka",
     ]
     with path.open("w", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=fieldnames, lineterminator="\n")
         writer.writeheader()
+        epoch_totals = {epoch: 0 for epoch in epochs}
         for track in sorted(by_track):
             group = rows_by_track[track]
             amounts = by_track[track]
@@ -458,11 +457,23 @@ def write_epoch_crosstab_csv(rows: list[Row], path: Path) -> None:
                 "component_rows": str(len(group)),
                 "unique_positive_addresses": str(len({row.address for row in group})),
                 "epochs_present": ",".join(str(epoch) for epoch in sorted(amounts)),
-                "total_gonka": format_gonka(sum(amounts.values())),
             }
             for epoch in epochs:
-                out[f"epoch_{epoch}_gonka"] = format_cell(amounts.get(epoch, 0))
+                amount = amounts.get(epoch, 0)
+                epoch_totals[epoch] += amount
+                out[f"epoch_{epoch}_gonka"] = format_cell(amount)
             writer.writerow(out)
+        total_out = {
+            "case_track": "TOTAL",
+            "case_family": "",
+            "status_groups": "",
+            "component_rows": str(len(rows)),
+            "unique_positive_addresses": str(len({row.address for row in rows})),
+            "epochs_present": ",".join(str(epoch) for epoch in epochs),
+        }
+        for epoch in epochs:
+            total_out[f"epoch_{epoch}_gonka"] = format_cell(epoch_totals[epoch])
+        writer.writerow(total_out)
 
 
 def epoch_overlap_summary(rows: list[Row], overlaps: list[dict[str, str]]) -> list[dict[str, str]]:
@@ -510,17 +521,28 @@ def append_crosstab_section(
         "",
         f"## {title}",
         "",
-        "| Case / track | Status | Rows | Addresses | " + " | ".join(str(epoch) for epoch in epochs) + " | Total |",
-        "|---|---|---:|---:|" + "|".join("---:" for _ in epochs) + "|---:|",
+        "| Case / track | Status | Rows | Addresses | " + " | ".join(str(epoch) for epoch in epochs) + " |",
+        "|---|---|---:|---:|" + "|".join("---:" for _ in epochs) + "|",
     ]
+    epoch_totals = {epoch: 0 for epoch in epochs}
     for key in sorted(grouped_amounts):
         amounts = grouped_amounts[key]
-        cells = [format_cell(amounts.get(epoch, 0)) for epoch in epochs]
+        cells = []
+        for epoch in epochs:
+            amount = amounts.get(epoch, 0)
+            epoch_totals[epoch] += amount
+            cells.append(format_cell(amount))
         lines.append(
             f"| `{key}` | `{statuses[key]}` | {row_counts[key]} | {address_counts[key]} | "
             + " | ".join(f"`{cell}`" if cell else "" for cell in cells)
-            + f" | `{format_gonka(sum(amounts.values()))}` |"
+            + " |"
         )
+    total_cells = [format_cell(epoch_totals[epoch]) for epoch in epochs]
+    lines.append(
+        f"| **Total** |  | {sum(row_counts.values())} |  | "
+        + " | ".join(f"`{cell}`" if cell else "" for cell in total_cells)
+        + " |"
+    )
 
 
 def write_epoch_crosstab_markdown(rows: list[Row], overlaps: list[dict[str, str]], path: Path) -> None:
@@ -579,6 +601,10 @@ def write_epoch_crosstab_markdown(rows: list[Row], overlaps: list[dict[str, str]
         )
     if not summary:
         lines.append("| | | | | | | |")
+    else:
+        lines.append(
+            f"| **Total** |  |  | {sum(int(item['component_rows']) for item in summary)} |  | `{format_gonka(sum(int(Decimal(item['total_amount_gonka_if_naively_summed']) * NGONKA) for item in summary))}` | {sum(int(item['exact_address_epoch_overlap_keys']) for item in summary)} |"
+        )
 
     append_crosstab_section(
         lines,
@@ -657,14 +683,18 @@ def write_address_crosstab_csv(rows: list[Row], overlaps: list[dict[str, str]], 
         "status_groups",
         "case_tracks",
         *[f"{family}_gonka" for family in families],
-        "total_gonka_if_naively_summed",
     ]
     with path.open("w", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=fieldnames, lineterminator="\n")
         writer.writeheader()
+        family_totals = {family: 0 for family in families}
+        written_rows = 0
+        exact_overlap_total = 0
         for row in address_case_rows(rows, overlaps):
             family_amounts = row["family_amounts"]
             assert isinstance(family_amounts, dict)
+            written_rows += 1
+            exact_overlap_total += int(row["exact_address_epoch_overlap_keys"])
             out = {
                 "address": row["address"],
                 "case_family_count": row["case_family_count"],
@@ -674,31 +704,60 @@ def write_address_crosstab_csv(rows: list[Row], overlaps: list[dict[str, str]], 
                 "exact_address_epoch_overlap_keys": row["exact_address_epoch_overlap_keys"],
                 "status_groups": row["status_groups"],
                 "case_tracks": row["case_tracks"],
-                "total_gonka_if_naively_summed": format_gonka(int(row["total_ngonka"])),
             }
             for family in families:
-                out[f"{family}_gonka"] = format_cell(int(family_amounts[family]))
+                amount = int(family_amounts[family])
+                family_totals[family] += amount
+                out[f"{family}_gonka"] = format_cell(amount)
             writer.writerow(out)
+        total_out = {
+            "address": "TOTAL",
+            "case_family_count": "",
+            "case_track_count": "",
+            "component_rows": str(sum(1 for _ in rows)),
+            "epochs_present": "",
+            "exact_address_epoch_overlap_keys": str(exact_overlap_total),
+            "status_groups": "",
+            "case_tracks": "",
+        }
+        for family in families:
+            total_out[f"{family}_gonka"] = format_cell(family_totals[family])
+        writer.writerow(total_out)
 
 
 def append_address_table(lines: list[str], rows_for_table: list[dict[str, object]], families: list[str]) -> None:
     lines += [
         "| Address | Families | Tracks | Rows | Epochs | Exact overlap keys | "
         + " | ".join(families)
-        + " | Naive total |",
+        + " |",
         "|---|---:|---:|---:|---|---:|"
         + "|".join("---:" for _ in families)
-        + "|---:|",
+        + "|",
     ]
+    family_totals = {family: 0 for family in families}
+    row_total = 0
+    exact_overlap_total = 0
     for row in rows_for_table:
         family_amounts = row["family_amounts"]
         assert isinstance(family_amounts, dict)
-        family_cells = [format_cell(int(family_amounts[family])) for family in families]
+        row_total += int(row["component_rows"])
+        exact_overlap_total += int(row["exact_address_epoch_overlap_keys"])
+        family_cells = []
+        for family in families:
+            amount = int(family_amounts[family])
+            family_totals[family] += amount
+            family_cells.append(format_cell(amount))
         lines.append(
             f"| `{row['address']}` | {row['case_family_count']} | {row['case_track_count']} | {row['component_rows']} | `{row['epochs_present']}` | {row['exact_address_epoch_overlap_keys']} | "
             + " | ".join(f"`{cell}`" if cell else "" for cell in family_cells)
-            + f" | `{format_gonka(int(row['total_ngonka']))}` |"
+            + " |"
         )
+    total_cells = [format_cell(family_totals[family]) for family in families]
+    lines.append(
+        f"| **Total** |  |  | {row_total} |  | {exact_overlap_total} | "
+        + " | ".join(f"`{cell}`" if cell else "" for cell in total_cells)
+        + " |"
+    )
 
 
 def append_case_family_recipients(lines: list[str], rows_for_table: list[dict[str, object]], family: str) -> None:
@@ -716,13 +775,19 @@ def append_case_family_recipients(lines: list[str], rows_for_table: list[dict[st
         "| Address | Epochs | Amount, GONKA | Other case families | Exact overlap keys |",
         "|---|---|---:|---:|---:|",
     ]
+    total = 0
+    exact_overlap_total = 0
     for row, amount in sorted(recipients, key=lambda item: str(item[0]["address"])):
+        total += amount
+        exact_overlap_total += int(row["exact_address_epoch_overlap_keys"])
         other_families = int(row["case_family_count"]) - 1
         lines.append(
             f"| `{row['address']}` | `{row['epochs_present']}` | `{format_gonka(amount)}` | {other_families} | {row['exact_address_epoch_overlap_keys']} |"
         )
     if not recipients:
         lines.append("| | | | | |")
+    else:
+        lines.append(f"| **Total** |  | `{format_gonka(total)}` |  | {exact_overlap_total} |")
     lines.append("")
 
 
@@ -747,7 +812,7 @@ def write_address_crosstab_markdown(rows: list[Row], overlaps: list[dict[str, st
         "Current crosstab scope excludes `P3-CAND-06`; that case remains in the raw address/epoch ledger as reference data, but is not part of this payout-scope view.",
         "`P4-CAND-01` is already paid and rejected as a case; this crosstab keeps only P4 rows whose recipient address also appears in a current case.",
         "",
-        "Amounts are grouped by address and case family. `Naive total` is useful for review, but it must not be treated as final payout when a row has multiple case families, multiple tracks, or exact address/epoch overlap keys.",
+        "Amounts are grouped by address and case family. Totals are shown at the bottom of each table; rows with multiple case families, multiple tracks, or exact address/epoch overlap keys still require dedupe review.",
         "",
         "## Summary",
         "",
@@ -833,8 +898,8 @@ def write_markdown(rows: list[Row], overlaps: list[dict[str, str]], path: Path) 
         "",
         "`P4-CAND-01` was rejected as a case but was fully paid. This table isolates exact `epoch + address` intersections between current case candidates and paid P4 rows.",
         "",
-        "| Epoch | Address | Current tracks | Current amount, GONKA | Paid P4 tracks | Paid P4 amount, GONKA | Naive total, GONKA |",
-        "|---:|---|---|---:|---|---:|---:|",
+        "| Epoch | Address | Current tracks | Current amount, GONKA | Paid P4 tracks | Paid P4 amount, GONKA |",
+        "|---:|---|---|---:|---|---:|",
     ]
     current_total = 0
     paid_reference_total = 0
@@ -842,16 +907,16 @@ def write_markdown(rows: list[Row], overlaps: list[dict[str, str]], path: Path) 
         current_total += int(Decimal(row["current_amount_gonka"]) * NGONKA)
         paid_reference_total += int(Decimal(row["paid_reference_amount_gonka"]) * NGONKA)
         lines.append(
-            "| {epoch} | `{address}` | {current_tracks} | `{current_amount_gonka}` | {paid_reference_tracks} | `{paid_reference_amount_gonka}` | `{naive_total_gonka}` |".format(
+            "| {epoch} | `{address}` | {current_tracks} | `{current_amount_gonka}` | {paid_reference_tracks} | `{paid_reference_amount_gonka}` |".format(
                 **row
             )
         )
     if paid_reference_summary:
         lines.append(
-            f"| **Total** |  |  | `{format_gonka(current_total)}` |  | `{format_gonka(paid_reference_total)}` | `{format_gonka(current_total + paid_reference_total)}` |"
+            f"| **Total** |  |  | `{format_gonka(current_total)}` |  | `{format_gonka(paid_reference_total)}` |"
         )
     else:
-        lines.append("| | | | | | | |")
+        lines.append("| | | | | | |")
 
     lines += [
         "",
@@ -862,7 +927,11 @@ def write_markdown(rows: list[Row], overlaps: list[dict[str, str]], path: Path) 
         "| Epoch | Address | Rows | Families | Naive total, GONKA | Tracks | Amounts, GONKA | Action |",
         "|---:|---|---:|---:|---:|---|---|---|",
     ]
+    overlap_naive_total = 0
+    overlap_row_count = 0
     for row in overlaps:
+        overlap_naive_total += int(Decimal(row["total_amount_gonka_if_naively_summed"]) * NGONKA)
+        overlap_row_count += int(row["row_count"])
         lines.append(
             "| {epoch} | `{address}` | {row_count} | {case_family_count} | `{total_amount_gonka_if_naively_summed}` | {case_tracks} | {amounts_gonka} | `{recommended_action}` |".format(
                 **row
@@ -871,6 +940,8 @@ def write_markdown(rows: list[Row], overlaps: list[dict[str, str]], path: Path) 
 
     if not overlaps:
         lines.append("| | | | | | | | |")
+    else:
+        lines.append(f"| **Total** |  | {overlap_row_count} |  | `{format_gonka(overlap_naive_total)}` |  |  |  |")
 
     path.write_text("\n".join(lines) + "\n")
 
