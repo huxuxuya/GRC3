@@ -17,6 +17,8 @@ Main entry points:
   case/epoch crosstab for epoch-level overlap review.
 - [`COMPENSATION_ADDRESS_CROSSTAB.md`](COMPENSATION_ADDRESS_CROSSTAB.md) -
   address/case crosstab for recipient-level overlap review.
+- [`COMPENSATION_ADDRESS_EPOCH_CROSSTAB.md`](COMPENSATION_ADDRESS_EPOCH_CROSSTAB.md)
+  - address/epoch/case crosstab for participant-level epoch review.
 - [`compensation_address_epoch_ledger.csv`](compensation_address_epoch_ledger.csv)
   - machine-readable per-address, per-epoch compensation component ledger.
 - [`compensation_overlap_matrix.csv`](compensation_overlap_matrix.csv) -
@@ -25,6 +27,8 @@ Main entry points:
   machine-readable case/epoch crosstab.
 - [`compensation_address_case_crosstab.csv`](compensation_address_case_crosstab.csv)
   - machine-readable address/case crosstab.
+- [`compensation_address_epoch_case_crosstab.csv`](compensation_address_epoch_case_crosstab.csv)
+  - machine-readable address/epoch/case crosstab.
 
 Generated address/epoch files are rebuilt with:
 

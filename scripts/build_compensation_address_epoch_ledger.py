@@ -842,6 +842,153 @@ def write_address_crosstab_markdown(rows: list[Row], overlaps: list[dict[str, st
     path.write_text("\n".join(lines) + "\n")
 
 
+def address_epoch_case_rows(rows: list[Row]) -> list[dict[str, object]]:
+    families = sorted({row.case_family for row in rows})
+    by_key = group_by_epoch_address(rows)
+
+    result: list[dict[str, object]] = []
+    for (epoch, address), group in by_key.items():
+        family_amounts = {family: 0 for family in families}
+        for row in group:
+            family_amounts[row.case_family] += row.amount_ngonka
+        result.append(
+            {
+                "epoch": epoch,
+                "address": address,
+                "case_family_count": len({row.case_family for row in group}),
+                "case_track_count": len({row.case_track for row in group}),
+                "component_rows": len(group),
+                "status_groups": ",".join(sorted({row.status_group for row in group})),
+                "case_tracks": "; ".join(sorted({row.case_track for row in group})),
+                "family_amounts": family_amounts,
+            }
+        )
+    return sorted(result, key=lambda row: (int(row["epoch"]), str(row["address"])))
+
+
+def write_address_epoch_crosstab_csv(rows: list[Row], path: Path) -> None:
+    families = sorted({row.case_family for row in rows})
+    fieldnames = [
+        "epoch",
+        "address",
+        "case_family_count",
+        "case_track_count",
+        "component_rows",
+        "status_groups",
+        "case_tracks",
+        *[f"{family}_gonka" for family in families],
+    ]
+    with path.open("w", newline="") as fh:
+        writer = csv.DictWriter(fh, fieldnames=fieldnames, lineterminator="\n")
+        writer.writeheader()
+        family_totals = {family: 0 for family in families}
+        component_rows_total = 0
+        for row in address_epoch_case_rows(rows):
+            family_amounts = row["family_amounts"]
+            assert isinstance(family_amounts, dict)
+            component_rows_total += int(row["component_rows"])
+            out = {
+                "epoch": row["epoch"],
+                "address": row["address"],
+                "case_family_count": row["case_family_count"],
+                "case_track_count": row["case_track_count"],
+                "component_rows": row["component_rows"],
+                "status_groups": row["status_groups"],
+                "case_tracks": row["case_tracks"],
+            }
+            for family in families:
+                amount = int(family_amounts[family])
+                family_totals[family] += amount
+                out[f"{family}_gonka"] = format_cell(amount)
+            writer.writerow(out)
+        total_out = {
+            "epoch": "TOTAL",
+            "address": "",
+            "case_family_count": "",
+            "case_track_count": "",
+            "component_rows": str(component_rows_total),
+            "status_groups": "",
+            "case_tracks": "",
+        }
+        for family in families:
+            total_out[f"{family}_gonka"] = format_cell(family_totals[family])
+        writer.writerow(total_out)
+
+
+def append_address_epoch_table(lines: list[str], rows_for_table: list[dict[str, object]], families: list[str]) -> None:
+    lines += [
+        "| Epoch | Address | Families | Tracks | Rows | Case tracks | "
+        + " | ".join(families)
+        + " |",
+        "|---:|---|---:|---:|---:|---|"
+        + "|".join("---:" for _ in families)
+        + "|",
+    ]
+    family_totals = {family: 0 for family in families}
+    row_total = 0
+    for row in rows_for_table:
+        family_amounts = row["family_amounts"]
+        assert isinstance(family_amounts, dict)
+        row_total += int(row["component_rows"])
+        family_cells = []
+        for family in families:
+            amount = int(family_amounts[family])
+            family_totals[family] += amount
+            family_cells.append(format_cell(amount))
+        lines.append(
+            f"| {row['epoch']} | `{row['address']}` | {row['case_family_count']} | {row['case_track_count']} | {row['component_rows']} | `{row['case_tracks']}` | "
+            + " | ".join(f"`{cell}`" if cell else "" for cell in family_cells)
+            + " |"
+        )
+    total_cells = [format_cell(family_totals[family]) for family in families]
+    lines.append(
+        f"| **Total** |  |  |  | {row_total} |  | "
+        + " | ".join(f"`{cell}`" if cell else "" for cell in total_cells)
+        + " |"
+    )
+
+
+def write_address_epoch_crosstab_markdown(rows: list[Row], path: Path) -> None:
+    families = sorted({row.case_family for row in rows})
+    address_epoch_rows = address_epoch_case_rows(rows)
+    review_rows = [
+        row
+        for row in address_epoch_rows
+        if int(row["case_family_count"]) > 1 or int(row["case_track_count"]) > 1
+    ]
+
+    lines = [
+        "# Compensation Address/Epoch/Case Crosstab",
+        "",
+        "Generated by `scripts/build_compensation_address_epoch_ledger.py` from the address/epoch ledger inputs.",
+        "",
+        "Machine-readable file: `compensation_address_epoch_case_crosstab.csv`.",
+        "",
+        "Current crosstab scope excludes `P3-CAND-06`; that case remains in the raw address/epoch ledger as reference data, but is not part of this payout-scope view.",
+        "`P4-CAND-01` is already paid and rejected as a case; this crosstab keeps only P4 rows whose recipient address also appears in a current case.",
+        "",
+        "Amounts are grouped by exact `epoch + address` and split by case family. Totals are shown at the bottom of each table.",
+        "",
+        "## Summary",
+        "",
+        f"- Unique address/epoch rows in current crosstab scope: `{len(address_epoch_rows)}`",
+        f"- Address/epoch rows with more than one case family: `{sum(1 for row in address_epoch_rows if int(row['case_family_count']) > 1)}`",
+        f"- Address/epoch rows with more than one case track: `{sum(1 for row in address_epoch_rows if int(row['case_track_count']) > 1)}`",
+        "",
+        "## All Address/Epoch Rows",
+        "",
+    ]
+    append_address_epoch_table(lines, address_epoch_rows, families)
+
+    lines += [
+        "",
+        "## Address/Epoch Rows Requiring Review",
+        "",
+    ]
+    append_address_epoch_table(lines, review_rows, families)
+    path.write_text("\n".join(lines) + "\n")
+
+
 def write_markdown(rows: list[Row], overlaps: list[dict[str, str]], path: Path) -> None:
     by_track: dict[str, list[Row]] = defaultdict(list)
     by_status: dict[str, list[Row]] = defaultdict(list)
@@ -962,9 +1109,11 @@ def main() -> None:
     write_overlap_csv(overlaps, BASE / "compensation_overlap_matrix.csv")
     write_epoch_crosstab_csv(crosstab_rows, BASE / "compensation_epoch_crosstab.csv")
     write_address_crosstab_csv(crosstab_rows, crosstab_overlaps, BASE / "compensation_address_case_crosstab.csv")
+    write_address_epoch_crosstab_csv(crosstab_rows, BASE / "compensation_address_epoch_case_crosstab.csv")
     write_markdown(rows, overlaps, BASE / "COMPENSATION_OVERLAP_MATRIX.md")
     write_epoch_crosstab_markdown(crosstab_rows, crosstab_overlaps, BASE / "COMPENSATION_EPOCH_CROSSTAB.md")
     write_address_crosstab_markdown(crosstab_rows, crosstab_overlaps, BASE / "COMPENSATION_ADDRESS_CROSSTAB.md")
+    write_address_epoch_crosstab_markdown(crosstab_rows, BASE / "COMPENSATION_ADDRESS_EPOCH_CROSSTAB.md")
 
     print(f"ledger_rows={len(rows)}")
     print(f"current_crosstab_rows={len(crosstab_rows)}")
@@ -975,6 +1124,7 @@ def main() -> None:
     print(f"current_crosstab_overlap_keys={len(crosstab_overlaps)}")
     print(f"epoch_overlap_rows={len(epoch_overlap_summary(crosstab_rows, crosstab_overlaps))}")
     print(f"address_review_rows={len([row for row in address_case_rows(crosstab_rows, crosstab_overlaps) if int(row['case_family_count']) > 1 or int(row['case_track_count']) > 1 or int(row['exact_address_epoch_overlap_keys']) > 0])}")
+    print(f"address_epoch_crosstab_rows={len(address_epoch_case_rows(crosstab_rows))}")
 
 
 if __name__ == "__main__":
