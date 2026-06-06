@@ -19,18 +19,18 @@ the full-root zero-reward upper bound.
 | Strict `>2/3` threshold at final cPoC | `488,553` |
 | Alpha threshold | `0.5` |
 
-## Participant Kimi Weight
+## Participant Model Weights
 
-| Field | Value | Meaning |
-|---|---:|---|
-| Kimi raw model `weight` | `52,279` | Sum of participant Kimi node PoC weights: `kimi30..kimi33`. |
-| Kimi `voting_power` | `66,311` | Voting power used when summing validator power for Kimi cPoC validation. |
-| Kimi `confirmation_weight` | `66,311` | Model row confirmation weight before the failed cPoC transition. |
-| Full root/participant weight before exclusion | `66,311` | Full reward numerator if the whole participant row is restored. |
-| Chain confirmation weight after exclusion | `323` | Stored weight after `failed_confirmation_poc` at block `4,103,171`. |
-| Proposed Kimi scale factor | `0.780` | Policy/input assumption used by the narrower Kimi-only counterfactual. |
-| Scaled Kimi weight, floor(`52,279 * 0.780`) | `40,777` | Kimi-only restored contribution in reward scale. |
-| Chain-style restored weight, `323 + 40,777` | `41,100` | Narrow counterfactual: keep measured non-Kimi residual and restore scaled Kimi. |
+| Field | Kimi | Qwen | Meaning |
+|---|---:|---:|---|
+| Raw model `weight` | `52,279` | `923` | Sum of participant node PoC weights for that model. Kimi nodes: `kimi30..kimi33`; Qwen node: `node1`. |
+| Model `voting_power` | `66,311` | `66,311` | Voting power used when summing validator power for cPoC validation. |
+| Model `confirmation_weight` before failure | `66,311` | `66,311` | Model row confirmation weight before the failed cPoC transition. |
+| Full root/participant weight before exclusion | `66,311` | `66,311` | Full reward numerator if the whole participant row is restored. |
+| Chain confirmation weight after exclusion | `323` | `323` | Stored participant weight after `failed_confirmation_poc` at block `4,103,171`. |
+| Proposed scale factor for narrow model-only restitution | `0.780` | not used | Policy/input assumption used by the narrower Kimi-only counterfactual. |
+| Scaled restored model weight | `40,777` | not restored | `floor(52,279 * 0.780)` for Kimi-only restitution. |
+| Chain-style restored weight | `41,100` | not restored | `323 + 40,777`; keep measured residual and restore scaled Kimi. |
 
 ## cPoC Progression
 
@@ -38,11 +38,11 @@ The first two rows come from the existing epoch `265` timeline scan. The final
 row is the archive-confirmed failure stage and uses the cPoC snapshot denominator
 `732,828`.
 
-| cPoC | Trigger height | Kimi submitted count | Kimi validating voting power | Denominator used here | Strict `>2/3` threshold | Weight result | Guardian result | Chain confirmation weight |
-|---:|---:|---:|---:|---:|---:|---|---|---:|
-| `0` | `4,095,682` | `43,360` | `677,518` | `904,177` diagnostic | `602,785` diagnostic | passes diagnostic | not reconstructed in local raw cache | not finalized |
-| `1` | `4,098,879` | `43,328` | `535,847` | `904,177` diagnostic | `602,785` diagnostic | short by `66,938` diagnostic | not reconstructed in local raw cache | not finalized |
-| `2` | `4,102,890` | `52,028` | `256,727` | `732,828` cPoC snapshot | `488,553` | short by `231,826` | `1 valid / 1 invalid / 1 no_vote`; no guardian pass | `66,311 -> 323` at block `4,103,171` |
+| cPoC | Trigger height | Kimi submitted count | Kimi validating voting power | Kimi result | Qwen submitted count | Qwen validating voting power | Qwen result | Denominator used here | Strict `>2/3` threshold | Guardian result | Chain confirmation weight |
+|---:|---:|---:|---:|---|---:|---:|---|---:|---:|---|---:|
+| `0` | `4,095,682` | `43,360` | `677,518` | passes diagnostic | `960` | `509,938` | short by `92,847` diagnostic | `904,177` diagnostic | `602,785` diagnostic | not reconstructed in local raw cache | not finalized |
+| `1` | `4,098,879` | `43,328` | `535,847` | short by `66,938` diagnostic | `960` | `406,730` | short by `196,055` diagnostic | `904,177` diagnostic | `602,785` diagnostic | not reconstructed in local raw cache | not finalized |
+| `2` | `4,102,890` | `52,028` | `256,727` | short by `231,826` | `960` | `35,370` | short by `453,183` | `732,828` cPoC snapshot | `488,553` | Kimi: `1 valid / 1 invalid / 1 no_vote`, no guardian pass; Qwen: `2 valid / 0 invalid / 1 no_vote`, guardian pass | `66,311 -> 323` at block `4,103,171` |
 
 ## Compensation Interpretations
 
