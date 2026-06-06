@@ -30,9 +30,9 @@ Chain facts for epoch `265`:
   `epoch_group_data` are empty (`[]`);
 - the chain stores the participant/model-row `confirmation_weight` as `66,311`
   before the cPoC failure;
-- that `66,311` is the chain reward/confirmation weight. It is not the raw
-  Kimi `52,279` weight, and it must not be multiplied by another policy scale
-  factor when calculating the normal chain payout.
+- that `66,311` is the historical chain reward/confirmation weight. It is not
+  the raw Kimi `52,279` weight, and it must not be multiplied by another policy
+  scale factor when calculating the normal chain payout.
 
 | Field | Kimi | Qwen | Meaning |
 |---|---:|---:|---|
@@ -42,6 +42,50 @@ Chain facts for epoch `265`:
 | Full root/participant weight before exclusion | `66,311` | `66,311` | Full reward numerator if the whole participant row is restored. |
 | Chain confirmation weight after exclusion | `323` | `323` | Stored participant weight after `failed_confirmation_poc` at block `4,103,171`. |
 | External policy factor | not chain state | not chain state | No external Kimi-only factor is used in the chain-state table below. |
+
+## Scale Parameter Check
+
+The main source of disagreement with the external `12,951.806895703 GONKA`
+calculation is the Kimi scale factor used for epoch `265`.
+
+For the historical epoch `265` cPoC stage `4,102,890`, local chain params show:
+
+| Model | Raw model weight | Historical chain scale parameter | Scaled weight |
+|---|---:|---:|---:|
+| Kimi | `52,279` | `1.2620856201975851` | `65,980` |
+| Qwen | `923` | `0.3593` | `331` |
+| **Total weight to confirm** |  |  | **`66,311`** |
+
+This matches the chain-stored value:
+
+```text
+floor(52,279 * 1.2620856201975851) + floor(923 * 0.3593)
+= 65,980 + 331
+= 66,311
+```
+
+The Dolper epoch `265` scope-addition note uses the later/recalibrated Kimi
+factor `0.78`:
+
+| Model | Raw model weight | Dolper/recalibrated scale parameter | Scaled weight |
+|---|---:|---:|---:|
+| Kimi | `52,279` | `0.78` | `40,777` |
+| Qwen | `923` | `0.3593` | `331` |
+| **Total weight to confirm** |  |  | **`41,108`** |
+
+That `41,108` is internally consistent with the `0.78` factor, but it is not
+the historical epoch `265` chain scale result. It is a recalibrated/model-only
+counterfactual. For historical chain-state replay of epoch `265`, the
+chain-matching total is `66,311`.
+
+For comparison, Dolper's strict epoch `267` calculation uses Kimi `0.78` and
+Qwen `0.3593`, which match the params they cached for epoch `267`:
+
+| Epoch | Model | Raw model weight | Scale parameter used | Scaled weight |
+|---:|---|---:|---:|---:|
+| `267` | Kimi | `51,822` | `0.78` | `40,421` |
+| `267` | Qwen | `873` | `0.3593` | `313` |
+| `267` | **Total scaled model weight** |  |  | **`40,734`** |
 
 ## cPoC Progression
 
