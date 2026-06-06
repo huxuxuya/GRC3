@@ -51,16 +51,18 @@ This table separates three different layers:
 - raw model weight: the participant's model-specific PoC weight entering the epoch;
 - confirmed raw model weight: which model row would be treated as confirmed at that stage;
 - reward numerator: the weight used in the epoch reward formula after applying the
-  Kimi-only scale/residual interpretation.
+  Kimi-only scale/residual interpretation. For Kimi-only restitution this is not
+  the raw Kimi model weight; it is `floor(52,279 * 0.780) = 40,777`.
 
 Rows `cPoC 0` and `cPoC 1` are diagnostic because the local archive does not
 contain the raw guardian/final-reading cache for those two intermediate stages.
 The final chain-applied stage is `cPoC 2`.
 
-| Stage | Height | Kimi input raw weight | Qwen input raw weight | Kimi confirmed raw weight | Qwen confirmed raw weight | Kimi reward numerator | Qwen/residual reward numerator | Total reward numerator | Calculated reward, GONKA | Notes |
+| Stage | Height | Kimi input raw weight | Qwen input raw weight | Kimi confirmed raw weight | Qwen confirmed raw weight | Kimi scaled reward numerator | Qwen/residual reward numerator | Total reward numerator | Calculated reward, GONKA | Notes |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| Epoch entry | before cPoC | `52,279` | `923` | not applicable | not applicable | not decomposed | not decomposed | `66,311` | `20,896.527179100` | Full active participant/root weight on epoch entry. This is the full-root upper bound, not Kimi-only. |
-| `cPoC 0` diagnostic | `4,095,682` | `52,279` | `923` | `52,279` | `0` by weight diagnostic | `40,777` | `0` | `40,777` | `12,850.020189443` | Kimi validating power clears the diagnostic threshold; Qwen validating power is short. Guardian outcome was not reconstructed locally. |
+| Epoch entry, full-root view | before cPoC | `52,279` | `923` | not applicable | not applicable | not decomposed | not decomposed | `66,311` | `20,896.527179100` | Full active participant/root weight on epoch entry. This is the full-root upper bound, not Kimi-only. |
+| Epoch entry, Kimi-only projection | before cPoC | `52,279` | `923` | `52,279` projected | not restored | `40,777` | `0` | `40,777` | `12,850.020189443` | Narrow model-only view at epoch entry: raw Kimi weight `52,279` is converted to the scaled reward numerator `floor(52,279 * 0.780) = 40,777`. |
+| `cPoC 0` diagnostic | `4,095,682` | `52,279` | `923` | `52,279` | `0` by weight diagnostic | `40,777` | `0` | `40,777` | `12,850.020189443` | Kimi validating power clears the diagnostic threshold. `40,777` is not another cPoC weight; it is the scaled reward numerator from `floor(52,279 * 0.780)`. Qwen validating power is short. Guardian outcome was not reconstructed locally. |
 | `cPoC 1` diagnostic | `4,098,879` | `52,279` | `923` | `0` by weight diagnostic | `0` by weight diagnostic | `0` | `0` | `0` | `0.000000000000` | Both Kimi and Qwen are short by voting-power diagnostic. Guardian outcome was not reconstructed locally. |
 | `cPoC 2` chain-applied result | `4,102,890` | `52,279` | `923` | `0` | `923` by guardian pass | `0` | `323` | `323` | `101.786706260` | Kimi has voting shortfall and no guardian pass. Qwen has voting shortfall but `2 valid / 0 invalid / 1 no_vote`; chain stores residual confirmation weight `323` after exclusion. |
 | `cPoC 2` Kimi-restored counterfactual | `4,102,890` | `52,279` | `923` | `52,279` restored | `923` retained by guardian pass | `40,777` | `323` | `41,100` | `12,951.806895703` | Narrow Kimi-only compensation view: keep the chain-observed residual and add scaled Kimi weight. |
