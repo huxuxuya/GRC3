@@ -16,6 +16,7 @@ from pathlib import Path
 
 BASE = Path(__file__).resolve().parents[1]
 NGONKA = Decimal("1000000000")
+EXCLUDED_FROM_CURRENT_CROSSTAB = {"P3-CAND-06"}
 
 
 @dataclass(frozen=True)
@@ -369,6 +370,10 @@ def format_cell(amount_ngonka: int) -> str:
     return format_gonka(amount_ngonka) if amount_ngonka else ""
 
 
+def current_crosstab_rows(rows: list[Row]) -> list[Row]:
+    return [row for row in rows if row.case_family not in EXCLUDED_FROM_CURRENT_CROSSTAB]
+
+
 def sum_by(rows: list[Row], key_name: str) -> dict[str, dict[int, int]]:
     result: dict[str, dict[int, int]] = defaultdict(lambda: defaultdict(int))
     for row in rows:
@@ -510,6 +515,8 @@ def write_epoch_crosstab_markdown(rows: list[Row], overlaps: list[dict[str, str]
         "",
         "Machine-readable file: `compensation_epoch_crosstab.csv`.",
         "",
+        "Current crosstab scope excludes `P3-CAND-06`; that case remains in the raw address/epoch ledger as reference data, but is not part of this payout-scope view.",
+        "",
         "The crosstab shows epoch-level overlap only. Exact duplicate-risk review still uses `COMPENSATION_OVERLAP_MATRIX.md`, because duplicate payout risk requires the same `epoch + address`, not just the same epoch.",
         "",
         "## Epoch Overlap Summary",
@@ -647,6 +654,31 @@ def append_address_table(lines: list[str], rows_for_table: list[dict[str, object
         )
 
 
+def append_case_family_recipients(lines: list[str], rows_for_table: list[dict[str, object]], family: str) -> None:
+    recipients = []
+    for row in rows_for_table:
+        family_amounts = row["family_amounts"]
+        assert isinstance(family_amounts, dict)
+        amount = int(family_amounts.get(family, 0))
+        if amount > 0:
+            recipients.append((row, amount))
+
+    lines += [
+        f"## {family} Recipients",
+        "",
+        "| Address | Epochs | Amount, GONKA | Other case families | Exact overlap keys |",
+        "|---|---|---:|---:|---:|",
+    ]
+    for row, amount in sorted(recipients, key=lambda item: str(item[0]["address"])):
+        other_families = int(row["case_family_count"]) - 1
+        lines.append(
+            f"| `{row['address']}` | `{row['epochs_present']}` | `{format_gonka(amount)}` | {other_families} | {row['exact_address_epoch_overlap_keys']} |"
+        )
+    if not recipients:
+        lines.append("| | | | | |")
+    lines.append("")
+
+
 def write_address_crosstab_markdown(rows: list[Row], overlaps: list[dict[str, str]], path: Path) -> None:
     families = sorted({row.case_family for row in rows})
     address_rows = address_case_rows(rows, overlaps)
@@ -665,6 +697,8 @@ def write_address_crosstab_markdown(rows: list[Row], overlaps: list[dict[str, st
         "",
         "Machine-readable file: `compensation_address_case_crosstab.csv`.",
         "",
+        "Current crosstab scope excludes `P3-CAND-06`; that case remains in the raw address/epoch ledger as reference data, but is not part of this payout-scope view.",
+        "",
         "Amounts are grouped by address and case family. `Naive total` is useful for review, but it must not be treated as final payout when a row has multiple case families, multiple tracks, or exact address/epoch overlap keys.",
         "",
         "## Summary",
@@ -674,6 +708,13 @@ def write_address_crosstab_markdown(rows: list[Row], overlaps: list[dict[str, st
         f"- Addresses with more than one case track: `{sum(1 for row in address_rows if int(row['case_track_count']) > 1)}`",
         f"- Addresses with exact address/epoch overlap keys: `{sum(1 for row in address_rows if int(row['exact_address_epoch_overlap_keys']) > 0)}`",
         "",
+        "## All Recipients Address/Case Crosstab",
+        "",
+    ]
+    append_address_table(lines, address_rows, families)
+
+    lines += [
+        "",
         "## Addresses Requiring Review",
         "",
     ]
@@ -681,10 +722,10 @@ def write_address_crosstab_markdown(rows: list[Row], overlaps: list[dict[str, st
 
     lines += [
         "",
-        "## Full Address/Case Crosstab",
-        "",
     ]
-    append_address_table(lines, address_rows, families)
+    append_case_family_recipients(lines, address_rows, "P3-CAND-02")
+    while lines and lines[-1] == "":
+        lines.pop()
     path.write_text("\n".join(lines) + "\n")
 
 
@@ -768,20 +809,25 @@ def main() -> None:
     load_p4(rows)
 
     overlaps = build_overlaps(rows)
+    crosstab_rows = current_crosstab_rows(rows)
+    crosstab_overlaps = build_overlaps(crosstab_rows)
     write_ledger(rows, BASE / "compensation_address_epoch_ledger.csv")
     write_overlap_csv(overlaps, BASE / "compensation_overlap_matrix.csv")
-    write_epoch_crosstab_csv(rows, BASE / "compensation_epoch_crosstab.csv")
-    write_address_crosstab_csv(rows, overlaps, BASE / "compensation_address_case_crosstab.csv")
+    write_epoch_crosstab_csv(crosstab_rows, BASE / "compensation_epoch_crosstab.csv")
+    write_address_crosstab_csv(crosstab_rows, crosstab_overlaps, BASE / "compensation_address_case_crosstab.csv")
     write_markdown(rows, overlaps, BASE / "COMPENSATION_OVERLAP_MATRIX.md")
-    write_epoch_crosstab_markdown(rows, overlaps, BASE / "COMPENSATION_EPOCH_CROSSTAB.md")
-    write_address_crosstab_markdown(rows, overlaps, BASE / "COMPENSATION_ADDRESS_CROSSTAB.md")
+    write_epoch_crosstab_markdown(crosstab_rows, crosstab_overlaps, BASE / "COMPENSATION_EPOCH_CROSSTAB.md")
+    write_address_crosstab_markdown(crosstab_rows, crosstab_overlaps, BASE / "COMPENSATION_ADDRESS_CROSSTAB.md")
 
     print(f"ledger_rows={len(rows)}")
+    print(f"current_crosstab_rows={len(crosstab_rows)}")
     print(f"unique_epoch_address={len({(row.epoch, row.address) for row in rows})}")
     print(f"unique_addresses={len({row.address for row in rows})}")
     print(f"overlap_keys={len(overlaps)}")
-    print(f"epoch_overlap_rows={len(epoch_overlap_summary(rows, overlaps))}")
-    print(f"address_review_rows={len([row for row in address_case_rows(rows, overlaps) if int(row['case_family_count']) > 1 or int(row['case_track_count']) > 1 or int(row['exact_address_epoch_overlap_keys']) > 0])}")
+    print(f"current_crosstab_unique_addresses={len({row.address for row in crosstab_rows})}")
+    print(f"current_crosstab_overlap_keys={len(crosstab_overlaps)}")
+    print(f"epoch_overlap_rows={len(epoch_overlap_summary(crosstab_rows, crosstab_overlaps))}")
+    print(f"address_review_rows={len([row for row in address_case_rows(crosstab_rows, crosstab_overlaps) if int(row['case_family_count']) > 1 or int(row['case_track_count']) > 1 or int(row['exact_address_epoch_overlap_keys']) > 0])}")
 
 
 if __name__ == "__main__":
