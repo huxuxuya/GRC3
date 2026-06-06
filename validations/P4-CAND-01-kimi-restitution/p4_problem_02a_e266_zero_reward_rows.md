@@ -45,3 +45,9 @@ The raw data confirms submissions and validation records, but does not
 prove that these zero-reward rows are direct victims of the same incident
 as the absent operators. They should remain a separate row-level cause
 and policy question.
+
+## Audit Remark
+
+`P4-E266-ZR-01`: these 5 rows should be treated as a formal scope objection
+against approving all e266 nonce rows together. They are in-final-group
+`failed_confirmation_poc` rows, not absent final-set operators.

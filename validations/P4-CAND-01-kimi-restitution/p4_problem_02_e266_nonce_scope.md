@@ -11,8 +11,10 @@ Primary local evidence:
 
 - [`p4_audit_pass_04_e266_nonce_scope.md`](p4_audit_pass_04_e266_nonce_scope.md)
 - [`p4_problem_02a_e266_zero_reward_rows.md`](p4_problem_02a_e266_zero_reward_rows.md)
+- [`p4_problem_02b_e266_rewarded_topup_rows.md`](p4_problem_02b_e266_rewarded_topup_rows.md)
 - [`p4_e266_nonce_scope_classifier.csv`](p4_e266_nonce_scope_classifier.csv)
 - [`p4_e266_zero_reward_rows.csv`](p4_e266_zero_reward_rows.csv)
+- [`p4_e266_rewarded_topup_rows.csv`](p4_e266_rewarded_topup_rows.csv)
 - raw commit and validation cache listed in
   [`raw_chain_cache_manifest.md`](raw_chain_cache_manifest.md)
 - source labels listed in
@@ -23,7 +25,7 @@ Primary local evidence:
 | Group | Count | Local status | Decision need |
 |---|---:|---|---|
 | Source-listed excluded operators | `9` | Raw PoC commit rows exist, raw validation records exist, no final epoch-group row, no performance row. | Chain facts confirmed; compensation still depends on external-attack scope. |
-| In-final-group rewarded top-up rows | `4` | Participants were in final group and already received rewards. | Policy required; this is not final-set exclusion. |
+| In-final-group rewarded top-up rows | `4` | Pass 02b confirms participants were in final group, already received non-zero rewards, and were not in `excluded_participants/266`. | Policy required; this is not final-set exclusion. |
 | In-final-group zero-reward rows | `5` | Pass 02a confirms they were in final group, had raw commits/validations, then ended with `confirmation_weight=0`, `rewarded_coins=0`, and `failed_confirmation_poc`. Three are Qwen-only by source labels, one is Kimi-only, and one is mixed Kimi+Qwen. | Row-level cause and policy required before treating as attack victims. |
 
 ## What Is Proven
@@ -40,6 +42,8 @@ Primary local evidence:
 - That reconstructed nonce weights are automatically eligible for compensation.
 - That the 5 zero-reward in-final-group rows failed because of the same incident
   rather than ordinary cPoC failure or local operator issues.
+- That the 4 rewarded in-final-group rows should receive reconstruction top-ups
+  despite already receiving epoch rewards.
 
 ## Recommended Handling
 
@@ -49,3 +53,10 @@ Split e266 nonce into at least two decisions:
 2. Broader reconstruction/top-up decision for the remaining 9 rows.
 
 Do not approve all 18 rows as one technical class.
+
+## Audit Remarks
+
+- `P4-E266-ZR-01`: the 5 zero-reward rows are in-final-group
+  `failed_confirmation_poc` rows, not absent final-set operators.
+- `P4-E266-TOPUP-01`: the 4 rewarded rows are reconstruction/top-up policy rows,
+  not final-set-exclusion victims.
