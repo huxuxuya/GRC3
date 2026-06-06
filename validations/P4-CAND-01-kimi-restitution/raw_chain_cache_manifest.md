@@ -12,6 +12,9 @@ Default node used for this pass:
 | File | Endpoint / request | SHA-256 | Notes |
 |---|---|---|---|
 | `node1_all_poc_v2_store_commits_4105361.json` | `GET /productscience/inference/inference/all_poc_v2_store_commits/4105361` | `6f2307fbedb93d100c83fe817ea04626a98d7a8696fb6e59a3d7a1452cd7809a` | Current endpoint response; `commits` array is empty. Not sufficient to disprove historical e266 nonce submission. |
+| `node1_epoch_group_data_265.json` | `GET /productscience/inference/inference/epoch_group_data/265` | `342fc83eb19b5b229883a9225ccf9c006b0a827da7c7f6ac98ca9a0dae0b11ff` | Current endpoint returns epoch `265` final group with `51` validation-weight rows and `total_weight=904177`; used for attack summary participant counts. |
+| `node1_excluded_participants_265.json` | `GET /productscience/inference/inference/excluded_participants/265` | `bc2dccb7b84db277e6e5a2c975ed4b22e675a3b97f46611b5a63dd4c2a84a45a` | Current endpoint returns `14` excluded participant rows for epoch `265`; used for attack summary participant counts. |
+| `node1_epoch_performance_summary_265.json` | `GET /productscience/inference/inference/epoch_performance_summary/265` | `ef3542fbc58ac90bd6c680964c759b76f53c488dd7a131bc47332a0980a50297` | Current endpoint returns `53` performance summary rows for epoch `265`; used for actual rewarded/burned totals and zero-reward row counts. |
 | `node1_epoch_group_data_266.json` | `GET /productscience/inference/inference/epoch_group_data/266` | `cc5cb6c7dcae4219c486d86760acfeca7197e134f9fcaadf3d947097fa630c1c` | Current endpoint returns epoch `266` final group with `46` validation-weight rows and `total_weight=335159`. |
 | `node1_excluded_participants_266.json` | `GET /productscience/inference/inference/excluded_participants/266` | `c2f0c61423819476ef7488d32a4c056ff17547bb43f944c7520f26292a6c590e` | Current endpoint returns `7` excluded participant rows for epoch `266`. |
 | `node1_epoch_performance_summary_266.json` | `GET /productscience/inference/inference/epoch_performance_summary/266` | `d0846c3e0375f104d2225539ecf71b58f258f329b82fe70e52ccab641428ea0e` | Current endpoint returns `48` performance summary rows for epoch `266`. |
@@ -107,4 +110,7 @@ The matching pass 06 `.stderr.txt` files are empty with SHA-256
   commit submission by address/count/root hash, not model-specific submission.
 - The e266 delegation pass also stores matching `.stderr.txt` files for the
   `poc_delegation` and params requests; all are empty with SHA-256
+  `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`.
+- The e265 node1 files added for the attack summary also store matching
+  `.stderr.txt` files; all are empty with SHA-256
   `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`.

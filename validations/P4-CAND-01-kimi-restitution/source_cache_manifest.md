@@ -12,6 +12,8 @@ Pinned source commit: `5462c55a6b95d50dfb53bdc4211cdcd31369c2ea`
 
 | File | Source path | SHA-256 | Use |
 |---|---|---|---|
+| `votkon_e265_compensation_265.json` | `e265/compensation_265.json` | `9cb20ca589e28da48df183ea141d07fdabf6e8c011f617f2c55c6edb041266ab` | Source aggregate e265 claim used for attack summary labels and theoretical reward-pool input. |
+| `votkon_e265_compensation_265.csv` | `e265/compensation_265.csv` | `cc381ee8b259bcfb001f508bdf9629259d72b5ea4ef940f2a0ac2be0da20a44a` | Source e265 row set used as claim labels for affected-row counts. |
 | `votkon_e266_epoch266_commits.json` | `e266/epoch266_commits.json` | `f1a016c29a10fe4d8f752f12b2bd597cf6303cbcc4e51f1c85c139cbcbbd20b5` | Source model labels for e266 commit rows; exact raw commit row match is checked in pass 04. |
 | `votkon_e266_compensation_266_nonces.csv` | `e266/compensation_266_nonces.csv` | `c948b9c67519825b290f7f76a0fbe0a5b55c12a672cab5a3b386d957605ec330` | Source nonce-compensation row set used for scope classification. |
 | `votkon_e266_compensation_266_delegation.csv` | `e266/compensation_266_delegation.csv` | `b8099566d0c70c10ce97e5fbdd984727db9f1362e8cf54d35353bdd4c1b36186` | Source delegation-compensation row set used for scope classification. |

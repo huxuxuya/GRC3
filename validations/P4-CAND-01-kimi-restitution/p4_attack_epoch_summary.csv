@@ -1,0 +1,3 @@
+epoch,final_group_participants,performance_rows,excluded_rows,participant_union_count,zero_reward_performance_rows,source_affected_rows,source_affected_unique_addresses,source_compensation_gonka,theoretical_reward_pool_gonka,reward_pool_input,actual_rewarded_gonka,burned_gonka,gov_remainder_gonka,source_comp_minus_gov_remainder_gonka
+265,51,53,14,53,16,3,3,30592.104861828,284932.503735690,source_compensation_json,185565.043741173,0.000000000,99367.459994517,-68775.355132689
+266,46,48,7,48,10,27,26,188698.468968749,284797.192935274,source_compensation_json,261173.638858560,0.000000000,23623.554076714,165074.914892035

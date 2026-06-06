@@ -1,0 +1,36 @@
+[
+  {
+    "actual_rewarded_gonka": "185565.043741173",
+    "burned_gonka": "0.000000000",
+    "epoch": 265,
+    "excluded_rows": 14,
+    "final_group_participants": 51,
+    "gov_remainder_gonka": "99367.459994517",
+    "participant_union_count": 53,
+    "performance_rows": 53,
+    "reward_pool_input": "source_compensation_json",
+    "source_affected_rows": 3,
+    "source_affected_unique_addresses": 3,
+    "source_comp_minus_gov_remainder_gonka": "-68775.355132689",
+    "source_compensation_gonka": "30592.104861828",
+    "theoretical_reward_pool_gonka": "284932.503735690",
+    "zero_reward_performance_rows": 16
+  },
+  {
+    "actual_rewarded_gonka": "261173.638858560",
+    "burned_gonka": "0.000000000",
+    "epoch": 266,
+    "excluded_rows": 7,
+    "final_group_participants": 46,
+    "gov_remainder_gonka": "23623.554076714",
+    "participant_union_count": 48,
+    "performance_rows": 48,
+    "reward_pool_input": "source_compensation_json",
+    "source_affected_rows": 27,
+    "source_affected_unique_addresses": 26,
+    "source_comp_minus_gov_remainder_gonka": "165074.914892035",
+    "source_compensation_gonka": "188698.468968749",
+    "theoretical_reward_pool_gonka": "284797.192935274",
+    "zero_reward_performance_rows": 10
+  }
+]

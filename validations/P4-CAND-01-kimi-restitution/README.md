@@ -16,6 +16,8 @@ on rerunning the investigator's scripts.
 | [`p4_conceptual_audit_plan.md`](p4_conceptual_audit_plan.md) | Working checklist for auditing claims, evidence, root cause, eligibility, overlap, and policy boundaries without reproducing arithmetic. |
 | [`p4_decision_matrix.md`](p4_decision_matrix.md) | Split P4 decision matrix with the recommended voting order and per-track policy gates. |
 | [`p4_recommendation_draft.md`](p4_recommendation_draft.md) | Draft recommendation: do not approve aggregate P4 total; split into separate committee decisions. |
+| [`p4_attack_summary.md`](p4_attack_summary.md) | Attack-attributed e265/e266 summary: participant counts, source-affected rows, and epoch-level undistributed settlement remainder. |
+| [`p4_attack_epoch_summary.csv`](p4_attack_epoch_summary.csv), [`p4_attack_epoch_summary.json`](p4_attack_epoch_summary.json) | Machine-readable attack summary generated from saved raw/source cache files. |
 | [`p4_problem_01_e265_scope.md`](p4_problem_01_e265_scope.md) | Epoch 265 scope note: separates Case 3 overlap from non-strict direct cPoC rows. |
 | [`p4_problem_02_e266_nonce_scope.md`](p4_problem_02_e266_nonce_scope.md) | Epoch 266 nonce note: separates 9 excluded operators from broader reconstruction/top-up rows. |
 | [`p4_problem_02a_e266_zero_reward_rows.md`](p4_problem_02a_e266_zero_reward_rows.md) | Epoch 266 zero-reward note: row-level evidence for the 5 in-final-group failed-confirmation nonce candidates. |
@@ -73,3 +75,10 @@ settlement denominator instead of recomputing the full uncapped settlement.
 Therefore the package is useful as evidence, but it should not be treated as a
 fully validated GRC compensation case without resolving the methodology items
 listed in the review note.
+
+For the attack-attributed part alone, see
+[`p4_attack_summary.md`](p4_attack_summary.md). In short: the source package
+marks `3` e265 rows and `27` e266 rows as affected, while the raw-settlement
+undistributed remainder is `99,367.459994517` GONKA for e265 and
+`23,623.554076714` GONKA for e266. That remainder is not the same object as the
+source compensation model.
