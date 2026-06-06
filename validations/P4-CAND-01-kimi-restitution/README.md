@@ -21,6 +21,9 @@ on rerunning the investigator's scripts.
 | [`p4_e265_row_classifier.csv`](p4_e265_row_classifier.csv) | Machine-readable classifier for the three epoch 265 rows in the P4 source package. |
 | [`p4_audit_pass_03_e265_gonka1830.md`](p4_audit_pass_03_e265_gonka1830.md) | Row-level cPoC evidence for `gonka1830...`, showing no raw Kimi/Qwen submission or validation record at final cPoC stage `4102890`. |
 | [`p4_e265_gonka1830_cpoc_evidence.csv`](p4_e265_gonka1830_cpoc_evidence.csv) | Machine-readable commit/validation/voting-power evidence for the epoch 265 disputed rows. |
+| [`p4_audit_pass_04_e266_nonce_scope.md`](p4_audit_pass_04_e266_nonce_scope.md) | Epoch 266 nonce scope classifier: separates nine absent operators from in-final-group reconstruction/top-up rows. |
+| [`p4_e266_nonce_scope_classifier.csv`](p4_e266_nonce_scope_classifier.csv) | Machine-readable e266 nonce scope classification for the 18 source nonce-compensation rows. |
+| [`source_cache_manifest.md`](source_cache_manifest.md) | Manifest of copied source artifacts from the pinned Votkon repository used as claim labels. |
 
 ## Current Result
 
