@@ -21,6 +21,16 @@ the full-root zero-reward upper bound.
 
 ## Participant Model Weights
 
+Chain facts for epoch `265`:
+
+- historical `confirmation_weight_scales` in both Kimi and Qwen
+  `epoch_group_data` are empty (`[]`);
+- the chain stores the participant/model-row `confirmation_weight` as `66,311`
+  before the cPoC failure;
+- that `66,311` is the chain reward/confirmation weight. It is not the raw
+  Kimi `52,279` weight, and it must not be multiplied by another policy scale
+  factor when calculating the normal chain payout.
+
 | Field | Kimi | Qwen | Meaning |
 |---|---:|---:|---|
 | Raw model `weight` | `52,279` | `923` | Sum of participant node PoC weights for that model. Kimi nodes: `kimi30..kimi33`; Qwen node: `node1`. |
@@ -28,9 +38,9 @@ the full-root zero-reward upper bound.
 | Model `confirmation_weight` before failure | `66,311` | `66,311` | Model row confirmation weight before the failed cPoC transition. |
 | Full root/participant weight before exclusion | `66,311` | `66,311` | Full reward numerator if the whole participant row is restored. |
 | Chain confirmation weight after exclusion | `323` | `323` | Stored participant weight after `failed_confirmation_poc` at block `4,103,171`. |
-| Proposed scale factor for narrow model-only restitution | `0.780` | not used | Policy/input assumption used by the narrower Kimi-only counterfactual. |
-| Scaled restored model weight | `40,777` | not restored | `floor(52,279 * 0.780)` for Kimi-only restitution. |
-| Chain-style restored weight | `41,100` | not restored | `323 + 40,777`; keep measured residual and restore scaled Kimi. |
+| External policy factor for narrow model-only restitution | `0.780` | not used | Not a chain field for epoch `265`; only a policy/input assumption for a narrower Kimi-only counterfactual. |
+| Policy-only restored model weight | `40,777` | not restored | `floor(52,279 * 0.780)` for Kimi-only restitution, if that external factor is accepted. |
+| Chain-style restored weight | `41,100` | not restored | `323 + 40,777`; keep measured residual and add the policy-only Kimi projection. |
 
 ## cPoC Progression
 
@@ -50,22 +60,27 @@ This table separates three different layers:
 
 - raw model weight: the participant's model-specific PoC weight entering the epoch;
 - confirmed raw model weight: which model row would be treated as confirmed at that stage;
-- reward numerator: the weight used in the epoch reward formula after applying the
-  Kimi-only scale/residual interpretation. For Kimi-only restitution this is not
-  the raw Kimi model weight; it is `floor(52,279 * 0.780) = 40,777`.
+- chain reward numerator: the weight actually used by the epoch reward formula;
+- policy-only Kimi numerator: a non-chain decomposition used only if GRC wants a
+  narrower Kimi-only compensation instead of full participant-row restoration.
+
+At epoch entry, the chain-applicable reward numerator is `66,311`. That value
+already comes from chain confirmation/reward accounting. The local chain data
+does not expose an additive per-model reward decomposition where Kimi and Qwen
+can be summed separately into `66,311`.
 
 Rows `cPoC 0` and `cPoC 1` are diagnostic because the local archive does not
 contain the raw guardian/final-reading cache for those two intermediate stages.
 The final chain-applied stage is `cPoC 2`.
 
-| Stage | Height | Kimi input raw weight | Qwen input raw weight | Kimi confirmed raw weight | Qwen confirmed raw weight | Kimi scaled reward numerator | Qwen/residual reward numerator | Total reward numerator | Calculated reward, GONKA | Notes |
+| Stage | Height | Kimi input raw weight | Qwen input raw weight | Kimi confirmed raw weight | Qwen confirmed raw weight | Policy-only Kimi numerator | Chain Qwen/residual numerator | Total reward numerator | Calculated reward, GONKA | Notes |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| Epoch entry, full-root view | before cPoC | `52,279` | `923` | not applicable | not applicable | not decomposed | not decomposed | `66,311` | `20,896.527179100` | Full active participant/root weight on epoch entry. This is the full-root upper bound, not Kimi-only. |
-| Epoch entry, Kimi-only projection | before cPoC | `52,279` | `923` | `52,279` projected | not restored | `40,777` | `0` | `40,777` | `12,850.020189443` | Narrow model-only view at epoch entry: raw Kimi weight `52,279` is converted to the scaled reward numerator `floor(52,279 * 0.780) = 40,777`. |
-| `cPoC 0` diagnostic | `4,095,682` | `52,279` | `923` | `52,279` | `0` by weight diagnostic | `40,777` | `0` | `40,777` | `12,850.020189443` | Kimi validating power clears the diagnostic threshold. `40,777` is not another cPoC weight; it is the scaled reward numerator from `floor(52,279 * 0.780)`. Qwen validating power is short. Guardian outcome was not reconstructed locally. |
+| Epoch entry, chain full-row view | before cPoC | `52,279` | `923` | not applicable | not applicable | not decomposed | not decomposed | `66,311` | `20,896.527179100` | Full active participant/root weight on epoch entry. This is the chain payout weight if cPoC did not exclude the participant. Do not apply the external `0.780` factor to this row. |
+| Epoch entry, policy-only Kimi decomposition | before cPoC | `52,279` | `923` | `52,279` projected | not restored | `40,777` | `0` | `40,777` | `12,850.020189443` | This is not a chain entry weight. It is a policy-only Kimi projection: `floor(52,279 * 0.780) = 40,777`, if the external factor is accepted. |
+| `cPoC 0` diagnostic | `4,095,682` | `52,279` | `923` | `52,279` | `0` by weight diagnostic | `40,777` | `0` | `40,777` | `12,850.020189443` | Kimi validating power clears the diagnostic threshold. `40,777` is not another cPoC weight and not a stored chain field; it is the policy-only projection from `floor(52,279 * 0.780)`. Qwen validating power is short. Guardian outcome was not reconstructed locally. |
 | `cPoC 1` diagnostic | `4,098,879` | `52,279` | `923` | `0` by weight diagnostic | `0` by weight diagnostic | `0` | `0` | `0` | `0.000000000000` | Both Kimi and Qwen are short by voting-power diagnostic. Guardian outcome was not reconstructed locally. |
 | `cPoC 2` chain-applied result | `4,102,890` | `52,279` | `923` | `0` | `923` by guardian pass | `0` | `323` | `323` | `101.786706260` | Kimi has voting shortfall and no guardian pass. Qwen has voting shortfall but `2 valid / 0 invalid / 1 no_vote`; chain stores residual confirmation weight `323` after exclusion. |
-| `cPoC 2` Kimi-restored counterfactual | `4,102,890` | `52,279` | `923` | `52,279` restored | `923` retained by guardian pass | `40,777` | `323` | `41,100` | `12,951.806895703` | Narrow Kimi-only compensation view: keep the chain-observed residual and add scaled Kimi weight. |
+| `cPoC 2` Kimi-restored counterfactual | `4,102,890` | `52,279` | `923` | `52,279` restored | `923` retained by guardian pass | `40,777` | `323` | `41,100` | `12,951.806895703` | Narrow Kimi-only compensation view: keep the chain-observed residual and add policy-only Kimi projection. |
 | Full-row restore counterfactual | `4,102,890` | `52,279` | `923` | full participant row | full participant row | not decomposed | not decomposed | `66,311` | `20,896.527179100` | Broader policy view: restore the whole failed participant epoch row. This is not model-only compensation. |
 
 ## Compensation Interpretations
@@ -73,8 +88,8 @@ The final chain-applied stage is `cPoC 2`.
 | Interpretation | Reward numerator | Formula | Amount, GONKA | What it compensates |
 |---|---:|---|---:|---|
 | Full-root restore | `66,311` | `floor(66,311 * fixedEpochReward / 904,177)` | `20,896.527179100` | Treats the whole participant epoch row as if it should have remained fully active. This includes more than the Kimi-only lost contribution. |
-| Kimi-only restored contribution | `40,777` | `floor(40,777 * fixedEpochReward / 904,177)` | `12,850.020189443` | Restores only scaled Kimi weight using the proposed `0.780` factor. |
-| Chain-style Kimi counterfactual | `41,100` | `floor((323 + 40,777) * fixedEpochReward / 904,177)` | `12,951.806895703` | Keeps the chain-observed residual `323` and adds scaled Kimi. This is the narrowest practical Kimi-only row-level payout if actual reward is zero. |
+| Kimi-only restored contribution | `40,777` | `floor(40,777 * fixedEpochReward / 904,177)` | `12,850.020189443` | Restores only Kimi under the external `0.780` policy factor. This is not a stored chain entry weight. |
+| Chain-style Kimi counterfactual | `41,100` | `floor((323 + 40,777) * fixedEpochReward / 904,177)` | `12,951.806895703` | Keeps the chain-observed residual `323` and adds the policy-only Kimi projection. This is a narrow model-only policy counterfactual if actual reward is zero. |
 | Chain-observed residual only | `323` | `floor(323 * fixedEpochReward / 904,177)` | `101.786706260` | Not a restitution amount by itself; shown to explain the `41,100` counterfactual. |
 
 ## Conclusion
@@ -82,7 +97,8 @@ The final chain-applied stage is `cPoC 2`.
 For epoch `265`, `20,896.527179100 GONKA` is a full-root upper bound, not a
 Kimi-only amount.
 
-If the policy is **Kimi-only restitution**, the cleaner chain-style number is
-`12,951.806895703 GONKA` for this epoch, subject to accepting the `0.780` Kimi
-scale factor. If the policy is **full failed-confirmation-poc row restoration**,
-then `20,896.527179100 GONKA` is the corresponding full-root amount.
+If the policy is **Kimi-only restitution**, the `12,951.806895703 GONKA` number
+is a model-only policy counterfactual, not a direct chain entry-weight replay,
+and it depends on accepting the external `0.780` Kimi factor. If the policy is
+**full failed-confirmation-poc row restoration**, then `20,896.527179100 GONKA`
+is the corresponding chain full-root amount.
