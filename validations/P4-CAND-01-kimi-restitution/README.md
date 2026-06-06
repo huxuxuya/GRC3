@@ -14,6 +14,8 @@ on rerunning the investigator's scripts.
 |---|---|
 | [`votkon_repo_truth_review.md`](votkon_repo_truth_review.md) | Claim-by-claim review of the current upstream repository, including confirmed facts, internal inconsistencies, and open methodology risks. |
 | [`p4_conceptual_audit_plan.md`](p4_conceptual_audit_plan.md) | Working checklist for auditing claims, evidence, root cause, eligibility, overlap, and policy boundaries without reproducing arithmetic. |
+| [`raw_chain_cache_manifest.md`](raw_chain_cache_manifest.md) | Manifest of raw node responses saved during P4 audit passes, with endpoints, hashes, and limitations. |
+| [`p4_audit_pass_01.md`](p4_audit_pass_01.md) | First evidence pass: e266 final-set absence, e266 commit endpoint limitation, and e267/e275 Kimi cap-effect evidence. |
 
 ## Current Result
 
