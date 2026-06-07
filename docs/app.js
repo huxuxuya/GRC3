@@ -43,8 +43,8 @@ function renderSummary() {
   const total = settlement.totals.global;
   const cards = [
     ["Source total", total.planned_amount_gonka],
-    ["P4 paid overlap", total.p4_paid_overlap_gonka],
-    ["Applied adjustment", total.overlap_adjustment_gonka],
+    ["Already paid by P4", total.p4_paid_overlap_gonka],
+    ["Deducted from payout", total.overlap_adjustment_gonka],
     ["Final victim payout", total.final_payout_gonka],
     ["Rows", total.rows],
     ["Recipients", total.address_count],
@@ -118,9 +118,27 @@ function renderSummaryTable(bodyId, items, columns) {
 
 function renderAggregates() {
   const visibleRows = filteredRows();
+  const selectedCase = $("case-filter").value;
   const visibleAddressKeys = new Set(visibleRows.map((row) => row.address));
   const visibleEpochKeys = new Set(visibleRows.map((row) => String(row.epoch)));
   const visibleCaseEpochKeys = new Set(visibleRows.map((row) => `${row.case_family}|${row.epoch}`));
+  const visibleCaseKeys = new Set(visibleRows.map((row) => row.case_family));
+  if (selectedCase !== "all") visibleCaseKeys.add(selectedCase);
+
+  renderSummaryTable(
+    "cases-body",
+    settlement.totals.by_case.filter((item) => selectedCase === "all" || visibleCaseKeys.has(item.case_family)),
+    [
+      { render: (item) => `<td><span class="badge">${item.case_family}</span></td>` },
+      { render: (item) => `<td>${item.rows}</td>` },
+      { render: (item) => `<td>${item.address_count}</td>` },
+      { render: (item) => `<td class="num">${item.planned_amount_gonka}</td>` },
+      { render: (item) => `<td class="num">${item.p4_paid_overlap_gonka}</td>` },
+      { render: (item) => `<td class="num">${item.overlap_adjustment_gonka}</td>` },
+      { render: (item) => `<td class="num">${item.p4_overpaid_gonka}</td>` },
+      { render: (item) => `<td class="num">${item.final_payout_gonka}</td>` },
+    ],
+  );
 
   renderSummaryTable(
     "addresses-body",

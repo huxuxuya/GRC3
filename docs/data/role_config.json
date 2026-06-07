@@ -158,6 +158,38 @@
         "amount_gonka": "0.000000000",
         "comment": "Proposal organizer"
       }
+    },
+    {
+      "case_family": "P4-CAND-01",
+      "title": "Kimi restitution: CPoC, nonce exclusion, ComputeGroupCap",
+      "investigators": [
+        {
+          "name": "@votkon",
+          "address": "",
+          "amount_gonka": "0.000000000",
+          "comment": "Published full-period calculation"
+        }
+      ],
+      "validators": [
+        {
+          "name": "@maksimenkoff",
+          "address": "",
+          "amount_gonka": "0.000000000",
+          "comment": "Reviewed numbers as generally correct"
+        },
+        {
+          "name": "@mikenosov",
+          "address": "",
+          "amount_gonka": "0.000000000",
+          "comment": "Raised scope, denominator, proration, and reproducibility objections"
+        }
+      ],
+      "organizer": {
+        "name": "@OpenMindedPerson",
+        "address": "",
+        "amount_gonka": "0.000000000",
+        "comment": "Proposal organizer"
+      }
     }
   ]
 }

@@ -48,6 +48,7 @@
 
       <nav class="tabs">
         <button class="tab active" data-tab="rows">Rows</button>
+        <button class="tab" data-tab="cases">Cases</button>
         <button class="tab" data-tab="addresses">Addresses</button>
         <button class="tab" data-tab="epochs">Epochs</button>
         <button class="tab" data-tab="case-epochs">Case/Epoch</button>
@@ -66,13 +67,33 @@
                 <th>Case</th>
                 <th>Track</th>
                 <th class="num">Planned</th>
-                <th class="num">P4 paid</th>
-                <th class="num">Adjustment</th>
+                <th class="num">Already paid by P4</th>
+                <th class="num">Deducted from payout</th>
                 <th class="num">Remaining</th>
                 <th>Comment</th>
               </tr>
             </thead>
             <tbody id="rows-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel hidden" data-panel="cases">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Case</th>
+                <th>Rows</th>
+                <th>Addresses</th>
+                <th class="num">Planned</th>
+                <th class="num">Already paid by P4</th>
+                <th class="num">Deducted from payout</th>
+                <th class="num">Overpaid by P4</th>
+                <th class="num">Remaining</th>
+              </tr>
+            </thead>
+            <tbody id="cases-body"></tbody>
           </table>
         </div>
       </section>
@@ -86,8 +107,8 @@
                 <th>Cases</th>
                 <th>Epochs</th>
                 <th class="num">Planned</th>
-                <th class="num">P4 paid</th>
-                <th class="num">Adjustment</th>
+                <th class="num">Already paid by P4</th>
+                <th class="num">Deducted from payout</th>
                 <th class="num">Remaining</th>
               </tr>
             </thead>
@@ -106,8 +127,8 @@
                 <th>Addresses</th>
                 <th>Cases</th>
                 <th class="num">Planned</th>
-                <th class="num">P4 paid</th>
-                <th class="num">Adjustment</th>
+                <th class="num">Already paid by P4</th>
+                <th class="num">Deducted from payout</th>
                 <th class="num">Remaining</th>
               </tr>
             </thead>
@@ -126,8 +147,8 @@
                 <th>Rows</th>
                 <th>Addresses</th>
                 <th class="num">Planned</th>
-                <th class="num">P4 paid</th>
-                <th class="num">Adjustment</th>
+                <th class="num">Already paid by P4</th>
+                <th class="num">Deducted from payout</th>
                 <th class="num">Remaining</th>
               </tr>
             </thead>
