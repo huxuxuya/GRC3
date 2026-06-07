@@ -8,6 +8,9 @@ recommendations and from disputed source totals. Do not sum rows across
 different status groups without checking overlap notes.
 
 Machine-readable summary: [`compensation_results.csv`](compensation_results.csv).
+Planned settlement:
+[`PLANNED_COMPENSATION_SETTLEMENT.md`](PLANNED_COMPENSATION_SETTLEMENT.md)
+and [`planned_compensation_settlement.csv`](planned_compensation_settlement.csv).
 Address/epoch ledger:
 [`compensation_address_epoch_ledger.csv`](compensation_address_epoch_ledger.csv).
 Overlap matrix:
@@ -70,6 +73,7 @@ and
 ## Source Pointers
 
 - Calculation repo reconciliation: [`CALCULATION_REPO_RECONCILIATION.md`](CALCULATION_REPO_RECONCILIATION.md).
+- Planned settlement: [`PLANNED_COMPENSATION_SETTLEMENT.md`](PLANNED_COMPENSATION_SETTLEMENT.md).
 - Address/epoch overlap matrix: [`COMPENSATION_OVERLAP_MATRIX.md`](COMPENSATION_OVERLAP_MATRIX.md).
 - Case/epoch crosstab: [`COMPENSATION_EPOCH_CROSSTAB.md`](COMPENSATION_EPOCH_CROSSTAB.md).
 - Address/case crosstab: [`COMPENSATION_ADDRESS_CROSSTAB.md`](COMPENSATION_ADDRESS_CROSSTAB.md).

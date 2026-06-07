@@ -18,6 +18,12 @@ BASE = Path(__file__).resolve().parents[1]
 NGONKA = Decimal("1000000000")
 EXCLUDED_FROM_CURRENT_CROSSTAB = {"P3-CAND-06"}
 PAID_REFERENCE_FAMILIES = {"P4-CAND-01"}
+PLANNED_SETTLEMENT_FAMILIES = (
+    "P3-CAND-01",
+    "P3-CAND-02",
+    "P3-CAND-03",
+    "P3-CAND-04",
+)
 
 
 @dataclass(frozen=True)
@@ -407,6 +413,11 @@ def write_overlap_csv(overlaps: list[dict[str, str]], path: Path) -> None:
 
 def format_cell(amount_ngonka: int) -> str:
     return format_gonka(amount_ngonka) if amount_ngonka else ""
+
+
+def markdown_amount_cell(amount_ngonka: int) -> str:
+    value = format_cell(amount_ngonka)
+    return f"`{value}`" if value else ""
 
 
 def current_crosstab_rows(rows: list[Row]) -> list[Row]:
@@ -996,6 +1007,211 @@ def write_address_epoch_crosstab_markdown(rows: list[Row], path: Path) -> None:
     path.write_text("\n".join(lines) + "\n")
 
 
+def settlement_comment(planned: int, p4_paid: int, adjustment: int) -> str:
+    if p4_paid == 0:
+        return "No exact P4 paid overlap."
+    if adjustment < planned:
+        return "Exact P4 paid overlap deducted; remaining payout is positive."
+    if p4_paid == planned:
+        return "Already fully paid by P4 exact overlap; final payout is zero."
+    return "P4 exact payment exceeds this planned amount; final payout floored at zero."
+
+
+def planned_settlement_rows(rows: list[Row]) -> list[dict[str, object]]:
+    paid_by_key: dict[tuple[int, str], list[Row]] = defaultdict(list)
+    for row in rows:
+        if row.case_family in PAID_REFERENCE_FAMILIES:
+            paid_by_key[(row.epoch, row.address)].append(row)
+
+    result: list[dict[str, object]] = []
+    for row in rows:
+        if row.case_family not in PLANNED_SETTLEMENT_FAMILIES:
+            continue
+        p4_rows = paid_by_key.get((row.epoch, row.address), [])
+        p4_paid = sum(paid.amount_ngonka for paid in p4_rows)
+        adjustment = min(row.amount_ngonka, p4_paid)
+        p4_excess = max(p4_paid - row.amount_ngonka, 0)
+        final_payout = row.amount_ngonka - adjustment
+        result.append(
+            {
+                "epoch": row.epoch,
+                "address": row.address,
+                "case_family": row.case_family,
+                "case_track": row.case_track,
+                "source_status": row.status_group,
+                "source_scope": row.source_scope,
+                "planned_amount_ngonka": row.amount_ngonka,
+                "p4_paid_overlap_ngonka": p4_paid,
+                "p4_paid_tracks": "; ".join(sorted({paid.case_track for paid in p4_rows})),
+                "overlap_adjustment_ngonka": adjustment,
+                "p4_overpaid_ngonka": p4_excess,
+                "final_payout_ngonka": final_payout,
+                "comment": settlement_comment(row.amount_ngonka, p4_paid, adjustment),
+            }
+        )
+    return sorted(result, key=lambda item: (int(item["epoch"]), str(item["address"]), str(item["case_track"])))
+
+
+def settlement_totals(rows: list[dict[str, object]]) -> dict[str, dict[str, int]]:
+    totals = {
+        family: {
+            "source": 0,
+            "p4_paid": 0,
+            "adjustment": 0,
+            "p4_excess": 0,
+            "final": 0,
+            "rows": 0,
+            "addresses": 0,
+        }
+        for family in PLANNED_SETTLEMENT_FAMILIES
+    }
+    addresses_by_family: dict[str, set[str]] = defaultdict(set)
+    for row in rows:
+        family = str(row["case_family"])
+        totals[family]["source"] += int(row["planned_amount_ngonka"])
+        totals[family]["p4_paid"] += int(row["p4_paid_overlap_ngonka"])
+        totals[family]["adjustment"] += int(row["overlap_adjustment_ngonka"])
+        totals[family]["p4_excess"] += int(row["p4_overpaid_ngonka"])
+        totals[family]["final"] += int(row["final_payout_ngonka"])
+        totals[family]["rows"] += 1
+        addresses_by_family[family].add(str(row["address"]))
+    for family, addresses in addresses_by_family.items():
+        totals[family]["addresses"] = len(addresses)
+    return totals
+
+
+def write_planned_settlement_csv(rows: list[Row], path: Path) -> None:
+    fieldnames = [
+        "epoch",
+        "address",
+        "case_family",
+        "case_track",
+        "source_status",
+        "source_scope",
+        "planned_amount_gonka",
+        "p4_paid_overlap_gonka",
+        "p4_paid_tracks",
+        "overlap_adjustment_gonka",
+        "p4_overpaid_gonka",
+        "final_payout_gonka",
+        "comment",
+    ]
+    settlement_rows = planned_settlement_rows(rows)
+    with path.open("w", newline="") as fh:
+        writer = csv.DictWriter(fh, fieldnames=fieldnames, lineterminator="\n")
+        writer.writeheader()
+        for row in settlement_rows:
+            writer.writerow(
+                {
+                    "epoch": row["epoch"],
+                    "address": row["address"],
+                    "case_family": row["case_family"],
+                    "case_track": row["case_track"],
+                    "source_status": row["source_status"],
+                    "source_scope": row["source_scope"],
+                    "planned_amount_gonka": format_gonka(int(row["planned_amount_ngonka"])),
+                    "p4_paid_overlap_gonka": format_cell(int(row["p4_paid_overlap_ngonka"])),
+                    "p4_paid_tracks": row["p4_paid_tracks"],
+                    "overlap_adjustment_gonka": format_cell(int(row["overlap_adjustment_ngonka"])),
+                    "p4_overpaid_gonka": format_cell(int(row["p4_overpaid_ngonka"])),
+                    "final_payout_gonka": format_gonka(int(row["final_payout_ngonka"])),
+                    "comment": row["comment"],
+                }
+            )
+        totals = settlement_totals(settlement_rows)
+        writer.writerow(
+            {
+                "epoch": "TOTAL",
+                "address": "",
+                "case_family": "",
+                "case_track": "",
+                "source_status": "",
+                "source_scope": "",
+                "planned_amount_gonka": format_gonka(sum(item["source"] for item in totals.values())),
+                "p4_paid_overlap_gonka": format_gonka(sum(item["p4_paid"] for item in totals.values())),
+                "p4_paid_tracks": "",
+                "overlap_adjustment_gonka": format_gonka(sum(item["adjustment"] for item in totals.values())),
+                "p4_overpaid_gonka": format_gonka(sum(item["p4_excess"] for item in totals.values())),
+                "final_payout_gonka": format_gonka(sum(item["final"] for item in totals.values())),
+                "comment": "",
+            }
+        )
+
+
+def append_settlement_totals_table(lines: list[str], totals: dict[str, dict[str, int]]) -> None:
+    lines += [
+        "| Case | Rows | Addresses | Source total | P4 paid exact overlap | Applied adjustment | P4 excess | Final payout |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|",
+    ]
+    grand = {"source": 0, "p4_paid": 0, "adjustment": 0, "p4_excess": 0, "final": 0, "rows": 0}
+    for family in PLANNED_SETTLEMENT_FAMILIES:
+        item = totals[family]
+        for key in grand:
+            grand[key] += item[key]
+        lines.append(
+            f"| `{family}` | {item['rows']} | {item['addresses']} | `{format_gonka(item['source'])}` | `{format_gonka(item['p4_paid'])}` | `{format_gonka(item['adjustment'])}` | `{format_gonka(item['p4_excess'])}` | `{format_gonka(item['final'])}` |"
+        )
+    lines.append(
+        f"| **Total** | {grand['rows']} |  | `{format_gonka(grand['source'])}` | `{format_gonka(grand['p4_paid'])}` | `{format_gonka(grand['adjustment'])}` | `{format_gonka(grand['p4_excess'])}` | `{format_gonka(grand['final'])}` |"
+    )
+
+
+def write_planned_settlement_markdown(rows: list[Row], path: Path) -> None:
+    settlement_rows = planned_settlement_rows(rows)
+    totals = settlement_totals(settlement_rows)
+
+    lines = [
+        "# Planned Compensation Settlement",
+        "",
+        "Generated by `scripts/build_compensation_address_epoch_ledger.py` from the address/epoch ledger inputs.",
+        "",
+        "Machine-readable file: `planned_compensation_settlement.csv`.",
+        "",
+        "This is the payout-planning view. It includes `P3-CAND-01`, `P3-CAND-02`, `P3-CAND-03`, and `P3-CAND-04` as planned compensation cases.",
+        "`P3-CAND-06` is excluded from this settlement view. `P4-CAND-01` is not a new payout case here; it is used only as an already-paid exact `epoch + address` adjustment.",
+        "",
+        "Final payout rule: `final_payout = max(planned_amount - p4_paid_overlap, 0)`.",
+        "",
+        "## Summary",
+        "",
+        f"- Planned settlement rows: `{len(settlement_rows)}`",
+        f"- Unique recipients: `{len({str(row['address']) for row in settlement_rows})}`",
+        f"- Rows with exact P4 paid overlap: `{sum(1 for row in settlement_rows if int(row['p4_paid_overlap_ngonka']) > 0)}`",
+        "",
+        "## Source Totals By Case",
+        "",
+        "| Case | Rows | Addresses | Source total, GONKA |",
+        "|---|---:|---:|---:|",
+    ]
+    for family in PLANNED_SETTLEMENT_FAMILIES:
+        item = totals[family]
+        lines.append(f"| `{family}` | {item['rows']} | {item['addresses']} | `{format_gonka(item['source'])}` |")
+    lines.append(
+        f"| **Total** | {sum(item['rows'] for item in totals.values())} |  | `{format_gonka(sum(item['source'] for item in totals.values()))}` |"
+    )
+
+    lines += [
+        "",
+        "## Adjusted Totals By Case",
+        "",
+    ]
+    append_settlement_totals_table(lines, totals)
+
+    lines += [
+        "",
+        "## Planned Payout Rows",
+        "",
+        "| Epoch | Address | Case | Track | Status | Planned amount | P4 paid overlap | Adjustment | P4 excess | Final payout | Comment |",
+        "|---:|---|---|---|---|---:|---:|---:|---:|---:|---|",
+    ]
+    for row in settlement_rows:
+        lines.append(
+            f"| {row['epoch']} | `{row['address']}` | `{row['case_family']}` | `{row['case_track']}` | `{row['source_status']}` | `{format_gonka(int(row['planned_amount_ngonka']))}` | {markdown_amount_cell(int(row['p4_paid_overlap_ngonka']))} | {markdown_amount_cell(int(row['overlap_adjustment_ngonka']))} | {markdown_amount_cell(int(row['p4_overpaid_ngonka']))} | `{format_gonka(int(row['final_payout_ngonka']))}` | {row['comment']} |"
+        )
+
+    path.write_text("\n".join(lines) + "\n")
+
+
 def write_markdown(rows: list[Row], overlaps: list[dict[str, str]], path: Path) -> None:
     by_track: dict[str, list[Row]] = defaultdict(list)
     by_status: dict[str, list[Row]] = defaultdict(list)
@@ -1117,10 +1333,12 @@ def main() -> None:
     write_epoch_crosstab_csv(crosstab_rows, BASE / "compensation_epoch_crosstab.csv")
     write_address_crosstab_csv(crosstab_rows, crosstab_overlaps, BASE / "compensation_address_case_crosstab.csv")
     write_address_epoch_crosstab_csv(crosstab_rows, BASE / "compensation_address_epoch_case_crosstab.csv")
+    write_planned_settlement_csv(crosstab_rows, BASE / "planned_compensation_settlement.csv")
     write_markdown(rows, overlaps, BASE / "COMPENSATION_OVERLAP_MATRIX.md")
     write_epoch_crosstab_markdown(crosstab_rows, crosstab_overlaps, BASE / "COMPENSATION_EPOCH_CROSSTAB.md")
     write_address_crosstab_markdown(crosstab_rows, crosstab_overlaps, BASE / "COMPENSATION_ADDRESS_CROSSTAB.md")
     write_address_epoch_crosstab_markdown(crosstab_rows, BASE / "COMPENSATION_ADDRESS_EPOCH_CROSSTAB.md")
+    write_planned_settlement_markdown(crosstab_rows, BASE / "PLANNED_COMPENSATION_SETTLEMENT.md")
 
     print(f"ledger_rows={len(rows)}")
     print(f"current_crosstab_rows={len(crosstab_rows)}")
@@ -1132,6 +1350,7 @@ def main() -> None:
     print(f"epoch_overlap_rows={len(epoch_overlap_summary(crosstab_rows, crosstab_overlaps))}")
     print(f"address_review_rows={len([row for row in address_case_rows(crosstab_rows, crosstab_overlaps) if int(row['case_family_count']) > 1 or int(row['case_track_count']) > 1 or int(row['exact_address_epoch_overlap_keys']) > 0])}")
     print(f"address_epoch_crosstab_rows={len(address_epoch_case_rows(crosstab_rows))}")
+    print(f"planned_settlement_rows={len(planned_settlement_rows(crosstab_rows))}")
 
 
 if __name__ == "__main__":
