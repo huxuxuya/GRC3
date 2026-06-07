@@ -1,0 +1,163 @@
+{
+  "settings": {
+    "authority": "gonka10d07y265gmmuvt4z0w9aw880jnsr700j2h5m33",
+    "vesting_epochs": "150",
+    "deposit": "50000000ngonka",
+    "metadata": "https://github.com/fedortimokhov/GRC3",
+    "title": "GRC Proposal #3 - Restitution",
+    "summary": "Restitution payout for confirmed GRC Proposal #3 cases, adjusted for exact P4 address+epoch overlaps.",
+    "organizer_launch_fee_gonka": "500.000000000",
+    "organizer_launch_fee_once": true,
+    "proposal_model": "proposal_2_style"
+  },
+  "cases": [
+    {
+      "case_family": "P3-CAND-01",
+      "title": "High miss rate / devshard issue",
+      "investigators": [
+        {
+          "name": "@OpenMindedPerson",
+          "address": "",
+          "amount_gonka": "0.000000000",
+          "comment": "Case investigator"
+        }
+      ],
+      "validators": [
+        {
+          "name": "@mikenosov",
+          "address": "",
+          "amount_gonka": "0.000000000",
+          "comment": "Case validator"
+        }
+      ],
+      "organizer": {
+        "name": "@OpenMindedPerson",
+        "address": "",
+        "amount_gonka": "0.000000000",
+        "comment": "Proposal coordinator / organizer"
+      }
+    },
+    {
+      "case_family": "P3-CAND-02",
+      "title": "Negative coin balance / settle-drop",
+      "investigators": [
+        {
+          "name": "@maksimenkoff",
+          "address": "",
+          "amount_gonka": "0.000000000",
+          "comment": "Case investigator"
+        }
+      ],
+      "validators": [
+        {
+          "name": "@dem_ww",
+          "address": "",
+          "amount_gonka": "0.000000000",
+          "comment": "Case validator"
+        }
+      ],
+      "organizer": {
+        "name": "@OpenMindedPerson",
+        "address": "",
+        "amount_gonka": "0.000000000",
+        "comment": "Coordinator validation"
+      }
+    },
+    {
+      "case_family": "P3-CAND-03",
+      "title": "Failed cPoC / preserved Kimi shortfall",
+      "investigators": [
+        {
+          "name": "@mikenosov",
+          "address": "",
+          "amount_gonka": "0.000000000",
+          "comment": "Case investigator"
+        }
+      ],
+      "validators": [
+        {
+          "name": "@dem_ww",
+          "address": "",
+          "amount_gonka": "0.000000000",
+          "comment": "Case validator"
+        },
+        {
+          "name": "@votkon",
+          "address": "",
+          "amount_gonka": "0.000000000",
+          "comment": "Case validator"
+        }
+      ],
+      "organizer": {
+        "name": "@OpenMindedPerson",
+        "address": "",
+        "amount_gonka": "0.000000000",
+        "comment": "Proposal organizer"
+      }
+    },
+    {
+      "case_family": "P3-CAND-04",
+      "title": "UpgradeProtectionWindow / CPoC misfire",
+      "investigators": [
+        {
+          "name": "@maksimenkoff",
+          "address": "",
+          "amount_gonka": "0.000000000",
+          "comment": "Case investigator"
+        }
+      ],
+      "validators": [
+        {
+          "name": "@votkon",
+          "address": "",
+          "amount_gonka": "0.000000000",
+          "comment": "Case validator"
+        },
+        {
+          "name": "@OpenMindedPerson",
+          "address": "",
+          "amount_gonka": "0.000000000",
+          "comment": "Case validator"
+        }
+      ],
+      "organizer": {
+        "name": "@OpenMindedPerson",
+        "address": "",
+        "amount_gonka": "0.000000000",
+        "comment": "Proposal organizer"
+      }
+    },
+    {
+      "case_family": "P3-CAND-05",
+      "title": "ml3 hardware re-registration",
+      "investigators": [
+        {
+          "name": "SegovChik / @gonkstein",
+          "address": "",
+          "amount_gonka": "0.000000000",
+          "comment": "Reporter / claimant-side evidence"
+        }
+      ],
+      "validators": [
+        {
+          "name": "@maksimenkoff",
+          "address": "",
+          "amount_gonka": "0.000000000",
+          "comment": "Assigned validator"
+        },
+        {
+          "name": "@mikenosov",
+          "address": "",
+          "amount_gonka": "0.000000000",
+          "comment": "Assigned validator"
+        }
+      ],
+      "organizer": {
+        "name": "@OpenMindedPerson",
+        "address": "",
+        "amount_gonka": "0.000000000",
+        "comment": "Proposal organizer"
+      }
+    }
+  ]
+}

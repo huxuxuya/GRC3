@@ -33,9 +33,30 @@ Main entry points:
   - machine-readable address/epoch/case crosstab.
 - [`planned_compensation_settlement.csv`](planned_compensation_settlement.csv)
   - machine-readable planned payout rows with P4 overlap adjustments.
+- [`docs/index.html`](docs/index.html) - GitHub Pages dashboard for case,
+  epoch, recipient, P4 overlap, role-payout, and proposal-export review.
+- [`docs/data/settlement.json`](docs/data/settlement.json) - dashboard source
+  data generated from the planned settlement ledger.
+- [`docs/data/role_config.json`](docs/data/role_config.json) - editable role
+  payout template for investigators, validators, and proposal organizer.
 
 Generated address/epoch files are rebuilt with:
 
 ```sh
 python3 scripts/build_compensation_address_epoch_ledger.py
+```
+
+The Gonka governance proposal export follows the `grc-proposal-2` shape:
+victim payouts are emitted as one `MsgBatchTransferWithVesting`, while role
+and organizer-fee payouts are emitted as `MsgCommunityPoolSpend` messages.
+Build it after filling non-zero role payout addresses:
+
+```sh
+python3 scripts/build_gonka_proposal.py
+```
+
+For local dashboard review:
+
+```sh
+python3 -m http.server 8765 --bind 127.0.0.1 --directory docs
 ```

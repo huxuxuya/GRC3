@@ -8,6 +8,7 @@ the overlap review reproducible and avoids hand-maintained per-address totals.
 from __future__ import annotations
 
 import csv
+import json
 from collections import defaultdict
 from dataclasses import dataclass
 from decimal import Decimal, ROUND_HALF_UP
@@ -24,6 +25,7 @@ PLANNED_SETTLEMENT_FAMILIES = (
     "P3-CAND-03",
     "P3-CAND-04",
 )
+DISPLAY_CASE_FAMILIES = (*PLANNED_SETTLEMENT_FAMILIES, "P3-CAND-05")
 
 
 @dataclass(frozen=True)
@@ -1212,6 +1214,191 @@ def write_planned_settlement_markdown(rows: list[Row], path: Path) -> None:
     path.write_text("\n".join(lines) + "\n")
 
 
+def amount_fields(prefix: str, amount_ngonka: int) -> dict[str, object]:
+    return {
+        f"{prefix}_ngonka": amount_ngonka,
+        f"{prefix}_gonka": format_gonka(amount_ngonka),
+    }
+
+
+def settlement_json(rows: list[Row]) -> dict[str, object]:
+    settlement_rows = planned_settlement_rows(rows)
+    totals = settlement_totals(settlement_rows)
+
+    by_address: dict[str, dict[str, object]] = {}
+    by_epoch: dict[str, dict[str, object]] = {}
+    by_case_epoch: dict[tuple[str, int], dict[str, object]] = {}
+
+    for row in settlement_rows:
+        address = str(row["address"])
+        epoch = int(row["epoch"])
+        family = str(row["case_family"])
+
+        for bucket, key, label in (
+            (by_address, address, "address"),
+            (by_epoch, str(epoch), "epoch"),
+        ):
+            item = bucket.setdefault(
+                key,
+                {
+                    label: key,
+                    "rows": 0,
+                    "addresses": set(),
+                    "cases": set(),
+                    "epochs": set(),
+                    "planned_amount_ngonka": 0,
+                    "p4_paid_overlap_ngonka": 0,
+                    "overlap_adjustment_ngonka": 0,
+                    "p4_overpaid_ngonka": 0,
+                    "final_payout_ngonka": 0,
+                },
+            )
+            item["rows"] = int(item["rows"]) + 1
+            item["addresses"].add(address)
+            item["cases"].add(family)
+            item["epochs"].add(epoch)
+            item["planned_amount_ngonka"] = int(item["planned_amount_ngonka"]) + int(row["planned_amount_ngonka"])
+            item["p4_paid_overlap_ngonka"] = int(item["p4_paid_overlap_ngonka"]) + int(row["p4_paid_overlap_ngonka"])
+            item["overlap_adjustment_ngonka"] = int(item["overlap_adjustment_ngonka"]) + int(row["overlap_adjustment_ngonka"])
+            item["p4_overpaid_ngonka"] = int(item["p4_overpaid_ngonka"]) + int(row["p4_overpaid_ngonka"])
+            item["final_payout_ngonka"] = int(item["final_payout_ngonka"]) + int(row["final_payout_ngonka"])
+
+        case_epoch_key = (family, epoch)
+        case_epoch = by_case_epoch.setdefault(
+            case_epoch_key,
+            {
+                "case_family": family,
+                "epoch": epoch,
+                "rows": 0,
+                "addresses": set(),
+                "planned_amount_ngonka": 0,
+                "p4_paid_overlap_ngonka": 0,
+                "overlap_adjustment_ngonka": 0,
+                "p4_overpaid_ngonka": 0,
+                "final_payout_ngonka": 0,
+            },
+        )
+        case_epoch["rows"] = int(case_epoch["rows"]) + 1
+        case_epoch["addresses"].add(address)
+        case_epoch["planned_amount_ngonka"] = int(case_epoch["planned_amount_ngonka"]) + int(row["planned_amount_ngonka"])
+        case_epoch["p4_paid_overlap_ngonka"] = int(case_epoch["p4_paid_overlap_ngonka"]) + int(row["p4_paid_overlap_ngonka"])
+        case_epoch["overlap_adjustment_ngonka"] = int(case_epoch["overlap_adjustment_ngonka"]) + int(row["overlap_adjustment_ngonka"])
+        case_epoch["p4_overpaid_ngonka"] = int(case_epoch["p4_overpaid_ngonka"]) + int(row["p4_overpaid_ngonka"])
+        case_epoch["final_payout_ngonka"] = int(case_epoch["final_payout_ngonka"]) + int(row["final_payout_ngonka"])
+
+    def finalize_summary(item: dict[str, object]) -> dict[str, object]:
+        out = dict(item)
+        out["addresses"] = sorted(out["addresses"]) if isinstance(out["addresses"], set) else out["addresses"]
+        out["address_count"] = len(out["addresses"]) if isinstance(out["addresses"], list) else out.get("address_count", 0)
+        out["cases"] = sorted(out["cases"]) if isinstance(out.get("cases"), set) else out.get("cases", [])
+        out["epochs"] = sorted(out["epochs"]) if isinstance(out.get("epochs"), set) else out.get("epochs", [])
+        for field in (
+            "planned_amount",
+            "p4_paid_overlap",
+            "overlap_adjustment",
+            "p4_overpaid",
+            "final_payout",
+        ):
+            out[f"{field}_gonka"] = format_gonka(int(out[f"{field}_ngonka"]))
+        return out
+
+    def finalize_case_epoch(item: dict[str, object]) -> dict[str, object]:
+        out = dict(item)
+        out["addresses"] = sorted(out["addresses"])
+        out["address_count"] = len(out["addresses"])
+        for field in (
+            "planned_amount",
+            "p4_paid_overlap",
+            "overlap_adjustment",
+            "p4_overpaid",
+            "final_payout",
+        ):
+            out[f"{field}_gonka"] = format_gonka(int(out[f"{field}_ngonka"]))
+        return out
+
+    grand = {
+        "rows": sum(item["rows"] for item in totals.values()),
+        "address_count": len({str(row["address"]) for row in settlement_rows}),
+        "overlap_rows": sum(1 for row in settlement_rows if int(row["p4_paid_overlap_ngonka"]) > 0),
+    }
+    for source, target in (
+        ("source", "planned_amount"),
+        ("p4_paid", "p4_paid_overlap"),
+        ("adjustment", "overlap_adjustment"),
+        ("p4_excess", "p4_overpaid"),
+        ("final", "final_payout"),
+    ):
+        amount = sum(item[source] for item in totals.values())
+        grand.update(amount_fields(target, amount))
+
+    case_totals = []
+    for family in DISPLAY_CASE_FAMILIES:
+        item = totals.get(
+            family,
+            {
+                "source": 0,
+                "p4_paid": 0,
+                "adjustment": 0,
+                "p4_excess": 0,
+                "final": 0,
+                "rows": 0,
+                "addresses": 0,
+            },
+        )
+        out = {
+            "case_family": family,
+            "rows": item["rows"],
+            "address_count": item["addresses"],
+        }
+        for source, target in (
+            ("source", "planned_amount"),
+            ("p4_paid", "p4_paid_overlap"),
+            ("adjustment", "overlap_adjustment"),
+            ("p4_excess", "p4_overpaid"),
+            ("final", "final_payout"),
+        ):
+            out.update(amount_fields(target, item[source]))
+        case_totals.append(out)
+
+    return {
+        "metadata": {
+            "generated_by": "scripts/build_compensation_address_epoch_ledger.py",
+            "display_case_families": list(DISPLAY_CASE_FAMILIES),
+            "planned_settlement_families": list(PLANNED_SETTLEMENT_FAMILIES),
+            "paid_reference_families": sorted(PAID_REFERENCE_FAMILIES),
+            "final_payout_rule": "final_payout=max(planned_amount-p4_paid_overlap,0)",
+            "unit": "ngonka",
+            "decimal_places": 9,
+        },
+        "totals": {
+            "global": grand,
+            "by_case": case_totals,
+            "by_address": [finalize_summary(item) for item in sorted(by_address.values(), key=lambda x: str(x["address"]))],
+            "by_epoch": [finalize_summary(item) for item in sorted(by_epoch.values(), key=lambda x: int(x["epoch"]))],
+            "by_case_epoch": [
+                finalize_case_epoch(item)
+                for item in sorted(by_case_epoch.values(), key=lambda x: (str(x["case_family"]), int(x["epoch"])))
+            ],
+        },
+        "rows": [
+            {
+                **{key: row[key] for key in ("epoch", "address", "case_family", "case_track", "source_status", "source_scope", "p4_paid_tracks", "comment")},
+                **amount_fields("planned_amount", int(row["planned_amount_ngonka"])),
+                **amount_fields("p4_paid_overlap", int(row["p4_paid_overlap_ngonka"])),
+                **amount_fields("overlap_adjustment", int(row["overlap_adjustment_ngonka"])),
+                **amount_fields("p4_overpaid", int(row["p4_overpaid_ngonka"])),
+                **amount_fields("final_payout", int(row["final_payout_ngonka"])),
+            }
+            for row in settlement_rows
+        ],
+    }
+
+
+def write_settlement_json(rows: list[Row], path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(settlement_json(rows), indent=2, sort_keys=True) + "\n")
+
+
 def write_markdown(rows: list[Row], overlaps: list[dict[str, str]], path: Path) -> None:
     by_track: dict[str, list[Row]] = defaultdict(list)
     by_status: dict[str, list[Row]] = defaultdict(list)
@@ -1339,6 +1526,7 @@ def main() -> None:
     write_address_crosstab_markdown(crosstab_rows, crosstab_overlaps, BASE / "COMPENSATION_ADDRESS_CROSSTAB.md")
     write_address_epoch_crosstab_markdown(crosstab_rows, BASE / "COMPENSATION_ADDRESS_EPOCH_CROSSTAB.md")
     write_planned_settlement_markdown(crosstab_rows, BASE / "PLANNED_COMPENSATION_SETTLEMENT.md")
+    write_settlement_json(crosstab_rows, BASE / "docs/data/settlement.json")
 
     print(f"ledger_rows={len(rows)}")
     print(f"current_crosstab_rows={len(crosstab_rows)}")
