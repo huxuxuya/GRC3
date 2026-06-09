@@ -1,7 +1,7 @@
 [
   {
     "address": "gonka14ljarev2nlzu4ej50vx7ylj2rvg4n20fnq2ysc",
-    "case4_compensation_gnk": "88.946722163",
+    "case4_compensation_gnk": "79.662604523",
     "epoch": 276,
     "overlap_references": "",
     "p3_cand_06_same_address_epoch276": 0,
@@ -11,7 +11,7 @@
   },
   {
     "address": "gonka17pw6099q758qwzewtrqmqpf5c2lrhr97fwqexu",
-    "case4_compensation_gnk": "1030.751496775",
+    "case4_compensation_gnk": "923.163292052",
     "epoch": 276,
     "overlap_references": "",
     "p3_cand_06_same_address_epoch276": 0,
@@ -21,7 +21,7 @@
   },
   {
     "address": "gonka1amlmhjym02shahjv8ldmupg4cx0qc66q6f85rj",
-    "case4_compensation_gnk": "242.705232731",
+    "case4_compensation_gnk": "217.372045879",
     "epoch": 276,
     "overlap_references": "",
     "p3_cand_06_same_address_epoch276": 0,
@@ -31,7 +31,7 @@
   },
   {
     "address": "gonka1ce02jjduga8jvwj8jx39mxn0jr345vgkx7lk2n",
-    "case4_compensation_gnk": "11.118340270",
+    "case4_compensation_gnk": "9.957825565",
     "epoch": 276,
     "overlap_references": "",
     "p3_cand_06_same_address_epoch276": 0,
@@ -41,7 +41,7 @@
   },
   {
     "address": "gonka1d694r00czmq75txghwjcuk07lxvc8d4ekgsha0",
-    "case4_compensation_gnk": "126.369428439",
+    "case4_compensation_gnk": "113.179188133",
     "epoch": 276,
     "overlap_references": "",
     "p3_cand_06_same_address_epoch276": 0,
@@ -51,7 +51,7 @@
   },
   {
     "address": "gonka1duuaqdx06sx8v2dzggltwwmqyuw8lvjkjq7xll",
-    "case4_compensation_gnk": "180.062876574",
+    "case4_compensation_gnk": "161.268199400",
     "epoch": 276,
     "overlap_references": "",
     "p3_cand_06_same_address_epoch276": 0,
@@ -61,7 +61,7 @@
   },
   {
     "address": "gonka1fvly5jrewyjmjfgwah3khy9rttq4cqajcesv9p",
-    "case4_compensation_gnk": "0.813537092",
+    "case4_compensation_gnk": "0.728621382",
     "epoch": 276,
     "overlap_references": "",
     "p3_cand_06_same_address_epoch276": 0,
@@ -71,7 +71,7 @@
   },
   {
     "address": "gonka1gyk0aahvr3qeju4zx0nplfreej6cy4jjk8svc5",
-    "case4_compensation_gnk": "93.556765689",
+    "case4_compensation_gnk": "83.791459026",
     "epoch": 276,
     "overlap_references": "",
     "p3_cand_06_same_address_epoch276": 0,
@@ -81,7 +81,7 @@
   },
   {
     "address": "gonka1mmlyd5xxu5l68yx8wzclrkxkxvm88mhq5tp5s0",
-    "case4_compensation_gnk": "3953.519092736",
+    "case4_compensation_gnk": "3540.857046786",
     "epoch": 276,
     "overlap_references": "",
     "p3_cand_06_same_address_epoch276": 0,
@@ -91,7 +91,7 @@
   },
   {
     "address": "gonka1rcpc45n6zch9qlkn4m3cwngekad89xu8mcr09v",
-    "case4_compensation_gnk": "3.254148371",
+    "case4_compensation_gnk": "2.914485531",
     "epoch": 276,
     "overlap_references": "",
     "p3_cand_06_same_address_epoch276": 0,
@@ -101,7 +101,7 @@
   },
   {
     "address": "gonka1u4zxypjgcr8khlzefwjr0vwdaj2uzruw2cehj3",
-    "case4_compensation_gnk": "274.975537419",
+    "case4_compensation_gnk": "246.274027398",
     "epoch": 276,
     "overlap_references": "",
     "p3_cand_06_same_address_epoch276": 0,
@@ -111,7 +111,7 @@
   },
   {
     "address": "gonka1zktn8j65wlys8a8e38hqhf4y3x6m4x04zskkrx",
-    "case4_compensation_gnk": "645.406093745",
+    "case4_compensation_gnk": "578.039630382",
     "epoch": 276,
     "overlap_references": "",
     "p3_cand_06_same_address_epoch276": 0,
@@ -121,7 +121,7 @@
   },
   {
     "address": "gonka10079cnl3nuh2k82mhkm04dj0slhtw9kmjewwau",
-    "case4_compensation_gnk": "4038.669308466",
+    "case4_compensation_gnk": "3617.119418189",
     "epoch": 276,
     "overlap_references": "P4-CAND-01",
     "p3_cand_06_same_address_epoch276": 0,
@@ -131,7 +131,7 @@
   },
   {
     "address": "gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09",
-    "case4_compensation_gnk": "17896.188970852",
+    "case4_compensation_gnk": "16028.213179615",
     "epoch": 276,
     "overlap_references": "P3-CAND-06",
     "p3_cand_06_same_address_epoch276": 1,
@@ -141,7 +141,7 @@
   },
   {
     "address": "gonka168rtjfkszuhcggg4dfyse4yh7xn9zwfglnkns2",
-    "case4_compensation_gnk": "38.236243368",
+    "case4_compensation_gnk": "34.245204993",
     "epoch": 276,
     "overlap_references": "P4-CAND-01",
     "p3_cand_06_same_address_epoch276": 0,
@@ -151,7 +151,7 @@
   },
   {
     "address": "gonka1gvrrhjmy4w4mayvs2s5l23edj8ertcmtd2v4zr",
-    "case4_compensation_gnk": "3785.930451587",
+    "case4_compensation_gnk": "3390.761041922",
     "epoch": 276,
     "overlap_references": "P4-CAND-01",
     "p3_cand_06_same_address_epoch276": 0,
@@ -161,7 +161,7 @@
   },
   {
     "address": "gonka1kx9mca3xm8u8ypzfuhmxey66u0ufxhs7nm6wc5",
-    "case4_compensation_gnk": "12.203056394",
+    "case4_compensation_gnk": "10.929320742",
     "epoch": 276,
     "overlap_references": "P4-CAND-01",
     "p3_cand_06_same_address_epoch276": 0,
@@ -171,7 +171,7 @@
   },
   {
     "address": "gonka1scskt6wpnjnumsah6kjphmdu87vjgvcxmn4rxv",
-    "case4_compensation_gnk": "3731.965824421",
+    "case4_compensation_gnk": "3342.429156860",
     "epoch": 276,
     "overlap_references": "P4-CAND-01",
     "p3_cand_06_same_address_epoch276": 0,
@@ -181,7 +181,7 @@
   },
   {
     "address": "gonka1yal0ysgzc860zt3y8cds8656tnueusgymftvkw",
-    "case4_compensation_gnk": "54.778164259",
+    "case4_compensation_gnk": "49.060506444",
     "epoch": 276,
     "overlap_references": "P4-CAND-01",
     "p3_cand_06_same_address_epoch276": 0,

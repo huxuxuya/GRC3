@@ -31,8 +31,8 @@
   },
   {
     "affected_rows_attributed": 5,
-    "compensation_gnk_attributed": "23216.721558783",
-    "compensation_ngonka_attributed": 23216721558783,
+    "compensation_gnk_attributed": "20793.397023358",
+    "compensation_ngonka_attributed": 20793397023358,
     "cpoc_sequence": 2,
     "cpoc_trigger_height": 4267778,
     "cpoc_trigger_msk": "2026-05-26 18:25:04 MSK",
@@ -46,8 +46,8 @@
   },
   {
     "affected_rows_attributed": 2,
-    "compensation_gnk_attributed": "401.344965858",
-    "compensation_ngonka_attributed": 401344965858,
+    "compensation_gnk_attributed": "359.453215531",
+    "compensation_ngonka_attributed": 359453215531,
     "cpoc_sequence": 3,
     "cpoc_trigger_height": 4270605,
     "cpoc_trigger_msk": "2026-05-26 22:36:05 MSK",
@@ -61,8 +61,8 @@
   },
   {
     "affected_rows_attributed": 12,
-    "compensation_gnk_attributed": "12591.384766710",
-    "compensation_ngonka_attributed": 12591384766710,
+    "compensation_gnk_attributed": "11277.116015933",
+    "compensation_ngonka_attributed": 11277116015933,
     "cpoc_sequence": "final_snapshot_delta",
     "cpoc_trigger_height": "",
     "cpoc_trigger_msk": "",

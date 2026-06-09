@@ -23,7 +23,7 @@ epoch 276.
 
 | Requested height | Response height | Key base64 | Value base64 | Null | Status | RPC source |
 |---:|---:|---|---|---:|---|---|
-| `latest` | `4377778` | `Gw==` | `` | `1` | `ok` | `default_node1` |
+| `latest` | `4495278` | `Gw==` | `` | `1` | `ok` | `default_node1` |
 | `4267299` | `4267299` | `Gw==` | `` | `1` | `ok` | `default_node1` |
 | `4267300` | `4267300` | `Gw==` | `` | `1` | `ok` | `default_node1` |
 | `4267778` | `4267778` | `Gw==` | `` | `1` | `ok` | `default_node1` |
@@ -50,7 +50,7 @@ misfire.
 
 ## Strength And Remaining Limits
 
-- Strong: affected rows and amounts match the published CSV exactly from independent archive-chain state.
+- Strong: affected rows and chain-style amounts match the current published CSV exactly from independent archive-chain state.
 - Strong: two post-upgrade cPoC stages are directly visible inside the upgrade epoch.
 - Strong: historical and current chain state return null for the `LastUpgradeHeight` key at all checked heights.
 - Strong: PR #1268 changes future full upgrades to record `LastUpgradeHeight` from the upgrade handler and tests full/partial upgrade tracking.

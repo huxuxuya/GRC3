@@ -6,8 +6,8 @@ UpgradeProtectionWindow / cPoC misfire candidate.
 ## Result
 
 - Affected set: `19` participants (`7` dropped, `12` reduced).
-- Independent total: `36,209.451291351 GONKA`.
-- Published CSV total: `36,209.451291351 GONKA`.
+- Independent total: `32,429.966254822 GONKA`.
+- Published CSV total: `32,429.966254822 GONKA`.
 - Published CSV comparison exact match: `True`.
 - Root-cause support: `LastUpgradeHeight` latest null proof = `True`.
 - Scope scan case4-like post-upgrade cPoC rows: `2`.

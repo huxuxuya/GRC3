@@ -343,7 +343,7 @@ def build_affected(base: str, *, refresh: bool = False) -> tuple[list[dict[str, 
         after = cw_after.get(address, 0)
         was_dropped = status_after in {"INACTIVE", "INVALID"}
         lost_cw = before if was_dropped else max(0, before - after)
-        compensation = lost_cw * total_rewarded // total_cw_after if total_cw_after else 0
+        compensation = lost_cw * total_rewarded // total_full_weight_after if total_full_weight_after else 0
         if compensation <= 0:
             continue
         exclusion = excluded.get(address, {})
@@ -383,7 +383,7 @@ def build_affected(base: str, *, refresh: bool = False) -> tuple[list[dict[str, 
         "total_cw_lost_eligible": sum(int(row["lost_cw"]) for row in rows),
         "total_full_weight_after": total_full_weight_after,
         "total_compensation_ngonka": sum(int(row["compensation_ngonka"]) for row in rows),
-        "formula": "lost_cw * total_rewarded_ngonka // total_cw_after",
+        "formula": "lost_cw * total_rewarded_ngonka // total_full_weight_after",
     }
     return rows, summary
 
@@ -699,7 +699,6 @@ def build_published_compare(rows: list[dict[str, Any]], summary: dict[str, Any],
             "cw_after",
             "lost_cw",
             "rewarded_coins_received",
-            "was_dropped",
             "compensation_ngonka",
         ]:
             if str(ours[address][field]) != str(published[address][field]):
@@ -765,10 +764,11 @@ def write_compensation_md(rows: list[dict[str, Any]], summary: dict[str, Any]) -
         f"| Total rewarded in epoch | `{amount_ngonka(summary['total_rewarded_ngonka'])} GNK` |",
         f"| Total cw before | `{summary['total_cw_before']}` |",
         f"| Total cw after | `{summary['total_cw_after']}` |",
+        f"| Total full weight after | `{summary['total_full_weight_after']}` |",
         f"| Eligible lost cw | `{summary['total_cw_lost_eligible']}` |",
         f"| Total compensation | `{amount_ngonka(summary['total_compensation_ngonka'])} GNK` |",
         "",
-        "Formula: `lost_cw * total_rewarded_ngonka // total_cw_after`.",
+        "Formula: `lost_cw * total_rewarded_ngonka // total_full_weight_after`.",
         "",
         "## Rows",
         "",
@@ -911,7 +911,7 @@ def write_root_cause_md(root_cause: dict[str, Any], scope_rows: list[dict[str, A
             "",
             "## Strength And Remaining Limits",
             "",
-            "- Strong: affected rows and amounts match the published CSV exactly from independent archive-chain state.",
+            "- Strong: affected rows and chain-style amounts match the current published CSV exactly from independent archive-chain state.",
             "- Strong: two post-upgrade cPoC stages are directly visible inside the upgrade epoch.",
             "- Strong: historical and current chain state return null for the `LastUpgradeHeight` key at all checked heights.",
             "- Strong: PR #1268 changes future full upgrades to record `LastUpgradeHeight` from the upgrade handler and tests full/partial upgrade tracking.",
