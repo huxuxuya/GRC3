@@ -25,6 +25,18 @@ function shortAddress(address) {
   return `${address.slice(0, 12)}...${address.slice(-8)}`;
 }
 
+function maskName(name) {
+  const value = String(name || "").trim();
+  if (!value) return "";
+  const at = value.startsWith("@");
+  const raw = at ? value.slice(1) : value;
+  if (raw.includes(" / ")) {
+    return raw.split(" / ").map((part) => maskName(part)).join(" / ");
+  }
+  if (raw.length <= 4) return `${at ? "@" : ""}${raw[0] || ""}***`;
+  return `${at ? "@" : ""}${raw.slice(0, 2)}***${raw.slice(-2)}`;
+}
+
 function downloadJson(name, data) {
   const blob = new Blob([JSON.stringify(data, null, 2) + "\n"], { type: "application/json" });
   const url = URL.createObjectURL(blob);
@@ -200,6 +212,7 @@ function rolePeople(caseItem) {
 }
 
 function renderRoles() {
+  renderRoleTotals();
   $("role-editor").innerHTML = roleConfig.cases
     .map((caseItem, caseIndex) => {
       const rows = rolePeople(caseItem)
@@ -207,7 +220,7 @@ function renderRoles() {
           const path = `${caseIndex}:${group}:${personIndex}`;
           return `<div class="role-grid" data-role-path="${path}">
             <div><span class="badge">${role}</span></div>
-            <label>Name<input data-field="name" value="${person.name || ""}"></label>
+            <label>Name<input value="${maskName(person.name)}" readonly></label>
             <label>Address<input data-field="address" value="${person.address || ""}" placeholder="gonka1..."></label>
             <label>Amount GONKA<input data-field="amount_gonka" value="${person.amount_gonka || "0.000000000"}"></label>
             <label>Comment<input data-field="comment" value="${person.comment || ""}"></label>
@@ -215,7 +228,7 @@ function renderRoles() {
         })
         .join("");
       return `<article class="case-role">
-        <h2>${caseItem.case_family}: ${caseItem.title}</h2>
+        <h2>${caseItem.case_family}: ${caseItem.title} ${caseItem.status ? `<span class="badge">${caseItem.status}</span>` : ""}</h2>
         ${rows}
       </article>`;
     })
@@ -226,6 +239,42 @@ function renderRoles() {
   });
 }
 
+function renderRoleTotals() {
+  const byAddress = new Map();
+  allRoleEntries().forEach((entry) => {
+    const amount = BigInt(entry.amount_ngonka);
+    if (amount <= 0n) return;
+    const key = entry.address || "(missing address)";
+    const item = byAddress.get(key) || {
+      address: key,
+      names: new Set(),
+      roles: [],
+      cases: new Set(),
+      amount: 0n,
+    };
+    item.names.add(maskName(entry.name));
+    item.roles.push(`${entry.role}: ${entry.amount_gonka}`);
+    item.cases.add(entry.case_family);
+    item.amount += amount;
+    byAddress.set(key, item);
+  });
+
+  const rows = [...byAddress.values()].sort((a, b) => {
+    if (a.address === "(missing address)") return -1;
+    if (b.address === "(missing address)") return 1;
+    return b.amount === a.amount ? a.address.localeCompare(b.address) : Number(b.amount - a.amount);
+  });
+  $("role-totals-body").innerHTML = rows.length
+    ? rows.map((row) => `<tr>
+        <td class="mono" title="${row.address}">${shortAddress(row.address)}</td>
+        <td>${[...row.names].join(", ")}</td>
+        <td>${row.roles.length}</td>
+        <td>${[...row.cases].sort().join(", ")}</td>
+        <td class="num">${formatNgonka(row.amount)}</td>
+      </tr>`).join("")
+    : `<tr><td colspan="5">No non-zero role payouts.</td></tr>`;
+}
+
 function updateRoleField(event) {
   const wrapper = event.target.closest("[data-role-path]");
   const [caseIndexRaw, group, personIndexRaw] = wrapper.dataset.rolePath.split(":");
@@ -233,6 +282,7 @@ function updateRoleField(event) {
   const person = group === "organizer" ? caseItem.organizer : caseItem[group][Number(personIndexRaw)];
   person[event.target.dataset.field] = event.target.value;
   localStorage.setItem(STORAGE_KEY, JSON.stringify(roleConfig));
+  renderRoleTotals();
   renderWarnings();
 }
 
@@ -240,32 +290,19 @@ function allRoleEntries() {
   const entries = [];
   roleConfig.cases.forEach((caseItem) => {
     rolePeople(caseItem).forEach(([, role, person]) => {
+      const amount = caseItem.status === "rejected_by_coordinator" ? 0n : amountToBigInt(person.amount_gonka || "0");
       entries.push({
         case_family: caseItem.case_family,
         role,
         name: person.name || "",
         address: person.address || "",
-        amount_ngonka: amountToBigInt(person.amount_gonka || "0").toString(),
-        amount_gonka: formatNgonka(amountToBigInt(person.amount_gonka || "0")),
+        amount_ngonka: amount.toString(),
+        amount_gonka: formatNgonka(amount),
         comment: person.comment || "",
       });
     });
   });
 
-  const fee = amountToBigInt(roleConfig.settings.organizer_launch_fee_gonka || "0");
-  if (fee > 0n) {
-    const organizers = entries.filter((entry) => entry.role === "organizer" && gonkaAddressOk(entry.address));
-    const addresses = [...new Set(organizers.map((entry) => entry.address))];
-    entries.push({
-      case_family: "GLOBAL",
-      role: "organizer_launch_fee",
-      name: organizers[0]?.name || "proposal organizer",
-      address: addresses.length === 1 ? addresses[0] : "",
-      amount_ngonka: fee.toString(),
-      amount_gonka: formatNgonka(fee),
-      comment: "One-time proposal launch fee.",
-    });
-  }
   return entries;
 }
 
@@ -273,7 +310,7 @@ function validationErrors() {
   const errors = [];
   allRoleEntries().forEach((entry) => {
     if (BigInt(entry.amount_ngonka) > 0n && !gonkaAddressOk(entry.address)) {
-      errors.push(`${entry.case_family} ${entry.role} ${entry.name}: non-zero ${entry.amount_gonka} GONKA needs a valid address`);
+      errors.push(`${entry.case_family} ${entry.role} ${maskName(entry.name)}: non-zero ${entry.amount_gonka} GONKA needs a valid address`);
     }
   });
   return errors;

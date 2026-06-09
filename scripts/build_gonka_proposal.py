@@ -35,10 +35,11 @@ def role_entries(role_config: dict) -> list[dict[str, object]]:
     entries: list[dict[str, object]] = []
     for case in role_config.get("cases", []):
         family = case.get("case_family", "")
+        rejected_by_coordinator = case.get("status") == "rejected_by_coordinator"
         for role_name in ("investigators", "validators"):
             singular = role_name[:-1]
             for person in case.get(role_name, []):
-                amount = gonka_to_ngonka(person.get("amount_gonka", "0"))
+                amount = 0 if rejected_by_coordinator else gonka_to_ngonka(person.get("amount_gonka", "0"))
                 entries.append(
                     {
                         "case_family": family,
@@ -51,7 +52,7 @@ def role_entries(role_config: dict) -> list[dict[str, object]]:
                     }
                 )
         organizer = case.get("organizer") or {}
-        amount = gonka_to_ngonka(organizer.get("amount_gonka", "0"))
+        amount = 0 if rejected_by_coordinator else gonka_to_ngonka(organizer.get("amount_gonka", "0"))
         entries.append(
             {
                 "case_family": family,
@@ -64,46 +65,6 @@ def role_entries(role_config: dict) -> list[dict[str, object]]:
             }
         )
     return entries
-
-
-def add_launch_fee(entries: list[dict[str, object]], role_config: dict) -> None:
-    settings = role_config.get("settings", {})
-    fee = gonka_to_ngonka(settings.get("organizer_launch_fee_gonka", "0"))
-    if fee <= 0:
-        return
-
-    organizers = [
-        entry
-        for entry in entries
-        if entry["role"] == "organizer" and is_gonka_address(str(entry.get("address", "")))
-    ]
-    addresses = sorted({str(entry["address"]) for entry in organizers})
-    if len(addresses) != 1:
-        entries.append(
-            {
-                "case_family": "GLOBAL",
-                "role": "organizer_launch_fee",
-                "name": "proposal organizer",
-                "address": "",
-                "amount_ngonka": fee,
-                "amount_gonka": format_gonka(fee),
-                "comment": "Fill exactly one organizer address in role_config.json to receive the launch fee.",
-            }
-        )
-        return
-
-    name = next((str(entry["name"]) for entry in organizers if str(entry["address"]) == addresses[0]), "proposal organizer")
-    entries.append(
-        {
-            "case_family": "GLOBAL",
-            "role": "organizer_launch_fee",
-            "name": name,
-            "address": addresses[0],
-            "amount_ngonka": fee,
-            "amount_gonka": format_gonka(fee),
-            "comment": "One-time 500 GONKA proposal launch fee.",
-        }
-    )
 
 
 def validate_role_entries(entries: list[dict[str, object]]) -> list[str]:
@@ -186,7 +147,6 @@ def build_proposal(settlement: dict, role_config: dict) -> tuple[dict, dict]:
     victim_outputs, victim_breakdown = build_victim_outputs(settlement)
 
     entries = role_entries(role_config)
-    add_launch_fee(entries, role_config)
     errors = validate_role_entries(entries)
     if errors:
         raise SystemExit("Cannot build proposal JSON:\n- " + "\n- ".join(errors))

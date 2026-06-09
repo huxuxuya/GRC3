@@ -228,6 +228,15 @@ tbody tr:hover {
   border-bottom: 1px solid var(--line);
 }
 
+.role-summary {
+  padding: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.role-summary h2 {
+  margin-bottom: 10px;
+}
+
 .file-button {
   display: inline-grid;
   place-items: center;
